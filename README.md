@@ -52,6 +52,7 @@ $ sudo apt install gtkwave
 ![Alt Text](images/week0/gtkwave_installation_done.jpeg)
 
 #### **ngspice**
+After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:
 ```bash
 $ tar -zxvf ngspice-37.tar.gz
 $ cd ngspice-37
