@@ -1,5 +1,4 @@
 # spatha_vsd
-<details>
   <Summary> VSD Hardware Design Program </summary>
   <Summary> Week 0 - Day 0 - Tools Installation</summary>
 
