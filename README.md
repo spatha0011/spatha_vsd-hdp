@@ -40,6 +40,6 @@ $ make config-gcc
 $ make 
 $ sudo make install
 ```
-![Alt Text](images/week0/yosys_installation_done.jpg)
+![Alt Text](https://github.com/spatha0011/spatha_vsd-hdp/blob/main/images/week0/yosys_installation_done.jpeg)
 
 
