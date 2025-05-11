@@ -65,6 +65,7 @@ $ sudo make install
 ![Alt Text](images/week0/ngspice_installation_done.jpeg)
 
 #### **magic**
+Install the required dependencies:
 ```bash
 $ sudo apt-get install m4
 $ sudo apt-get install tcsh
@@ -74,6 +75,9 @@ $ sudo apt-get install tcl-dev tk-dev
 $ sudo apt-get install libcairo2-dev
 $ sudo apt-get install mesa-common-dev libglu1-mesa-dev
 $ sudo apt-get install libncurses-dev
+```
+Clone and build Magic:
+```bash
 $ git clone https://github.com/RTimothyEdwards/magic
 $ cd magic
 $ ./configure
