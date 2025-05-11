@@ -1,6 +1,6 @@
 # spatha_vsd
 <details>
-  <Summary> SFAL_VSD SOC</summary>
+  <Summary> VSD </summary>
 
   This project is to create an SOC from specifications to netlist.
 </details>
