@@ -21,7 +21,7 @@ $ ./autorun.sh
 
 ### **TOOL CHECK**
 
-#### **Yosys**
+#### <ins>**Yosys**</ins>
 ```bash
 $ sudo apt-get update
 $ git clone https://github.com/YosysHQ/yosys.git
