@@ -37,21 +37,21 @@ $ sudo make install
 ```
 ![Alt Text](images/week0/yosys_installation_done.jpeg)
 
-#### **Iverilog**
+#### <ins>**Iverilog**</ins>
 ```bash
 $ sudo apt-get update
 $ sudo apt-get install iverilog
 ```
 ![Alt Text](images/week0/Iverilog_installation_done.jpeg)
 
-#### **gtkwave**
+#### <ins>**gtkwave**</ins>
 ```bash
 $ sudo apt-get update
 $ sudo apt install gtkwave
 ```
 ![Alt Text](images/week0/gtkwave_installation_done.jpeg)
 
-#### **ngspice**
+#### <ins>**ngspice**</ins>
 After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:
 ```bash
 $ tar -zxvf ngspice-37.tar.gz
@@ -64,7 +64,7 @@ $ sudo make install
 ```
 ![Alt Text](images/week0/ngspice_installation_done.jpeg)
 
-#### **magic**
+#### <ins>**magic**</ins>
 Install the required dependencies:
 ```bash
 $ sudo apt-get install m4
@@ -86,7 +86,7 @@ $ sudo make install
 ```
 ![Alt Text](images/week0/magic_installation_done.jpeg)
 
-### **Tool Versions**
+### <ins>**Tool Versions**</ins>
 ```bash
 $ git --version
 $ docker --version
