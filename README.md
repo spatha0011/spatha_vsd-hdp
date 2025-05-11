@@ -56,6 +56,7 @@ $ sudo make install
 $ sudo apt-get update
 $ sudo apt-get install iverilog
 ```
+![Alt Text](images/week0/Iverilog_installation_done.jpeg)
 
 
  
