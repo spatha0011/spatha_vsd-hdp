@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## Week 0 - Day 0: Tools Installation
+## Week 0 - Day 0 : Tools Installation
 
 All the instructions for installation of required tools can be found here:
 
@@ -14,7 +14,7 @@ All the instructions for installation of required tools can be found here:
 ```bash
 $ sudo apt update
 $ sudo apt install build-essential dkms linux-headers-$(uname -r)
-$ cd /media/sdudigani/VBox_GAs_7.1.8/
+$ cd /media/spatha/VBox_GAs_7.1.8/
 $ ./autorun.sh
 ```
 
