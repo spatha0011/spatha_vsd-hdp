@@ -10,7 +10,7 @@ All the instructions for installation of required tools can be found here:
 - Ubuntu 20.04 or higher
 - 4 vCPU
 
-### **To resize the Ubuntu window to adjust the screen size**
+### **Resizing the Ubuntu window to fit the screen**
 ```bash
 $ sudo apt update
 $ sudo apt install build-essential dkms linux-headers-$(uname -r)
@@ -64,6 +64,19 @@ $ sudo apt-get update
 $ sudo apt install gtkwave
 ```
 ![Alt Text](images/week0/gtkwave_installation_done.jpeg)
+
+#### **ngspice**
+```bash
+$ tar -zxvf ngspice-37.tar.gz
+$ cd ngspice-37
+$ mkdir release
+$ cd release
+$ ../configure  --with-x --with-readline=yes --disable-debug
+$ make
+$ sudo make install
+```
+![Alt Text](images/week0/ngspice_installation_done.jpeg)
+
 
 
 
