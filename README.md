@@ -51,4 +51,13 @@ $ sudo make install
 ```
 ![Alt Text](images/week0/yosys_installation_done.jpeg)
 
+#### **Iverilog**
+```bash
+$ sudo apt-get update
+$ sudo apt-get install iverilog
+```
+
+
+ 
+
 
