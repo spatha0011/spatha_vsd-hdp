@@ -39,6 +39,6 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make config-gcc
 $ make 
 $ sudo make install
-![image](https://github.com/spatha0011/spatha_vsd-hdp/blob/main/images/week0/yosys_installation_done.jpeg)
+![Alt Text](images/week0/yosys_installation_done.jpg)
 
 
