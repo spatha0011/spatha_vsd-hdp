@@ -24,5 +24,5 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make config-gcc
 $ make 
 $ sudo make install
-![Alt Text](images/yosys_installation_done.jpeg)
+![Alt Text](images/week0/yosys_installation_done.jpeg)
     
