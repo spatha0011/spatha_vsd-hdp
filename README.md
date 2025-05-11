@@ -1,6 +1,6 @@
 # spatha_vsd
 <details>
-  <Summary> VSD </summary>
+  <Summary> VSD Hardware Design Program </summary>
 
   This project is to create an SOC from specifications to netlist.
 </details>
