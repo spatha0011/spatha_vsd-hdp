@@ -12,7 +12,6 @@ All the instructions for installation of required tools can be found here:
 - ### **TOOL CHECK**
 
 #### **Yosys**
-```bash
 $ sudo apt-get update
 $ git clone https://github.com/YosysHQ/yosys.git
 $ cd yosys
