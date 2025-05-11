@@ -80,7 +80,7 @@ $ sudo make install
 ```
 ![Alt Text](images/week0/magic_installation_done.jpeg)
 
-#### **Tool Versions**
+### **Tool Versions**
 ```bash
 $ git --version
 $ docker --version
