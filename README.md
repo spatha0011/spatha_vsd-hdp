@@ -24,5 +24,4 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make config-gcc
 $ make 
 $ sudo make install
-![image](https://github.com/user-attachments/assets/62b12792-849f-4078-9e84-c6be8bb43b00)
 
