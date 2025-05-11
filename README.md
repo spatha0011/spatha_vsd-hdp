@@ -88,7 +88,7 @@ $ python3 --version
 $ python3 -m pip --version
 $ make --version
 ```
-![Alt Text](images/week0/Tool_versions.jpeg)
+![Alt Text](images/week0/Tool_versions.png)
 
 
 
