@@ -66,5 +66,28 @@ To simulate and verify a 2:1 multiplexer, we use two main Verilog files: the des
 ![Alt Text](Images/tb_good_mux.png)
 
 
+### Yosys Synthesis Flow for `good_mux`
 
+This flow demonstrates how to perform RTL-to-gate-level synthesis using the [Yosys](https://github.com/YosysHQ/yosys) open synthesis suite and the `sky130_fd_sc_hd` standard cell library.
+
+
+#### Yosys Commands:
+yosys
+# 1. Read RTL Verilog
+read_verilog good_mux.v
+
+# 2. Read Liberty file for Sky130 standard cells
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 3. Synthesize the top-level module
+synth -top good_mux
+
+# 4. Map synthesized RTL to standard cells
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 5. View synthesized netlist as a schematic
+show
+
+# 6. Write the synthesized gate-level netlist
+write_verilog -noattr good_mux_netlist.v
 
