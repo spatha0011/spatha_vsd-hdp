@@ -34,4 +34,17 @@ The Iverilog-based simulation flow begins with writing the Design (RTL Verilog m
 
 ![Alt Text](Images/Iverilog_based_simulation_flow.png)
 
+### Process
+
+**Step 1**: Passing RTL design and corresponding testbench to Iverilog simulator  
+![Step 1](Images/1.png)
+
+**Step 2**: Generating VCD (Value Change Dump) file  
+![Step 2](Images/2.png)
+
+**Step 3**: Visualizing the dumped variables using GTKWave  
+![Step 3](Images/3.png)
+
+**Step 4**: Viewing the simulation waveform  
+![Step 4](Images/4.png)
 
