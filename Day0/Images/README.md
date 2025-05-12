@@ -43,14 +43,14 @@ $ sudo make install
 $ sudo apt-get update
 $ sudo apt-get install iverilog
 ```
-![Alt Text](images/week0/Iverilog_installation_done.jpeg)
+![Alt Text](Iverilog_installation_done.jpeg)
 
 #### <ins>**gtkwave**</ins>
 ```bash
 $ sudo apt-get update
 $ sudo apt install gtkwave
 ```
-![Alt Text](images/week0/gtkwave_installation_done.jpeg)
+![Alt Text](/tkwave_installation_done.jpeg)
 
 #### <ins>**ngspice**</ins>
 After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:
@@ -63,7 +63,7 @@ $ ../configure  --with-x --with-readline=yes --disable-debug
 $ make
 $ sudo make install
 ```
-![Alt Text](images/week0/ngspice_installation_done.jpeg)
+![Alt Text](ngspice_installation_done.jpeg)
 
 #### <ins>**magic**</ins>
 Install the required dependencies:
@@ -85,7 +85,7 @@ $ ./configure
 $ make
 $ sudo make install
 ```
-![Alt Text](images/week0/magic_installation_done.jpeg)
+![Alt Text](magic_installation_done.jpeg)
 
 ### <ins>**Tool Versions**</ins>
 ```bash
@@ -95,7 +95,7 @@ $ python3 --version
 $ python3 -m pip --version
 $ make --version
 ```
-![Alt Text](images/week0/Tool_versions.jpeg)
+![Alt Text](Tool_versions.jpeg)
 
 
 
