@@ -34,7 +34,7 @@ The Iverilog-based simulation flow begins with writing the Design (RTL Verilog m
 
 ![Alt Text](Images/Iverilog_based_simulation_flow.png)
 
-### Process
+### `Process`
 
 **Step 1**: Passing RTL design and corresponding testbench to Iverilog simulator  
 ![Step 1](Images/1.png)
@@ -49,7 +49,7 @@ The Iverilog-based simulation flow begins with writing the Design (RTL Verilog m
 ![Step 4](Images/4.png)
 
 
-### File Structure: MUX 2:1 Design and Testbench
+### `File Structure: MUX 2:1 Design and Testbench`
 
 To simulate and verify a 2:1 multiplexer, we use two main Verilog files: the design file and the testbench file.
 
