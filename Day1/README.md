@@ -100,7 +100,7 @@ Follow the steps below to perform RTL to gate-level synthesis using Yosys and th
 
 >show
 
-**Step 6**: Write the synthesized gate-level netlist
+**Step 6**: Write the synthesized gate-level netlist [By excluding attributes, the netlist becomes simpler and easier to read]
 
 >write_verilog -noattr good_mux_netlist.v
 
