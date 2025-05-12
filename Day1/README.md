@@ -92,7 +92,7 @@ Follow the steps below to perform RTL to gate-level synthesis using Yosys and th
 
 >synth -top good_mux
 
-**Step 4**: Map synthesized RTL to standard cells
+**Step 4**: Map synthesized RTL to standard cells [map the synthesized netlist to the standard cells defined in the Liberty file, creating a technology-dependent netlist]
 
 >abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
