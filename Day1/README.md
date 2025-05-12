@@ -76,25 +76,25 @@ This flow demonstrates how to perform RTL-to-gate-level synthesis using the [Yos
 
 Follow the steps below to perform RTL to gate-level synthesis using Yosys and the Sky130 standard cell library.
 
-#### 0. Invoke Yosys
+**Step 0**: Invoke Yosys
  yosys
 
-#### 1. Read Liberty file for Sky130 standard cells
+**Step 1**: Read Liberty file for Sky130 standard cells
  read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
-#### 2. Read RTL Verilog
+**Step 2**: Read RTL Verilog
  read_verilog good_mux.v
 
-#### 3. Synthesize the top-level module
+**Step 3**: Synthesize the top-level module
  synth -top good_mux
 
-#### 4. Map synthesized RTL to standard cells
+**Step 4**: Map synthesized RTL to standard cells
  abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
-#### 5. View synthesized netlist as a schematic
+**Step 5**: View synthesized netlist as a schematic
  show
 
-#### 6. Write the synthesized gate-level netlist
+**Step 6**: Write the synthesized gate-level netlist
  write_verilog -noattr good_mux_netlist.v
 
 ![Alt Text](Images/5.png)
