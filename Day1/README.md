@@ -78,7 +78,7 @@ Follow the steps below to perform RTL to gate-level synthesis using Yosys and th
 
 **Step 0**: Invoke Yosys
 
-echo -e "\033[1myosys\033[0m"
+>yosys
 
 **Step 1**: Read Liberty File - You are reading the Liberty file for the Sky130 standard cells, which is necessary for mapping the synthesized netlist to specific technology cells.
 
