@@ -96,7 +96,7 @@ Follow the steps below to perform RTL to gate-level synthesis using Yosys and th
 
 >abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
-**Step 5**: View synthesized netlist as a schematic
+**Step 5**: View synthesized netlist as a schematic [graphical representation of logic that the tool has realised]
 
 >show
 
