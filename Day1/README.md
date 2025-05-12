@@ -17,7 +17,7 @@ A testbench is used to apply test vectors (stimuli) to the design.
 
 It mimics input signals and observes the response to verify design correctness.
 
-Note: The testbench does not have primary inputs or outputs.
+<strong>Note:</strong> The testbench does not have primary inputs or outputs.
 
 ### How the Simulator Works
 The simulator continuously checks for changes in input signals.
@@ -56,11 +56,13 @@ To simulate and verify a 2:1 multiplexer, we use two main Verilog files: the des
 ### Design (`good_mux.v`)
 - Implements a 2:1 multiplexer using behavioral Verilog with inputs `i0`, `i1`, `sel` and output `y`.
 - Uses an `always @(*)` block with an `if-else` construct to select between `i0` and `i1` based on the value of `sel`.
+  
 ![Alt Text](Images/good_mux.png)
 
 ### Testbench (`tb_good_mux.v`)
 - Instantiates the `good_mux` module and applies stimulus through internal registers `i0`, `i1`, and `sel`.
-- Generates a VCD waveform file using `$dumpfile` and `$dumpvars` for output signal observation via gtkwave
+- Generates a VCD waveform file using `$dumpfile` and `$dumpvars` for output signal observation via gtkwave.
+
 ![Alt Text](Images/tb_good_mux.png)
 
 
