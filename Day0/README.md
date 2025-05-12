@@ -49,7 +49,7 @@ $ sudo apt-get install iverilog
 $ sudo apt-get update
 $ sudo apt install gtkwave
 ```
-![Alt Text](/tkwave_installation_done.jpeg)
+![Alt Text](Images/gtkwave_installation_done.jpeg)
 
 #### <ins>**ngspice**</ins>
 After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:
