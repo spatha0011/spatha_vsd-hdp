@@ -48,3 +48,14 @@ The Iverilog-based simulation flow begins with writing the Design (RTL Verilog m
 **Step 4**: Viewing the simulation waveform  
 ![Step 4](Images/4.png)
 
+
+### File Structure: MUX 2:1 Design and Testbench
+
+To simulate and verify a 2:1 multiplexer, we use two main Verilog files: the design file and the testbench file.
+
+![Alt Text](Images/good_mux.png)
+![Alt Text](Images/tb_good_mux.png)
+
+
+
+
