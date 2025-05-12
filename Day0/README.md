@@ -1,7 +1,7 @@
 
 # VSD Hardware Design Program
 
-##<strong>Day 0 : Tools Installation</strong>
+## Day 0 : Tools Installation
 
 #### <ins>All the instructions for installation of required tools can be found here:</ins>
 
