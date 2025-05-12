@@ -72,7 +72,13 @@ This flow demonstrates how to perform RTL-to-gate-level synthesis using the [Yos
 
 
 #### Yosys Commands:
+## 🔧 Yosys Synthesis Steps for `good_mux`
+
+Follow the steps below to perform RTL to gate-level synthesis using Yosys and the Sky130 standard cell library.
+
+# 0. Invoke Yosys
 yosys
+
 # 1. Read RTL Verilog
 read_verilog good_mux.v
 
@@ -90,4 +96,14 @@ show
 
 # 6. Write the synthesized gate-level netlist
 write_verilog -noattr good_mux_netlist.v
+
+![Alt Text](Images/5.png)
+![Alt Text](Images/6.png)
+![Alt Text](Images/7.png)
+![Alt Text](Images/8.png)
+![Alt Text](Images/9.png)
+![Alt Text](Images/10.png)
+![Alt Text](Images/11.png)
+![Alt Text](Images/12.png)
+
 
