@@ -84,7 +84,7 @@ Follow the steps below to perform RTL to gate-level synthesis using Yosys and th
 
 >read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
-**Step 2**: Read RTL Verilog
+**Step 2**: Read RTL Verilog [you need to get - `Successfully finished verilog frontend`message]
 
 >read_verilog good_mux.v
 
