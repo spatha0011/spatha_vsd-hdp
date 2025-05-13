@@ -143,7 +143,7 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 flatten
 
 # Write out the flattened netlist
-write_verilog -noattr multiple_module_opt2_flat.v
+write_verilog -noattr multiple_module_opt_flat.v
 ```
 ```bash
 
