@@ -104,3 +104,19 @@ The flip-flop responds to either the positive edge of clk or async_set.
 If async_set is high, the output q is immediately set to 1, regardless of the clock.
 
 If async_set is low (inactive), then q takes the value of d on the rising edge of the clock.
+
+## D Flip-Flop with Synchronous Reset
+
+This module defines a D Flip-Flop with a synchronous reset. The flip-flop captures the value of d on the rising edge of the clock, unless the synchronous reset is active.
+
+![Alt Text](Images/11.png)
+
+The always block triggers only on the rising edge of the clock.
+
+If sync_reset is high at the time of the clock edge, the output q is set to 0.
+
+If sync_reset is low, the output q is updated with the input d.
+
+`Synchronous reset depends on the clock:`
+The reset takes effect only when the clock edge occurs, which ensures predictable timing behavior and is easier for synthesis tools to optimize.
+
