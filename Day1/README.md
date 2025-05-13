@@ -4,20 +4,9 @@
 
 ## 📚 Table of Contents
 1. [Introduction to RTL Design and Simulation](#day-1--introduction-to-verilog-rtl-design-and-synthesis)  
-   - [Simulator Overview](#simulator)  
-   - [Design File Overview](#design)  
-   - [Testbench Role](#testbench)  
-   - [How the Simulator Works](#how-the-simulator-works)
-
 2. [iverilog-Based Simulation Flow](#iverilog-based-simulation-flow)  
-   - [Simulation Process Steps](#process)  
-   - [MUX 2:1 RTL Design and Testbench](#file-structure-mux-21-design-and-testbench)  
+3. [Yosys RTL-to-Gate-Level Synthesis Flow](#yosys-synthesis-flow-for-good_mux)
 
-3. [Yosys RTL-to-Gate-Level Synthesis Flow](#yosys-synthesis-flow-for-good_mux)  
-   - [Required Files and Setup](#yosys-synthesis-steps-for-good_mux)  
-   - [Step-by-Step Yosys Commands](#️step-by-step-yosys-flow)  
-   - [Visualization and Output Files](#synthesis-visualization)
-     
 ### Simulator
 RTL design is validated by simulating its behavior to ensure it adheres to the specifications.
 
