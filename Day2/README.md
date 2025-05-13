@@ -51,7 +51,7 @@ show multiple_modules
 write_verilog -noattr multiple_modules.v
 ```
 
->Preserves module hierarchy:
+It Preserves module hierarchy:
 
 Top: multiple_modules
 
