@@ -246,3 +246,42 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ![Alt Text](Images/18.png)
+
+## sequential Logic Optimisation examples
+
+## opt1
+
+![Alt Text](Images/20_a.png)
+
+![Alt Text](Images/20_wave.png)
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const1.v
+synth -top dff_const1
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![Alt Text](Images/20.png)
+
+## opt2
+
+![Alt Text](Images/21.png)
+
+![Alt Text](Images/21_design.png)
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const2.v
+synth -top dff_const2
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Alt Text](Images/21_wave.png)
+
+
