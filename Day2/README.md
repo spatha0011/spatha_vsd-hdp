@@ -190,7 +190,6 @@ show
 
 ## Synthesis of mul2
 
-###Design
 ![Alt Text](Images/21.png)
 
 ![Alt Text](Images/22.png)
