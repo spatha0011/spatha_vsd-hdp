@@ -212,6 +212,10 @@ show
 
 ![Alt Text](Images/28.png)
 
+![Alt Text](Images/25.png)
+
+![Alt Text](Images/26.png)
+
 ```bash
 yosys
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
