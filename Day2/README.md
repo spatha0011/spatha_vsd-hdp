@@ -185,3 +185,20 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ![Alt Text](Images/20.png)
+
+## Interesting optimisations part1
+
+## Synthesis of mul2
+
+![Alt Text](Images/21.png)
+![Alt Text](Images/22.png)
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_2.v
+synth -top mul2
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib [no need to do this step becoz no cells are used]
+show
+```
+![Alt Text](Images/23.png)
