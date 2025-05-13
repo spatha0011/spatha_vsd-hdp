@@ -160,4 +160,16 @@ show
 ```
 ![Alt Text](Images/17.png)
 
+## Synthesis of D Flip-Flop with Synchronous Reset
+## Synthesis of D Flip-Flop with Asynchronous Reset
 
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_syncres.v 
+synth -top dff_syncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![Alt Text](Images/19.png)
