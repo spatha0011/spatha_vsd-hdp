@@ -116,10 +116,12 @@ show
 
 ![Alt Text](Images/11.png)
 
-## opt5 - multiple_module_opt
+## opt5 - multiple_module_opt1
 
 ![Alt Text](Images/13.png)
 ![Alt Text](Images/14.png)
+
+## opt6 - multiple_module_opt2
 
 ```bash
 
@@ -129,10 +131,10 @@ yosys
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 # Read hierarchical RTL design
-read_verilog multiple_module_opt.v
+read_verilog multiple_module_opt2.v
 
 # Synthesize top module
-synth -top multiple_module_opt
+synth -top multiple_module_opt2
 
 # Map to standard cells using ABC
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -142,10 +144,17 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 flatten
 
 # Write out the flattened netlist
-write_verilog -noattr multiple_module_opt_flat.v
+write_verilog -noattr multiple_module_opt2_flat.v
+```
+```bash
+
+yosys
+
+# Load standard cell library (Liberty format)
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 # Read the flattened netlist for further optimization
-read_verilog multiple_module_opt_flat.v
+read_verilog multiple_module_opt2_flat.v
 
 # Remove unused logic and clean netlist
 opt_clean -purge   # Cleans up redundant gates and wires after flattening
@@ -153,6 +162,7 @@ opt_clean -purge   # Cleans up redundant gates and wires after flattening
 # Visualize optimized gate-level netlist
 show
 ```
+
 ![Alt Text](Images/15.png)
 
 >One AND2 gate (a & 1)
