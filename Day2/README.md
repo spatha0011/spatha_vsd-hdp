@@ -40,7 +40,7 @@ This section compares three variants of the 2-input AND gate from the `sky130_fd
 
 ## Hierarchical vs Flat Synthesis (Yosys)
 
-Design : multiple_modules.v
+###Design : multiple_modules.v
 
 ![Alt Text](Images/6.png)
 
@@ -70,4 +70,18 @@ flatten
 write_verilog -noattr multiple_modules_flat.v
 ```
 ![Alt Text](Images/5.png)
+
+###Design : multiple_modules_hier.v 
+
+![Alt Text](Images/8.png)
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules_hier.v
+synth -top multiple_modules
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show multiple_modules_hier
+write_verilog -noattr multiple_modules_hier.v
+```
 
