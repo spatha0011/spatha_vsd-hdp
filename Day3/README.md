@@ -82,3 +82,19 @@ show
 
 ![Alt Text](Images/6.png)
 
+### opt3
+
+![Alt Text](Images/7.png)
+![Alt Text](Images/8.png)
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check3.v 
+synth -top opt_check3
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Alt Text](Images/9.png)
