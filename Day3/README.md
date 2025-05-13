@@ -13,6 +13,7 @@
 7. [opt4](#opt4)
 8. [opt5 - multiple_module_opt1](#opt5---multiple_module_opt1)
 9. [opt6 - multiple_module_opt2](#opt6---multiple_module_opt2)
+10. [sequential-Logic-Optimisation-examples](#sequential-Logic-Optimisation-examples)
 
 ### Combinational Logic Optimisation
 
@@ -270,9 +271,9 @@ show
 
 ## opt2
 
-![Alt Text](Images/21.png)
-
 ![Alt Text](Images/21_design.png)
+
+![Alt Text](Images/21_wave.png)
 
 ```bash
 yosys
@@ -284,6 +285,6 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 
-![Alt Text](Images/21_wave.png)
+![Alt Text](Images/21.png)
 
 
