@@ -19,7 +19,7 @@
 13. [Synthesis of DFF with Both Async and Sync Reset](#synthesis-of-d-flip-flop-with-both-asynchronous-and-synchronous-reset)
 14. [Interesting Optimisations](#interesting-optimisations)
 15. [Part 1 - Synthesis of `mul2`](#part1---synthesis-of-mul2)
-16. [Part 2 - Synthesis of `mult8`](#part2---Synthesis-of-mult8)
+16. [Part 2 - Synthesis of `mult8`](#part2---synthesis-of-mult8)
 
 ##  Liberty Format
 
