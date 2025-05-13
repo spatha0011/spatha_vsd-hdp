@@ -137,7 +137,7 @@ synth -top multiple_module_opt
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 # Flatten design hierarchy 
-# `Essential before performing optimization on multi-module RTLs`
+# 🔸Essential before performing optimization on multi-module RTLs
 flatten
 
 # Write out the flattened netlist
