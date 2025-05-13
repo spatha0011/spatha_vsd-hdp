@@ -119,8 +119,7 @@ If sync_reset is high at the time of the clock edge, the output q is set to 0.
 
 If sync_reset is low, the output q is updated with the input d.
 
-`Synchronous reset depends on the clock:`
-The reset takes effect only when the clock edge occurs, which ensures predictable timing behavior and is easier for synthesis tools to optimize.
+![Alt Text](Images/15.png)
 
 ## D Flip-Flop with Both Asynchronous and Synchronous Reset
 
