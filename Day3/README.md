@@ -122,6 +122,9 @@ show
 ![Alt Text](Images/14.png)
 
 ```bash
+
+yosys
+
 # Load standard cell library (Liberty format)
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
