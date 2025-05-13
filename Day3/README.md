@@ -4,13 +4,14 @@
 
 # 📘 Table of Contents
 
-- [Day 3 : Combinational and sequential optmizations](#day-3--combinational-and-sequential-optmizations)
-- [opt1](#opt1)
-- [opt2](#opt2)
-- [opt3](#opt3)
-- [opt4](#opt4)
-- [opt5 - multiple_module_opt1](#opt5---multiple_module_opt1)
-- [opt6 - multiple_module_opt2](#opt6---multiple_module_opt2)
+1. [Combinational Logic Optimisation](#day-3--combinational-and-sequential-optmizations)
+2. [Sequential Logic Optimisation](#day-3--combinational-and-sequential-optmizations)
+3. [opt1](#opt1)
+4. [opt2](#opt2)
+5. [opt3](#opt3)
+6. [opt4](#opt4)
+7. [opt5 - multiple_module_opt1](#opt5---multiple_module_opt1)
+8. [opt6 - multiple_module_opt2](#opt6---multiple_module_opt2)
 
 ### Combinational Logic Optimisation
 
