@@ -137,7 +137,7 @@ synth -top multiple_module_opt
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 # Flatten design hierarchy 
-# 🔸 Essential before performing optimization on multi-module RTLs
+# `Essential before performing optimization on multi-module RTLs`
 flatten
 
 # Write out the flattened netlist
@@ -147,7 +147,7 @@ write_verilog -noattr multiple_module_opt_flat.v
 read_verilog multiple_module_opt_flat.v
 
 # Remove unused logic and clean netlist
-opt_clean -purge   # 🔍 Cleans up redundant gates and wires after flattening
+opt_clean -purge   # Cleans up redundant gates and wires after flattening
 
 # Visualize optimized gate-level netlist
 show
