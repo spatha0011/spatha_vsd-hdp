@@ -128,6 +128,4 @@ Asynchronous reset has higher priority and takes effect immediately, while synch
 
 ![Alt Text](Images/12.png)
 
---------------------------------------
-
 ![Alt Text](Images/13.png)
