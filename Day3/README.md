@@ -48,7 +48,7 @@ Squeeze and simplify logic to get the most optimized design in terms of **area**
 - **Sequential Logic Cloning**
   - Duplicates logic in floorplan-aware synthesis to meet timing and congestion goals.
  
-### opt1
+## opt1
 
 ![Alt Text](Images/1.png)
 ![Alt Text](Images/2.png)
@@ -65,7 +65,7 @@ show
 
 ![Alt Text](Images/5.png)
 
-### opt2
+## opt2
 
 ![Alt Text](Images/3.png)
 ![Alt Text](Images/4.png)
@@ -82,7 +82,7 @@ show
 
 ![Alt Text](Images/6.png)
 
-### opt3
+## opt3
 
 ![Alt Text](Images/7.png)
 ![Alt Text](Images/8.png)
@@ -99,7 +99,7 @@ show
 
 ![Alt Text](Images/9.png)
 
-### opt4
+## opt4
 
 ![Alt Text](Images/10.png)
 ![Alt Text](Images/12.jpeg)
@@ -116,7 +116,7 @@ show
 
 ![Alt Text](Images/11.png)
 
-### opt5
+## opt5 - multiple_module_opt
 
 ![Alt Text](Images/13.png)
 ![Alt Text](Images/14.png)
@@ -152,6 +152,7 @@ show
 ```
 ![Alt Text](Images/15.png)
 
-
+>One AND2 gate (a & 1)
+>One A21O gate ((a & b) | c)
 
 
