@@ -7,13 +7,7 @@
 1. [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
 2. [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
 3. [Combinational Logic Optimisation examples](#Combinational-Logic-Optimisation-examples)
-4. [opt1](#opt1)
-5. [opt2](#opt2)
-6. [opt3](#opt3)
-7. [opt4](#opt4)
-8. [opt5 - multiple_module_opt1](#opt5---multiple_module_opt1)
-9. [opt6 - multiple_module_opt2](#opt6---multiple_module_opt2)
-10. [sequential-Logic-Optimisation-examples](#sequential-Logic-Optimisation-examples)
+4.  [sequential-Logic-Optimisation-examples](#sequential-Logic-Optimisation-examples)
 
 ### Combinational Logic Optimisation
 
