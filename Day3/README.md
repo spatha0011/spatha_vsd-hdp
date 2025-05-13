@@ -251,6 +251,8 @@ show
 
 ## opt1
 
+![Alt Text](Images/22.png)
+
 ![Alt Text](Images/20_a.png)
 
 ![Alt Text](Images/20_wave.png)
@@ -267,8 +269,6 @@ show
 ![Alt Text](Images/20.png)
 
 ## opt2
-
-![Alt Text](Images/22.png)
 
 ![Alt Text](Images/21.png)
 
