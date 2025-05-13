@@ -182,4 +182,55 @@ show
 
 ![Alt Text](Images/16.png)
 ![Alt Text](Images/19.png)
+
+```bash
+# --------Phase 1: Flatten the hierarchical RTL design---------------
+
+# Invoke yosys
+yosys
+
+# Load standard cell library (Liberty format)
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Read hierarchical RTL design
+read_verilog multiple_module_opt2.v
+
+# Synthesize top module
+synth -top multiple_module_opt2
+
+# Map to standard cells using ABC
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Flatten design hierarchy 
+# 🔸Essential before performing optimization on multi-module RTLs
+flatten
+
+# Write out the flattened netlist
+write_verilog -noattr multiple_module_opt2_flat.v
+```
+```bash
+
+# ----------Phase 2: Optimize the flattened netlist-------------
+
+# Invoke yosys
+yosys
+
+# Load standard cell library (Liberty format)
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Read the flattened netlist for further optimization
+read_verilog multiple_module_opt2_flat.v
+
+# Synthesize top module
+synth -top multiple_module_opt2
+
+# Remove unused logic and clean netlist
+opt_clean -purge   # Cleans up redundant gates and wires after flattening
+
+# Map to standard cells using ABC
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Visualize optimized gate-level netlist
+show
+```
 ![Alt Text](Images/18.png)
