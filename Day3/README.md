@@ -306,3 +306,21 @@ show
 ```
 
 ![Alt Text](Images/23_d.png)
+
+## opt4
+
+![Alt Text](Images/24_a.png)
+
+![Alt Text](Images/24_b.png)
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const4.v
+synth -top dff_const4
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Alt Text](Images/24_c.png)
