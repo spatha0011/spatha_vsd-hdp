@@ -186,11 +186,11 @@ show
 ```
 ![Alt Text](Images/20.png)
 
-## Interesting optimisations part1
+## Interesting optimisations
 
 Optimization in synthesis refers to simplifying the RTL logic to make the design more efficient. In the below examples, you can see that the Yosys removes redundant logic, simplifies expressions, and reduces gate count without changing functionality.
 
-## Synthesis of mul2
+## part1 - Synthesis of mul2
 
 ![Alt Text](Images/21.png)
 
@@ -209,7 +209,8 @@ write_verilog -noattr mult2_net.v
 
 ![Alt Text](Images/24.png)
 
-## Interesting optimisations part2
+
+## part2  - Synthesis of mul8
 
 ![Alt Text](Images/28.png)
 
