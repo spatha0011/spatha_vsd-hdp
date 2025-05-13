@@ -120,3 +120,14 @@ If sync_reset is low, the output q is updated with the input d.
 `Synchronous reset depends on the clock:`
 The reset takes effect only when the clock edge occurs, which ensures predictable timing behavior and is easier for synthesis tools to optimize.
 
+## D Flip-Flop with Both Asynchronous and Synchronous Reset
+
+This design supports both asynchronous and synchronous reset behavior.
+
+Asynchronous reset has higher priority and takes effect immediately, while synchronous reset is evaluated at the clock edge.
+
+![Alt Text](Images/12.png)
+
+--------------------------------------
+
+![Alt Text](Images/13.png)
