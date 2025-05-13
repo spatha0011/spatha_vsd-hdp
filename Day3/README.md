@@ -287,4 +287,22 @@ show
 
 ![Alt Text](Images/21.png)
 
+## opt3
 
+![Alt Text](Images/23_a.png)
+
+![Alt Text](Images/23_b.png)
+
+![Alt Text](Images/23_c.png)
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const3.v
+synth -top dff_const3
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![Alt Text](Images/23_d.png)
