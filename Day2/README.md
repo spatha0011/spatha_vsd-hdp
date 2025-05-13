@@ -105,6 +105,8 @@ If async_set is high, the output q is immediately set to 1, regardless of the cl
 
 If async_set is low (inactive), then q takes the value of d on the rising edge of the clock.
 
+![Alt Text](Images/14.png)
+
 ## D Flip-Flop with Synchronous Reset
 
 This module defines a D Flip-Flop with a synchronous reset. The flip-flop captures the value of d on the rising edge of the clock, unless the synchronous reset is active.
