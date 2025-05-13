@@ -131,10 +131,10 @@ yosys
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 # Read hierarchical RTL design
-read_verilog multiple_module_opt2.v
+read_verilog multiple_module_opt.v
 
 # Synthesize top module
-synth -top multiple_module_opt2
+synth -top multiple_module_opt
 
 # Map to standard cells using ABC
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -154,7 +154,7 @@ yosys
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 # Read the flattened netlist for further optimization
-read_verilog multiple_module_opt2_flat.v
+read_verilog multiple_module_opt_flat.v
 
 # Remove unused logic and clean netlist
 opt_clean -purge   # Cleans up redundant gates and wires after flattening
