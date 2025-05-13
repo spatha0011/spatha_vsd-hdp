@@ -21,3 +21,10 @@ In the second part of Lib file, it contains cell-specific information for each c
 
 ![Alt Text](Images/2.png)
 
+## Standard Cell Example: `a2111o_1`
+
+The cell `a2111o_1` from the `sky130_fd_sc_hd__tt_025C_1v80.lib` library implements the following logic:
+
+X = ((A1 & A2) | B1 | C1 | D1)
+
+![Alt Text](Images/3.png)
