@@ -188,6 +188,8 @@ show
 
 ## Interesting optimisations part1
 
+Optimization in synthesis refers to simplifying the RTL logic to make the design more efficient. In the mul2 example, Yosys removes redundant logic, simplifies expressions, and reduces gate count without changing functionality.
+
 ## Synthesis of mul2
 
 ![Alt Text](Images/21.png)
