@@ -71,3 +71,13 @@ write_verilog -noattr multiple_modules_flat.v
 ```
 ![Alt Text](Images/5.png)
 
+
+### Why Do We Use Flops? (To Avoid Glitches)
+Combinational circuits can produce glitches — short, unwanted changes in output — when the inputs change at slightly different times. This happens because the logic takes a little time to settle when multiple signals arrive with different delays.
+
+These glitches can cause problems, especially if they are captured by other parts of the circuit.
+
+To solve this, we insert flip-flops between combinational blocks. Flip-flops are edge-sensitive, which means they only capture data at a specific moment (like the rising edge of a clock). This helps ensure that only stable, correct data is passed forward, and any glitches that happened before the clock edge are ignored.
+
+![Alt Text](Images/8.png)
+
