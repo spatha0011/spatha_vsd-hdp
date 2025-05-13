@@ -93,6 +93,8 @@ async_reset is checked first, so if it is high (1), it immediately resets q to 0
 
 The clock (clk) only matters when async_reset is low (inactive).
 
+![Alt Text](Images/15.png)
+
 ## D Flip-Flop with Asynchronous set
 
 This module defines a D Flip-Flop with an asynchronous set. It captures input d on the rising edge of the clock, unless the asynchronous set is active.
@@ -118,8 +120,6 @@ The always block triggers only on the rising edge of the clock.
 If sync_reset is high at the time of the clock edge, the output q is set to 0.
 
 If sync_reset is low, the output q is updated with the input d.
-
-![Alt Text](Images/15.png)
 
 ## D Flip-Flop with Both Asynchronous and Synchronous Reset
 
