@@ -119,7 +119,9 @@ The always block triggers only on the rising edge of the clock.
 
 If sync_reset is high at the time of the clock edge, the output q is set to 0.
 
-If sync_reset is low, the output q is updated with the input d.
+If sync_reset is low, the output q is updated with the input d. 
+
+![Alt Text](Images/16.png)
 
 ## D Flip-Flop with Both Asynchronous and Synchronous Reset
 
