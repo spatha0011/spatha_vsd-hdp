@@ -208,3 +208,17 @@ show
 
 ## Interesting optimisations part2
 
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mul2_net.v
+synth -top mul2
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib [no need to do this step becoz no cells are used]
+show
+rite_verilog -noattr mul2_net.v 
+```
+![Alt Text](Images/25.png)
+
+![Alt Text](Images/26.png)
+
+![Alt Text](Images/27.png)
