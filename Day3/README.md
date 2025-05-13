@@ -123,7 +123,7 @@ show
 
 
 ```bash
-
+# Invoke yosys
 yosys
 
 # Load standard cell library (Liberty format)
@@ -147,6 +147,7 @@ write_verilog -noattr multiple_module_opt_flat.v
 ```
 ```bash
 
+# Invoke yosys
 yosys
 
 # Load standard cell library (Liberty format)
