@@ -61,6 +61,7 @@ Top: multiple_modules
 
 Submodules: sub_module1, sub_module2
 
+![Alt Text](Images/7.png)
 
 ### Flattened Flow:
 
