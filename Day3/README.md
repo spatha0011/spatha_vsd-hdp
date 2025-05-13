@@ -121,7 +121,6 @@ show
 ![Alt Text](Images/13.png)
 ![Alt Text](Images/14.png)
 
-## opt6 - multiple_module_opt2
 
 ```bash
 
@@ -168,4 +167,4 @@ show
 >One AND2 gate (a & 1)
 >One A21O gate ((a & b) | c)
 
-
+## opt6 - multiple_module_opt2
