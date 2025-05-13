@@ -92,3 +92,15 @@ In the dff_asyncres module, the asynchronous reset has higher priority than the 
 async_reset is checked first, so if it is high (1), it immediately resets q to 0.
 
 The clock (clk) only matters when async_reset is low (inactive).
+
+## D Flip-Flop with Asynchronous set
+
+This module defines a D Flip-Flop with an asynchronous set. It captures input d on the rising edge of the clock, unless the asynchronous set is active.
+
+![Alt Text](Images/10.png)
+
+The flip-flop responds to either the positive edge of clk or async_set.
+
+If async_set is high, the output q is immediately set to 1, regardless of the clock.
+
+If async_set is low (inactive), then q takes the value of d on the rising edge of the clock.
