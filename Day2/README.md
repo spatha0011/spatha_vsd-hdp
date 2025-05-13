@@ -28,3 +28,12 @@ The cell `a2111o_1` from the `sky130_fd_sc_hd__tt_025C_1v80.lib` library impleme
 X = ((A1 & A2) | B1 | C1 | D1)
 
 ![Alt Text](Images/3.png)
+
+## Standard Cell Comparison: `and2_1`, `and2_2`, and `and2_4`
+
+This section compares three variants of the 2-input AND gate from the `sky130_fd_sc_hd` library:
+- `and2_1`
+- `and2_2`
+- `and2_4`
+
+![Alt Text](Images/4.png)
