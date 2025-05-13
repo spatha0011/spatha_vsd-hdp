@@ -2,6 +2,25 @@
 
 ## Day 2 : Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 
+## 📚 Table of Contents
+
+1. [Liberty Format](#liberty-format)
+2. [Standard Cell Example: `a2111o_1`](#standard-cell-example-a2111o_1)
+3. [Standard Cell Comparison: `and2_1`, `and2_2`, and `and2_4`](#standard-cell-comparison-and2_1-and2_2-and-and2_4)
+4. [Hierarchical vs Flat Synthesis (Yosys)](#hierarchical-vs-flat-synthesis-yosys)
+5. [Why Do We Use Flops? (To Avoid Glitches)](#why-do-we-use-flops-to-avoid-glitches)
+6. [D Flip-Flop with Asynchronous Reset](#d-flip-flop-with-asynchronous-reset)
+7. [D Flip-Flop with Asynchronous Set](#d-flip-flop-with-asynchronous-set)
+8. [D Flip-Flop with Synchronous Reset](#d-flip-flop-with-synchronous-reset)
+9. [D Flip-Flop with Both Asynchronous and Synchronous Reset](#d-flip-flop-with-both-asynchronous-and-synchronous-reset)
+10. [Synthesis of DFF with Async Set](#synthesis-of-d-flip-flop-with-asynchronous-set)
+11. [Synthesis of DFF with Async Reset](#synthesis-of-d-flip-flop-with-asynchronous-reset)
+12. [Synthesis of DFF with Sync Reset](#synthesis-of-d-flip-flop-with-synchronous-reset)
+13. [Synthesis of DFF with Both Async and Sync Reset](#synthesis-of-d-flip-flop-with-both-asynchronous-and-synchronous-reset)
+14. [Interesting Optimisations](#interesting-optimisations)
+15. [Part 1 - Synthesis of `mul2`](#part1---synthesis-of-mul2)
+16. [Part 2 - Synthesis of `mult8`](#part2---synthesis-of-mult8)
+
 ##  Liberty Format
 
 Liberty format is an industry standard format used to describe library cells of a particular technology. A cell could be a standard cell, IO buffer, complex IP, etc. Library cell description contains a lot of information like timing information, power estimation, and several other attributes like area, functionality, and operating conditions. Speaking more technically, Liberty format is a format to represent timing and power properties of black boxes (which we can't descend into). Liberty is an ASCII format, usually represented in a text file with the extension `.lib`.
@@ -210,7 +229,7 @@ write_verilog -noattr mult2_net.v
 ![Alt Text](Images/24.png)
 
 
-## part2  - Synthesis of mul8
+## part2  - Synthesis of mult8
 
 ![Alt Text](Images/28.png)
 
