@@ -81,3 +81,14 @@ To solve this, we insert flip-flops between combinational blocks. Flip-flops are
 
 ![Alt Text](Images/8.png)
 
+## D Flip-Flop with Asynchronous Reset
+
+This module defines a D Flip-Flop with an asynchronous reset. It captures the input d on the rising edge of the clock, unless the asynchronous reset is activated.
+
+![Alt Text](Images/9.png)
+
+In the dff_asyncres module, the asynchronous reset has higher priority than the clock.
+
+async_reset is checked first, so if it is high (1), it immediately resets q to 0.
+
+The clock (clk) only matters when async_reset is low (inactive).
