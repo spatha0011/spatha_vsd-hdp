@@ -2,7 +2,7 @@
 
 ## Day 3 : Combinational and sequential optmizations
 
-# 📘 Table of Contents
+# 📚 Table of Contents
 
 1. [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
 2. [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
