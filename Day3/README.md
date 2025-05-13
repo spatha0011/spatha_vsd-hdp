@@ -34,7 +34,7 @@ Squeeze and simplify logic to get the most optimized design in terms of **area**
 
 ---
 
-### ⏱Sequential Logic Optimisation
+### Sequential Logic Optimisation
 
 #### Basic:
 - **Sequential Constant Propagation**  
