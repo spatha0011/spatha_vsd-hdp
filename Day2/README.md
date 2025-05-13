@@ -203,3 +203,8 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib [no need to do this step b
 show
 ```
 ![Alt Text](Images/23.png)
+
+![Alt Text](Images/24.png)
+
+## Interesting optimisations part2
+
