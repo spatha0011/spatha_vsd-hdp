@@ -4,8 +4,8 @@
 
 # 📘 Table of Contents
 
-1. [Combinational Logic Optimisation](#day-3--combinational-and-sequential-optmizations)
-2. [Sequential Logic Optimisation](#day-3--combinational-and-sequential-optmizations)
+1. [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
+2. [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
 3. [opt1](#opt1)
 4. [opt2](#opt2)
 5. [opt3](#opt3)
