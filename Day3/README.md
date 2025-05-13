@@ -6,12 +6,13 @@
 
 1. [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
 2. [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
-3. [opt1](#opt1)
-4. [opt2](#opt2)
-5. [opt3](#opt3)
-6. [opt4](#opt4)
-7. [opt5 - multiple_module_opt1](#opt5---multiple_module_opt1)
-8. [opt6 - multiple_module_opt2](#opt6---multiple_module_opt2)
+3. [Combinational Logic Optimisation examples](#Combinational-Logic-Optimisation-examples)
+4. [opt1](#opt1)
+5. [opt2](#opt2)
+6. [opt3](#opt3)
+7. [opt4](#opt4)
+8. [opt5 - multiple_module_opt1](#opt5---multiple_module_opt1)
+9. [opt6 - multiple_module_opt2](#opt6---multiple_module_opt2)
 
 ### Combinational Logic Optimisation
 
@@ -57,7 +58,8 @@ Squeeze and simplify logic to get the most optimized design in terms of **area**
   - Moves registers across logic boundaries to balance delay and improve timing.
 - **Sequential Logic Cloning**
   - Duplicates logic in floorplan-aware synthesis to meet timing and congestion goals.
- 
+    
+## Combinational Logic Optimisation examples
 ## opt1
 
 ![Alt Text](Images/1.png)
