@@ -132,3 +132,18 @@ Asynchronous reset has higher priority and takes effect immediately, while synch
 ![Alt Text](Images/12.png)
 
 ![Alt Text](Images/13.png)
+
+## Synthesis of D Flip-Flop with Asynchronous Reset
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v 
+synth -top dff_asyncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![Alt Text](Images/17.png)
+
+
