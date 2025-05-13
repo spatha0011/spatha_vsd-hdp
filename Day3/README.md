@@ -123,6 +123,8 @@ show
 
 
 ```bash
+# --------Phase 1: Flatten the hierarchical RTL design---------------
+
 # Invoke yosys
 yosys
 
@@ -146,6 +148,8 @@ flatten
 write_verilog -noattr multiple_module_opt_flat.v
 ```
 ```bash
+
+# ----------Phase 2: Optimize the flattened netlist-------------
 
 # Invoke yosys
 yosys
