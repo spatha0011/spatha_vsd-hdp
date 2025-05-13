@@ -116,12 +116,10 @@ show
 
 ![Alt Text](Images/11.png)
 
-
-yosys
-
 ### opt5
 
 ![Alt Text](Images/13.png)
+![Alt Text](Images/14.png)
 
 ```bash
 # Load standard cell library (Liberty format)
@@ -152,4 +150,8 @@ opt_clean -purge   # Cleans up redundant gates and wires after flattening
 # Visualize optimized gate-level netlist
 show
 ```
-![Alt Text](Images/14.png)
+![Alt Text](Images/15.png)
+
+
+
+
