@@ -161,7 +161,6 @@ show
 ![Alt Text](Images/17.png)
 
 ## Synthesis of D Flip-Flop with Synchronous Reset
-## Synthesis of D Flip-Flop with Asynchronous Reset
 
 ```bash
 yosys
