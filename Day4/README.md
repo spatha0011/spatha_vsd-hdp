@@ -14,7 +14,7 @@
 6. [Synthesis-Simulation Mismatch of Bad MUX design](#synthesis-simulation-mismatch-of-bad-mux-design)  
 7. [Synthesis of blocking_caveat design](#synthesis-of-blocking_caveat-design)  
 8. [GLS of blocking_caveat design](#gls-of-blocking_caveat-design)  
-9. [Synthesis-Simulation Mismatch of blocking_caveat design](#synthesis-simulation-mismatch-of-bad-mux-design)
+9. [Synthesis-Simulation Mismatch of blocking_caveat design](#synthesis-simulation-mismatch-of-blocking_caveat-design)
 
    
 ![Alt Text](Images/1.png)
@@ -180,6 +180,6 @@ gtkwave tb_blocking_caveat.vcd
 ```
 ![Alt Text](Images/bl_4.png)
 
-## Synthesis-Simulation Mismatch of Bad MUX design
+## Synthesis-Simulation Mismatch of blocking_caveat design
 
 ![Alt Text](Images/bl_5.png)
