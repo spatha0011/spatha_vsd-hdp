@@ -128,7 +128,7 @@ The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL
 
 ![Alt Text](Images/10_d.png)
 
-## Synthesis blocking_caveat.v
+## Synthesis of blocking_caveat.v
 
 ![Alt Text](Images/bl_1.png)
 
@@ -165,7 +165,7 @@ write_verilog -noattr blocking_caveat_net.v
 ```
 ![Alt Text](Images/bl_3.png)
 
-## GLS of Bad MUX
+## GLS of blocking_caveat.v
 
 ```bash
 iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
