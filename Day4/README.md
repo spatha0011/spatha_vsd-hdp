@@ -4,14 +4,18 @@
 
 ## 📚 Table of Contents
 
+## 📚 Table of Contents
+
 1. [Day 4 Overview](#vsd-hardware-design-program)  
 2. [Synthesis of Ternary Operator MUX](#synthesis-of-ternary-operator-mux)  
 3. [GLS (Gate Level Simulation) of Ternary Operator MUX](#gls-gate-level-simulation-of-ternary-operator-mux)  
-4. [Synthesis of Bad MUX](#synthesis-of-bad-mux)  
-5. [GLS of Bad MUX](#gls-of-bad-mux)  
-6. [Synthesis-Simulation Mismatch](#synthesis-simulation-mismatch)  
-7. [Synthesis of blocking_caveat.v](#synthesis-of-blocking_caveat-design)  
-8. [GLS of blocking_caveat.v](#gls-of-blocking_caveat-design)  
+4. [Synthesis of Bad MUX design](#synthesis-of-bad-mux-design)  
+5. [GLS of Bad MUX design](#gls-of-bad-mux-design)  
+6. [Synthesis-Simulation Mismatch of Bad MUX design](#synthesis-simulation-mismatch-of-bad-mux-design)  
+7. [Synthesis of blocking_caveat design](#synthesis-of-blocking_caveat-design)  
+8. [GLS of blocking_caveat design](#gls-of-blocking_caveat-design)  
+9. [Synthesis-Simulation Mismatch of blocking_caveat design](#synthesis-simulation-mismatch-of-bad-mux-design)
+
    
 ![Alt Text](Images/1.png)
 ![Alt Text](Images/2.png)
@@ -76,7 +80,7 @@ gtkwave tb_ternary_operator_mux.vcd
 ```
 ![Alt Text](Images/9_a.png)
 
-## Synthesis of Bad MUX
+## Synthesis of Bad MUX design
 
 This bad_mux uses a blocking sensitivity list (@ (sel)) without including data inputs (i0, i1), leading to a simulation-synthesis mismatch due to incomplete sensitivity.
 
@@ -115,7 +119,7 @@ write_verilog -noattr bad_mux_net.v
 ```
 ![Alt Text](Images/10_c.png)
 
-## GLS of Bad MUX
+## GLS of Bad MUX design
 
 ```bash
 iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
@@ -124,7 +128,7 @@ gtkwave tb_bad_mux.vcd
 ```
 ![Alt Text](Images/10_e.png)
 
-## Synthesis-Simulation Mismatch
+## Synthesis-Simulation Mismatch of Bad MUX design
 
 The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL not including i0 and i1 in the sensitivity list.
 
@@ -175,3 +179,7 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
 gtkwave tb_blocking_caveat.vcd
 ```
 ![Alt Text](Images/bl_4.png)
+
+## Synthesis-Simulation Mismatch of Bad MUX design
+
+![Alt Text](Images/bl_5.png)
