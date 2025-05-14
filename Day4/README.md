@@ -109,6 +109,6 @@ gtkwave tb_bad_mux.vcd
 ```
 ![Alt Text](Images/10_e.png)
 
-The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL not including i0 and i1 in the sensitivity list, leading to incorrect simulation behavior not seen in synthesized hardware.
+The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL not including i0 and i1 in the sensitivity list.
 
 ![Alt Text](Images/10_d.png)
