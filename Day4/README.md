@@ -24,6 +24,8 @@ This module implements a 2:1 multiplexer using a ternary (conditional) operator.
 
 ![Alt Text](Images/8_a.png)
 
+### RTL simulation
+
 ```bash
 iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
 ./a.out
@@ -59,6 +61,8 @@ write_verilog -noattr ternary_operator_mux_net.v
 ## GLS (Gate level simulation) of Ternary Operator MUX
 
 Gate-Level Simulation is performed using the synthesized netlist (ternary_operator_mux_net.v) instead of RTL. This helps verify the functional correctness of the design after synthesis, using the actual standard cells and any delays (if modeled)
+
+### RTL simulation
 
 ```bash
 # Compile the gate-level netlist and testbench
