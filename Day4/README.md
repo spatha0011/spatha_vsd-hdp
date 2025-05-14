@@ -64,6 +64,9 @@ gtkwave tb_ternary_operator_mux.vcd
 ![Alt Text](Images/9_a.png)
 
 ## Synthesis of Bad MUX
+
+This bad_mux uses a blocking sensitivity list (@ (sel)) without including data inputs (i0, i1), leading to a simulation-synthesis mismatch due to incomplete sensitivity.
+
 ![Alt Text](Images/10_a.png)
 
 ```bash
