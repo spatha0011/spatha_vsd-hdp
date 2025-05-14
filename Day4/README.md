@@ -62,8 +62,6 @@ write_verilog -noattr ternary_operator_mux_net.v
 
 Gate-Level Simulation is performed using the synthesized netlist (ternary_operator_mux_net.v) instead of RTL. This helps verify the functional correctness of the design after synthesis, using the actual standard cells and any delays (if modeled)
 
-### RTL simulation
-
 ```bash
 # Compile the gate-level netlist and testbench
 iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
@@ -81,6 +79,8 @@ gtkwave tb_ternary_operator_mux.vcd
 This bad_mux uses a blocking sensitivity list (@ (sel)) without including data inputs (i0, i1), leading to a simulation-synthesis mismatch due to incomplete sensitivity.
 
 ![Alt Text](Images/10_a.png)
+
+### RTL simulation
 
 ```bash
 iverilog bad_mux.v tb_bad_mux.v
