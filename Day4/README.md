@@ -2,6 +2,15 @@
 
 ## Day 4 : GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
+## 📚 Table of Contents
+
+1. [Day 4 Overview](#vsd-hardware-design-program)  
+2. [Synthesis of Ternary Operator MUX using Yosys and Sky130](#synthesis-of-ternary-operator-mux-using)  
+3. [GLS (Gate Level Simulation) of Ternary Operator MUX](#gls-gate-level-simulation-of-ternary-operator-mux)  
+4. [Synthesis of Bad MUX](#synthesis-of-bad-mux)  
+5. [GLS of Bad MUX](#gls-of-bad-mux)  
+6. [Key Learning: Synthesis-Simulation Mismatch](#gls-of-bad-mux)
+   
 ![Alt Text](Images/1.png)
 ![Alt Text](Images/2.png)
 ![Alt Text](Images/3.png)
