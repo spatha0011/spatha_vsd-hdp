@@ -88,6 +88,7 @@ Submodules: sub_module1, sub_module2
 flatten
 write_verilog -noattr multiple_modules_flat.v
 ```
+![Alt Text](Images/flatten.png)
 ![Alt Text](Images/5.png)
 
 
