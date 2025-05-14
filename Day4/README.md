@@ -63,7 +63,7 @@ gtkwave tb_ternary_operator_mux.vcd
 ```
 ![Alt Text](Images/9_a.png)
 
-## Synthesis of Ternary Bad MUX
+## Synthesis of Bad MUX
 ![Alt Text](Images/10_a.png)
 
 ```bash
