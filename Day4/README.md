@@ -30,7 +30,7 @@ This module implements a 2:1 multiplexer using a ternary (conditional) operator.
 
 ![Alt Text](Images/8_a.png)
 
-### RTL simulation
+### `RTL simulation`
 
 ```bash
 iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
@@ -86,7 +86,7 @@ This bad_mux uses a blocking sensitivity list (@ (sel)) without including data i
 
 ![Alt Text](Images/10_a.png)
 
-### RTL simulation
+### `RTL simulation`
 
 ```bash
 iverilog bad_mux.v tb_bad_mux.v
