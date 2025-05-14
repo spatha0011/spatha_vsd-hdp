@@ -9,7 +9,7 @@
 3. [GLS (Gate Level Simulation) of Ternary Operator MUX](#gls-gate-level-simulation-of-ternary-operator-mux)  
 4. [Synthesis of Bad MUX](#synthesis-of-bad-mux)  
 5. [GLS of Bad MUX](#gls-of-bad-mux)  
-6. [Key Learning: Synthesis-Simulation Mismatch](#gls-of-bad-mux)
+6. [Key Learning: Synthesis-Simulation Mismatch](#synthesis-Simulation-Mismatch)
    
 ![Alt Text](Images/1.png)
 ![Alt Text](Images/2.png)
@@ -118,6 +118,7 @@ gtkwave tb_bad_mux.vcd
 ```
 ![Alt Text](Images/10_e.png)
 
+## Synthesis-Simulation Mismatch
 The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL not including i0 and i1 in the sensitivity list.
 
 ![Alt Text](Images/10_d.png)
