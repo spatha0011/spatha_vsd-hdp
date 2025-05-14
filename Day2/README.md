@@ -83,6 +83,9 @@ Submodules: sub_module1, sub_module2
 ![Alt Text](Images/7.png)
 
 ### Flattened Flow:
+A flat design is a representation where all hierarchical module structures are collapsed into a single level, eliminating submodules and integrating their logic directly into the top-level module.
+
+No submodules are preserved.
 
 ```bash
 flatten
