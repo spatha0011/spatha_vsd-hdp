@@ -129,7 +129,7 @@ The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL
 
 ## Synthesis locking_caveat.v
 
-![Alt Text](Images/b1_1.png)
+![Alt Text](Images/bl_1.png)
 
 ### RTL simulation
 
