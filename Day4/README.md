@@ -5,7 +5,7 @@
 ## 📚 Table of Contents
 
 1. [Day 4 Overview](#vsd-hardware-design-program)  
-2. [Synthesis of Ternary Operator MUX using Yosys and Sky130](#synthesis-of-ternary-operator-mux-using)  
+2. [Synthesis of Ternary Operator MUX using Yosys and Sky130](#synthesis-of-ternary-operator-mux)  
 3. [GLS (Gate Level Simulation) of Ternary Operator MUX](#gls-gate-level-simulation-of-ternary-operator-mux)  
 4. [Synthesis of Bad MUX](#synthesis-of-bad-mux)  
 5. [GLS of Bad MUX](#gls-of-bad-mux)  
@@ -18,7 +18,7 @@
 ![Alt Text](Images/5.png)
 ![Alt Text](Images/7.png)
 
-## Synthesis of Ternary Operator MUX using
+## Synthesis of Ternary Operator MUX
 
 This module implements a 2:1 multiplexer using a ternary (conditional) operator.
 
