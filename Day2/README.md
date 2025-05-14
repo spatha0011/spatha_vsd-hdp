@@ -59,7 +59,7 @@ This section compares three variants of the 2-input AND gate from the `sky130_fd
 
 ## Hierarchical vs Flat Synthesis (Yosys)
 
-###Design : multiple_modules.v
+### Design : multiple_modules.v
 
 ![Alt Text](Images/6.png)
 
