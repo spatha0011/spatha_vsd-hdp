@@ -47,7 +47,7 @@ write_verilog -noattr ternary_operator_mux_net.v
 
 ![Alt Text](Images/8_c.png)
 
-## Gate-Level Simulation (GLS) of Ternary Operator MUX
+## GLS of Ternary Operator MUX
 
 Gate-Level Simulation is performed using the synthesized netlist (ternary_operator_mux_net.v) instead of RTL. This helps verify the functional correctness of the design after synthesis, using the actual standard cells and any delays (if modeled)
 
@@ -99,3 +99,14 @@ show
 write_verilog -noattr bad_mux_net.v
 ```
 ![Alt Text](Images/10_c.png)
+
+## GLS of Bad MUX
+
+```bash
+iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+![Alt Text](Images/10_e.png)
+
+![Alt Text](Images/10_d.png)
