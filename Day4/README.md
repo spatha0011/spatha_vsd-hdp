@@ -126,3 +126,15 @@ gtkwave tb_bad_mux.vcd
 The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL not including i0 and i1 in the sensitivity list.
 
 ![Alt Text](Images/10_d.png)
+
+## Synthesis locking_caveat.v
+
+![Alt Text](Images/b1_1.png)
+
+### RTL simulation
+
+```bash
+iverilog blocking_caveat.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
