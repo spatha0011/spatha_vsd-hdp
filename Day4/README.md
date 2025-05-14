@@ -123,6 +123,7 @@ gtkwave tb_bad_mux.vcd
 ![Alt Text](Images/10_e.png)
 
 ## Synthesis-Simulation Mismatch
+
 The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL not including i0 and i1 in the sensitivity list.
 
 ![Alt Text](Images/10_d.png)
@@ -138,3 +139,37 @@ iverilog blocking_caveat.v tb_blocking_caveat.v
 ./a.out
 gtkwave tb_blocking_caveat.vcd
 ```
+![Alt Text](Images/bl_2.png)
+
+```bash
+# Launch Yosys
+yosys
+
+# Step 1: Read Sky130 Liberty File
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Step 2: Read Verilog RTL Design
+read_verilog blocking_caveat.v
+
+# Step 3: Synthesize the design with the given top module
+synth -top blocking_caveat
+
+# Step 4: Technology Mapping using ABC
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Step 5: View the schematic
+show
+
+# Step 6: Export the gate-level netlist
+write_verilog -noattr blocking_caveat_net.v
+```
+![Alt Text](Images/bl_3.png)
+
+## GLS of Bad MUX
+
+```bash
+iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+![Alt Text](Images/bl_4.png)
