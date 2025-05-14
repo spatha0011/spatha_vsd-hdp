@@ -53,7 +53,7 @@ Gate-Level Simulation is performed using the synthesized netlist (ternary_operat
 
 ```bash
 # Compile the gate-level netlist and testbench
-iverilog ternary_operator_mux_net.v tb_ternary_operator_mux.v -o gls_out
+iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
 
 # Run the simulation binary
 ./a.out
