@@ -5,7 +5,7 @@
 ## 📚 Table of Contents
 
 1. [Day 4 Overview](#vsd-hardware-design-program)  
-2. [Synthesis of Ternary Operator MUX using Yosys and Sky130](#synthesis-of-ternary-operator-mux)  
+2. [Synthesis of Ternary Operator MUX](#synthesis-of-ternary-operator-mux)  
 3. [GLS (Gate Level Simulation) of Ternary Operator MUX](#gls-gate-level-simulation-of-ternary-operator-mux)  
 4. [Synthesis of Bad MUX](#synthesis-of-bad-mux)  
 5. [GLS of Bad MUX](#gls-of-bad-mux)  
