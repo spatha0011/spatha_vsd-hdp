@@ -10,8 +10,8 @@
 4. [Synthesis of Bad MUX](#synthesis-of-bad-mux)  
 5. [GLS of Bad MUX](#gls-of-bad-mux)  
 6. [Synthesis-Simulation Mismatch](#synthesis-simulation-mismatch)  
-7. [Synthesis of blocking_caveat.v](#synthesis-of-blocking_caveat)  
-8. [GLS of blocking_caveat.v](#gls-of-blocking_caveat)  
+7. [Synthesis of blocking_caveat.v](#synthesis-of-blocking_caveat.v-design)  
+8. [GLS of blocking_caveat.v](#gls-of-blocking_caveat.v-design)  
    
 ![Alt Text](Images/1.png)
 ![Alt Text](Images/2.png)
@@ -130,7 +130,7 @@ The waveform illustrates a `synthesis vs. simulation mismatch` caused by the RTL
 
 ![Alt Text](Images/10_d.png)
 
-## Synthesis of blocking_caveat.v
+## Synthesis of blocking_caveat.v design
 
 ![Alt Text](Images/bl_1.png)
 
@@ -167,7 +167,7 @@ write_verilog -noattr blocking_caveat_net.v
 ```
 ![Alt Text](Images/bl_3.png)
 
-## GLS of blocking_caveat.v
+## GLS of blocking_caveat.v design
 
 ```bash
 iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
