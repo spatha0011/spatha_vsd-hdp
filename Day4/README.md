@@ -56,7 +56,7 @@ Gate-Level Simulation is performed using the synthesized netlist (ternary_operat
 iverilog ternary_operator_mux_net.v tb_ternary_operator_mux.v -o gls_out
 
 # Run the simulation binary
-./gls_out
+./a.out
 
 # View the waveform
 gtkwave tb_ternary_operator_mux.vcd
