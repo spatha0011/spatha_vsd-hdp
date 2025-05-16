@@ -26,6 +26,7 @@ The Gate level verilog model(s) need to be provided as shown below to do GLS usi
 ```shell
 Syntax:
     iverilog <path-to-gate-level-verilog-model(s)> <netlist_file.v> <tb_top.v>
+```
 
 ### `RTL simulation`
 
@@ -34,6 +35,7 @@ iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
 ./a.out
 gtkwave tb_ternary_operator_mux.vcd
 ```
+
 ![Alt Text](Images/8_b.png)
 
 ```bash
