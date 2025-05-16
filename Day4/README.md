@@ -205,5 +205,5 @@ gtkwave tb_blocking_caveat.vcd
 ![Alt Text](Images/bl_4.png)
 
 ## Synthesis-Simulation Mismatch of blocking_caveat design
-
+In this case, there is a mismatch in the simulation results between pre and post-synthesis due to the use of blocking assignments.
 ![Alt Text](Images/bl_5.png)
