@@ -66,7 +66,7 @@ The additional switch, purge also removes the internal nets if they have a publi
   - Duplicates logic in floorplan-aware synthesis to meet timing and congestion goals.
     
 ## Combinational Logic Optimisation examples
-## opt1
+## lab1
 
 ![Alt Text](Images/1.png)
 ![Alt Text](Images/2.png)
@@ -83,7 +83,7 @@ show
 
 ![Alt Text](Images/5.png)
 
-## opt2
+## lab2
 
 ![Alt Text](Images/3.png)
 ![Alt Text](Images/4.png)
@@ -100,7 +100,7 @@ show
 
 ![Alt Text](Images/6.png)
 
-## opt3
+## lab3
 
 ![Alt Text](Images/7.png)
 ![Alt Text](Images/8.png)
@@ -117,7 +117,7 @@ show
 
 ![Alt Text](Images/9.png)
 
-## opt4
+## lab4
 
 ![Alt Text](Images/10.png)
 ![Alt Text](Images/12.jpeg)
@@ -134,7 +134,7 @@ show
 
 ![Alt Text](Images/11.png)
 
-## opt5 - multiple_module_opt1
+## lab5 - multiple_module_opt1
 
 ![Alt Text](Images/13.png)
 ![Alt Text](Images/14.png)
@@ -196,7 +196,7 @@ show
 >One AND2 gate (a & 1)
 >One A21O gate ((a & b) | c)
 
-## opt6 - multiple_module_opt2
+## lab6 - multiple_module_opt2
 
 ![Alt Text](Images/16.png)
 ![Alt Text](Images/19.png)
@@ -255,7 +255,7 @@ show
 
 ## sequential Logic Optimisation examples
 
-## opt1
+## lab1
 
 ![Alt Text](Images/22.png)
 
@@ -274,7 +274,7 @@ show
 ```
 ![Alt Text](Images/20.png)
 
-## opt2
+## lab2
 
 ![Alt Text](Images/21_design.png)
 
@@ -292,7 +292,7 @@ show
 
 ![Alt Text](Images/21.png)
 
-## opt3
+## lab3
 
 ![Alt Text](Images/23_a.png)
 
@@ -312,7 +312,7 @@ show
 
 ![Alt Text](Images/23_d.png)
 
-## opt4
+## lab4
 
 ![Alt Text](Images/24_a.png)
 
@@ -330,7 +330,7 @@ show
 
 ![Alt Text](Images/24_c.png)
 
-## opt5
+## lab5
 
 ![Alt Text](Images/25_a.png)
 
