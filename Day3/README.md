@@ -7,7 +7,7 @@
 1. [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
 2. [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
 3. [Combinational Logic Optimisation-labs](#Combinational-Logic-Optimisation-examples)
-4. [Sequential-Logic-Optimisation-labs](#sequential-Logic-Optimisation-examples)
+4. [Sequential-Logic-Optimisation-labs](#Sequential-Logic-Optimisation-examples)
 
 ### Combinational Logic Optimisation
 
@@ -253,7 +253,7 @@ show
 ```
 ![Alt Text](Images/18.png)
 
-## sequential Logic Optimisation examples
+## Sequential Logic Optimisation examples
 
 ## lab1
 In this example, no optimization is possible as the flop output, q changes.
