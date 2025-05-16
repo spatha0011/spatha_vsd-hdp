@@ -37,7 +37,18 @@ Squeeze and simplify logic to get the most optimized design in terms of **area**
       ```
       y = a ⊕ c
       ```
+**Note:**  
+  - The command to perform logic optimization in Yosys is `opt_clean`.  
+  - Additionally, for a hierarchical design involving multiple sub-modules, the design must be flattened by running the `flatten` command before executing the `opt_clean` command.
 
+```shell
+USAGE:
+After the synth -top <module_name> command is executed, do:
+    opt_clean -purge
+
+This command identifies wires and cells that are unused and removes them.
+The additional switch, purge also removes the internal nets if they have a public name.
+```
 ---
 
 ### Sequential Logic Optimisation
