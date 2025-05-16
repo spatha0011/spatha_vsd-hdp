@@ -358,13 +358,12 @@ show
 
 ![Alt Text](Images/counter_3.png)
 ![Alt Text](Images/counter_4.png)
-This design serves as an example for Sequential logic optimization with designs having unused outputs.
 
-Although we have a 3-bit up counter in the RTL design, only the LSB, count[0:0] is used for generating the output signal, q.
+This design demonstrates sequential logic optimization in scenarios where only a portion of a multi-bit register is utilized.
 
-Since count[0:0] toggles every clock cycle, there really is a need for only one flip-flop in the circuit.
+Although the RTL describes a 3-bit up counter (count[2:0]), only the least significant bit (count[0]) is used to drive the output q.
 
-In other words, the synthesis output does not have a 3-bit up counter and its associated count incrementing logic.
+Since count[0] toggles on every clock cycle, the synthesis tool recognizes that only a single bit is functionally relevant. As a result, it optimizes the logic by eliminating the unused flip-flops and associated increment logic, reducing the design to a single flip-flop implementation.
 
 #### Synthesis Result w/o opt_clean switch
 
