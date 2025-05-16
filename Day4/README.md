@@ -6,7 +6,7 @@
 
 1. [Day 4 Overview](#vsd-hardware-design-program)  
 2. [Synthesis of Ternary Operator MUX](#synthesis-of-ternary-operator-mux)  
-3. [GLS (Gate Level Simulation) of Ternary Operator MUX](#gls-gate-level-simulation-of-ternary-operator-mux)  
+3. [GLS (Gate Level Simulation) of Ternary Operator MUX](#gls-of-ternary-operator-mux)  
 4. [Synthesis of Bad MUX design](#synthesis-of-bad-mux-design)  
 5. [GLS of Bad MUX design](#gls-of-bad-mux-design)  
 6. [Synthesis-Simulation Mismatch of Bad MUX design](#synthesis-simulation-mismatch-of-bad-mux-design)  
@@ -90,7 +90,7 @@ write_verilog -noattr ternary_operator_mux_net.v
 
 ![Alt Text](Images/8_c.png)
 
-## GLS (Gate level simulation) of Ternary Operator MUX
+## GLS of Ternary Operator MUX
 
 Gate-Level Simulation is performed using the synthesized netlist (ternary_operator_mux_net.v) instead of RTL. This helps verify the functional correctness of the design after synthesis, using the actual standard cells and any delays (if modeled)
 
