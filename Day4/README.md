@@ -32,6 +32,12 @@ The following block diagram shows the GLS flow using iverilog:
 
 ![Alt Text](Images/2.png)
 
+The Gate level verilog model(s) need to be provided as shown below to do GLS using iverilog:
+```shell
+Syntax:
+    iverilog <path-to-gate-level-verilog-model(s)> <netlist_file.v> <tb_top.v>
+```
+
 ### Synthesis - Simulation mismatch
 Some of the common reasons for Synthesis - Simulation mismatch (mismatch between pre- and post-synthesis simulations) :  
   * Incomplete sensitivity list
@@ -46,12 +52,6 @@ Some of the common reasons for Synthesis - Simulation mismatch (mismatch between
 ![Alt Text](Images/4.png)
 ![Alt Text](Images/5.png)
 ![Alt Text](Images/7.png)
-
-The Gate level verilog model(s) need to be provided as shown below to do GLS using iverilog:
-```shell
-Syntax:
-    iverilog <path-to-gate-level-verilog-model(s)> <netlist_file.v> <tb_top.v>
-```
 
 ### `RTL simulation`
 
