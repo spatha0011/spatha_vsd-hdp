@@ -14,9 +14,30 @@
 8. [GLS of blocking_caveat design](#gls-of-blocking_caveat-design)  
 9. [Synthesis-Simulation Mismatch of blocking_caveat design](#synthesis-simulation-mismatch-of-blocking_caveat-design)
 
+### Gate Level Simulation (GLS)
+  * _Gate Level_ refers to the netlist view of a design after the synthesis has been performed.
+  * RTL simulations are pre-synthesis, while GLS is post-synthesis - i.e., in RTL simulations, the Device Under Test (DUT) is the RTL design itself while in GLS, the DUT is the netlist generated after synthesis.
+  * The RTL code and the generated netlist are logically equivalent (well, supposed to be!)  and hence the same testbenches can be used to verify both.
+  * Although it is expected that the generated netlist has the same logical correctness as the RTL design, there can sometimes be mismatches between the RTL-level simulation and the sythesized design (Synthesis - Simulation mismatch) and thus arises the need to run GLS to help identify such scenarios and fix them to ensure the logical correctness post-synthesis as well.
+
+To run GLS, we need to provide the Gate level netlist, the testbench and the Gate Level verilog models to the simulator.  
+GLS can be run in different delay modes:
+   1. Functional validation (zero delay similar to RTL sim): if the Gate Level verilog models do not have the timing information for various corners, we can only verify the functional correctness of the design by running GLS.
+   2. Full Timing validation: if the Gate level verilog models have the necessary timing information, both the functional correctness and the timing behaviour can be verified by GLS.
    
 ![Alt Text](Images/1.png)
 ![Alt Text](Images/2.png)
+
+### Synthesis - Simulation mismatch
+Some of the common reasons for Synthesis - Simulation mismatch (mismatch between pre- and post-synthesis simulations) :  
+  * Incomplete sensitivity list
+  * Use of blocking assignments inside always block vs. non-blocking assignments
+    * Blocking assignments ("=") inside always block are executed sequentially by the simulator.
+    * The RHS of non-blocking assignments ("<=") are evaluated first and then assigned to the LHS at the same simulation clock tick by the simulator. 
+    * Synthesis will yield the same circuit with blocking and non-blocking assignments, with the synthesis output being that of the non-blocking case for both.
+    * Hence, if the RTL was written assuming one functionality using blocking assignments, a simulation mismatch can occur in GLS.
+  * Non-standard verilog coding
+    
 ![Alt Text](Images/3.png)
 ![Alt Text](Images/4.png)
 ![Alt Text](Images/5.png)
