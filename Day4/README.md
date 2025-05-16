@@ -53,6 +53,8 @@ Some of the common reasons for Synthesis - Simulation mismatch (mismatch between
 ![Alt Text](Images/5.png)
 ![Alt Text](Images/7.png)
 
+## Synthesis of Ternary Operator MUX
+
 ### `RTL simulation`
 
 ```bash
