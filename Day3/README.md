@@ -276,6 +276,7 @@ show
 
 ## lab2
 Here, the the flip-flop output, q remains constant at 1 irrespective of the other signals in the sensitivity list.
+
 Thus the realization does not need any cells and q is connected to 1'b1.
 ![Alt Text](Images/21_design.png)
 
@@ -317,6 +318,7 @@ show
 
 ## lab4
 In this example, both q1 & q remain constant at 1'b1.
+
 Thus, the design can be optimized to have only wires. Further, q1 being an internal net can also be removed.
 ![Alt Text](Images/24_a.png)
 
