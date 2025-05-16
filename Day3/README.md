@@ -7,7 +7,7 @@
 1. [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
 2. [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
 3. [Combinational Logic Optimisation-labs](#Combinational-Logic-Optimisation-examples)
-4.  [sequential-Logic-Optimisation-labs](#sequential-Logic-Optimisation-examples)
+4. [Sequential-Logic-Optimisation-labs](#sequential-Logic-Optimisation-examples)
 
 ### Combinational Logic Optimisation
 
