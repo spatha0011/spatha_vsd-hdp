@@ -26,6 +26,10 @@ GLS can be run in different delay modes:
    2. Full Timing validation: if the Gate level verilog models have the necessary timing information, both the functional correctness and the timing behaviour can be verified by GLS.
    
 ![Alt Text](Images/1.png)
+
+### GLS using iverilog
+The following block diagram shows the GLS flow using iverilog: 
+
 ![Alt Text](Images/2.png)
 
 ### Synthesis - Simulation mismatch
