@@ -6,7 +6,7 @@
 
 1. [Day 4 Overview](#vsd-hardware-design-program)  
 2. [Synthesis of Ternary Operator MUX](#synthesis-of-ternary-operator-mux)  
-3. [GLS (Gate Level Simulation) of Ternary Operator MUX](#gls-of-ternary-operator-mux)  
+3. [GLS of Ternary Operator MUX](#gls-of-ternary-operator-mux)  
 4. [Synthesis of Bad MUX design](#synthesis-of-bad-mux-design)  
 5. [GLS of Bad MUX design](#gls-of-bad-mux-design)  
 6. [Synthesis-Simulation Mismatch of Bad MUX design](#synthesis-simulation-mismatch-of-bad-mux-design)  
