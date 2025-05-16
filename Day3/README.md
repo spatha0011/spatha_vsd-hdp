@@ -357,7 +357,7 @@ show
 ## lab6 - unused outputs
 
 ![Alt Text](Images/counter_3.png)
-
+![Alt Text](Images/counter_4.png)
 This design serves as an example for Sequential logic optimization with designs having unused outputs.
 
 Although we have a 3-bit up counter in the RTL design, only the LSB, count[0:0] is used for generating the output signal, q.
