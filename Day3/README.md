@@ -256,7 +256,7 @@ show
 ## sequential Logic Optimisation examples
 
 ## lab1
-
+In this example, no optimization is possible as the flop output, q changes.
 ![Alt Text](Images/22.png)
 
 ![Alt Text](Images/20_a.png)
@@ -275,7 +275,8 @@ show
 ![Alt Text](Images/20.png)
 
 ## lab2
-
+Here, the the flip-flop output, q remains constant at 1 irrespective of the other signals in the sensitivity list.
+Thus the realization does not need any cells and q is connected to 1'b1.
 ![Alt Text](Images/21_design.png)
 
 ![Alt Text](Images/21_wave.png)
@@ -293,6 +294,8 @@ show
 ![Alt Text](Images/21.png)
 
 ## lab3
+Here, both q1 & q have transitions and thus cannot be optimized further.
+So the design will have two DFFs.
 
 ![Alt Text](Images/23_a.png)
 
@@ -313,7 +316,8 @@ show
 ![Alt Text](Images/23_d.png)
 
 ## lab4
-
+In this example, both q1 & q remain constant at 1'b1.
+Thus, the design can be optimized to have only wires. Further, q1 being an internal net can also be removed.
 ![Alt Text](Images/24_a.png)
 
 ![Alt Text](Images/24_b.png)
