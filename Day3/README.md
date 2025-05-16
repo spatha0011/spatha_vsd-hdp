@@ -353,3 +353,23 @@ show
 ```
 
 ![Alt Text](Images/25_c.png)
+
+## lab6 - unused outputs
+
+![Alt Text](Images/counter_3.png)
+
+This design serves as an example for Sequential logic optimization with designs having unused outputs.
+
+Although we have a 3-bit up counter in the RTL design, only the LSB, count[0:0] is used for generating the output signal, q.
+
+Since count[0:0] toggles every clock cycle, there really is a need for only one flip-flop in the circuit.
+
+In other words, the synthesis output does not have a 3-bit up counter and its associated count incrementing logic.
+
+#### Synthesis Result w/o opt_clean switch
+
+![Alt Text](Images/counter_1.png)
+
+#### Synthesis Result with opt_clean switch
+
+![Alt Text](Images/counter_2.png)
