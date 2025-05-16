@@ -27,12 +27,6 @@ The Gate level verilog model(s) need to be provided as shown below to do GLS usi
 Syntax:
     iverilog <path-to-gate-level-verilog-model(s)> <netlist_file.v> <tb_top.v>
 
-## Synthesis of Ternary Operator MUX
-
-This module implements a 2:1 multiplexer using a ternary (conditional) operator.
-
-![Alt Text](Images/8_a.png)
-
 ### `RTL simulation`
 
 ```bash
