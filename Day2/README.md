@@ -2,7 +2,7 @@
 
 ## Day 2 : Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 
-## 📚 Table of Contents
+## 📚 Contents
 
 1. [Liberty Format](#liberty-format)
 2. [Standard Cell Example: `a2111o_1`](#standard-cell-example-a2111o_1)
