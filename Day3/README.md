@@ -382,6 +382,8 @@ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
+
+![Alt Text](Images/counter_5.png)
 ![Alt Text](Images/counter_1.png)
 
 #### Synthesis Result with opt_clean switch
