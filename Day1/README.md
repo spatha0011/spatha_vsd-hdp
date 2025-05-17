@@ -2,7 +2,7 @@
 
 ## Day 1 : Introduction to Verilog RTL design and Synthesis
 
-## 📚 Table of Contents
+## 📚 Contents
 1. [Introduction to RTL Design and Simulation](#day-1--introduction-to-verilog-rtl-design-and-synthesis)  
 2. [iverilog-Based Simulation Flow](#iverilog-based-simulation-flow)  
 3. [Yosys-Synthesis Flow](#yosys-synthesis-flow-for-good_mux)
