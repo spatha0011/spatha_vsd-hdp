@@ -2,7 +2,7 @@
 
 ## Day 4 : GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
-## 📚 Table of Contents
+## 📚 Contents
 
 1. [Day 4 Overview](#vsd-hardware-design-program)  
 2. [Synthesis of Ternary Operator MUX](#synthesis-of-ternary-operator-mux)  
