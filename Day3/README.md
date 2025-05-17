@@ -397,9 +397,14 @@ show
 ```
 ![Alt Text](Images/counter_2.png)
 
-## lab7 - unused outputs
+## lab7 
 
 ![Alt Text](Images/c2_1.png)
+
+In this design, we have a 3-bit up counter and all the bits in the counter state value, count[2:0] are used for generating the output signal, q.
+q = 1, when count[2:0] = 3'b100
+
+So when this design is synthesized, we expect 3 DFF instantiations to be present along with the count incrementing logic and the logic to generate, q.
 
 ```shell
 yosys
