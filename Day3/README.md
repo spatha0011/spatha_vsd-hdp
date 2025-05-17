@@ -373,9 +373,43 @@ Although the RTL describes a 3-bit up counter (count[2:0]), only the least signi
 Since count[0] toggles on every clock cycle, the synthesis tool recognizes that only a single bit is functionally relevant. As a result, it optimizes the logic by eliminating the unused flip-flops and associated increment logic, reducing the design to a single flip-flop implementation.
 
 #### Synthesis Result w/o opt_clean switch
-
+```shell
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
 ![Alt Text](Images/counter_1.png)
 
 #### Synthesis Result with opt_clean switch
-
+```shell
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
 ![Alt Text](Images/counter_2.png)
+
+## lab7 - unused outputs
+
+![Alt Text](Images/c2_1.png)
+
+```shell
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt2.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![Alt Text](Images/c2_2.png)
+
+![Alt Text](Images/c2_3.png)
