@@ -110,7 +110,7 @@ source sp_env/bin/activate
 pip install pyyaml click sandpiper-saas
 
 # Step 4: Convert rvmyth.tlv to Verilog
-sandpiper-saas -I src/include -o src/module/rvmyth.v src/module/rvmyth.tlv
+sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
 ```
  ![Alt Text](Images/1.png)
 
