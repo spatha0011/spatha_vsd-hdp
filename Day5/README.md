@@ -1,4 +1,4 @@
-# VSD Hardware Design Program
+c# VSD Hardware Design Program
 
 ## Day 5 : VSDBabySoC Design and Modeling
 
@@ -171,3 +171,14 @@ cd output/post_synth_sim
 
    - Module Redefinition: If you encounter redefinition errors, ensure modules are included only once, either in the testbench or in the command line.
    - Path Issues: Verify paths specified with -I are correct. Use full paths if relative paths cause errors.
+
+## Why Pre-Synthesis and Post-Synthesis?
+
+1. **Pre-Synthesis Simulation**: 
+   - Focuses only on verifying functionality based on the RTL code.
+   - Zero-delay environment, with events occurring on the active clock edge.
+
+2. **Post-Synthesis Simulation (GLS)**:
+   - Uses the synthesized netlist (gate-level) to simulate both functionality and timing.
+   - Identifies timing violations and potential mismatches (e.g., unintended latches).
+   - Helps verify dynamic circuit behavior that static methods may miss.
