@@ -19,7 +19,7 @@
     - [Pre-Synthesis Simulation](#pre-synthesis-simulation)  
     - [Viewing Waveform in GTKWave](#viewing-waveform-in-gtkwave)  
     - [Post-Synthesis Simulation](#post-synthesis-simulation)  
-13. [Troubleshooting Tips](#troubleshooting-tips)
+13. [Troubleshooting Tips](#Trouble-shooting-tips)
 
 ### Introduction to the VSDBabySoC
 VSDBabySoC is a small yet powerful RISCV-based SoC. 
