@@ -124,5 +124,10 @@ cd output/pre_synth_sim
 
 Explanation:
 
--DPRE_SYNTH_SIM: Defines the PRE_SYNTH_SIM macro for conditional compilation in the testbench.
-The resulting pre_synth_sim.vcd file can be viewed in GTKWave.
+- DPRE_SYNTH_SIM: Defines the PRE_SYNTH_SIM macro for conditional compilation in the testbench.
+- The resulting pre_synth_sim.vcd file can be viewed in GTKWave.
+
+#### Viewing Waveform in GTKWave
+After running the simulation, open the VCD file in GTKWave: gtkwave output/pre_synth_sim/pre_synth_sim.vcd
+
+
