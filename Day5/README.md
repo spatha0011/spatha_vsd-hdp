@@ -42,6 +42,8 @@ A digital-to-analog converter or DAC is a system that converts a digital signal 
 - output/ - Directory where compiled outputs and simulation files will be generated.
 
 ### Setup and Prepare Project Directory
+Clone or set up the directory structure as follows:
+```txt
 VSDBabySoC/
 ├── src/
 │   ├── include/
@@ -55,3 +57,4 @@ VSDBabySoC/
 │   │   └── testbench.v       # Testbench for simulation
 └── output/
 └── compiled_tlv/         # Holds compiled intermediate files if needed
+```
