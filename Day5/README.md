@@ -109,7 +109,7 @@ avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen
 
 ### Simulation Steps
 
-#### <Pre-Synthesis Simulation>
+#### <ins>Pre-Synthesis Simulation</ins>
 
 Run the following command to perform a pre-synthesis simulation:
 
