@@ -19,4 +19,4 @@ VSDBabySoC contains one RVMYTH microprocessor, an 8x-PLL to generate a stable cl
 
   Its primary purpose is to integrate and test these IPs collaboratively and calibrate the analog part of the SoC.
 
-  ![Alt Text](Images/Day5/Images/BabySoC_block.png)
+  ![Alt Text](Images/BabySoC_block.png)
