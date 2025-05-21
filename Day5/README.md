@@ -77,7 +77,7 @@ Initially, you will see only the `rvmyth.tlv` file inside `src/module/`, since t
 
 To convert it into a `.v` file for simulation, follow the steps below:
 
-<summary><strong>🔧 TLV to Verilog Conversion Steps</strong></summary>
+<strong>🔧 TLV to Verilog Conversion Steps</strong>
 
 ```bash
 # Step 1: Install python3-venv (if not already installed)
