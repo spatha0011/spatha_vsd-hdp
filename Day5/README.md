@@ -107,4 +107,22 @@ spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ ls src/module/
 avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen.v  rvmyth.tlv  rvmyth.v  testbench.rvmyth.post-routing.v  testbench.v  vsdbabysoc.v
 ```
 
+### Simulation Steps
+Pre-Synthesis Simulation
+Run the following command to perform a pre-synthesis simulation:
 
+```bash
+iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM \
+  -I src/include -I src/module \
+  src/module/testbench.v
+```
+```bash
+Then run:
+cd output/pre_synth_sim
+./pre_synth_sim.out
+```
+
+Explanation:
+
+-DPRE_SYNTH_SIM: Defines the PRE_SYNTH_SIM macro for conditional compilation in the testbench.
+The resulting pre_synth_sim.vcd file can be viewed in GTKWave.
