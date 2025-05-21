@@ -108,7 +108,9 @@ avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen
 ```
 
 ### Simulation Steps
-Pre-Synthesis Simulation
+
+#### <Pre-Synthesis Simulation>
+
 Run the following command to perform a pre-synthesis simulation:
 
 ```bash
@@ -116,8 +118,9 @@ iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM \
   -I src/include -I src/module \
   src/module/testbench.v
 ```
-```bash
+
 Then run:
+```bash
 cd output/pre_synth_sim
 ./pre_synth_sim.out
 ```
@@ -128,6 +131,8 @@ Explanation:
 - The resulting pre_synth_sim.vcd file can be viewed in GTKWave.
 
 #### Viewing Waveform in GTKWave
+
 After running the simulation, open the VCD file in GTKWave: gtkwave output/pre_synth_sim/pre_synth_sim.vcd
 
+ ![Alt Text](Images/2.png)
 
