@@ -40,3 +40,18 @@ A digital-to-analog converter or DAC is a system that converts a digital signal 
 - src/include/ - Contains header files (*.vh) with necessary macros or parameter definitions.
 - src/module/ - Contains Verilog files for each module in the SoC design.
 - output/ - Directory where compiled outputs and simulation files will be generated.
+
+### Setup and Prepare Project Directory
+VSDBabySoC/
+├── src/
+│   ├── include/
+│   │   ├── sandpiper.vh
+│   │   └── other header files...
+│   ├── module/
+│   │   ├── vsdbabysoc.v      # Top-level module integrating all components
+│   │   ├── rvmyth.v          # RISC-V core module
+│   │   ├── avsdpll.v         # PLL module
+│   │   ├── avsddac.v         # DAC module
+│   │   └── testbench.v       # Testbench for simulation
+└── output/
+└── compiled_tlv/         # Holds compiled intermediate files if needed
