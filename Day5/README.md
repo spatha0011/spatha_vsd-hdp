@@ -131,6 +131,7 @@ avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen
 Run the following command to perform a pre-synthesis simulation:
 
 ```bash
+mkdir -p output/pre_synth_sim
 iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM \
   -I src/include -I src/module \
   src/module/testbench.v
