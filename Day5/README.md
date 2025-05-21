@@ -2,7 +2,24 @@
 
 ## Day 5 : VSDBabySoC Design and Modeling
 
-VSDBabySoC is a small SoC including PLL, DAC, and a RISCV-based processor named RVMYTH.
+### 📚 Contents
+
+1. [Introduction to the VSDBabySoC](#introduction-to-the-vsdbabysoc)  
+2. [What is VSDBabySoC?](#what-is-vsdbabysoc)  
+3. [Problem Statement](#problem-statement)  
+4. [What is SoC](#what-is-soc)  
+5. [What is RVMYTH](#what-is-rvmyth)  
+6. [What is PLL](#what-is-pll)  
+7. [What is DAC](#what-is-dac)  
+8. [Project Structure](#project-structure)  
+9. [Setup and Prepare Project Directory](#setup-and-prepare-project-directory)  
+10. [🛠️ Cloning the Project](#️-cloning-the-project)  
+11. [TLV to Verilog Conversion for RVMYTH](#tlv-to-verilog-conversion-for-rvmyth)  
+12. [Simulation Steps](#simulation-steps)  
+    - [Pre-Synthesis Simulation](#pre-synthesis-simulation)  
+    - [Viewing Waveform in GTKWave](#viewing-waveform-in-gtkwave)  
+    - [Post-Synthesis Simulation](#post-synthesis-simulation)  
+13. [Troubleshooting Tips](#troubleshooting-tips)
 
 ### Introduction to the VSDBabySoC
 VSDBabySoC is a small yet powerful RISCV-based SoC. 
