@@ -124,6 +124,16 @@ spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ ls src/module/
 avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen.v  rvmyth.tlv  rvmyth.v  testbench.rvmyth.post-routing.v  testbench.v  vsdbabysoc.v
 ```
 
+#### Note 
+To use this environment in future sessions, always activate it first:
+```bash
+source sp_env/bin/activate
+```
+To exit:
+```bash
+deactivate
+```
+
 ### Simulation Steps
 
 #### <ins>Pre-Synthesis Simulation</ins>
