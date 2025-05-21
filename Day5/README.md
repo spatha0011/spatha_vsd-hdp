@@ -77,7 +77,6 @@ Initially, you will see only the `rvmyth.tlv` file inside `src/module/`, since t
 
 To convert it into a `.v` file for simulation, follow the steps below:
 
-<details>
 <summary><strong>🔧 TLV to Verilog Conversion Steps</strong></summary>
 
 ```bash
@@ -95,3 +94,8 @@ pip install pyyaml click sandpiper-saas
 
 # Step 4: Convert rvmyth.tlv to Verilog
 sandpiper-saas -I src/include -o src/module/rvmyth.v src/module/rvmyth.tlv
+```
+ ![Alt Text](Images/1.png)
+
+
+
