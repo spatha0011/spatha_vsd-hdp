@@ -139,3 +139,18 @@ gtkwave output/pre_synth_sim/pre_synth_sim.vcd
 ```
  ![Alt Text](Images/2.png)
 
+#### <ins>Post-Synthesis Simulation</ins>
+
+To run a post-synthesis simulation, use:
+
+```tcl
+iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM \
+    -I src/include -I src/module \
+    src/module/testbench.v output/synthesized/vsdbabysoc.synth.v
+cd output/post_synth_sim
+./post_synth_sim.out
+```
+### Trouble shooting tips
+
+   - Module Redefinition: If you encounter redefinition errors, ensure modules are included only once, either in the testbench or in the command line.
+   - Path Issues: Verify paths specified with -I are correct. Use full paths if relative paths cause errors.
