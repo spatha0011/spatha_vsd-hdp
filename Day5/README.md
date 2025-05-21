@@ -58,3 +58,16 @@ VSDBabySoC/
 └── output/
 └── compiled_tlv/         # Holds compiled intermediate files if needed
 ```
+### 🛠️ Cloning the Project
+
+To begin, clone the VSDBabySoC repository using the following command:
+
+```bash
+cd ~/VLSI
+git clone https://github.com/manili/VSDBabySoC.git
+cd VSDBabySoC
+spatha@spatha-VirtualBox:~/VLSI$ ls VSDBabySoC/
+images  LICENSE  Makefile  README.md  src
+spatha@spatha-VirtualBox:~/VLSI$ ls VSDBabySoC/src/module/
+avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen.v  rvmyth.tlv  rvmyth.v  testbench.rvmyth.post-routing.v  testbench.v  vsdbabysoc.v
+```
