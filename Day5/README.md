@@ -127,11 +127,11 @@ avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen
 #### Note 
 To use this environment in future sessions, always activate it first:
 ```bash
-source sp_env/bin/activate
+spatha@spatha-VirtualBox:~$ source sp_env/bin/activate
 ```
 To exit:
 ```bash
-deactivate
+spatha@spatha-VirtualBox:~$ deactivate
 ```
 
 ### Simulation Steps
