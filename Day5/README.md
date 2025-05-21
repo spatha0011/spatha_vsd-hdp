@@ -71,3 +71,27 @@ images  LICENSE  Makefile  README.md  src
 spatha@spatha-VirtualBox:~/VLSI$ ls VSDBabySoC/src/module/
 avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen.v  rvmyth.tlv  rvmyth.v  testbench.rvmyth.post-routing.v  testbench.v  vsdbabysoc.v
 ```
+### TLV to Verilog Conversion for RVMYTH
+
+Initially, you will see only the `rvmyth.tlv` file inside `src/module/`, since the RVMYTH core is written in TL-Verilog.
+
+To convert it into a `.v` file for simulation, follow the steps below:
+
+<details>
+<summary><strong>🔧 TLV to Verilog Conversion Steps</strong></summary>
+
+```bash
+# Step 1: Install python3-venv (if not already installed)
+sudo apt update
+sudo apt install python3-venv python3-pip
+
+# Step 2: Create and activate a virtual environment
+cd VSDBabySoC
+python3 -m venv sp_env
+source sp_env/bin/activate
+
+# Step 3: Install SandPiper-SaaS inside the virtual environment
+pip install pyyaml click sandpiper-saas
+
+# Step 4: Convert rvmyth.tlv to Verilog
+sandpiper-saas -I src/include -o src/module/rvmyth.v src/module/rvmyth.tlv
