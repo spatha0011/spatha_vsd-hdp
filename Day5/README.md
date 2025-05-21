@@ -132,7 +132,10 @@ Explanation:
 
 #### Viewing Waveform in GTKWave
 
-After running the simulation, open the VCD file in GTKWave: gtkwave output/pre_synth_sim/pre_synth_sim.vcd
+After running the simulation, open the VCD file in GTKWave: 
 
+```bash
+gtkwave output/pre_synth_sim/pre_synth_sim.vcd
+```
  ![Alt Text](Images/2.png)
 
