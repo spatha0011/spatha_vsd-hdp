@@ -141,6 +141,7 @@ spatha@spatha-VirtualBox:~$ deactivate
 Run the following command to perform a pre-synthesis simulation:
 
 ```bash
+cd ~/VLSI/VSDBabySoC/
 mkdir -p output/pre_synth_sim
 iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM \
   -I src/include -I src/module \
