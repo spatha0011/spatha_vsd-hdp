@@ -97,5 +97,14 @@ sandpiper-saas -I src/include -o src/module/rvmyth.v src/module/rvmyth.tlv
 ```
  ![Alt Text](Images/1.png)
 
+✅ After running the above command, rvmyth.v will be generated in the src/module/ directory.
+
+You can confirm this by listing the files:
+
+```bash
+spatha@spatha-VirtualBox:~$ cd VLSI/VSDBabySoC/
+spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ ls src/module/
+avsddac.v  avsdpll.v  clk_gate.v  pseudo_rand_gen.sv  pseudo_rand.sv  rvmyth_gen.v  rvmyth.tlv  rvmyth.v  testbench.rvmyth.post-routing.v  testbench.v  vsdbabysoc.v
+```
 
 
