@@ -35,3 +35,8 @@ A phase-locked loop or PLL is a control system that generates an output signal w
 
 ### What is DAC
 A digital-to-analog converter or DAC is a system that converts a digital signal into an analog signal. DACs are widely used in modern communication systems enabling the generation of digitally-defined transmission signals. As a result, high-speed DACs are used for mobile communications and ultra-high-speed DACs are employed in optical communications systems.
+
+### Project Structure
+- src/include/ - Contains header files (*.vh) with necessary macros or parameter definitions.
+- src/module/ - Contains Verilog files for each module in the SoC design.
+- output/ - Directory where compiled outputs and simulation files will be generated.
