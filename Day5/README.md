@@ -169,6 +169,8 @@ After running the simulation, open the VCD file in GTKWave:
 
 ```bash
 
+cd ~/VLSI/VSDBabySoC/
+
 gtkwave output/pre_synth_sim/pre_synth_sim.vcd
 
 ```
