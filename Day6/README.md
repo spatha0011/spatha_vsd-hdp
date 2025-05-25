@@ -22,3 +22,7 @@ yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/modu
 ```
  ![Alt Text](Images/2.jpg)
 
+```bash
+yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/clk_gate.v
+```
+ ![Alt Text](Images/3.jpg)
