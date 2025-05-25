@@ -146,4 +146,10 @@ yosys> stat
      sky130_fd_sc_hd__xor2_1        32
 ```
 
+### **Step 8: Write the Synthesized Netlist**
+```bash
+yosys> write_verilog -noattr ~/VLSI/VSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
+```
+![Alt Text](Images/15.jpg)
+
 
