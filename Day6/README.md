@@ -149,8 +149,44 @@ yosys> stat
 
 ### **Step 8: Write the Synthesized Netlist**
 ```bash
+
 yosys> write_verilog -noattr ~/VLSI/VSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
 ```
 ![Alt Text](Images/15.jpg)
+
+## POST_SYNTHESIS SIMULATION AND WAVEFORMS
+---
+
+### **Step 1: Compile the Testbench**
+Run the following `iverilog` command to compile the testbench:
+```bash
+spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/src/module$ cp -r /home/spatha/SAI/my_lib/verilog_model/sky130_fd_sc_hd.v .
+
+spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/src/module$ cp -r /home/spatha/SAI/my_lib/verilog_model/primitives.v .
+```
+Note : To resolve this error "/home/spatha/VLSI/VSDBabySoC/src/module/sky130_fd_sc_hd.v:74452: syntax error", 
+change /VLSI/VSDBabySoC/src/module/sky130_fd_sc_hd.v syntax from endif SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_V to endif //SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_V
+
+```bash
+spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ iverilog -o /home/spatha/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I /home/spatha/VLSI/VSDBabySoC/src/include -I /home/spatha/VLSI/VSDBabySoC/src/module /home/spatha/VLSI/VSDBabySoC/src/module/testbench.v
+```
+---
+### **Step 2: Navigate to the Post-Synthesis Simulation Output Directory**
+```bash
+cd output/post_synth_sim/
+```
+---
+### **Step 3: Run the Simulation**
+
+```bash
+./post_synth_sim.out
+```
+---
+### **Step 4: View the Waveforms in GTKWave**
+
+```bash
+gtkwave post_synth_sim.vcd
+```
+---
 
 
