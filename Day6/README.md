@@ -34,7 +34,7 @@ yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/modu
 
  ### **Step 2: Load the Liberty Files for Synthesis**
 Inside the same Yosys shell, run:
-```yosys
+```bash
 yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsdpll.lib 
 yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsddac.lib 
 yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -42,8 +42,10 @@ yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80
 ![Alt Text](Images/4.jpg)
 
 ### **Step 3: Run Synthesis Targeting `vsdbabysoc`**
-```yosys
+```bash
 yosys> synth -top vsdbabysoc
 ```
 ![Alt Text](Images/5.jpg)
+
+### **Step 5: Perform Optimization and Technology Mapping**
 
