@@ -158,13 +158,15 @@ yosys> write_verilog -noattr ~/VLSI/VSDBabySoC/output/post_synth_sim/vsdbabysoc.
 ---
 
 ### **Step 1: Compile the Testbench**
-Run the following `iverilog` command to compile the testbench:
+
+Before running the iverilog command, copy the necessary standard cell and primitive models:
+These files must be present in the same directory as the testbench (src/module) to resolve all module references during compilation.
+
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/src/module$ cp -r /home/spatha/SAI/my_lib/verilog_model/sky130_fd_sc_hd.v .
-
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/src/module$ cp -r /home/spatha/SAI/my_lib/verilog_model/primitives.v .
 ```
-
+Run the following `iverilog` command to compile the testbench:
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ iverilog -o /home/spatha/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I /home/spatha/VLSI/VSDBabySoC/src/include -I /home/spatha/VLSI/VSDBabySoC/src/module /home/spatha/VLSI/VSDBabySoC/src/module/testbench.v
 ```
