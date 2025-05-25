@@ -179,7 +179,7 @@ Drag and drop the CLK, reset, OUT (DAC), and RV TO DAC [9:0] signals to their re
 
 Drag and drop the CLK, reset, OUT (DAC) (as analog step), and RV TO DAC [9:0] signals to their respective locations in the simulation tool 
 
-![Alt Text](Images/3.jpeg)
+![Alt Text](Images/7.jpeg)
 
 ![Alt Text](Images/6.jpg)
 
