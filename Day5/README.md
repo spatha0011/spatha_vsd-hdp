@@ -17,7 +17,8 @@
 11. [TLV to Verilog Conversion for RVMYTH](#tlv-to-verilog-conversion-for-rvmyth)  
 12. [Simulation Steps](#simulation-steps)  
     - [Pre-Synthesis Simulation](#pre-synthesis-simulation)  
-    - [Viewing Waveform in GTKWave](#viewing-waveform-in-gtkwave)  
+    - [Viewing Waveform in GTKWave](#viewing-waveform-in-gtkwave)
+    - [Viewing Waveform in GTKWave analog mode](#Viewing-Waveform-in-GTKWave-analog-mode)
     - [Post-Synthesis Simulation](#post-synthesis-simulation)  
 13. [Troubleshooting Tips](#Trouble-shooting-tips)
 
@@ -172,7 +173,7 @@ spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ gtkwave output/pre_synth_sim/pre_syn
 ```
  ![Alt Text](Images/2.png)
 
-#### Viewing Waveform in GTKWave [in analog mode]
+#### Viewing Waveform in GTKWave [analog mode]
 
 ![Alt Text](Images/3.jpeg)
 
