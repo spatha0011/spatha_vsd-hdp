@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+## Day 4 : GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
 ## 📚 Contents
 
