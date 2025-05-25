@@ -93,6 +93,17 @@ yosys> opt
 yosys> abc -liberty ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
 ```
 
+| Step           | Purpose                                                              |
+| -------------- | -------------------------------------------------------------------- |
+| `strash`       | Structural hashing (reduces logic redundancy)                        |
+| `scorr`        | Sequential sweeping for redundancy removal                           |
+| `ifraig`       | Incremental FRAIGing (logic equivalence checking and optimization)   |
+| `retime;{D}`   | Move registers across combinational logic to optimize timing         |
+| `strash`       | Re-run structural hashing after retiming                             |
+| `dch,-f`       | Delay-aware combinational optimization with fast mode                |
+| `map,-M,1,{D}` | Map logic to gates minimizing area (`-M,1`) and retime-aware (`{D}`) |
+
+
 ![Alt Text](Images/7.jpg)
 
 ![Alt Text](Images/12.jpg)
