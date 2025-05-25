@@ -150,9 +150,7 @@ cd ~/VLSI/VSDBabySoC/
 
 mkdir -p output/pre_synth_sim
 
-iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM \
-  -I src/include -I src/module \
-  src/module/testbench.v
+iverilog -o ~/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM -I ~/VLSI/VSDBabySoC/src/include -I ~/VLSI/VSDBabySoC/src/module ~/VLSI/VSDBabySoC/src/module/testbench.v
 ```
 
 Then run:
@@ -192,17 +190,7 @@ Drag and drop the CLK, reset, OUT (DAC) (as analog step), and RV TO DAC [9:0] si
 
 ![Alt Text](Images/5.png)
 
-#### <ins>Post-Synthesis Simulation</ins>
 
-To run a post-synthesis simulation, use:
-
-```tcl
-iverilog -o ~/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM -I ~/VLSI/VSDBabySoC/src/include -I ~/VLSI/VSDBabySoC/src/module ~/VLSI/VSDBabySoC/src/module/testbench.v
-
-cd output/post_synth_sim
-
-./post_synth_sim.out
-```
 ### Trouble shooting tips
 
    - Module Redefinition: If you encounter redefinition errors, ensure modules are included only once, either in the testbench or in the command line.
