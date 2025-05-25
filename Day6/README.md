@@ -55,3 +55,14 @@ yosys> dfflibmap -liberty ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v8
 
 ![Alt Text](Images/7.jpg)
 ![Alt Text](Images/6.jpg)
+
+### **Step 6: Perform Final Clean-Up and Renaming**
+
+```bash
+yosys> flatten
+yosys> setundef -zero
+yosys> clean -purge
+yosys> rename -enumerate
+```
+![Alt Text](Images/8.jpg)
+
