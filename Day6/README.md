@@ -43,7 +43,7 @@ yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80
 
 ### **Step 3: Run Synthesis Targeting `vsdbabysoc`**
 ```yosys
-synth -top vsdbabysoc
+yosys> synth -top vsdbabysoc
 ```
 ![Alt Text](Images/5.jpg)
 
