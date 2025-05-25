@@ -49,8 +49,8 @@ yosys> synth -top vsdbabysoc
 
 ### **Step 5: Perform Optimization and Technology Mapping**
 ```bash
-opt
-dfflibmap -liberty ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> opt
+yosys> dfflibmap -liberty ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
 ![Alt Text](Images/7.jpg)
