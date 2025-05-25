@@ -166,7 +166,7 @@ yosys> stat
      sky130_fd_sc_hd__and3_2         1
      sky130_fd_sc_hd__clkinv_1     597
      sky130_fd_sc_hd__dfxtp_1     1144
-          sky130_fd_sc_hd__lpflow_inputiso0p_1      1
+     sky130_fd_sc_hd__lpflow_inputiso0p_1      1
      sky130_fd_sc_hd__mux2i_1       12
      sky130_fd_sc_hd__nand2_1      839
      sky130_fd_sc_hd__nand3_1      249
