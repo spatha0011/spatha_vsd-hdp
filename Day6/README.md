@@ -169,7 +169,7 @@ spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/src/module$ cp -r /home/spatha/SAI/my
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ iverilog -o /home/spatha/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I /home/spatha/VLSI/VSDBabySoC/src/include -I /home/spatha/VLSI/VSDBabySoC/src/module /home/spatha/VLSI/VSDBabySoC/src/module/testbench.v
 ```
 
-##### Note : To resolve this error 
+##### Note - You may encounter this error:
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ iverilog -o /home/spatha/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I /home/spatha/VLSI/VSDBabySoC/src/include -I /home/spatha/VLSI/VSDBabySoC/src/module /home/spatha/VLSI/VSDBabySoC/src/module/testbench.v
 /home/spatha/VLSI/VSDBabySoC/src/module/sky130_fd_sc_hd.v:74452: syntax error
@@ -177,14 +177,15 @@ I give up.
 ```
 Update the syntax in the file sky130_fd_sc_hd.v at or around line 74452.
 
-Change:
+###### Change:
 ```bash
 `endif SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_V
 ```
-To:
+###### To:
 ```bash
 `endif // SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_V
 ```
+![Alt Text](Images/16.jpg)
 
 ---
 ### **Step 2: Navigate to the Post-Synthesis Simulation Output Directory**
