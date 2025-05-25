@@ -9,6 +9,7 @@ Here is the step-by-step execution plan for running the  commands manually:
 ### **Step 1: Load the Top-Level Design and Supporting Modules**
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ yosys
+
 yosys> read_verilog src/module/vsdbabysoc.v 
 ```
 
