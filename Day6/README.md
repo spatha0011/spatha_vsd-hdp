@@ -12,8 +12,12 @@ patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sandpiper.vh .
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sandpiper_gen.vh .
 
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ yosys
-
-yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/rvmyth.v
-
 ```
+
+ ![Alt Text](Images/1.jpg)
+
+```bash
+yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/rvmyth.v
+```
+ ![Alt Text](Images/2.jpg)
 
