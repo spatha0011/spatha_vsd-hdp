@@ -43,11 +43,10 @@ The following cp commands copy essential header files from the src/include direc
 - sandpiper_gen.vh – may include auto-generated or tool-generated parameters
 
 ```bash
-<pre>
-spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ <b>cp -r src/include/sp_verilog.vh .</b>
-spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ <b>cp -r src/include/sandpiper.vh .</b>
-spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ <b>cp -r src/include/sandpiper_gen.vh .</b>
-</pre>
+cd ~/VLSI/VSDBabySoC
+cp -r src/include/sp_verilog.vh .
+cp -r src/include/sandpiper.vh 
+cp -r src/include/sandpiper_gen.vh .
 ```
 
 ```bash
