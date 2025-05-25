@@ -39,3 +39,4 @@ yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsdpll.lib
 yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsddac.lib 
 yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
+![Alt Text](Images/4.jpg)
