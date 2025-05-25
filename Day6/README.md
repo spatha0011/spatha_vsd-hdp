@@ -48,7 +48,7 @@ patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sp_verilog.vh .
 patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sandpiper.vh 
 patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sandpiper_gen.vh .
 patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ ls
-images  LICENSE  Makefile  output  README.md  `sandpiper_gen.vh`  `sandpiper.vh`  sp_env  `sp_verilog.vh`  src
+images  LICENSE  Makefile  output  README.md  <strong>sandpiper_gen.vh</strong>   <strong>sandpiper.vh</strong>  sp_env   <strong>sp_verilog.vh</strong>  src
 ```
 
 ```bash
