@@ -18,7 +18,7 @@
 12. [Simulation Steps](#simulation-steps)  
     - [Pre-Synthesis Simulation](#pre-synthesis-simulation)  
     - [Viewing Waveform in GTKWave](#viewing-waveform-in-gtkwave)
-    - [Viewing Waveform in GTKWave analog mode](#Viewing-Waveform-in-GTKWave-analog-mode)
+    - [Viewing DAC output in analog mode](#Viewing-DAC-output-in-analog-mode)
     - [Post-Synthesis Simulation](#post-synthesis-simulation)  
 13. [Troubleshooting Tips](#Trouble-shooting-tips)
 
@@ -178,7 +178,7 @@ Drag and drop the CLK, reset, OUT (DAC), and RV TO DAC [9:0] signals to their re
 
  ![Alt Text](Images/2.png)
 
-#### Viewing Waveform in GTKWave [analog mode]
+#### Viewing DAC output in analog mode
 
 Drag and drop the CLK, reset, OUT (DAC) (as analog step), and RV TO DAC [9:0] signals to their respective locations in the simulation tool 
 
