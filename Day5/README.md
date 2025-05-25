@@ -191,7 +191,9 @@ To run a post-synthesis simulation, use:
 iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM \
     -I src/include -I src/module \
     src/module/testbench.v output/synthesized/vsdbabysoc.synth.v
+
 cd output/post_synth_sim
+
 ./post_synth_sim.out
 ```
 ### Trouble shooting tips
