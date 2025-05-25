@@ -72,7 +72,7 @@ yosys> setundef -zero
 yosys> clean -purge
 yosys> rename -enumerate
 ```
-![Alt Text](Images/8.jpg)
+![Alt Text](Images/13.jpg)
 
 ### **Step 7: Check Statistics**
 ```bash
