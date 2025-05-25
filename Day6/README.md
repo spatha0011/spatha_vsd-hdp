@@ -4,6 +4,9 @@
 
 First step in the design flow is to synthesize the generated RTL code and after that we will simulate the result. This way we can find more about our code and its bugs. So in this section we are going to synthesize our code then do a post-synthesis simulation to look for any issues. The post and pre (modeling section) synthesis results should be identical.
 
+Here is the step-by-step execution plan for running the  commands manually:
+---
+### **Step 1: Load the Top-Level Design and Supporting Modules**
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ yosys
 yosys> read_verilog src/module/vsdbabysoc.v 
@@ -28,3 +31,11 @@ yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/modu
 yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/clk_gate.v
 ```
  ![Alt Text](Images/3.jpg)
+
+ ### **Step 2: Load the Liberty Files for Synthesis**
+Inside the same Yosys shell, run:
+```yosys
+yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsdpll.lib 
+yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsddac.lib 
+yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
