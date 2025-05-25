@@ -197,9 +197,7 @@ Drag and drop the CLK, reset, OUT (DAC) (as analog step), and RV TO DAC [9:0] si
 To run a post-synthesis simulation, use:
 
 ```tcl
-iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM \
-    -I src/include -I src/module \
-    src/module/testbench.v output/synthesized/vsdbabysoc.synth.v
+iverilog -o ~/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM -I ~/VLSI/VSDBabySoC/src/include -I ~/VLSI/VSDBabySoC/src/module ~/VLSI/VSDBabySoC/src/module/testbench.v
 
 cd output/post_synth_sim
 
