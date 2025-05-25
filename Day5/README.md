@@ -83,7 +83,7 @@ To begin, clone the VSDBabySoC repository using the following command:
 ```bash
 cd ~/VLSI
 git clone https://github.com/manili/VSDBabySoC.git
-cd VSDBabySoC
+cd ~/VLSI/VSDBabySoC/
 spatha@spatha-VirtualBox:~/VLSI$ ls VSDBabySoC/
 images  LICENSE  Makefile  README.md  src
 spatha@spatha-VirtualBox:~/VLSI$ ls VSDBabySoC/src/module/
