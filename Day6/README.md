@@ -129,7 +129,7 @@ yosys> rename -enumerate
 ```bash
 yosys> stat
 ```
-```bash
+
 13. Printing statistics.
 
 === vsdbabysoc ===
@@ -195,7 +195,6 @@ yosys> stat
      sky130_fd_sc_hd__or4_2          1
      sky130_fd_sc_hd__xnor2_1       13
      sky130_fd_sc_hd__xor2_1        32
-```
 
 ### **Step 8: Write the Synthesized Netlist**
 ```bash
