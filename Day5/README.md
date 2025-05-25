@@ -19,8 +19,8 @@
     - [Pre-Synthesis Simulation](#pre-synthesis-simulation)  
     - [Viewing Waveform in GTKWave](#viewing-waveform-in-gtkwave)
     - [Viewing DAC output in analog mode](#Viewing-DAC-output-in-analog-mode)
-    - [Post-Synthesis Simulation](#post-synthesis-simulation)  
 13. [Troubleshooting Tips](#Trouble-shooting-tips)
+14. [Why Pre-Synthesis and Post-Synthesis?](#Why-Pre-Synthesis-and-Post-Synthesis?)
 
 ### Introduction to the VSDBabySoC
 VSDBabySoC is a small yet powerful RISCV-based SoC. 
