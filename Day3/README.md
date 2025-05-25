@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## Combinational and sequential optmizations
+## Day 3 : Combinational and sequential optmizations
 
 ## 📚 Contents
 
