@@ -207,5 +207,6 @@ cd output/post_synth_sim/
 gtkwave post_synth_sim.vcd
 ```
 ---
-
+![Alt Text](Images/17.jpg)
+![Alt Text](Images/18.jpg)
 
