@@ -62,7 +62,7 @@ yosys> abc -liberty ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
 
 ![Alt Text](Images/7.jpg)
 
-![Alt Text](Images/10.jpg)
+![Alt Text](Images/12.jpg)
 
 ### **Step 6: Perform Final Clean-Up and Renaming**
 
