@@ -66,3 +66,9 @@ yosys> rename -enumerate
 ```
 ![Alt Text](Images/8.jpg)
 
+### **Step 7: Check Statistics**
+```bash
+yosys> stat
+```
+![Alt Text](Images/9.jpg)
+
