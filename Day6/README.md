@@ -34,6 +34,14 @@ yosys> read_verilog src/module/vsdbabysoc.v
 ```
  ![Alt Text](Images/today2.jpg)
 
+The following cp commands copy essential header files from the src/include directory into the working directory. These include:
+
+- sp_verilog.vh – contains Verilog definitions and macros
+
+- sandpiper.vh – holds integration-related definitions for SandPiper
+
+- sandpiper_gen.vh – may include auto-generated or tool-generated parameters
+
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sp_verilog.vh .
 
