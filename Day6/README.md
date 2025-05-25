@@ -116,6 +116,13 @@ yosys> setundef -zero
 yosys> clean -purge
 yosys> rename -enumerate
 ```
+| **Command**         | **Purpose / Usage**                                                                    |
+| ------------------- | -------------------------------------------------------------------------------------- |
+| `flatten`           | Flattens the entire design hierarchy into a single-level netlist.                      |
+| `setundef -zero`    | Replaces all undefined (`x`) logic values with logical `0` to avoid simulation issues. |
+| `clean -purge`      | Removes all unused wires, cells, and modules; `-purge` makes it more aggressive.       |
+| `rename -enumerate` | Renames internal wires and cells to unique, numbered names for consistency.            |
+
 ![Alt Text](Images/13.jpg)
 
 ### **Step 7: Check Statistics**
