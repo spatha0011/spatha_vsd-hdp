@@ -26,11 +26,13 @@ Here is the step-by-step execution plan for running the  commands manually:
 ### **Step 1: Load the Top-Level Design and Supporting Modules**
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ yosys
+```
+ ![Alt Text](Images/today1.jpg)
 
+```bash
 yosys> read_verilog src/module/vsdbabysoc.v 
 ```
-
- ![Alt Text](Images/1.jpg)
+ ![Alt Text](Images/today2.jpg)
 
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sp_verilog.vh .
