@@ -4,7 +4,7 @@
 
 ## 📚 Contents
 
-1. [Day 4 Overview](#vsd-hardware-design-program)  
+1. [Overview](#vsd-hardware-design-program)  
 2. [Synthesis of Ternary Operator MUX](#synthesis-of-ternary-operator-mux)  
 3. [GLS of Ternary Operator MUX](#gls-of-ternary-operator-mux)  
 4. [Synthesis of Bad MUX design](#synthesis-of-bad-mux-design)  
