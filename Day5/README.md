@@ -107,7 +107,7 @@ sudo apt update
 sudo apt install python3-venv python3-pip
 
 # Step 2: Create and activate a virtual environment
-cd VSDBabySoC
+~/VLSI/VSDBabySoC/
 python3 -m venv sp_env
 source sp_env/bin/activate
 
