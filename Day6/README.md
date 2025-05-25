@@ -1,5 +1,22 @@
 # VSD Hardware Design Program
 
+### 📚 Contents
+
+- [Day 6 : VSDBabySoC Post-Synthesis Simulation](#day-6--vsdbabysoc-post-synthesis-simulation)
+- [Step 1: Load the Top-Level Design and Supporting Modules](#step-1-load-the-top-level-design-and-supporting-modules)
+- [Step 2: Load the Liberty Files for Synthesis](#step-2-load-the-liberty-files-for-synthesis)
+- [Step 3: Run Synthesis Targeting `vsdbabysoc`](#step-3-run-synthesis-targeting-vsdbabysoc)
+- [Step 4: Map D Flip-Flops to Standard Cells](#step-4-map-d-flip-flops-to-standard-cells)
+- [Step 5: Perform Optimization and Technology Mapping](#step-5-perform-optimization-and-technology-mapping)
+- [Step 6: Perform Final Clean-Up and Renaming](#step-6-perform-final-clean-up-and-renaming)
+- [Step 7: Check Statistics](#step-7-check-statistics)
+- [Step 8: Write the Synthesized Netlist](#step-8-write-the-synthesized-netlist)
+- [POST_SYNTHESIS SIMULATION AND WAVEFORMS](#post_synthesis-simulation-and-waveforms)
+  - [Step 1: Compile the Testbench](#step-1-compile-the-testbench)
+  - [Step 2: Navigate to the Post-Synthesis Simulation Output Directory](#step-2-navigate-to-the-post-synthesis-simulation-output-directory)
+  - [Step 3: Run the Simulation](#step-3-run-the-simulation)
+  - [Step 4: View the Waveforms in GTKWave](#step-4-view-the-waveforms-in-gtkwave)
+    
 ## Day 6 : VSDBabySoC Post-Synthesis Simulation
 
 First step in the design flow is to synthesize the generated RTL code and after that we will simulate the result. This way we can find more about our code and its bugs. So in this section we are going to synthesize our code then do a post-synthesis simulation to look for any issues. The post and pre (modeling section) synthesis results should be identical.
