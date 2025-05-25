@@ -181,6 +181,8 @@ Drag and drop the CLK, reset, OUT (DAC) (as analog step), and RV TO DAC [9:0] si
 
 ![Alt Text](Images/4.png)
 
+![Alt Text](Images/5.png)
+
 #### <ins>Post-Synthesis Simulation</ins>
 
 To run a post-synthesis simulation, use:
