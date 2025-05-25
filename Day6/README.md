@@ -131,7 +131,7 @@ yosys> stat
 ```
 
 13. Printing statistics.
-
+```shell
 === vsdbabysoc ===
 
    Number of wires:               4736
@@ -195,6 +195,7 @@ yosys> stat
      sky130_fd_sc_hd__or4_2          1
      sky130_fd_sc_hd__xnor2_1       13
      sky130_fd_sc_hd__xor2_1        32
+```
 
 ### **Step 8: Write the Synthesized Netlist**
 ```bash
