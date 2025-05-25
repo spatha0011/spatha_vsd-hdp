@@ -47,14 +47,21 @@ yosys> synth -top vsdbabysoc
 ```
 ![Alt Text](Images/5.jpg)
 
-### **Step 5: Perform Optimization and Technology Mapping**
+### **Step 4: Map D Flip-Flops to Standard Cells**
+
 ```bash
-yosys> opt
 yosys> dfflibmap -liberty ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
+### **Step 5: Perform Optimization and Technology Mapping**
+```bash
+yosys> opt
+yosys> abc -liberty ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
+```
+
 ![Alt Text](Images/7.jpg)
-![Alt Text](Images/6.jpg)
+
+![Alt Text](Images/10.jpg)
 
 ### **Step 6: Perform Final Clean-Up and Renaming**
 
