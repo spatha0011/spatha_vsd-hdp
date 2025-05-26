@@ -268,5 +268,5 @@ gtkwave post_synth_sim.vcd
 ```
 ---
 ![Alt Text](Images/17.jpg)
-![Alt Text](Images/19.jpg)
+![Alt Text](Images/today3.jpg)
 
