@@ -16,7 +16,7 @@
   - [Step 2: Navigate to the Post-Synthesis Simulation Output Directory](#step-2-navigate-to-the-post-synthesis-simulation-output-directory)
   - [Step 3: Run the Simulation](#step-3-run-the-simulation)
   - [Step 4: View the Waveforms in GTKWave](#step-4-view-the-waveforms-in-gtkwave)
-- [Comparing Pre-Synthesis and Post-Synthesis Output](Comparing-Pre-Synthesis-and-Post-Synthesis-Output)
+- [Comparing Pre-Synthesis and Post-Synthesis Output](#comparing-pre-synthesis-and-post-synthesis-output)
     
 ## Day 6 : VSDBabySoC Post-Synthesis Simulation
 
