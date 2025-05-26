@@ -270,3 +270,17 @@ gtkwave post_synth_sim.vcd
 ![Alt Text](Images/17.jpg)
 ![Alt Text](Images/today3.jpg)
 
+## Comparing Pre-Synthesis and Post-Synthesis Output
+
+To ensure that the synthesis process did not alter the original design behavior, the output from the pre-synthesis simulation was compared with the post-synthesis simulation.
+
+Both simulations were run using GTKWave, and the resulting waveforms were observed.
+
+![Alt Text](Day5/Images/today6.jpg)
+
+![Alt Text](Images/today3.jpg)
+
+✔️ The outputs match exactly, confirming that the functionality is preserved across the synthesis flow.
+
+This validates that the synthesized netlist is functionally equivalent to the RTL design.
+
