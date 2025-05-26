@@ -182,11 +182,17 @@ Drag and drop the CLK, reset, OUT (DAC), and RV TO DAC [9:0] signals to their re
 
 In this picture we can see the following signals:
 
-CLK: This is the input CLK signal of the RVMYTH core. This signal comes from the PLL, originally.
-reset: This is the input reset signal of the RVMYTH core. This signal comes from an external source, originally.
-OUT: This is the output OUT signal of the VSDBabySoC module. This signal comes from the DAC (due to simulation restrictions it behaves like a digital signal which is incorrect), originally.
-RV_TO_DAC[9:0]: This is the 10-bit output [9:0] OUT port of the RVMYTH core. This port comes from the RVMYTH register #17, originally.
-OUT: This is a real datatype wire which can simulate analog values. It is the output wire real OUT signal of the DAC module. This signal comes from the DAC, originally. This can be viewed by changing the Data Format of the signal to Analog -> Step
+**CLK**: This is the input CLK signal of the RVMYTH core. This signal comes from the PLL, originally.
+
+**reset**: This is the input reset signal of the RVMYTH core. This signal comes from an external source, originally.
+
+**OUT**: This is the output OUT signal of the VSDBabySoC module. This signal comes from the DAC (due to simulation restrictions it behaves like a digital signal which is incorrect), originally.
+
+**RV_TO_DAC[9:0]**: This is the 10-bit output [9:0] OUT port of the RVMYTH core. This port comes from the RVMYTH register #17, originally.
+
+**OUT**: This is a real datatype wire which can simulate analog values. It is the output wire real OUT signal of the DAC module. This signal comes from the DAC, originally. 
+
+This can be viewed by changing the Data Format of the signal to Analog → Step
 
 #### Viewing DAC output in analog mode
 
