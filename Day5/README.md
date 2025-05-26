@@ -198,11 +198,9 @@ This can be viewed by changing the Data Format of the signal to Analog → Step
 
 Drag and drop the CLK, reset, OUT (DAC) (as analog step), and RV TO DAC [9:0] signals to their respective locations in the simulation tool 
 
-![Alt Text](Images/7.jpeg)
+![Alt Text](Images/today5.jpeg)
 
-![Alt Text](Images/6.jpg)
-
-![Alt Text](Images/5.png)
+![Alt Text](Images/today6.jpg)
 
 
 ### Trouble shooting tips
