@@ -16,6 +16,7 @@
   - [Step 2: Navigate to the Post-Synthesis Simulation Output Directory](#step-2-navigate-to-the-post-synthesis-simulation-output-directory)
   - [Step 3: Run the Simulation](#step-3-run-the-simulation)
   - [Step 4: View the Waveforms in GTKWave](#step-4-view-the-waveforms-in-gtkwave)
+- [Comparing Pre-Synthesis and Post-Synthesis Output](Comparing-Pre-Synthesis-and-Post-Synthesis-Output)
     
 ## Day 6 : VSDBabySoC Post-Synthesis Simulation
 
@@ -276,7 +277,7 @@ To ensure that the synthesis process did not alter the original design behavior,
 
 Both simulations were run using GTKWave, and the resulting waveforms were observed.
 
-![Alt Text](Day5/Images/today6.jpg)
+![Alt Text](https://github.com/spatha0011/spatha_vsd-hdp/blob/main/Day5/Images/today6.jpg)
 
 ![Alt Text](Images/today3.jpg)
 
