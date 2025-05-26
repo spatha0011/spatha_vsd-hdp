@@ -20,7 +20,7 @@
     - [Viewing Waveform in GTKWave](#viewing-waveform-in-gtkwave)
     - [Viewing DAC output in analog mode](#Viewing-DAC-output-in-analog-mode)
 13. [Troubleshooting Tips](#Trouble-shooting-tips)
-14. [Why Pre-Synthesis and Post-Synthesis?](#Why-pre-synthesis-and-post-synthesis?)
+14. [Why Pre-Synthesis and Post-Synthesis?](#why-pre-synthesis-and-post-synthesis)
 
 ### Introduction to the VSDBabySoC
 VSDBabySoC is a small yet powerful RISCV-based SoC. 
