@@ -76,9 +76,9 @@ yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/modu
 ```
  ![Alt Text](Images/2.jpg)
 
-#### ❗Note: 
+#### ❗Note:
 
-If you try to read the rvmyth.v file using yosys without copying the necessary header files first, you may encounter errors like:
+_If you try to read the rvmyth.v file using yosys without copying the necessary header files first, you may encounter errors like:_
 
 ![Alt Text](Images/err1.jpeg)
 
@@ -266,7 +266,7 @@ spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ iverilog -o /home/spatha/VLSI/VSDBab
 /home/spatha/VLSI/VSDBabySoC/src/module/sky130_fd_sc_hd.v:74452: syntax error
 I give up.
 ```
-To resolve this : Update the syntax in the file sky130_fd_sc_hd.v at or around line 74452.
+_To resolve this : Update the syntax in the file sky130_fd_sc_hd.v at or around line 74452._
 
 ###### Change:
 ```bash
