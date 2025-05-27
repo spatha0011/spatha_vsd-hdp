@@ -298,8 +298,9 @@ show
 
 ## lab3
 
-Here, both q1 & q have transitions and thus cannot be optimized further.
-So the design will have two DFFs.
+Here,Two DFFs will be inferred with a set flip-flop with q output and reset flip-flop with q1 output and both flip-flops will be connected back to back.
+
+Here,the logic will be retained as the value of q depends upon the state of q1,as seen in the waveform.
 
 ![Alt Text](Images/23_a.png)
 
@@ -321,9 +322,7 @@ show
 
 ## lab4
 
-In this example, both q1 & q remain constant at 1'b1.
-
-Thus, the design can be optimized to have only wires. Further, q1 being an internal net can also be removed.
+Here,the value of q1 and q are independent of reset input,hence no DFF will be inferred upon synthesis.
 
 ![Alt Text](Images/24_a.png)
 
