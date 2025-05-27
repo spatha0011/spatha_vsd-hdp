@@ -76,6 +76,17 @@ yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/modu
 ```
  ![Alt Text](Images/2.jpg)
 
+#### Note:
+If you try to read the rvmyth.v file using yosys without copying the necessary header files first, you may encounter errors like:
+
+![Alt Text](Images/err1.jpeg)
+
+![Alt Text](Images/err2.jpeg)
+
+![Alt Text](Images/err3.jpeg)
+
+To avoid these errors, first copy the required include files into your working directory!!
+
 Read the clk_gate.v file with the include path using -I option.
 ```bash
 yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/clk_gate.v
