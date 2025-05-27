@@ -41,13 +41,13 @@ Pre-synthesis simulation is crucial for verifying the logical functionality of a
 Here is the step-by-step execution plan for running the  commands manually:
 ---
 ### **Step 1: Load the Top-Level Design and Supporting Modules**
-Launch the Yosys synthesis tool from your working directory.
+- Launch the Yosys synthesis tool from your working directory.
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ yosys
 ```
  ![Alt Text](Images/today1.jpg)
  
-Read the main vsdbabysoc.v RTL file into the Yosys environment.
+- Read the main vsdbabysoc.v RTL file into the Yosys environment.
 ```bash
 yosys> read_verilog src/module/vsdbabysoc.v 
 ```
@@ -70,7 +70,7 @@ patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ ls
 images  LICENSE  Makefile  output  README.md  sandpiper_gen.vh  sandpiper.vh  sp_env  sp_verilog.vh  src
 ```
 
-Read the rvmyth.v file with the include path using -I option.
+- Read the rvmyth.v file with the include path using -I option.
 ```bash
 yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/rvmyth.v
 ```
@@ -87,7 +87,7 @@ If you try to read the rvmyth.v file using yosys without copying the necessary h
 
 To avoid these errors, first copy the required include files into your working directory!!
 
-Read the clk_gate.v file with the include path using -I option.
+- Read the clk_gate.v file with the include path using -I option.
 ```bash
 yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/clk_gate.v
 ```
