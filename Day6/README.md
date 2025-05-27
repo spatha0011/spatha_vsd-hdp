@@ -4,7 +4,7 @@
 
 ### 📚 Contents
 
-- [Day 6 : VSDBabySoC Post-Synthesis Simulation](#day-6--vsdbabysoc-post-synthesis-simulation)
+- [Day 6 : Overview](#day-6--vsdbabysoc-post-synthesis-simulation)
 - [Step 1: Load the Top-Level Design and Supporting Modules](#step-1-load-the-top-level-design-and-supporting-modules)
 - [Step 2: Load the Liberty Files for Synthesis](#step-2-load-the-liberty-files-for-synthesis)
 - [Step 3: Run Synthesis Targeting `vsdbabysoc`](#step-3-run-synthesis-targeting-vsdbabysoc)
