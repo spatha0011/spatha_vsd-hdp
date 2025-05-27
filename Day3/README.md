@@ -257,7 +257,7 @@ show
 
 ## lab1
 
-In this example, no optimization is possible as the flop output, q changes.
+dff_cons1.v synthesis: Here, we can see value of q does not change as soon as reset=0,but q takes the value of 1’b0 at next clock edge,hence here no sequential logic optimization will occur and DFF will be inferred.
 
 ![Alt Text](Images/22.png)
 
@@ -278,9 +278,7 @@ show
 
 ## lab2
 
-Here, the the flip-flop output, q remains constant at 1 irrespective of the other signals in the sensitivity list.
-
-Thus the realization does not need any cells and q is connected to 1'b1.
+Here,we can observe the value of q=1'b1 independent of reset input,so upon synthesis, a DFF will not be inferred upon synthesis.
 
 ![Alt Text](Images/21_design.png)
 
