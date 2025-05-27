@@ -59,7 +59,7 @@ The following cp commands copy essential header files from the src/include direc
 ```bash
 patha@spatha-VirtualBox:~$ cd ~/VLSI/VSDBabySoC
 patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sp_verilog.vh .
-patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sandpiper.vh 
+patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sandpiper.vh .
 patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ cp -r src/include/sandpiper_gen.vh .
 patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ ls
 images  LICENSE  Makefile  output  README.md  sandpiper_gen.vh  sandpiper.vh  sp_env  sp_verilog.vh  src
