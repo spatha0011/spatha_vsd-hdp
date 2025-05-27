@@ -86,7 +86,7 @@ If you try to read the rvmyth.v file using yosys without copying the necessary h
 
 ![Alt Text](Images/err3.jpeg)
 
-To avoid these errors, first copy the required include files into your working directory!!
+To avoid these errors, make sure to copy the required include files into your working directory! This ensures Yosys can resolve them correctly during parsing, even if the -I option is used.
 
 - Read the clk_gate.v file with the include path using -I option.
 ```bash
