@@ -309,7 +309,7 @@ Both simulations were run using GTKWave, and the resulting waveforms were observ
 
 ![Alt Text](Images/today3.jpg)
 
-✅ The outputs match exactly, confirming that the functionality is preserved across the synthesis flow.
+✅ _The outputs match exactly, confirming that the functionality is preserved across the synthesis flow._
 
-This validates that the synthesized netlist is functionally equivalent to the RTL design.
+_This validates that the synthesized netlist is functionally equivalent to the RTL design._
 
