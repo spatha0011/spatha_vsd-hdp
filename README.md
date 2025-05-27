@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-Welcome to my journey through the VSD-HDP program! Below are links to my day-wise progress and learnings.
+_Welcome to my journey through the VSD-HDP program! Below are links to my day-wise progress and learnings._
 
 ## 📅 Day-wise Logs
 
