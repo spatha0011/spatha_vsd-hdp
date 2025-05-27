@@ -257,7 +257,7 @@ show
 
 ## lab1
 
-dff_cons1.v synthesis: Here, we can see value of q does not change as soon as reset=0,but q takes the value of 1’b0 at next clock edge,hence here no sequential logic optimization will occur and DFF will be inferred.
+Here, we can see value of q does not change as soon as reset=0,but q takes the value of 1’b0 at next clock edge,hence here no sequential logic optimization will occur and DFF will be inferred.
 
 ![Alt Text](Images/22.png)
 
