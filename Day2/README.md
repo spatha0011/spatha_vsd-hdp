@@ -4,22 +4,22 @@
 
 ## 📚 Contents
 
-1. [Liberty Format](#liberty-format)
-2. [Standard Cell Example: `a2111o_1`](#standard-cell-example-a2111o_1)
-3. [Standard Cell Comparison: `and2_1`, `and2_2`, and `and2_4`](#standard-cell-comparison-and2_1-and2_2-and-and2_4)
-4. [Hierarchical vs Flat Synthesis (Yosys)](#hierarchical-vs-flat-synthesis-yosys)
-5. [Why Do We Use Flops? (To Avoid Glitches)](#why-do-we-use-flops-to-avoid-glitches)
-6. [DFF with Asynchronous Reset](#d-flip-flop-with-asynchronous-reset)
-7. [DFF with Asynchronous Set](#d-flip-flop-with-asynchronous-set)
-8. [DFF with Synchronous Reset](#d-flip-flop-with-synchronous-reset)
-9. [DFF with Both Asynchronous and Synchronous Reset](#d-flip-flop-with-both-asynchronous-and-synchronous-reset)
-10. [Synthesis of DFF with Async Set](#synthesis-of-d-flip-flop-with-asynchronous-set)
-11. [Synthesis of DFF with Async Reset](#synthesis-of-d-flip-flop-with-asynchronous-reset)
-12. [Synthesis of DFF with Sync Reset](#synthesis-of-d-flip-flop-with-synchronous-reset)
-13. [Synthesis of DFF with Both Async and Sync Reset](#synthesis-of-d-flip-flop-with-both-asynchronous-and-synchronous-reset)
-14. [Interesting Optimisations](#interesting-optimisations)
-15. [Part 1 - Synthesis of `mul2`](#part1---synthesis-of-mul2)
-16. [Part 2 - Synthesis of `mult8`](#part2---synthesis-of-mult8)
+- [Liberty Format](#liberty-format)
+- [Standard Cell Example: `a2111o_1`](#standard-cell-example-a2111o_1)
+- [Standard Cell Comparison: `and2_1`, `and2_2`, and `and2_4`](#standard-cell-comparison-and2_1-and2_2-and-and2_4)
+- [Hierarchical vs Flat Synthesis (Yosys)](#hierarchical-vs-flat-synthesis-yosys)
+- [Why Do We Use Flops? (To Avoid Glitches)](#why-do-we-use-flops-to-avoid-glitches)
+- [DFF with Asynchronous Reset](#d-flip-flop-with-asynchronous-reset)
+- [DFF with Asynchronous Set](#d-flip-flop-with-asynchronous-set)
+- [DFF with Synchronous Reset](#d-flip-flop-with-synchronous-reset)
+- [DFF with Both Asynchronous and Synchronous Reset](#d-flip-flop-with-both-asynchronous-and-synchronous-reset)
+- [Synthesis of DFF with Async Set](#synthesis-of-d-flip-flop-with-asynchronous-set)
+- [Synthesis of DFF with Async Reset](#synthesis-of-d-flip-flop-with-asynchronous-reset)
+- [Synthesis of DFF with Sync Reset](#synthesis-of-d-flip-flop-with-synchronous-reset)
+- [Synthesis of DFF with Both Async and Sync Reset](#synthesis-of-d-flip-flop-with-both-asynchronous-and-synchronous-reset)
+- [Interesting Optimisations](#interesting-optimisations)
+- [Part 1 - Synthesis of `mul2`](#part1---synthesis-of-mul2)
+- [Part 2 - Synthesis of `mult8`](#part2---synthesis-of-mult8)
 
 ##  Liberty Format
 
