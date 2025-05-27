@@ -342,6 +342,8 @@ show
 
 ## lab5
 
+Here,after reset is deasserted,q1 is set to 1’b1 at next rising edge of clock,and we see q samples value of q1=1’b1 at the further clk edge,hence q depends upon value of q1,so even if q1 value remains constant,two DFFs will be inferred,as seen in the waveform.
+
 ![Alt Text](Images/25_a.png)
 
 ![Alt Text](Images/25_b.png)
