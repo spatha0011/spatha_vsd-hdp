@@ -53,7 +53,7 @@ yosys> read_verilog src/module/vsdbabysoc.v
 ```
  ![Alt Text](Images/today2.jpg)
 
-The following cp commands copy essential header files from the src/include directory into the working directory. These include:
+- The following cp commands copy essential header files from the src/include directory into the working directory. These include:
 
 **sp_verilog.vh** – contains Verilog definitions and macros
 
@@ -76,7 +76,8 @@ yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/modu
 ```
  ![Alt Text](Images/2.jpg)
 
-#### Note:
+#### Note: 
+
 If you try to read the rvmyth.v file using yosys without copying the necessary header files first, you may encounter errors like:
 
 ![Alt Text](Images/err1.jpeg)
