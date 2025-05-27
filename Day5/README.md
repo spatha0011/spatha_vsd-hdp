@@ -4,23 +4,23 @@
 
 ### 📚 Contents
 
-1. [Introduction to the VSDBabySoC](#introduction-to-the-vsdbabysoc)  
-2. [What is VSDBabySoC?](#what-is-vsdbabysoc)  
-3. [Problem Statement](#problem-statement)  
-4. [What is SoC](#what-is-soc)  
-5. [What is RVMYTH](#what-is-rvmyth)  
-6. [What is PLL](#what-is-pll)  
-7. [What is DAC](#what-is-dac)  
-8. [Project Structure](#project-structure)  
-9. [Setup and Prepare Project Directory](#setup-and-prepare-project-directory)  
-10. [🛠️ Cloning the Project](#️-cloning-the-project)  
-11. [TLV to Verilog Conversion for RVMYTH](#tlv-to-verilog-conversion-for-rvmyth)  
-12. [Simulation Steps](#simulation-steps)  
+- [Introduction to the VSDBabySoC](#introduction-to-the-vsdbabysoc)  
+- [What is VSDBabySoC?](#what-is-vsdbabysoc)  
+- [Problem Statement](#problem-statement)  
+- [What is SoC](#what-is-soc)  
+- [What is RVMYTH](#what-is-rvmyth)  
+- [What is PLL](#what-is-pll)  
+- [What is DAC](#what-is-dac)  
+- [Project Structure](#project-structure)  
+- [Setup and Prepare Project Directory](#setup-and-prepare-project-directory)  
+- [🛠️ Cloning the Project](#️-cloning-the-project)  
+- [TLV to Verilog Conversion for RVMYTH](#tlv-to-verilog-conversion-for-rvmyth)  
+- [Simulation Steps](#simulation-steps)  
     - [Pre-Synthesis Simulation](#pre-synthesis-simulation)  
     - [Viewing Waveform in GTKWave](#viewing-waveform-in-gtkwave)
     - [Viewing DAC output in analog mode](#Viewing-DAC-output-in-analog-mode)
-13. [Troubleshooting Tips](#Trouble-shooting-tips)
-14. [Why Pre-Synthesis and Post-Synthesis?](#why-pre-synthesis-and-post-synthesis)
+- [Troubleshooting Tips](#Trouble-shooting-tips)
+- [Why Pre-Synthesis and Post-Synthesis?](#why-pre-synthesis-and-post-synthesis)
 
 ### Introduction to the VSDBabySoC
 VSDBabySoC is a small yet powerful RISCV-based SoC. 
