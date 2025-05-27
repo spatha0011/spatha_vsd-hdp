@@ -58,6 +58,15 @@ This section compares three variants of the 2-input AND gate from the `sky130_fd
 ![Alt Text](Images/4.png)
 
 ## Hierarchical vs Flat Synthesis (Yosys)
+A Hierarchical Design contains of multiple sub-modules,instantiated in the 'top' module. 
+
+Hierachical design approach is taken for large designs, to gain the advantage of divide and conquer approach. This leads to better utilization of tool resources for proper optimzation of smaller designs,as a larger design is difficult for a tool to optimize efficiently.
+
+It helps in better utilization of compute resources utilized during design process,and also leads to faster runtime and debugging operations.
+
+A flat design approach is chosen when the design is sufficiently small enough for the tool to optimize efficiently in a reasonable amount of time.
+
+For small and simple ASICs flat approach is preferable while hierarchical approach is preferable for larger,complex ASICs.
 
 ### Design : multiple_modules.v
 
@@ -168,6 +177,11 @@ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
+
+#### Note:
+abc -liberty <.lib file path> : This command is used for for technology mapping of yosys’s internal gate library to a target architecture.
+synth -top <module_name> : This command runs the yosys synthesis script on the mentioned module name of our design
+dfflibmap -liberty <.lib file path> : This command maps internal flipflop cells to the flipflop cells in the technology library specified in the given liberty file.
 
 ![Alt Text](Images/18.png)
 
