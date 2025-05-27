@@ -180,7 +180,9 @@ show
 
 #### Note:
 abc -liberty <.lib file path> : This command is used for for technology mapping of yosys’s internal gate library to a target architecture.
+
 synth -top <module_name> : This command runs the yosys synthesis script on the mentioned module name of our design
+
 dfflibmap -liberty <.lib file path> : This command maps internal flipflop cells to the flipflop cells in the technology library specified in the given liberty file.
 
 ![Alt Text](Images/18.png)
