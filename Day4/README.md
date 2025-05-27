@@ -49,6 +49,12 @@ Some of the common reasons for Synthesis - Simulation mismatch (mismatch between
   * Non-standard verilog coding
     
 ![Alt Text](Images/3.png)
+
+For ex: As seen in the screenshot below, in the left column,always block is evaluated only when sel is changing. So output y is not reflecting changes in input i1 and i0 when sel is not changing. Rather it acts like a
+latch. 
+
+The code on the right side represents the correct design coding for mux. In this case always is evaluated for any signal changes.
+
 ![Alt Text](Images/4.png)
 ![Alt Text](Images/5.png)
 ![Alt Text](Images/7.png)
