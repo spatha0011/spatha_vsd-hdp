@@ -4,10 +4,10 @@
 
 ## 📚 Contents
 
-1. [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
-2. [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
-3. [Combinational Logic Optimisation-labs](#Combinational-Logic-Optimisation-examples)
-4. [Sequential-Logic-Optimisation-labs](#Sequential-Logic-Optimisation-examples)
+- [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
+- [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
+- [Combinational Logic Optimisation-labs](#Combinational-Logic-Optimisation-examples)
+- [Sequential-Logic-Optimisation-labs](#Sequential-Logic-Optimisation-examples)
 
 ### Combinational Logic Optimisation
 
