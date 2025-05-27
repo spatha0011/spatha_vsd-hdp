@@ -41,13 +41,13 @@ Pre-synthesis simulation is crucial for verifying the logical functionality of a
 Here is the step-by-step execution plan for running the  commands manually:
 ---
 ### **Step 1: Load the Top-Level Design and Supporting Modules**
-- Launch the Yosys synthesis tool from your working directory.
+- Launch the yosys synthesis tool from your working directory.
 ```bash
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ yosys
 ```
  ![Alt Text](Images/today1.jpg)
  
-- Read the main vsdbabysoc.v RTL file into the Yosys environment.
+- Read the main vsdbabysoc.v RTL file into the yosys environment.
 ```bash
 yosys> read_verilog src/module/vsdbabysoc.v 
 ```
@@ -97,7 +97,7 @@ yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/modu
  ![Alt Text](Images/3.jpg)
 
  ### **Step 2: Load the Liberty Files for Synthesis**
-Inside the same Yosys shell, run:
+Inside the same yosys shell, run:
 ```bash
 yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsdpll.lib 
 yosys> read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsddac.lib 
