@@ -47,7 +47,7 @@ spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ yosys
 ```
  ![Alt Text](Images/today1.jpg)
  
-- Read the main **vsdbabysoc.v** RTL file into the Yosys environment.
+- Read the main vsdbabysoc.v RTL file into the Yosys environment.
 ```bash
 yosys> read_verilog src/module/vsdbabysoc.v 
 ```
@@ -70,7 +70,7 @@ patha@spatha-VirtualBox:~/VLSI/VSDBabySoC$ ls
 images  LICENSE  Makefile  output  README.md  sandpiper_gen.vh  sandpiper.vh  sp_env  sp_verilog.vh  src
 ```
 
-- Read the **rvmyth.v** file with the include path using -I option.
+- Read the rvmyth.v file with the include path using -I option.
 ```bash
 yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/rvmyth.v
 ```
@@ -88,10 +88,12 @@ _If you try to read the rvmyth.v file using yosys without copying the necessary 
 
 _To avoid these errors, make sure to copy the required include files into your working directory! This ensures Yosys can resolve them correctly during parsing, even if the -I option is used._
 
-- Read the **clk_gate.v** file with the include path using -I option.
+- Read the clk_gate.v file with the include path using -I option.
+  
 ```bash
 yosys> read_verilog -I ~/VLSI/VSDBabySoC/src/include/ ~/VLSI/VSDBabySoC/src/module/clk_gate.v
 ```
+
  ![Alt Text](Images/3.jpg)
 
  ### **Step 2: Load the Liberty Files for Synthesis**
