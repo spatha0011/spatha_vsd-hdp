@@ -4,15 +4,15 @@
 
 ## 📚 Contents
 
-1. [Overview](#vsd-hardware-design-program)  
-2. [Synthesis of Ternary Operator MUX](#synthesis-of-ternary-operator-mux)  
-3. [GLS of Ternary Operator MUX](#gls-of-ternary-operator-mux)  
-4. [Synthesis of Bad MUX design](#synthesis-of-bad-mux-design)  
-5. [GLS of Bad MUX design](#gls-of-bad-mux-design)  
-6. [Synthesis-Simulation Mismatch of Bad MUX design](#synthesis-simulation-mismatch-of-bad-mux-design)  
-7. [Synthesis of blocking_caveat design](#synthesis-of-blocking_caveat-design)  
-8. [GLS of blocking_caveat design](#gls-of-blocking_caveat-design)  
-9. [Synthesis-Simulation Mismatch of blocking_caveat design](#synthesis-simulation-mismatch-of-blocking_caveat-design)
+- [Overview](#vsd-hardware-design-program)  
+- [Synthesis of Ternary Operator MUX](#synthesis-of-ternary-operator-mux)  
+- [GLS of Ternary Operator MUX](#gls-of-ternary-operator-mux)  
+- [Synthesis of Bad MUX design](#synthesis-of-bad-mux-design)  
+- [GLS of Bad MUX design](#gls-of-bad-mux-design)  
+- [Synthesis-Simulation Mismatch of Bad MUX design](#synthesis-simulation-mismatch-of-bad-mux-design)  
+- [Synthesis of blocking_caveat design](#synthesis-of-blocking_caveat-design)  
+- [GLS of blocking_caveat design](#gls-of-blocking_caveat-design)  
+- [Synthesis-Simulation Mismatch of blocking_caveat design](#synthesis-simulation-mismatch-of-blocking_caveat-design)
 
 ### Gate Level Simulation (GLS)
   * _Gate Level_ refers to the netlist view of a design after the synthesis has been performed.
