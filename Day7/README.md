@@ -3,6 +3,7 @@
 ## Day 7 : Timing Graphs using openSTA
 
 ### 📚 Contents
+
 - [Installation of OpenSTA](#installation-of-opensta)
   - [Step 1: Clone the Repository](#step-1-clone-the-repository)
   - [Step 2: Build the Docker Image](#step-2-build-the-docker-image)
