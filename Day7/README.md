@@ -155,4 +155,59 @@ This method ensures repeatability and makes it easy to maintain reusable timing 
 
 ![Alt Text](Images/7.jpg)
 
+### VSDBabySoC basic timing analysis
+
+### Prepare Required Files
+
+Create a directory and copy all necessary files into it:
+
+```bash
+spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA$ mkdir -p examples/timing_libs/
+spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA$ ls examples/timing_libs/
+avsddac.lib  
+avsdpll.lib  
+sky130_fd_sc_hd__tt_025C_1v80.lib    
+vsdbabysoc_synthesis.sdc  
+vsdbabysoc.synth.v
+```
+These files include:
+
+- Standard cell library: sky130_fd_sc_hd__tt_025C_1v80.lib
+
+- IP-specific Liberty libraries: avsdpll.lib, avsddac.lib
+
+- Synthesized gate-level netlist: vsdbabysoc.synth.v
+
+- Timing constraints: vsdbabysoc_synthesis.sdc
+
+**Below is a TCL script to run complete min/max timing checks on the SoC:**
+```shell
+# Load Liberty Libraries (standard cell + IPs)
+read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib
+read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib
+
+read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsddac.lib
+read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsddac.lib
+
+# Read Synthesized Netlist
+read_verilog /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/vsdbabysoc.synth.v
+
+# Link the Top-Level Design
+link_design vsdbabysoc
+
+# Apply SDC Constraints
+read_sdc /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/vsdbabysoc_synthesis.sdc
+
+# Generate Timing Report
+report_checks
+```
+
+Save the above script as _vsdbabysoc_min_max_delays.tcl_, then execute it inside the Docker container with:
+
+```shell
+docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/vsdbabysoc_min_max_delays.tcl
+```
 
