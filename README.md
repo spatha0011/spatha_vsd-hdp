@@ -11,3 +11,4 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 - [GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](Day4/README.md)
 - [VSDBabySoC Design and Modeling](Day5/README.md)
 - [VSDBabySoC Post-Synthesis Simulation](Day6/README.md)
+- [Timing Graphs using openSTA](Day7/README.md)
