@@ -50,6 +50,9 @@ OpenSTA uses a TCL command interpreter to read the design, specify timing constr
 git clone https://github.com/parallaxsw/OpenSTA.git
 cd OpenSTA
 ```
+
+![Alt Text](Images/1.jpg)
+
 #### Step 2: Build the Docker Image
 ```bash
 docker build --file Dockerfile.ubuntu22.04 --tag opensta .
