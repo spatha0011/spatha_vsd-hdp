@@ -166,6 +166,7 @@ Create a directory and copy all necessary files into it:
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA$ mkdir -p examples/timing_libs/
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA/examples$ ls timing_libs/
 avsddac.lib  avsdpll.lib  sky130_fd_sc_hd__tt_025C_1v80.lib
+
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA$ mkdir -p examples/BabySOC
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA/examples$ ls BabySOC/
 gcd_sky130hd.sdc vsdbabysoc_synthesis.sdc  vsdbabysoc.synth.v
@@ -220,12 +221,10 @@ Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_
 Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 23, default_fanout_load is 0.0.
 Error: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, syntax error
 ```
-![Alt Text](Images/8.jpg)
-
 
 ✅ **Fix:**
 
-This error is due to the use of // for comments in Liberty files, which is not supported. Replace all // comments with C-style /* ... */ comments or remove them entirely. Specifically, check around line 54 of avsdpll.lib and correct any syntax issues such as:
+This error is due to the use of // for comments in Liberty files, which is not supported. Replace all // comments with C-style /* ... */ comments or remove them entirely. Specifically, check around _line 54 of avsdpll.lib_ and correct any syntax issues such as:
 
 ```shell
 //pin (GND#2) {
