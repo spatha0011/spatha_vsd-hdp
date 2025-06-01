@@ -129,7 +129,7 @@ To run this script non-interactively using Docker:
 docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/min_max_delays.tcl
 ```
 
-✅ Why use the full path?
+🤔**Why use the full path?**
 
 Inside the Docker container, your $HOME directory from the host system is mounted as /data.
 
