@@ -205,9 +205,39 @@ read_sdc /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/vsdbabysoc_synthesis
 report_checks
 ```
 
-Save the above script as _vsdbabysoc_min_max_delays.tcl_, then execute it inside the Docker container with:
+Save the above script as **_vsdbabysoc_min_max_delays.tcl_**, then execute it inside the Docker container with:
 
 ```shell
 docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/vsdbabysoc_min_max_delays.tcl
 ```
+⚠️ **Possible Error Alert**
+You may encounter the following error when running the script:
 
+Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 23, default_fanout_load is 0.0.
+Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 1, library sky130_fd_sc_hd__tt_025C_1v80 already exists.
+Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 23, default_fanout_load is 0.0.
+Error: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, syntax error
+![Alt Text](Images/8.jpg)
+
+
+✅ Fix:
+This error is due to the use of // for comments in Liberty files, which is not supported. Replace all // comments with C-style /* ... */ comments or remove them entirely. Specifically, check around line 54 of avsdpll.lib and correct any syntax issues such as:
+
+
+//pin (GND#2) {
+//  direction : input;
+//  max_transition : 2.5;
+//  capacitance : 0.001;
+//}
+
+✔️ Replace with:
+
+/*
+pin (GND#2) {
+  direction : input;
+  max_transition : 2.5;
+  capacitance : 0.001;
+}
+*/
+
+This should allow OpenSTA to parse the Liberty file without throwing syntax errors.
