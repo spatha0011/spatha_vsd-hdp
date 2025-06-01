@@ -12,7 +12,7 @@
 - [Timing Analysis Using a TCL Script](#timing-analysis-using-a-tcl-script)
   - [Sample Script: min_max_delays.tcl](#sample-script-min_max-delaystcl)
   - [Run the Script Using Docker](#run-the-script-using-docker)
-
+    
 OpenSTA(Open Static Timing Analyzer) is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats.
 
 * Verilog netlist
