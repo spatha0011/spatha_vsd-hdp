@@ -27,8 +27,10 @@ OpenSTA uses a TCL command interpreter to read the design, specify timing constr
 * Multicycle path
 * Min/Max path delay
 * Exception points
+
    -from clock/pin/instance -through pin/net -to clock/pin/instance
 *  Edge specific exception points
+
    -rise_from/-fall_from, -rise_through/-fall_through, -rise_to/-fall_to
 
 ##### Delay calculation
