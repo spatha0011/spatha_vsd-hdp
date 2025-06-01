@@ -59,6 +59,8 @@ docker build --file Dockerfile.ubuntu22.04 --tag opensta .
 ```
 This builds a Docker image named opensta using the provided Ubuntu 22.04 Dockerfile. All dependencies are installed during this step.
 
+![Alt Text](Images/2.jpg)
+
 #### Step 3: Run the OpenSTA Container
 ```bash
 docker run -i -v $HOME:/data opensta
@@ -67,3 +69,5 @@ docker run -i -v $HOME:/data opensta
 -i → Runs the container in interactive mode.
 
 -v $HOME:/data → Mounts your home directory into the container at /data, allowing OpenSTA to access your local design files.
+
+![Alt Text](Images/3.jpg)
