@@ -223,7 +223,8 @@ Error: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, s
 ![Alt Text](Images/8.jpg)
 
 
-✅ Fix:
+✅ **Fix:**
+
 This error is due to the use of // for comments in Liberty files, which is not supported. Replace all // comments with C-style /* ... */ comments or remove them entirely. Specifically, check around line 54 of avsdpll.lib and correct any syntax issues such as:
 
 ```shell
