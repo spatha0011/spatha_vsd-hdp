@@ -92,6 +92,6 @@ These commands will:
   
 _This flow is useful for quick testing and debugging without writing a full TCL script._
 
-![Alt Text](Images/4.png)
+![Alt Text](Images/4.jpg)
 
-![Alt Text](Images/5.png)
+![Alt Text](Images/5.jpg)
