@@ -66,8 +66,8 @@ This builds a Docker image named opensta using the provided Ubuntu 22.04 Dockerf
 docker run -i -v $HOME:/data opensta
 ```
 
--i → Runs the container in interactive mode.
+_-i → Runs the container in interactive mode._
 
--v $HOME:/data → Mounts your home directory into the container at /data, allowing OpenSTA to access your local design files.
+_-v $HOME:/data → Mounts your home directory into the container at /data, allowing OpenSTA to access your local design files._
 
 ![Alt Text](Images/3.jpg)
