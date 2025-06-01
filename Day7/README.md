@@ -66,4 +66,4 @@ To run a docker container using the OpenSTA image, use the -v option to docker t
 ```bash
 docker run -i -v $HOME:/data opensta
 ```
-![Alt Text](Images/3.jpg)
+![Alt Text](Images/3.png)
