@@ -133,7 +133,7 @@ set_input_delay -clock clk 0 {in1 in2}
 report_checks -path_delay min_max
 ```
 
-#### Run the Script Using Docker**
+#### Run the Script Using Docker
 
 To run this script non-interactively using Docker:
 
