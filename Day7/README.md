@@ -247,5 +247,5 @@ This should allow OpenSTA to parse the Liberty file without throwing syntax erro
 
 After fixing the Liberty file comment syntax as shown above, you can rerun the script to perform complete timing analysis for VSDBabySoC:
 
-![Alt Text](Images/9.jpg)
+![Alt Text](Images/10.jpg)
 
