@@ -100,7 +100,7 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
 
-*Sample Script: min_max_delays.tcl
+**Sample Script: min_max_delays.tcl**
 
 ```shell
 # Load liberty files for max and min analysis
@@ -127,5 +127,9 @@ Run the Script Inside OpenSTA
 source /data/VLSI/VSDBabySoC/OpenSTA/examples/min_max_delays.tcl
 ```
 This method ensures repeatability and allows you to maintain reusable timing environments for your design.
+
+![Alt Text](Images/6.jpg)
+
+![Alt Text](Images/7.jpg)
 
 
