@@ -113,7 +113,7 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
 
-#### sample script: min_max_delays.tcl
+#### <ins>sample script: min_max_delays.tcl</ins>
 
 ```shell
 # Load liberty files for max and min analysis
@@ -235,7 +235,7 @@ This error is due to the use of // for comments in Liberty files, which is not s
 //  capacitance : 0.001;
 //}
 ```
-✔️ Replace with:
+✔️ **Replace with:**
 ```shell
 /*
 pin (GND#2) {
