@@ -158,7 +158,7 @@ This method ensures repeatability and makes it easy to maintain reusable timing 
 
 ### VSDBabySoC basic timing analysis
 
-### Prepare Required Files
+#### Prepare Required Files
 
 Create a directory and copy all necessary files into it:
 
@@ -181,7 +181,7 @@ These files include:
 
 - Timing constraints: vsdbabysoc_synthesis.sdc
 
-**Below is a TCL script to run complete min/max timing checks on the SoC:**
+**<ins>Below is a TCL script to run complete min/max timing checks on the SoC:</ins>**
 ```shell
 # Load Liberty Libraries (standard cell + IPs)
 read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
