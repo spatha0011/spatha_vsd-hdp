@@ -41,3 +41,24 @@ OpenSTA uses a TCL command interpreter to read the design, specify timing constr
 * Report timing checks -from, -through, -to, multiple paths to endpoint
 * Report delay calculation
 * Check timing setup
+
+## Installation of OpenSTA
+
+#### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/parallaxsw/OpenSTA.git
+cd OpenSTA
+```
+#### Step 2: Build the Docker Image
+```bash
+docker build --file Dockerfile.ubuntu22.04 --tag opensta .
+```
+This builds a Docker image named opensta using the provided Ubuntu 22.04 Dockerfile. All dependencies are installed during this step.
+
+#### Step 3: Run the OpenSTA Container
+```bash
+docker run -i -v $HOME:/data opensta
+```
+-i → Runs the container in interactive mode.
+-v $HOME:/data → Mounts your home directory into the container at /data, allowing OpenSTA to access your local design files.
