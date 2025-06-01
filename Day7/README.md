@@ -70,7 +70,7 @@ docker run -i -v $HOME:/data opensta
 
 You now have OpenSTA installed and running inside a Docker container. After successful installation, you will see the % prompt—this indicates that the OpenSTA interactive shell is ready for use.
 
-#### Timing Ananlysis Using Inline Commands
+### Timing Ananlysis Using Inline Commands
 
 Once inside the OpenSTA shell (% prompt), you can perform a basic static timing analysis using the following inline commands:
 ```shell
@@ -95,3 +95,37 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 ![Alt Text](Images/4.jpg)
 
 ![Alt Text](Images/5.jpg)
+
+### Timing Analysis Using a TCL Script
+
+To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
+
+Sample Script: min_max_delays.tcl
+
+```shell
+# Load liberty files for max and min analysis
+read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/nangate45_slow.lib.gz
+read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/nangate45_fast.lib.gz
+
+# Read the gate-level Verilog netlist
+read_verilog /data/VLSI/VSDBabySoC/OpenSTA/examples/example1.v
+
+# Link the top-level design
+link_design top
+
+# Define clocks and input delays
+create_clock -name clk -period 10 {clk1 clk2 clk3}
+set_input_delay -clock clk 0 {in1 in2}
+
+# Generate a full min/max timing report
+report_checks -path_delay min_max
+```
+
+Run the Script Inside OpenSTA
+
+```shell
+source /data/VLSI/VSDBabySoC/OpenSTA/examples/min_max_delays.tcl
+```
+This method ensures repeatability and allows you to maintain reusable timing environments for your design.
+
+
