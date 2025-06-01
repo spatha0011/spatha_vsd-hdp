@@ -70,7 +70,7 @@ docker run -i -v $HOME:/data opensta
 
 You now have OpenSTA installed and running inside a Docker container. After successful installation, you will see the % prompt—this indicates that the OpenSTA interactive shell is ready for use.
 
-### Timing Ananlysis Using Inline Commands
+### Timing Ananlysis Using inline Commands
 
 Once inside the OpenSTA shell (% prompt), you can perform a basic static timing analysis using the following inline commands:
 ```shell
