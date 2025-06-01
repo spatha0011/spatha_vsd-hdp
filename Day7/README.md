@@ -211,12 +211,15 @@ Save the above script as **_vsdbabysoc_min_max_delays.tcl_**, then execute it in
 docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/vsdbabysoc_min_max_delays.tcl
 ```
 ⚠️ **Possible Error Alert**
+
 You may encounter the following error when running the script:
 
+```shell
 Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 23, default_fanout_load is 0.0.
 Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 1, library sky130_fd_sc_hd__tt_025C_1v80 already exists.
 Warning: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib line 23, default_fanout_load is 0.0.
 Error: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, syntax error
+```
 ![Alt Text](Images/8.jpg)
 
 
