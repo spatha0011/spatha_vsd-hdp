@@ -226,15 +226,15 @@ Error: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, s
 ✅ Fix:
 This error is due to the use of // for comments in Liberty files, which is not supported. Replace all // comments with C-style /* ... */ comments or remove them entirely. Specifically, check around line 54 of avsdpll.lib and correct any syntax issues such as:
 
-
+```shell
 //pin (GND#2) {
 //  direction : input;
 //  max_transition : 2.5;
 //  capacitance : 0.001;
 //}
-
+```
 ✔️ Replace with:
-
+```shell
 /*
 pin (GND#2) {
   direction : input;
@@ -242,5 +242,5 @@ pin (GND#2) {
   capacitance : 0.001;
 }
 */
-
+```
 This should allow OpenSTA to parse the Liberty file without throwing syntax errors.
