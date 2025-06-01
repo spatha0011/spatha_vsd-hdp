@@ -67,3 +67,26 @@ To run a docker container using the OpenSTA image, use the -v option to docker t
 docker run -i -v $HOME:/data opensta
 ```
 ![Alt Text](Images/3.png)
+
+You now have OpenSTA installed and running inside a Docker container. After successful installation, you will see the % prompt—this indicates that the OpenSTA interactive shell is ready for use.
+
+#### Timing Ananlysis Using Inline Commands
+
+Once inside the OpenSTA shell (% prompt), you can perform a basic static timing analysis using the following inline commands:
+```shell
+read_liberty /OpenSTA/examples/nangate45_slow.lib.gz
+read_verilog /OpenSTA/examples/example1.v
+link_design top
+create_clock -name clk -period 10 {clk1 clk2 clk3}
+set_input_delay -clock clk 0 {in1 in2}
+report_checks
+```
+These commands will:
+
+- Load the standard cell library
+- Read the synthesized gate-level Verilog netlist
+- Link the design with top module top
+- Define a clock with a 10ns period for multiple clock inputs
+- Apply input delay constraints
+- Generate a timing report showing setup/hold analysis results
+_This flow is useful for quick testing and debugging without writing a full TCL script._
