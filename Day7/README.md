@@ -196,13 +196,14 @@ This method ensures repeatability and makes it easy to maintain reusable timing 
 
 #### Prepare Required Files
 
-Create a directory and copy all necessary files into it:
+To begin static timing analysis on the VSDBabySoC design, you must organize and prepare the required files in specific directories.
 
 ```bash
+# Create a directory to store Liberty timing libraries
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA$ mkdir -p examples/timing_libs/
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA/examples$ ls timing_libs/
 avsddac.lib  avsdpll.lib  sky130_fd_sc_hd__tt_025C_1v80.lib
-
+# Create a directory to store synthesized netlist and constraint files
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA$ mkdir -p examples/BabySOC
 spatha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA/examples$ ls BabySOC/
 gcd_sky130hd.sdc vsdbabysoc_synthesis.sdc  vsdbabysoc.synth.v
