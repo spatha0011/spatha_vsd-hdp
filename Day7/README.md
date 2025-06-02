@@ -374,6 +374,15 @@ min_max_sky130_fd_sc_hd__ff_n40C_1v65.lib.txt  min_max_sky130_fd_sc_hd__ss_n40C_
 min_max_sky130_fd_sc_hd__ff_n40C_1v76.lib.txt  min_max_sky130_fd_sc_hd__ss_n40C_1v40.lib.txt  sta_wns.txt
 ```
 
+| **File**                  | **Description**                                                     |
+| ------------------------- | ------------------------------------------------------------------- |
+| `min_max_<lib>.txt`       | Detailed timing report for setup and hold paths for each PVT corner |
+| `sta_worst_max_slack.txt` | Worst setup slack values across all corners                         |
+| `sta_worst_min_slack.txt` | Worst hold slack values across all corners                          |
+| `sta_tns.txt`             | Total negative slack values across all corners                      |
+| `sta_wns.txt`             | Worst negative slack values across all corners                      |
+
+
 #### Timing Summary Across PVT Corners (Post-Synthesis STA Results)
 Below is the aggregated timing summary for the VSDBabySoC design across various PVT corners, extracted from the OpenSTA output files. 
 
