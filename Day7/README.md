@@ -194,13 +194,13 @@ read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsddac.lib
 read_liberty -max /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsddac.lib
 
 # Read Synthesized Netlist
-read_verilog /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySOC/vsdbabysoc.synth.v
+read_verilog /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc.synth.v
 
 # Link the Top-Level Design
 link_design vsdbabysoc
 
 # Apply SDC Constraints
-read_sdc /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySOC/vsdbabysoc_synthesis.sdc
+read_sdc /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc_synthesis.sdc
 
 # Generate Timing Report
 report_checks
@@ -209,7 +209,7 @@ report_checks
 Save the above script as **_vsdbabysoc_min_max_delays.tcl_**, then execute it inside the Docker container with:
 
 ```shell
-docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySOC/vsdbabysoc_min_max_delays.tcl
+docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc_min_max_delays.tcl
 ```
 ⚠️ **Possible Error Alert**
 
