@@ -13,6 +13,7 @@
 - [VSDBabySoC basic timing analysis](#vsdbabysoc-basic-timing-analysis)
 - [VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)](#vsdbabysoc-pvt-corner-analysis-post-synthesis-timing)
 - [Timing Summary Across PVT Corners (Post-Synthesis STA Results)](#timing-summary-across-pvt-corners-post-synthesis-sta-results)
+- [Timing Plots Across PVT Corners](#timing-plots-across-pvt-corners)
     
 OpenSTA(Open Static Timing Analyzer) is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats.
 
@@ -334,6 +335,8 @@ Below is the aggregated timing summary for the VSDBabySoC design across various 
 This includes Worst Hold Slack, Worst Setup Slack, WNS, and TNS values per corner:
 
 ![Alt Text](Images/excel_data.png)
+
+#### Timing Plots Across PVT Corners
 
 ![Alt Text](Images/WHS.jpg)
 
