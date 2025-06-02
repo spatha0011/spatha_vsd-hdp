@@ -48,13 +48,13 @@ OpenSTA uses a TCL command interpreter to read the design, specify timing constr
      `-rise_from/-fall_from, -rise_through/-fall_through, -rise_to/-fall_to`
 
 ##### Delay calculation
-* Integrated Dartu/Menezes/Pileggi RC effective capacitance algorithm
-* External delay calculator API
+  * Integrated Dartu/Menezes/Pileggi RC effective capacitance algorithm
+  * External delay calculator API
 
 ##### Analysis
-* Report timing checks -from, -through, -to, multiple paths to endpoint
-* Report delay calculation
-* Check timing setup
+  * Report timing checks -from, -through, -to, multiple paths to endpoint
+  * Report delay calculation
+  * Check timing setup
 
 ## Installation of OpenSTA
 
