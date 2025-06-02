@@ -113,7 +113,7 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
 
-#### <ins>sample script: min_max_delays.tcl</ins>
+🔽#### sample script: min_max_delays.tcl
 
 ```shell
 # Load liberty files for max and min analysis
@@ -181,7 +181,7 @@ These files include:
 
 - Timing constraints: vsdbabysoc_synthesis.sdc
 
-**<ins>Below is a TCL script to run complete min/max timing checks on the SoC:</ins>**
+🔽**Below is a TCL script to run complete min/max timing checks on the SoC:**
 ```shell
 # Load Liberty Libraries (standard cell + IPs)
 read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -267,7 +267,7 @@ _These represent the **fastest** operating conditions._
  **Timing libraries** required for this analysis can be downloaded from:  
 🔗 [Skywater PDK - sky130_fd_sc_hd Timing Libraries](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing)
 
-<ins>The below Tcl script _**sta_across_pvt.tcl**_ can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.</ins>
+🔽 The below Tcl script _**sta_across_pvt.tcl**_ can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.
 
 ```shell
  set list_of_lib_files(1) "sky130_fd_sc_hd__tt_025C_1v80.lib"
