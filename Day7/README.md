@@ -267,7 +267,7 @@ _These represent the **fastest** operating conditions._
  **Timing libraries** required for this analysis can be downloaded from:  
 🔗 [Skywater PDK - sky130_fd_sc_hd Timing Libraries](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing)
 
-The below Tcl script _**sta_across_pvt.tcl**_ can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.
+<ins>The below Tcl script _**sta_across_pvt.tcl**_ can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.</ins>
 
 ```shell
  set list_of_lib_files(1) "sky130_fd_sc_hd__tt_025C_1v80.lib"
