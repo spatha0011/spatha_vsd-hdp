@@ -111,6 +111,26 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 ![Alt Text](Images/5.jpg)
 
+❓Why Does report_checks Show Only Max (Setup) Paths?
+
+By default, report_checks reports -path_delay max (i.e., setup checks).
+
+OpenSTA interprets report_checks without arguments as:
+```shell
+report_checks -path_delay max
+```
+This reports only max path delays, i.e., setup timing checks from launch clock rising edge to capture clock rising edge, ensuring data arrives before the setup time.
+
+✅ How to Also Get Hold (min) Paths:
+
+If you want both setup and hold timing checks (i.e., both max and min path delays), use:
+```shell
+report_checks -path_delay min_max
+```
+Or if you want to see only hold checks (min path delays):
+```shell
+report_checks -path_delay min
+```
 ### Timing Analysis Using a TCL Script
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
