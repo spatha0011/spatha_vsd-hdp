@@ -111,7 +111,7 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 ![Alt Text](Images/5.jpg)
 
-❓Why Does report_checks Show Only Max (Setup) Paths?
+🤔**Why Does report_checks Show Only Max (Setup) Paths?**
 
 By default, report_checks reports -path_delay max (i.e., setup checks).
 
