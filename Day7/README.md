@@ -45,7 +45,7 @@ OpenSTA uses a TCL command interpreter to read the design, specify timing constr
     
   *  Edge specific exception points
 
-    `-rise_from/-fall_from, -rise_through/-fall_through, -rise_to/-fall_to`
+     `-rise_from/-fall_from, -rise_through/-fall_through, -rise_to/-fall_to`
 
 ##### Delay calculation
 * Integrated Dartu/Menezes/Pileggi RC effective capacitance algorithm
