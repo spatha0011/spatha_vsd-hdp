@@ -336,7 +336,7 @@ This includes Worst Hold Slack, Worst Setup Slack, WNS, and TNS values per corne
 
 ![Alt Text](Images/excel_data.png)
 
-#### Timing Plots Across PVT Corners
+#### 📈Timing Plots Across PVT Corners
 
 ![Alt Text](Images/WHS.jpg)
 
