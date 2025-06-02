@@ -384,9 +384,9 @@ min_max_sky130_fd_sc_hd__ff_n40C_1v76.lib.txt  min_max_sky130_fd_sc_hd__ss_n40C_
 
 
 #### Timing Summary Across PVT Corners (Post-Synthesis STA Results)
-Below is the aggregated timing summary for the VSDBabySoC design across various PVT corners, extracted from the OpenSTA output files. 
+The following timing summary table was collected by running STA across 13 PVT corners using OpenSTA. 
 
-This includes Worst Hold Slack, Worst Setup Slack, WNS, and TNS values per corner:
+Metrics such as Worst Hold Slack, Worst Setup Slack, WNS, and TNS were extracted from the output reports.
 
 ![Alt Text](Images/excel_data.png)
 
