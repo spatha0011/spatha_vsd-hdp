@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## Day 6 : VSDBabySoC Post-Synthesis Simulation
+## VSDBabySoC Post-Synthesis Simulation
 
 ### 📚 Contents
 
