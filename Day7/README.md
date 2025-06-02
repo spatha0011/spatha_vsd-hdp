@@ -10,8 +10,6 @@
   - [Step 3: Run the OpenSTA Container](#step-3-run-the-opensta-container)
 - [Timing Analysis Using Inline Commands](#timing-analysis-using-inline-commands)
 - [Timing Analysis Using a TCL Script](#timing-analysis-using-a-tcl-script)
-  - [Sample Script: min_max_delays.tcl](#sample-script-min_max-delaystcl)
-  - [Run the Script Using Docker](#run-the-script-using-docker)
 - [VSDBabySoC basic timing analysis](#vsdbabysoc-basic-timing-analysis)
     
 OpenSTA(Open Static Timing Analyzer) is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats.
@@ -113,7 +111,7 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
 
-#### sample script: min_max_delays.tcl
+🔽**sample script: min_max_delays.tcl**
 
 ```shell
 # Load liberty files for max and min analysis
