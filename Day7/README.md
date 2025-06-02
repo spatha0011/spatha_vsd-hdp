@@ -327,3 +327,11 @@ Below is the aggregated timing summary for the VSDBabySoC design across various 
 This includes Worst Hold Slack, Worst Setup Slack, WNS, and TNS values per corner:
 
 ![Alt Text](Images/excel_data.png)
+
+![Alt Text](Images/WHS.jpg)
+
+![Alt Text](Images/WSS.jpg)
+
+![Alt Text](Images/WNS.jpg)
+
+![Alt Text](Images/TNS.jpg)
