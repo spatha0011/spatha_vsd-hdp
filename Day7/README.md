@@ -8,7 +8,7 @@
   - [Step 1: Clone the Repository](#step-1-clone-the-repository)
   - [Step 2: Build the Docker Image](#step-2-build-the-docker-image)
   - [Step 3: Run the OpenSTA Container](#step-3-run-the-opensta-container)
-- [Timing Ananlysis Using inline Commands](#timing-analysis-using-inline-commands)
+- [Timing Analysis Using Inline Commands](#timing-analysis-using-inline-commands)
 - [Timing Analysis Using a TCL Script](#timing-analysis-using-a-tcl-script)
 - [VSDBabySoC basic timing analysis](#vsdbabysoc-basic-timing-analysis)
 - [VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)](#vsdbabysoc-pvt-corner-analysis-post-synthesis-timing)
