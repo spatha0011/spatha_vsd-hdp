@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## Day 1 : Introduction to Verilog RTL design and Synthesis
+## Introduction to Verilog RTL design and Synthesis
 
 ## 📚 Contents
 - [Introduction to RTL Design and Simulation](#day-1--introduction-to-verilog-rtl-design-and-synthesis)
