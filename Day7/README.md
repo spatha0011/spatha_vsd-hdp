@@ -310,6 +310,12 @@ _These represent the **fastest** operating conditions._
  }
 ```
 
+Save the above script as **_sta_across_pvt.tcl_**, then execute it inside the Docker container with:
+
+```shell
+docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/sta_across_pvt.tcl
+```
+
 After executing the above script, you can find the generated timing reports in the STA_OUTPUT directory:
 
 ```shell
