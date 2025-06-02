@@ -111,6 +111,10 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 ![Alt Text](Images/5.jpg)
 
+⚠️ **Note:** We use report_checks here because only the slow liberty file (nangate45_slow.lib.gz) is loaded. 
+
+This represents a setup (max delay) corner, so the analysis focuses on setup timing by default.
+
 🤔**Why Does report_checks Show Only Max (Setup) Paths?**
 
 By default, report_checks reports -path_delay max (i.e., setup checks).
@@ -127,7 +131,7 @@ If you want both setup and hold timing checks (i.e., both max and min path delay
 ```shell
 report_checks -path_delay min_max
 ```
-Or if you want to see only hold checks (min path delays):
+(Or) if you want to see only hold checks (min path delays):
 ```shell
 report_checks -path_delay min
 ```
