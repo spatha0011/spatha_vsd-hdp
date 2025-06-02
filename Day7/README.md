@@ -271,7 +271,7 @@ Error: /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/avsdpll.lib line 54, s
 
 ✅ **Fix:**
 
-This error is due to the use of // for comments in Liberty files, which is not supported. Replace all // comments with C-style /* ... */ comments or remove them entirely. Specifically, check around _line 54 of avsdpll.lib_ and correct any syntax issues such as:
+This error occurs because Liberty syntax does not support // for single-line comments, and more importantly, the { character appearing after // confuses the Liberty parser. Specifically, check around _line 54 of avsdpll.lib_ and correct any syntax issues such as:
 
 ```shell
 //pin (GND#2) {
