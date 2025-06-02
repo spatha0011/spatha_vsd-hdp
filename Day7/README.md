@@ -357,6 +357,13 @@ _These represent the **fastest** operating conditions._
  }
 ```
 
+| **Command**               | **Purpose**                       | **Explanation**                                                                                                              |
+| ------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `report_worst_slack -max` | Report Worst Setup Slack          | Outputs the **most negative setup slack** (WNS) in the design for the current PVT corner.                                    |
+| `report_worst_slack -min` | Report Worst Hold Slack           | Outputs the **most negative hold slack** in the design for the current PVT corner.                                           |
+| `report_tns`              | Report Total Negative Slack (TNS) | Prints the **sum of all negative slacks** (across all violating paths). Reflects how widespread timing violations are.       |
+| `report_wns`              | Report Worst Negative Slack (WNS) | Prints the **single worst slack** (i.e., the most timing-violating path). Indicates severity of the critical path violation. |
+
 Save the above script as **_sta_across_pvt.tcl_**, then execute it inside the Docker container with:
 
 ```shell
