@@ -249,3 +249,20 @@ After fixing the Liberty file comment syntax as shown above, you can rerun the s
 
 ![Alt Text](Images/11.jpg)
 
+### VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)
+Static Timing Analysis (STA) is performed across various **PVT (Process-Voltage-Temperature)** corners to ensure the design meets timing requirements under different conditions.
+
+### ⏱️ Critical Timing Corners (Sub-40nm nodes)
+
+**Worst Max Path (Setup-critical) Corners:**
+- `ss_LowTemp_LowVolt`
+- `ss_HighTemp_LowVolt`  
+_These represent the **slowest** operating conditions._
+
+**Worst Min Path (Hold-critical) Corners:**
+- `ff_LowTemp_HighVolt`
+- `ff_HighTemp_HighVolt`  
+_These represent the **fastest** operating conditions._
+
+ **Timing libraries** required for this analysis can be downloaded from:  
+🔗 [Skywater PDK - sky130_fd_sc_hd Timing Libraries](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing)
