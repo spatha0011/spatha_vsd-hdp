@@ -202,7 +202,7 @@ Reports timing paths with 4-digit precision and shows the net capacitance at eac
 ```
 Report timing with capacitance, slew, input pins, and fanout per stage.
 
-![Alt Text](Images/fields.png)
+![Alt Text](Images/fields1.png)
 
 ### Timing Analysis Using a TCL Script
 
