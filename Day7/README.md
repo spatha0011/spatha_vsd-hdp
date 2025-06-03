@@ -171,7 +171,7 @@ The datapath has been annotated with delay values at each stage for easier under
 
 Here’s the same OpenSTA timing analysis flow with added SPEF-based parasitic modeling:
 
-This enables **more accurate delay and slack computation** by including post-layout RC data, improving timing signoff precision.
+This enables **more realistic delay and slack computation** by including post-layout RC data, improving timing signoff precision.
 
 ```shell
 docker run -i -v $HOME:/data opensta
