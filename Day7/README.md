@@ -172,7 +172,7 @@ Here’s the same OpenSTA timing analysis flow with added SPEF-based parasitic m
 
 This enables **more accurate delay and slack computation** by including post-layout RC data, improving timing signoff precision.
 
-`shell
+```shell
 docker run -i -v $HOME:/data opensta
 ```
 
