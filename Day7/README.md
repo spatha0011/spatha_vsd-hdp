@@ -165,6 +165,21 @@ The datapath has been annotated with delay values at each stage for easier under
 
 ![Alt Text](Images/block.png)
 
+Here's the same OpenSTA static timing analysis flow with the addition of reading a SPEF file for parasitic information:
+
+Using this flow, you can perform a more accurate timing analysis by incorporating parasitic RC data from the SPEF file—leading to improved slack estimation and better timing closure insights.
+
+```shell
+read_liberty /OpenSTA/examples/nangate45_slow.lib.gz
+read_verilog /OpenSTA/examples/example1.v
+link_design top
+read_spef /OpenSTA/examples/example1.dspef
+create_clock -name clk -period 10 {clk1 clk2 clk3}
+set_input_delay -clock clk 0 {in1 in2}
+report_checks
+```
+![Alt Text](Images/12.png)
+
 ### Timing Analysis Using a TCL Script
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
