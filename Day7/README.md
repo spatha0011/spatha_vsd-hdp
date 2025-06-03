@@ -11,6 +11,7 @@
 - [Timing Analysis Using Inline Commands](#timing-analysis-using-inline-commands)
   - [Analyzing report outcomes](#analyzing-report-outcomes)
   - [SPEF-Based Timing Analysis](#spef-based-timing-analysis)
+  - [more options to explore](#more-options-to-explore)
 - [Timing Analysis Using a TCL Script](#timing-analysis-using-a-tcl-script)
 - [VSDBabySoC basic timing analysis](#vsdbabysoc-basic-timing-analysis)
 - [VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)](#vsdbabysoc-pvt-corner-analysis-post-synthesis-timing)
