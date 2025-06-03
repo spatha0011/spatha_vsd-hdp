@@ -190,9 +190,8 @@ report_checks
 ![Alt Text](Images/12.png)
 
 #### more options to explore
----------------------------------
 
-**Report Capacitance per Stage**
+**<ins>Report Capacitance per Stage</ins>**
 ```shell
 % report_checks -digits 4 -fields capacitance
 ```
@@ -200,7 +199,7 @@ Reports timing paths with 4-digit precision and shows the net capacitance at eac
 
 ![Alt Text](Images/cap.png)
 
-**Report Timing with Capacitance, Slew, Input Pins, and Fanout**
+**<ins>Report Timing with Capacitance, Slew, Input Pins, and Fanout</ins>**
 ```shell
 % report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
 ```
