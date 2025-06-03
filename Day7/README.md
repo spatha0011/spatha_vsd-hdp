@@ -15,7 +15,7 @@
 - [Timing Summary Across PVT Corners (Post-Synthesis STA Results)](#timing-summary-across-pvt-corners-post-synthesis-sta-results)
 - [Timing Plots Across PVT Corners](#timing-plots-across-pvt-corners)
     
-OpenSTA(Open Static Timing Analyzer) is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats.
+OpenSTA is an open source static timing analyzer (STA) tool used in digital design. It is utilized to analyze and verify the timing performance of digital circuits at the gate level.
 
   * Verilog netlist
   * Liberty library
@@ -89,21 +89,13 @@ You now have OpenSTA installed and running inside a Docker container. After succ
 
 Once inside the OpenSTA shell (% prompt), you can perform a basic static timing analysis using the following inline commands:
 ```shell
-read_liberty /OpenSTA/examples/nangate45_slow.lib.gz
-read_verilog /OpenSTA/examples/example1.v
-link_design top
-create_clock -name clk -period 10 {clk1 clk2 clk3}
-set_input_delay -clock clk 0 {in1 in2}
-report_checks
+read_liberty /OpenSTA/examples/nangate45_slow.lib.gz # Instructs OpenSTA to read and load the Liberty file "nangate45_slow.lib.gz".
+read_verilog /OpenSTA/examples/example1.v # Intructs OpenSTA to read and load the Verilog file (gate level verilog netlist) "example1.v"
+link_design top # Using "top," which stands for the main module, links the Verilog code with the Liberty timing cells.
+create_clock -name clk -period 10 {clk1 clk2 clk3} # Create a 10ns clock named 'clk' for clk1, clk2, and clk3 inputs
+set_input_delay -clock clk 0 {in1 in2} # Set 0ns input delay for inputs in1 and in2 relative to clock 'clk'
+report_checks # Run setup timing analysis (default: -path_delay max)
 ```
-These commands will:
-
-- Load the standard cell library
-- Read the synthesized gate-level Verilog netlist
-- Link the design with top module top
-- Define a clock with a 10ns period for multiple clock inputs
-- Apply input delay constraints
-- Generate a timing report showing setup/hold analysis results
   
 _This flow is useful for quick testing and debugging without writing a full TCL script._
 
@@ -111,7 +103,7 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 ![Alt Text](Images/5.jpg)
 
-⚠️ **Note:** We use report_checks here because only the slow liberty file (nangate45_slow.lib.gz) is loaded. 
+⚠️ **Note:** We used report_checks here because only the slow liberty file (nangate45_slow.lib.gz) is loaded. 
 
 This represents a setup (max delay) corner, so the analysis focuses on setup timing by default.
 
@@ -123,7 +115,7 @@ OpenSTA interprets report_checks without arguments as:
 ```shell
 report_checks -path_delay max
 ```
-This reports only max path delays, i.e., setup timing checks from launch clock rising edge to capture clock rising edge, ensuring data arrives before the setup time.
+This reports only max path delays, i.e., setup timing checks.
 
 ✅ How to Also Get Hold (min) Paths:
 
