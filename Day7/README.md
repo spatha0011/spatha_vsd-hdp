@@ -168,9 +168,9 @@ The datapath has been annotated with delay values at each stage for easier under
 
 #### SPEF-Based Timing Analysis
 
-Here's the same OpenSTA static timing analysis flow with the addition of reading a **SPEF file** for parasitic information:
+Here’s the same OpenSTA timing analysis flow with added SPEF-based parasitic modeling:
 
-Using this flow, you can perform a more accurate timing analysis by incorporating parasitic RC data from the SPEF file - leading to improved slack estimation and better timing closure insights.
+This enables **more accurate delay and slack computation** by including post-layout RC data, improving timing signoff precision.
 
 ```shell
 read_liberty /OpenSTA/examples/nangate45_slow.lib.gz
