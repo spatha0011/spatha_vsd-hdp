@@ -196,7 +196,7 @@ Reports timing paths with 4-digit precision and shows the net capacitance at eac
 
 ![Alt Text](Images/cap.png)
 
-**report Timing with Capacitance, Slew, Input Pins, and Fanout**
+**Report Timing with Capacitance, Slew, Input Pins, and Fanout**
 ```shell
 % report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
 ```
