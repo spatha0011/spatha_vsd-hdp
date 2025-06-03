@@ -10,6 +10,7 @@
   - [Step 3: Run the OpenSTA Container](#step-3-run-the-opensta-container)
 - [Timing Analysis Using Inline Commands](#timing-analysis-using-inline-commands)
   - [Analyzing report outcomes](#analyzing-report-outcomes)
+  - [SPEF-Based Timing Analysis](#spef-based-timing-analysis)
 - [Timing Analysis Using a TCL Script](#timing-analysis-using-a-tcl-script)
 - [VSDBabySoC basic timing analysis](#vsdbabysoc-basic-timing-analysis)
 - [VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)](#vsdbabysoc-pvt-corner-analysis-post-synthesis-timing)
@@ -164,6 +165,8 @@ Below is the *netlist diagram* automatically generated using Yosys.
 The datapath has been annotated with delay values at each stage for easier understanding:
 
 ![Alt Text](Images/block.png)
+
+#### SPEF-Based Timing Analysis
 
 Here's the same OpenSTA static timing analysis flow with the addition of reading a SPEF file for parasitic information:
 
