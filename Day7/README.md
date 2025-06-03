@@ -94,14 +94,19 @@ Once inside the OpenSTA shell (% prompt), you can perform a basic static timing 
 ```shell
 # Instructs OpenSTA to read and load the Liberty file "nangate45_slow.lib.gz".
 read_liberty /OpenSTA/examples/nangate45_slow.lib.gz
+
 # Intructs OpenSTA to read and load the Verilog file (gate level verilog netlist) "example1.v"
-read_verilog /OpenSTA/examples/example1.v 
+read_verilog /OpenSTA/examples/example1.v
+
 # Using "top," which stands for the main module, links the Verilog code with the Liberty timing cells.
 link_design top
+
 # Create a 10ns clock named 'clk' for clk1, clk2, and clk3 inputs 
 create_clock -name clk -period 10 {clk1 clk2 clk3}
+
 # Set 0ns input delay for inputs in1 and in2 relative to clock 'clk'
 set_input_delay -clock clk 0 {in1 in2}
+
 # Report of the timing checks for the design 
 report_checks 
 ```
