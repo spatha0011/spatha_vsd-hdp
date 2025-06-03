@@ -109,6 +109,7 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 
 ![Alt Text](Images/5.jpg)
 
+
 ⚠️ **Note:** We used report_checks here because only the slow liberty file (nangate45_slow.lib.gz) is loaded. 
 
 This represents a setup (max delay) corner, so the analysis focuses on setup timing by default.
@@ -133,6 +134,28 @@ report_checks -path_delay min_max
 ```shell
 report_checks -path_delay min
 ```
+
+**Verilog Netlist: example1.v**
+```shell
+module top (in1, in2, clk1, clk2, clk3, out);
+  input in1, in2, clk1, clk2, clk3;
+  output out;
+  wire r1q, r2q, u1z, u2z;
+
+  DFF_X1 r1 (.D(in1), .CK(clk1), .Q(r1q));
+  DFF_X1 r2 (.D(in2), .CK(clk2), .Q(r2q));
+  BUF_X1 u1 (.A(r2q), .Z(u1z));
+  AND2_X1 u2 (.A1(r1q), .A2(u1z), .ZN(u2z));
+  DFF_X1 r3 (.D(u2z), .CK(clk3), .Q(out));
+endmodule
+```
+
+Below is the netlist path diagram automatically generated using Yosys.
+
+The datapath has been annotated with delay values at each stage for easier understanding:
+
+![Alt Text](Images/block.png)
+
 ### Timing Analysis Using a TCL Script
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
