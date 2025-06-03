@@ -137,7 +137,7 @@ report_checks -path_delay min
 ```
 #### Analyzing report outcomes
 
-**Verilog Netlist: example1.v**
+*Verilog Netlist: example1.v*
 ```shell
 module top (in1, in2, clk1, clk2, clk3, out);
   input in1, in2, clk1, clk2, clk3;
@@ -152,7 +152,7 @@ module top (in1, in2, clk1, clk2, clk3, out);
 endmodule
 ```
 
-Below is the netlist diagram automatically generated using Yosys.
+Below is the *netlist diagram* automatically generated using Yosys.
 
 The datapath has been annotated with delay values at each stage for easier understanding:
 
