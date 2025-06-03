@@ -89,12 +89,18 @@ You now have OpenSTA installed and running inside a Docker container. After succ
 
 Once inside the OpenSTA shell (% prompt), you can perform a basic static timing analysis using the following inline commands:
 ```shell
-read_liberty /OpenSTA/examples/nangate45_slow.lib.gz # Instructs OpenSTA to read and load the Liberty file "nangate45_slow.lib.gz".
-read_verilog /OpenSTA/examples/example1.v # Intructs OpenSTA to read and load the Verilog file (gate level verilog netlist) "example1.v"
-link_design top # Using "top," which stands for the main module, links the Verilog code with the Liberty timing cells.
-create_clock -name clk -period 10 {clk1 clk2 clk3} # Create a 10ns clock named 'clk' for clk1, clk2, and clk3 inputs
-set_input_delay -clock clk 0 {in1 in2} # Set 0ns input delay for inputs in1 and in2 relative to clock 'clk'
-report_checks # Run setup timing analysis (default: -path_delay max)
+# Instructs OpenSTA to read and load the Liberty file "nangate45_slow.lib.gz".
+read_liberty /OpenSTA/examples/nangate45_slow.lib.gz
+# Intructs OpenSTA to read and load the Verilog file (gate level verilog netlist) "example1.v"
+read_verilog /OpenSTA/examples/example1.v 
+# Using "top," which stands for the main module, links the Verilog code with the Liberty timing cells.
+link_design top
+# Create a 10ns clock named 'clk' for clk1, clk2, and clk3 inputs 
+create_clock -name clk -period 10 {clk1 clk2 clk3}
+# Set 0ns input delay for inputs in1 and in2 relative to clock 'clk'
+set_input_delay -clock clk 0 {in1 in2}
+# Report of the timing checks for the design 
+report_checks 
 ```
   
 _This flow is useful for quick testing and debugging without writing a full TCL script._
