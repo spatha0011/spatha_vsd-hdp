@@ -188,6 +188,22 @@ report_checks
 
 ![Alt Text](Images/12.png)
 
+**Report Capacitance per Stage**
+```shell
+% report_checks -digits 4 -fields capacitance
+```
+Reports timing paths with 4-digit precision and shows the net capacitance at each stage, helping identify high-cap nodes that may affect delay.
+
+![Alt Text](Images/cap.png)
+
+**report Timing with Capacitance, Slew, Input Pins, and Fanout**
+```shell
+% report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
+```
+Report timing with capacitance, slew, input pins, and fanout per stage.
+
+![Alt Text](Images/fields.png)
+
 ### Timing Analysis Using a TCL Script
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
