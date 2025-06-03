@@ -9,6 +9,7 @@
   - [Step 2: Build the Docker Image](#step-2-build-the-docker-image)
   - [Step 3: Run the OpenSTA Container](#step-3-run-the-opensta-container)
 - [Timing Analysis Using Inline Commands](#timing-analysis-using-inline-commands)
+  - [Analyzing report outcomes](#analyzing-report-outcomes)
 - [Timing Analysis Using a TCL Script](#timing-analysis-using-a-tcl-script)
 - [VSDBabySoC basic timing analysis](#vsdbabysoc-basic-timing-analysis)
 - [VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)](#vsdbabysoc-pvt-corner-analysis-post-synthesis-timing)
@@ -134,6 +135,7 @@ report_checks -path_delay min_max
 ```shell
 report_checks -path_delay min
 ```
+#### Analyzing report outcomes
 
 **Verilog Netlist: example1.v**
 ```shell
