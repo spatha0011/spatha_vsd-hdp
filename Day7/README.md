@@ -189,7 +189,7 @@ report_checks
 
 ![Alt Text](Images/12.png)
 
-#### <ins> more options to explore </ins>
+#### more options to explore
 
 **Report Capacitance per Stage**
 ```shell
