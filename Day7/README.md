@@ -28,6 +28,8 @@ OpenSTA is an open source static timing analyzer (STA) tool used in digital desi
 
 OpenSTA uses a TCL command interpreter to read the design, specify timing constraints and print timing reports.
 
+![Alt Text](Images/opensta.png)
+
 ##### Clocks
   * Generated
   * Latency
