@@ -18,7 +18,7 @@
 - [Timing Summary Across PVT Corners (Post-Synthesis STA Results)](#timing-summary-across-pvt-corners-post-synthesis-sta-results)
 - [Timing Plots Across PVT Corners](#timing-plots-across-pvt-corners)
     
-Static Timing Analysis (also referred as STA) is one of the many techniques available to verify the timing of a digital design. 
+**Static Timing Analysis** is one of the many techniques available to verify the timing of a digital design. 
 
 An alternate approach used to verify the timing is the timing simulation which can verify the functionality as well as the timing of the design. 
 
@@ -34,7 +34,7 @@ In a CMOS digital design flow, the static timing analysis can be performed at ma
 
 ![Alt Text](Images/flow.png)
 
-OpenSTA is an open source static timing analyzer (STA) tool used in digital design. It is utilized to analyze and verify the timing performance of digital circuits at the gate level.
+**OpenSTA** is an open source static timing analyzer (STA) tool used in digital design. It is utilized to analyze and verify the timing performance of digital circuits at the gate level.
 
   * Verilog netlist
   * Liberty library
