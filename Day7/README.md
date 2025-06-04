@@ -22,13 +22,13 @@ Static Timing Analysis (also referred as STA) is one of the many techniques avai
 
 An alternate approach used to verify the timing is the timing simulation which can verify the functionality as well as the timing of the design. 
 
-The term timing analysis is used to refer to either of these two methods - static timing analysis, or the timing simulation. 
+The term timing analysis is used to refer to either of these two methods - static timing analysis, or the timing simulation. 
 
 Thus, timing analysis simply refers to the analysis of the design for timing issues.
 
 The STA is static since the analysis of the design is carried out statically and does not depend upon the data values being applied at the input pins. 
 
-This is in contrast to simulation based timing analysis where a stimulus is applied on input signals, resulting behavior is observed and verified, then time is advanced with new input stimulus applied, and the new behavior is observed and verified and so on.
+This is in contrast to simulation based timing analysis where a stimulus is applied on input signals, resulting behavior is observed and verified, then time is advanced with new input stimulus applied, and the new behavior is observed and verified and so on.
 
 In a CMOS digital design flow, the static timing analysis can be performed at many different stages of the implementation. Figure below shows a typical flow.
 
