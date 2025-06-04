@@ -190,7 +190,6 @@ endmodule
 ```
 Here are the commands for Yosys synthesis steps for example1.v:
 
-**`yosys commands`**
 ```shell
 patha@spatha-VirtualBox:~$ cd ~/VLSI/VSDBabySoC/OpenSTA/examples/
 patha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA/examples$ yosys
