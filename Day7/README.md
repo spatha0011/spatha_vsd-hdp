@@ -162,7 +162,7 @@ report_checks -path_delay max
 ```
 This reports only max path delays, i.e., setup timing checks.
 
-✅ How to Also Get Hold (min) Paths:
+✅**How to Also Get Hold (min) Paths:**
 
 If you want both setup and hold timing checks (i.e., both max and min path delays), use:
 ```shell
