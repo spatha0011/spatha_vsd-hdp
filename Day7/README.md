@@ -196,38 +196,35 @@ report_checks
 Reports timing paths with 4-digit precision and shows the net capacitance at each stage, helping identify high-cap nodes that may affect delay.
 
 ```shell
-% report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
-report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
+% report_checks -digits 4 -fields capacitance
+report_checks -digits 4 -fields capacitance
 Startpoint: r2 (rising edge-triggered flip-flop clocked by clk)
 Endpoint: r3 (rising edge-triggered flip-flop clocked by clk)
 Path Group: clk
 Path Type: max
 
-Fanout       Cap      Slew     Delay      Time   Description
--------------------------------------------------------------------------------------
-                    0.0000    0.0000    0.0000   clock clk (rise edge)
-                              0.0000    0.0000   clock network delay (ideal)
-                    0.0000    0.0000    0.0000 ^ r2/CK (DFF_X1)
-     1  275.9346    2.1654    2.5838    2.5838 ^ r2/Q (DFF_X1)
-                    2.1654    0.0013    2.5851 ^ u1/A (BUF_X1)
-     1  275.9392    2.1393    2.5765    5.1617 ^ u1/Z (BUF_X1)
-                    2.1393    0.0013    5.1630 ^ u2/A2 (AND2_X1)
-     1  276.1091    2.1579    2.7507    7.9137 ^ u2/ZN (AND2_X1)
-                    2.1579    0.0013    7.9150 ^ r3/D (DFF_X1)
-                                        7.9150   data arrival time
+      Cap     Delay      Time   Description
+----------------------------------------------------------------------
+             0.0000    0.0000   clock clk (rise edge)
+             0.0000    0.0000   clock network delay (ideal)
+             0.0000    0.0000 ^ r2/CK (DFF_X1)
+ 275.9346    2.5838    2.5838 ^ r2/Q (DFF_X1)
+ 275.9392    2.5778    5.1617 ^ u1/Z (BUF_X1)
+ 276.1091    2.7520    7.9137 ^ u2/ZN (AND2_X1)
+             0.0013    7.9150 ^ r3/D (DFF_X1)
+                       7.9150   data arrival time
 
-                    0.0000   10.0000   10.0000   clock clk (rise edge)
-                              0.0000   10.0000   clock network delay (ideal)
-                              0.0000   10.0000   clock reconvergence pessimism
-                                       10.0000 ^ r3/CK (DFF_X1)
-                             -0.5697    9.4303   library setup time
-                                        9.4303   data required time
--------------------------------------------------------------------------------------
-                                        9.4303   data required time
-                                       -7.9150   data arrival time
--------------------------------------------------------------------------------------
-                                        1.5153   slack (MET)
-
+            10.0000   10.0000   clock clk (rise edge)
+             0.0000   10.0000   clock network delay (ideal)
+             0.0000   10.0000   clock reconvergence pessimism
+                      10.0000 ^ r3/CK (DFF_X1)
+            -0.5697    9.4303   library setup time
+                       9.4303   data required time
+----------------------------------------------------------------------
+                       9.4303   data required time
+                      -7.9150   data arrival time
+----------------------------------------------------------------------
+                       1.5153   slack (MET)
 
 ```
 
