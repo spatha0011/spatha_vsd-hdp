@@ -193,11 +193,33 @@ Below is the *netlist diagram* automatically generated using Yosys.
 
 **`yosys commands`**
 ```shell
+cd ~/VLSI/VSDBabySoC/OpenSTA/examples
 yosys
-read_liberty -lib nangate45_slow.lib
-read_verilog example1.v
-synth -top top
-show
+yosys> read_liberty -lib nangate45_slow.lib
+yosys> read_verilog example1.v
+yosys> synth -top top
+3.25. Printing statistics.
+
+=== top ===
+
+   Number of wires:                 10
+   Number of wire bits:             10
+   Number of public wires:          10
+   Number of public wire bits:      10
+   Number of ports:                  6
+   Number of port bits:              6
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  5
+     AND2_X1                         1
+     BUF_X1                          1
+     DFF_X1                          3
+
+3.26. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Found and reported 0 problems.
+yosys> show
 ```
 
 The datapath has been annotated with delay values at each stage for easier understanding:
