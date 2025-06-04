@@ -191,7 +191,7 @@ endmodule
 
 Below is the *netlist diagram* automatically generated using Yosys.
 
-`yosys comamnds`
+**`yosys commands`**
 ```shell
 yosys
 read_liberty -lib nangate45_slow.lib
