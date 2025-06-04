@@ -40,7 +40,7 @@ OpenSTA uses a TCL command interpreter to read the design, specify timing constr
 
 ![Alt Text](Images/opensta.png)
 
-#### input files
+#### Input Files
 
 - `*.v`  : Gate-level Verilog Netlist  
 - `*.lib` : Liberty Timing Libraries  
