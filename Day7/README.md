@@ -472,8 +472,10 @@ These files include:
 - Timing constraints: vsdbabysoc_synthesis.sdc
 
 🔽**Below is a TCL script to run complete min/max timing checks on the SoC:**
+
 <details>
 <summary><strong>vsdbabysoc_min_max_delays.tcl</strong></summary>
+  
 ```shell
 # Load Liberty Libraries (standard cell + IPs)
 read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -497,6 +499,7 @@ read_sdc /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc_synthesis.sdc
 # Generate Timing Report
 report_checks
 ```
+
 </details>
 
 | **Line of Code**                                       | **Purpose**                | **Explanation**                                                                                    |
