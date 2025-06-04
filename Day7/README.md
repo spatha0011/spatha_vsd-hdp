@@ -207,6 +207,50 @@ Report timing with capacitance, slew, input pins, and fanout per stage.
 
 ![Alt Text](Images/fields1.png)
 
+**<ins>report_power</ins>**
+```shell
+% report_power
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.09e-06   3.73e-06   1.63e-07   4.99e-06  65.8%
+Combinational          6.68e-08   2.49e-06   3.08e-08   2.59e-06  34.2%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.16e-06   6.22e-06   1.94e-07   7.58e-06 100.0%
+                          15.3%      82.1%       2.6%
+```
+
+The report_power command uses static power analysis based on propagated or annotated pin activities in the circuit using Liberty power models. 
+
+The internal, switching, leakage and total power are reported. 
+
+Design power is reported separately for combinational, sequential, macro and pad groups. Power values are reported in watts
+
+**<ins>report_pulse_width_checks</ins>**
+
+The report_pulse_width_checks command reports min pulse width checks for pins in the clock network. 
+
+If pins is not specified all clock network pins are reported
+
+```shell
+% report_pulse_width_checks
+report_pulse_width_checks
+                                     Required  Actual
+Pin                                    Width   Width   Slack
+------------------------------------------------------------
+r1/CK (high)                            0.22    5.00    4.78 (MET)
+r2/CK (high)                            0.22    5.00    4.78 (MET)
+r3/CK (high)                            0.22    5.00    4.78 (MET)
+r1/CK (low)                             0.19    5.00    4.81 (MET)
+r2/CK (low)                             0.19    5.00    4.81 (MET)
+r3/CK (low)                             0.19    5.00    4.81 (MET)
+
+```
+
+
 ### Timing Analysis Using a TCL Script
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
