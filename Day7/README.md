@@ -391,7 +391,7 @@ report_units
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
 
 <details>
-<summary><strong></strong>sample script: min_max_delays.tcl</summary>strong></summary>
+<summary><strong></strong>sample script: min_max_delays.tcl</summary><strong>
 
 ```shell
 # Load liberty files for max and min analysis
@@ -411,6 +411,7 @@ set_input_delay -clock clk 0 {in1 in2}
 # Generate a full min/max timing report
 report_checks -path_delay min_max
 ```
+</summary>
 
 | **Line of Code**                                     | **Purpose**             | **Explanation**                                                                              |
 | ---------------------------------------------------- | ----------------------- | -------------------------------------------------------------------------------------------- |
