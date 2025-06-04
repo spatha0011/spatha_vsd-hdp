@@ -191,6 +191,14 @@ endmodule
 
 Below is the *netlist diagram* automatically generated using Yosys.
 
+```shell
+yosys
+read_liberty -lib nangate45_slow.lib
+read_verilog example1.v
+synth -top top
+show
+```
+
 The datapath has been annotated with delay values at each stage for easier understanding:
 
 ![Alt Text](Images/block.png)
