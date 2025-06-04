@@ -36,33 +36,36 @@ In a CMOS digital design flow, the static timing analysis can be performed at ma
 
 **OpenSTA** is an open source static timing analyzer (STA) tool used in digital design. It is utilized to analyze and verify the timing performance of digital circuits at the gate level.
 
-##### input files
-  * Verilog netlist
-  * Liberty library
-  * SDC timing constraints
-  * SDF delay annotation
-  * SPEF parasitics
-  * VCD power acitivies
-  * SAIF power acitivies
+OpenSTA requires the following input files:
+
+- `*.v`  : Gate-level Verilog Netlist  
+- `*.lib` : Liberty Timing Libraries  
+- `*.sdc` : Synopsys Design Constraints (clocks, delays, false paths)  
+- `*.sdf` : Annotated Delay File (optional)  
+- `*.spef`: Parasitics (RC extraction)  
+- `*.vcd` / `*.saif` : Switching Activity for Power Analysis 
 
 OpenSTA uses a TCL command interpreter to read the design, specify timing constraints and print timing reports.
 
 ![Alt Text](Images/opensta.png)
 
-##### Clocks
-  * Generated
-  * Latency
-  * Source latency (insertion delay)
-  * Uncertainty
-  * Propagated/Ideal
-  * Gated clock checks
-  * Multiple frequency clocks
+### Clock Modeling Features
 
-##### Exception paths
-  * False path
-  * Multicycle path
-  * Min/Max path delay
-  * Exception points
+- **Generated Clocks**: Derived from existing clocks  
+- **Latency**: Clock propagation delay  
+- **Source Latency**: Insertion delay from clock source to input  
+- **Uncertainty**: Jitter or skew margins  
+- **Propagated vs. Ideal**: Real vs. ideal clock network modeling  
+- **Gated Clock Checks**: Verifies clocks that are enabled conditionally  
+- **Multi-Frequency Clocks**: Analyzes multiple domains  
+
+### Exception Paths
+
+Timing exceptions refine analysis for real behavior:
+
+- `set_false_path` — Ignores invalid functional paths  
+- `set_multicycle_path` — Allows multiple clock cycles  
+- `set_max_delay` / `set_min_delay` — Custom timing limits
 
     `-from clock/pin/instance -through pin/net -to clock/pin/instance`
     
@@ -71,14 +74,25 @@ OpenSTA uses a TCL command interpreter to read the design, specify timing constr
      `-rise_from/-fall_from, -rise_through/-fall_through, -rise_to/-fall_to`
 
 ##### Delay calculation
+
   * Integrated Dartu/Menezes/Pileggi RC effective capacitance algorithm
+
+Models effective capacitance for RC networks to compute realistic gate and net delays. It balances accuracy and runtime using an efficient algorithm developed for timing engines.
+
   * External delay calculator API
+    
+Allows plugging in custom delay calculators for advanced or proprietary models (e.g., layout-aware or temperature-adaptive models). Useful for integrating tool flows beyond standard Liberty data.
 
-##### Analysis
-  * Report timing checks -from, -through, -to, multiple paths to endpoint
-  * Report delay calculation
-  * Check timing setup
+#### Timing Analysis and Reporting
+OpenSTA provides a rich set of commands for analyzing timing paths, delays, and setup/hold checks:
 
+- `report_checks`  
+  Reports timing violations across specified paths using options like `-from`, `-through`, and `-to`. Supports multi-path analysis to any endpoint.
+
+  ```tcl
+  report_checks -from [get_pins U1/Q] -to [get_pins U2/D]
+  ```
+  
 ## Installation of OpenSTA
 
 **Note:** Installation instructions are adapted from the official OpenSTA repository:
