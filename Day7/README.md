@@ -390,7 +390,8 @@ report_units
 
 To automate the timing flow, you can write the commands into a .tcl script and execute it from the OpenSTA shell.
 
-🔽**sample script: min_max_delays.tcl**
+<details>
+<summary>**sample script: min_max_delays.tcl**</summary>
 
 ```shell
 # Load liberty files for max and min analysis
