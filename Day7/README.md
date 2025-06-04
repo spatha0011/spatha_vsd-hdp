@@ -49,17 +49,17 @@ OpenSTA uses a TCL command interpreter to read the design, specify timing constr
 
 ![Alt Text](Images/opensta.png)
 
-### Clock Modeling Features
+#### Clock Modeling Features
 
-- **Generated Clocks**: Derived from existing clocks  
-- **Latency**: Clock propagation delay  
-- **Source Latency**: Insertion delay from clock source to input  
-- **Uncertainty**: Jitter or skew margins  
-- **Propagated vs. Ideal**: Real vs. ideal clock network modeling  
-- **Gated Clock Checks**: Verifies clocks that are enabled conditionally  
-- **Multi-Frequency Clocks**: Analyzes multiple domains  
+- `Generated Clocks`: Derived from existing clocks  
+- `Latency`: Clock propagation delay  
+- `Source Latency`: Insertion delay from clock source to input  
+- `Uncertainty`: Jitter or skew margins  
+- `Propagated vs. Ideal`: Real vs. ideal clock network modeling  
+- `Gated Clock Checks`: Verifies clocks that are enabled conditionally  
+- `Multi-Frequency Clocks`: Analyzes multiple domains  
 
-### Exception Paths
+#### Exception Paths
 
 Timing exceptions refine analysis for real behavior:
 
@@ -75,11 +75,11 @@ Timing exceptions refine analysis for real behavior:
 
 ##### Delay calculation
 
-  * Integrated Dartu/Menezes/Pileggi RC effective capacitance algorithm
+- `Integrated Dartu/Menezes/Pileggi RC effective capacitance algorithm`
 
 Models effective capacitance for RC networks to compute realistic gate and net delays. It balances accuracy and runtime using an efficient algorithm developed for timing engines.
 
-  * External delay calculator API
+- `External delay calculator API`
     
 Allows plugging in custom delay calculators for advanced or proprietary models (e.g., layout-aware or temperature-adaptive models). Useful for integrating tool flows beyond standard Liberty data.
 
