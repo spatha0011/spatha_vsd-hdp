@@ -67,12 +67,6 @@ Timing exceptions refine analysis for real behavior:
 - `set_multicycle_path` — Allows multiple clock cycles  
 - `set_max_delay` / `set_min_delay` — Custom timing limits
 
-    `-from clock/pin/instance -through pin/net -to clock/pin/instance`
-    
-  *  Edge specific exception points
-
-     `-rise_from/-fall_from, -rise_through/-fall_through, -rise_to/-fall_to`
-
 ##### Delay calculation
 
 - `Integrated Dartu/Menezes/Pileggi RC effective capacitance algorithm`
