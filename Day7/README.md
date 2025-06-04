@@ -36,7 +36,11 @@ In a CMOS digital design flow, the static timing analysis can be performed at ma
 
 **OpenSTA** is an open source static timing analyzer (STA) tool used in digital design. It is utilized to analyze and verify the timing performance of digital circuits at the gate level.
 
-OpenSTA requires the following input files:
+OpenSTA uses a TCL command interpreter to read the design, specify timing constraints and print timing reports.
+
+![Alt Text](Images/opensta.png)
+
+#### input files
 
 - `*.v`  : Gate-level Verilog Netlist  
 - `*.lib` : Liberty Timing Libraries  
@@ -44,10 +48,6 @@ OpenSTA requires the following input files:
 - `*.sdf` : Annotated Delay File (optional)  
 - `*.spef`: Parasitics (RC extraction)  
 - `*.vcd` / `*.saif` : Switching Activity for Power Analysis 
-
-OpenSTA uses a TCL command interpreter to read the design, specify timing constraints and print timing reports.
-
-![Alt Text](Images/opensta.png)
 
 #### Clock Modeling Features
 
