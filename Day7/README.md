@@ -471,7 +471,7 @@ These files include:
 
 - Timing constraints: vsdbabysoc_synthesis.sdc
 
-🔽**Below is a TCL script to run complete min/max timing checks on the SoC:**
+Below is a TCL script to run complete min/max timing checks on the SoC:
 
 <details>
 <summary><strong>vsdbabysoc_min_max_delays.tcl</strong></summary>
@@ -573,7 +573,9 @@ _These represent the **fastest** operating conditions._
  **Timing libraries** required for this analysis can be downloaded from:  
 🔗 [Skywater PDK - sky130_fd_sc_hd Timing Libraries](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing)
 
-🔽 The below Tcl script _**sta_across_pvt.tcl**_ can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.
+Below Tcl script _**sta_across_pvt.tcl**_ can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.
+<details>
+<summary><strong>sta_across_pvt.tcl</strong></summary>
 
 ```shell
  set list_of_lib_files(1) "sky130_fd_sc_hd__tt_025C_1v80.lib"
@@ -616,6 +618,8 @@ _These represent the **fastest** operating conditions._
  }
 ```
 
+</details>
+
 | **Command**               | **Purpose**                       | **Explanation**                                                                                                              |
 | ------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `report_worst_slack -max` | Report Worst Setup Slack          | Outputs the **most negative setup slack** (WNS) in the design for the current PVT corner.                                    |
@@ -623,7 +627,7 @@ _These represent the **fastest** operating conditions._
 | `report_tns`              | Report Total Negative Slack (TNS) | Prints the **sum of all negative slacks** (across all violating paths). Reflects how widespread timing violations are.       |
 | `report_wns`              | Report Worst Negative Slack (WNS) | Prints the **single worst slack** (i.e., the most timing-violating path). Indicates severity of the critical path violation. |
 
-Save the above script as **_sta_across_pvt.tcl_**, then execute it inside the Docker container with:
+execute it inside the Docker container:
 
 ```shell
 docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/sta_across_pvt.tcl
