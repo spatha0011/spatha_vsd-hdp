@@ -472,6 +472,8 @@ These files include:
 - Timing constraints: vsdbabysoc_synthesis.sdc
 
 🔽**Below is a TCL script to run complete min/max timing checks on the SoC:**
+<details>
+<summary><strong>vsdbabysoc_min_max_delays.tcl</strong></summary>
 ```shell
 # Load Liberty Libraries (standard cell + IPs)
 read_liberty -min /data/VLSI/VSDBabySoC/OpenSTA/examples/timing_libs/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -495,6 +497,7 @@ read_sdc /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc_synthesis.sdc
 # Generate Timing Report
 report_checks
 ```
+</details>
 
 | **Line of Code**                                       | **Purpose**                | **Explanation**                                                                                    |
 | ------------------------------------------------------ | -------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -506,7 +509,7 @@ report_checks
 | `read_sdc vsdbabysoc_synthesis.sdc`                    | Load constraints           | Loads SDC file specifying **clock definitions, input/output delays, and false paths**.             |
 | `report_checks`                                        | Run timing analysis        | Generates a default **setup timing report**. Add `-path_delay min_max` to see both hold and setup. |
 
-Save the above script as **_vsdbabysoc_min_max_delays.tcl_**, then execute it inside the Docker container with:
+execute it inside the Docker container:
 
 ```shell
 docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc_min_max_delays.tcl
