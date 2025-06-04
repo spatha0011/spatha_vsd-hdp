@@ -188,7 +188,7 @@ module top (in1, in2, clk1, clk2, clk3, out);
   DFF_X1 r3 (.D(u2z), .CK(clk3), .Q(out));
 endmodule
 ```
-Here are the commands for Yosys synthesis steps for example1.v:
+Here are the commands for Yosys synthesis for example1.v:
 
 ```shell
 patha@spatha-VirtualBox:~$ cd ~/VLSI/VSDBabySoC/OpenSTA/examples/
