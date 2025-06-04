@@ -471,7 +471,7 @@ These files include:
 
 - Timing constraints: vsdbabysoc_synthesis.sdc
 
-Below is a TCL script to run complete min/max timing checks on the SoC:
+Below is the TCL script to run complete min/max timing checks on the SoC:
 
 <details>
 <summary><strong>vsdbabysoc_min_max_delays.tcl</strong></summary>
@@ -573,7 +573,8 @@ _These represent the **fastest** operating conditions._
  **Timing libraries** required for this analysis can be downloaded from:  
 🔗 [Skywater PDK - sky130_fd_sc_hd Timing Libraries](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing)
 
-Below Tcl script _**sta_across_pvt.tcl**_ can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.
+Below is the script that can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.
+
 <details>
 <summary><strong>sta_across_pvt.tcl</strong></summary>
 
