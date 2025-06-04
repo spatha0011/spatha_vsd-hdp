@@ -38,6 +38,8 @@ In a CMOS digital design flow, the static timing analysis can be performed at ma
 
 OpenSTA uses a TCL command interpreter to read the design, specify timing constraints and print timing reports.
 
+![Alt Text](Images/sta.png)
+
 #### Input Files
 
 - `*.v`  : Gate-level Verilog Netlist  
