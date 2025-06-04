@@ -192,8 +192,8 @@ Here are the commands for Yosys synthesis steps for example1.v:
 
 **`yosys commands`**
 ```shell
-cd ~/VLSI/VSDBabySoC/OpenSTA/examples
-yosys
+patha@spatha-VirtualBox:~$ cd ~/VLSI/VSDBabySoC/OpenSTA/examples/
+patha@spatha-VirtualBox:~/VLSI/VSDBabySoC/OpenSTA/examples$ yosys
 yosys> read_liberty -lib nangate45_slow.lib
 yosys> read_verilog example1.v
 yosys> synth -top top
