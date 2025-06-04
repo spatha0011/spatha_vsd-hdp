@@ -188,8 +188,7 @@ module top (in1, in2, clk1, clk2, clk3, out);
   DFF_X1 r3 (.D(u2z), .CK(clk3), .Q(out));
 endmodule
 ```
-
-Below is the *netlist diagram* automatically generated using Yosys.
+Here are the commands for Yosys synthesis steps for example1.v:
 
 **`yosys commands`**
 ```shell
@@ -221,6 +220,7 @@ Checking module top...
 Found and reported 0 problems.
 yosys> show
 ```
+Below is the *netlist diagram* generated using Yosys.
 
 The datapath has been annotated with delay values at each stage for easier understanding:
 
