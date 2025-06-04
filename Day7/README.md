@@ -148,7 +148,7 @@ _This flow is useful for quick testing and debugging without writing a full TCL 
 ![Alt Text](Images/5.jpg)
 
 
-⚠️ **Note:** We used report_checks here because only the slow liberty file (nangate45_slow.lib.gz) is loaded. 
+**Note:** We used report_checks here because only the slow liberty file (nangate45_slow.lib.gz) is loaded. 
 
 This represents a setup (max delay) corner, so the analysis focuses on setup timing by default.
 
