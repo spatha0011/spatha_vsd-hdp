@@ -192,22 +192,92 @@ report_checks
 #### more options to explore
 
 **<ins>Report Capacitance per Stage</ins>**
-```shell
-% report_checks -digits 4 -fields capacitance
-```
+
 Reports timing paths with 4-digit precision and shows the net capacitance at each stage, helping identify high-cap nodes that may affect delay.
 
-![Alt Text](Images/cap.png)
-
-**<ins>Report Timing with Capacitance, Slew, Input Pins, and Fanout</ins>**
 ```shell
 % report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
+report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
+Startpoint: r2 (rising edge-triggered flip-flop clocked by clk)
+Endpoint: r3 (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock clk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                    0.0000    0.0000    0.0000 ^ r2/CK (DFF_X1)
+     1  275.9346    2.1654    2.5838    2.5838 ^ r2/Q (DFF_X1)
+                    2.1654    0.0013    2.5851 ^ u1/A (BUF_X1)
+     1  275.9392    2.1393    2.5765    5.1617 ^ u1/Z (BUF_X1)
+                    2.1393    0.0013    5.1630 ^ u2/A2 (AND2_X1)
+     1  276.1091    2.1579    2.7507    7.9137 ^ u2/ZN (AND2_X1)
+                    2.1579    0.0013    7.9150 ^ r3/D (DFF_X1)
+                                        7.9150   data arrival time
+
+                    0.0000   10.0000   10.0000   clock clk (rise edge)
+                              0.0000   10.0000   clock network delay (ideal)
+                              0.0000   10.0000   clock reconvergence pessimism
+                                       10.0000 ^ r3/CK (DFF_X1)
+                             -0.5697    9.4303   library setup time
+                                        9.4303   data required time
+-------------------------------------------------------------------------------------
+                                        9.4303   data required time
+                                       -7.9150   data arrival time
+-------------------------------------------------------------------------------------
+                                        1.5153   slack (MET)
+
+
 ```
+
+**<ins>Report Timing with Capacitance, Slew, Input Pins, and Fanout</ins>**
+
 Report timing with capacitance, slew, input pins, and fanout per stage.
 
-![Alt Text](Images/fields1.png)
+```shell
+% report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
+report_checks -digits 4 -fields [list capacitance slew input_pins fanout]
+Startpoint: r2 (rising edge-triggered flip-flop clocked by clk)
+Endpoint: r3 (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock clk (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                    0.0000    0.0000    0.0000 ^ r2/CK (DFF_X1)
+     1  275.9346    2.1654    2.5838    2.5838 ^ r2/Q (DFF_X1)
+                    2.1654    0.0013    2.5851 ^ u1/A (BUF_X1)
+     1  275.9392    2.1393    2.5765    5.1617 ^ u1/Z (BUF_X1)
+                    2.1393    0.0013    5.1630 ^ u2/A2 (AND2_X1)
+     1  276.1091    2.1579    2.7507    7.9137 ^ u2/ZN (AND2_X1)
+                    2.1579    0.0013    7.9150 ^ r3/D (DFF_X1)
+                                        7.9150   data arrival time
+
+                    0.0000   10.0000   10.0000   clock clk (rise edge)
+                              0.0000   10.0000   clock network delay (ideal)
+                              0.0000   10.0000   clock reconvergence pessimism
+                                       10.0000 ^ r3/CK (DFF_X1)
+                             -0.5697    9.4303   library setup time
+                                        9.4303   data required time
+-------------------------------------------------------------------------------------
+                                        9.4303   data required time
+                                       -7.9150   data arrival time
+-------------------------------------------------------------------------------------
+                                        1.5153   slack (MET)
+
+```
 
 **<ins>Report Total and Component Power</ins>**
+
+The report_power command uses static power analysis based on propagated or annotated pin activities in the circuit using Liberty power models. 
+
+The internal, switching, leakage and total power are reported. 
+
+Design power is reported separately for combinational, sequential, macro and pad groups. Power values are reported in watts
+
 ```shell
 % report_power
 Group                  Internal  Switching    Leakage      Total
@@ -223,11 +293,6 @@ Total                  1.16e-06   6.22e-06   1.94e-07   7.58e-06 100.0%
                           15.3%      82.1%       2.6%
 ```
 
-The report_power command uses static power analysis based on propagated or annotated pin activities in the circuit using Liberty power models. 
-
-The internal, switching, leakage and total power are reported. 
-
-Design power is reported separately for combinational, sequential, macro and pad groups. Power values are reported in watts
 
 **<ins>Report Pulse Width Checks</ins>**
 
