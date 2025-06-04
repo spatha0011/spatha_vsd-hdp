@@ -36,6 +36,7 @@ In a CMOS digital design flow, the static timing analysis can be performed at ma
 
 **OpenSTA** is an open source static timing analyzer (STA) tool used in digital design. It is utilized to analyze and verify the timing performance of digital circuits at the gate level.
 
+##### inpt files
   * Verilog netlist
   * Liberty library
   * SDC timing constraints
