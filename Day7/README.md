@@ -67,7 +67,7 @@ Timing exceptions refine analysis for real behavior:
 - `set_multicycle_path` — Allows multiple clock cycles  
 - `set_max_delay` / `set_min_delay` — Custom timing limits
 
-##### Delay calculation
+#### Delay calculation
 
 - `Integrated Dartu/Menezes/Pileggi RC effective capacitance algorithm`
 
@@ -78,6 +78,7 @@ Models effective capacitance for RC networks to compute realistic gate and net d
 Allows plugging in custom delay calculators for advanced or proprietary models (e.g., layout-aware or temperature-adaptive models). Useful for integrating tool flows beyond standard Liberty data.
 
 #### Timing Analysis and Reporting
+
 OpenSTA provides a rich set of commands for analyzing timing paths, delays, and setup/hold checks:
 
 - `report_checks`  
