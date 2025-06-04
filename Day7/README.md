@@ -207,7 +207,7 @@ Report timing with capacitance, slew, input pins, and fanout per stage.
 
 ![Alt Text](Images/fields1.png)
 
-**<ins>report_power</ins>**
+**<ins>Report Total and Component Power</ins>**
 ```shell
 % report_power
 Group                  Internal  Switching    Leakage      Total
@@ -229,7 +229,7 @@ The internal, switching, leakage and total power are reported.
 
 Design power is reported separately for combinational, sequential, macro and pad groups. Power values are reported in watts
 
-**<ins>report_pulse_width_checks</ins>**
+**<ins>Report Pulse Width Checks</ins>**
 
 The report_pulse_width_checks command reports min pulse width checks for pins in the clock network. 
 
@@ -250,6 +250,21 @@ r3/CK (low)                             0.19    5.00    4.81 (MET)
 
 ```
 
+**<ins>Report Units </ins>**
+
+Report the units used for command arguments and reporting.
+
+```shell
+% report_units
+report_units
+ time 1ns
+ capacitance 1fF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+```
 
 ### Timing Analysis Using a TCL Script
 
