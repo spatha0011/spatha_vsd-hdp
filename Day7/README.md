@@ -19,7 +19,7 @@
 - [Timing Summary Across PVT Corners (Post-Synthesis STA Results)](#timing-summary-across-pvt-corners-post-synthesis-sta-results)
 - [Timing Plots Across PVT Corners](#timing-plots-across-pvt-corners)
 
-### Introduction
+## Introduction
 
 **Static Timing Analysis** is one of the many techniques available to verify the timing of a digital design. 
 
