@@ -117,6 +117,7 @@ Timing path elements in STA are the start point, where a signal originates, the 
 Setup and hold slack is defined as the difference between data required time and data arrivals time. 
 
 >Setup slack = Data required time - Data arrival time
+
 >Hold slack = Data arrival time - Data required time
 
 -> What is Data Arrival Time?
