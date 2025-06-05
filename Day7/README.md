@@ -33,6 +33,8 @@ The STA is static since the analysis of the design is carried out statically and
 
 This is in contrast to simulation based timing analysis where a stimulus is applied on input signals, resulting behavior is observed and verified, then time is advanced with new input stimulus applied, and the new behavior is observed and verified and so on.
 
+![Alt Text](Images/sta3.png)
+
 In a CMOS digital design flow, the static timing analysis can be performed at many different stages of the implementation. Figure below shows a typical flow.
 
 ![Alt Text](Images/flow.png)
