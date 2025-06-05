@@ -4,7 +4,8 @@
 
 ### 📚 Contents
 
-- [Installation of OpenSTA](#installation-of-opensta)
+- [Introduction](#introduction)
+-  [Installation of OpenSTA](#installation-of-opensta)
   - [Step 1: Clone the Repository](#step-1-clone-the-repository)
   - [Step 2: Build the Docker Image](#step-2-build-the-docker-image)
   - [Step 3: Run the OpenSTA Container](#step-3-run-the-opensta-container)
@@ -17,7 +18,9 @@
 - [VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)](#vsdbabysoc-pvt-corner-analysis-post-synthesis-timing)
 - [Timing Summary Across PVT Corners (Post-Synthesis STA Results)](#timing-summary-across-pvt-corners-post-synthesis-sta-results)
 - [Timing Plots Across PVT Corners](#timing-plots-across-pvt-corners)
-    
+
+#### Introduction
+
 **Static Timing Analysis** is one of the many techniques available to verify the timing of a digital design. 
 
 An alternate approach used to verify the timing is the timing simulation which can verify the functionality as well as the timing of the design. 
