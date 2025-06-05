@@ -5,7 +5,7 @@
 ### 📚 Contents
 
 - [Introduction](#introduction)
--  [Installation of OpenSTA](#installation-of-opensta)
+- [Installation of OpenSTA](#installation-of-opensta)
   - [Step 1: Clone the Repository](#step-1-clone-the-repository)
   - [Step 2: Build the Docker Image](#step-2-build-the-docker-image)
   - [Step 3: Run the OpenSTA Container](#step-3-run-the-opensta-container)
