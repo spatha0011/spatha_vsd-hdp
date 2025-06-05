@@ -90,12 +90,12 @@ OpenSTA provides a rich set of commands for analyzing timing paths, delays, and 
   ```tcl
   report_checks -from [get_pins U1/Q] -to [get_pins U2/D]
   ```
-  ### Timing Paths 
+#### Timing Paths 
 
--> What do you mean by Timing Paths?
+`What do you mean by Timing Paths?`
 * It Refer to the logical paths a signal takes through a digital circuit from its source to its destination, including sequential and combinational elements. STA analyzes timing paths to determine their delay, setup and hold times, and other timing parameters specified in the constraints. Timing paths are categorized into combinatorial and sequential, and the critical path is the longest path in the design with the maximum operating frequency.
 
-### Timing Path Elements
+#### Timing Path Elements
    
 Timing path elements in STA are the start point, where a signal originates, the end point, where it terminates, and the combinational logic elements, such as gates, that the signal passes through. Timing paths are traced to determine the overall delay and timing performance of the digital circuit.
 
@@ -103,20 +103,21 @@ Timing path elements in STA are the start point, where a signal originates, the 
 * End Point: Is the point where the signal terminates or leaves the digital circuit. This point is typically an output port of the design, where the signal is outputted from the circuit.
 * Combinational Logic: Combinational logic elements are the building blocks of a digital circuit and are used to perform logic operations on the signals passing through the circuit. These elements do not store any information, and the output of a combinational logic element is solely determined by the input values at that moment.
 
-### Setup and Hold Checks
+#### Setup and Hold Checks
 
-->What is Setup Check?
+-> What is Setup Check?
 * Is the minimum time that the data must be stable before the clock edge, and if this time is not met, it can lead to setup violations, resulting in incorrect data being stored in the sequential element. The setup check is essential to ensure correct timing behavior of a digital circuit and prevent data loss or other timing-related issues.
 * The setup time of a flip-flop depends on the technology node, operating conditions, and other factors. The value of the setup time is usually provided in the logic libraries.
 
 -> What is Hold Check?
 * Is the minimum amount of time that the data must remain stable after the clock edge, and if this time is not met, it can lead to hold violations, resulting in incorrect data being stored in the sequential element. The hold check is necessary to prevent issues such as data corruption, metastability, and other timing-related problems in digital circuits.
 
-### Slack Calculation 
+#### Slack Calculation 
 
 Setup and hold slack is defined as the difference between data required time and data arrivals time. 
 
 >Setup slack = Data required time - Data arrival time
+>Hold slack = Data arrival time - Data required time
 
 -> What is Data Arrival Time?
 * The time taken by the signal to travel from the start point to the end point of the digital circuit. 
