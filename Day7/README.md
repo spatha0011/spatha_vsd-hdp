@@ -155,7 +155,6 @@ Signal timing is modeled using `set_input_delay` and `set_output_delay`. The `se
 
 Lastly, **Power Constraints** help manage dynamic and leakage power budgets using `set_max_dynamic_power` and `set_max_leakage_power`. These are especially useful in power-aware synthesis and verification flows.
 
-### 📋 Common SDC Constraints
 
 | Category              | Commands                                                                 |
 |-----------------------|--------------------------------------------------------------------------|
