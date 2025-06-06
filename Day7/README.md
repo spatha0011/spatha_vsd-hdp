@@ -5,19 +5,6 @@
 ### 📚 Contents
 
 - [Introduction](#introduction)
-  -What is Static Timing Analysis?  
-  - Simulation vs Static Timing  
-  - Timing Analysis in CMOS Flow  
-  - OpenSTA Overview  
-  - Input Files Required for STA  
-  - Clock Modeling Features  
-  - Timing Exceptions  
-  - Delay Calculation Models  
-  - Timing Analysis and Reporting  
-  - Timing Paths and Elements  
-  - Setup and Hold Checks  
-  - Slack Calculation  
-  - Common SDC Constraints
 - [Installation of OpenSTA](#installation-of-opensta)
   - [Step 1: Clone the Repository](#step-1-clone-the-repository)
   - [Step 2: Build the Docker Image](#step-2-build-the-docker-image)
