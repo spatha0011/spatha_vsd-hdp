@@ -111,11 +111,11 @@ Timing path elements in STA are the start point, where a signal originates, the 
 
 #### Setup and Hold Checks
 
--> What is Setup Check?
+-> **What is Setup Check?**
 * Is the minimum time that the data must be stable before the clock edge, and if this time is not met, it can lead to setup violations, resulting in incorrect data being stored in the sequential element. The setup check is essential to ensure correct timing behavior of a digital circuit and prevent data loss or other timing-related issues.
 * The setup time of a flip-flop depends on the technology node, operating conditions, and other factors. The value of the setup time is usually provided in the logic libraries.
 
--> What is Hold Check?
+-> **What is Hold Check?**
 * Is the minimum amount of time that the data must remain stable after the clock edge, and if this time is not met, it can lead to hold violations, resulting in incorrect data being stored in the sequential element. The hold check is necessary to prevent issues such as data corruption, metastability, and other timing-related problems in digital circuits.
 
 #### Slack Calculation 
@@ -126,13 +126,13 @@ Setup and hold slack is defined as the difference between data required time and
 
 >Hold slack = Data arrival time - Data required time
 
--> What is Data Arrival Time?
+-> **What is Data Arrival Time?**
 * The time taken by the signal to travel from the start point to the end point of the digital circuit. 
 
--> What is Data Required Time? 
+-> **What is Data Required Time?** 
 * The time for the clock to traverse through the clock path of the digital circuit. 
 
--> What is Slack? 
+-> **What is Slack?** 
 * It is difference between the desired arrival times and the actual arrival time for a signal. 
 * Positive Slack indicates that the design is meeting the timing and still it can be improved. 
 * Zero slack means that the design is critically working at the desired frequency. 
