@@ -103,7 +103,19 @@ Timing path elements in STA are the start point, where a signal originates, the 
 
 **Start Point**: Is the point where the signal originates or enters the digital circuit. This point is typically an input port of the design, where the signal is first introduced to the circuit.
 
+The start point of a timing path can be either:
+
+- An input port, where data enters the design, or
+
+- The clock pin of a register, where data is launched on a clock edge.
+
 **End Point:** Is the point where the signal terminates or leaves the digital circuit. This point is typically an output port of the design, where the signal is outputted from the circuit.
+
+The end point of a timing path can be either:
+
+- A register's data input pin (D pin), where data is captured by the clock edge, or
+
+- An output port, where data must be available at a specific time.
 
 **Combinational Logic:** Combinational logic elements are the building blocks of a digital circuit and are used to perform logic operations on the signals passing through the circuit. These elements do not store any information, and the output of a combinational logic element is solely determined by the input values at that moment.
 
