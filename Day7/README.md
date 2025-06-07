@@ -107,6 +107,16 @@ Timing path elements in STA are the start point, where a signal originates, the 
 
 **Combinational Logic:** Combinational logic elements are the building blocks of a digital circuit and are used to perform logic operations on the signals passing through the circuit. These elements do not store any information, and the output of a combinational logic element is solely determined by the input values at that moment.
 
+The diagram illustrates four distinct timing paths:
+
+Path 1: Input to Register (in2reg)
+
+Path 2: Register to Register (reg2reg)
+
+Path 3: Register to Output (reg2out)
+
+Path 4: Input to Output (in2out)
+
 ![Alt Text](Images/paths.png)
 
 #### Setup and Hold Checks
