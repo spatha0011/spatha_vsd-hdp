@@ -96,9 +96,9 @@ Example tables shown:
 
 This table helps STA tools interpolate the **actual delay** for a cell based on current slew and load.
 
-**Output Load Calculation:**
+**Total Capacitance Calculation:**
 
-In a buffer tree or any multi-stage driving network, the **total output capacitance** seen at the output node of a driving cell (buffer, inverter, etc.) is the sum of:
+In a buffer tree or any multi-stage driving network, the **total capacitance** seen at the output node of a driving cell (e.g., buffer, inverter) is the sum of:
 
 - The intrinsic input capacitance of the driven gates
 - Any external load capacitance (e.g., routing, fanout, parasitics)
