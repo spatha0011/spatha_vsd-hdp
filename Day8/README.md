@@ -137,3 +137,21 @@ To estimate the delay at `60fF`, we perform linear interpolation between `x9` an
 Delay_60fF = x9 + [(60fF - 50fF) / (70fF - 50fF)] * (x10 - x9)
 
 ![Alt Text](Images/4.png)
+
+In the example below, we want to estimate the delay for **CBUF2** when:
+
+- **Input Slew** = `60ps`
+- **Output Load** = `50fF`
+
+Fortunately, `50fF` is explicitly listed in the LUT, so no interpolation is needed for the load. We can directly pick the delay value from the table.
+
+From the CBUF2 delay table:
+- Row for `60ps` input slew
+- Column for `50fF` output load
+- Corresponding delay = `y15`
+
+Therefore, the delay of CBUF2 under these conditions is taken directly as `y15`.
+
+![Alt Text](Images/5.png)
+
+
