@@ -117,3 +117,11 @@ The **total capacitance seen at the output of G1** is the sum of:
 - The **parasitic capacitances** of the interconnect segments: `Cs1`, `Cs2`, `Cs3`, and `Cs4`
 
 `C_total (Output of G1) = Cout(G1) + Cin(G2) + Cin(G3) + Cin(G4) + Cs1 + Cs2 + Cs3 + Cs4`
+
+####  Delay Calculation from LUTs
+
+To interpolate the delay for CBUF1, focus on the delay table where the input slew is 40ps, and the output loads are 50fF and 70fF, corresponding to delay values x9 and x10, respectively. 
+
+If you need to estimate the delay for an output load of 60fF, which is not directly listed, you perform linear interpolation between x9 and x10
+
+![Alt Text](Images/4.png)
