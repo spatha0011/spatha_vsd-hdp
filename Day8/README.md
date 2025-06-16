@@ -66,7 +66,7 @@ This schematic shows a standard **CMOS inverter**:
 
 This forms the basis of digital NOT gates used in logic families.
 
-### SPICE Simulation Results
+#### SPICE Simulation Results
 
 ![Alt Text](Images/2.png)
 
