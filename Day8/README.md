@@ -103,6 +103,17 @@ If a cell output pin drives multiple fanout cells, the total capacitance on the 
 
 | Node | What It Drives            | Capacitance Calculation | Total Cap |
 | ---- | ------------------------- | ----------------------- | --------- |
-| A    | 2 CBUF's                 | 30fF + 30fF             | 60fF      |
+| A    | 2 CBUF's                  | 30fF + 30fF             | 60fF      |
 | B    | Load capacitors C1 and C2 | 25fF + 25fF             | 50fF      |
 | C    | Load capacitors C3 and C4 | 25fF + 25fF             | 50fF      |
+
+The figure below illustrates a scenario where a logic gate **G1** drives three other gates (**G2**, **G3**, and **G4**) through a shared interconnect network. The net includes multiple parasitic capacitances due to interconnect segments.
+
+![Alt Text](Images/7.png)
+
+The **total capacitance seen at the output of G1** is the sum of:
+- The **output pin capacitance** of G1 itself (`Cout(G1)`)
+- The **input pin capacitances** of the driven gates: `Cin(G2)`, `Cin(G3)`, and `Cin(G4)`
+- The **parasitic capacitances** of the interconnect segments: `Cs1`, `Cs2`, `Cs3`, and `Cs4`
+
+C_total (Output of G1) = Cout(G1) + Cin(G2) + Cin(G3) + Cin(G4) + Cs1 + Cs2 + Cs3 + Cs4
