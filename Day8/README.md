@@ -134,6 +134,6 @@ Total Cap at Node C = C3 + C4 = 25fF + 25fF = 50fF
 
 | Node | What It Drives            | Capacitance Calculation | Total Cap |
 | ---- | ------------------------- | ----------------------- | --------- |
-| A    | 2 CBUF's                  | 30fF + 30fF             | 60fF      |
+| A    | 2 CBUF2's                 | 30fF + 30fF             | 60fF      |
 | B    | Load capacitors C1 and C2 | 25fF + 25fF             | 50fF      |
 | C    | Load capacitors C3 and C4 | 25fF + 25fF             | 50fF      |
