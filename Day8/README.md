@@ -105,8 +105,35 @@ In a buffer tree or any multi-stage driving network, the **total output capacita
 
 `C_total = Σ C_gate_inputs + Σ C_load`
 
-**Node 'A':** The total capacitance at node 'A' is calculated as the sum of the capacitance of CBUF1 and the load capacitance driven by node 'A'. Therefore, total Cap at node 'A' = 60fF (30fF from CBUF1 + 30fF from the load).
+#### Node ‘A’ Capacitance Calculation
 
-**Node 'B':** The total capacitance at node 'B' is calculated as the sum of the capacitance of CBUF2 and the load capacitance driven by node 'B'. Therefore, total Cap at node 'B' = 50fF (25fF from C2 + 25fF from the load).
+Node A is the output of the first buffer (**CBUF1**), and it drives:
 
-**Node 'C':** Similarly, the total capacitance at node 'C' is 50fF (25fF from C3 + 25fF from the load).
+- Two buffers: **CBUF2** at nodes B and C
+- Each CBUF2 has an **input capacitance** of **30fF**
+
+Total Cap at Node A = Input Cap of B + Input Cap of C = 30fF + 30fF = 60fF
+
+#### Node ‘B’ Capacitance Calculation
+
+Node B is the output of a **CBUF2**, and it drives:
+
+- Two load capacitors: **C1** and **C2**
+- Each assumed to be **25fF**
+
+Total Cap at Node B = C1 + C2 = 25fF + 25fF = 50fF
+
+#### Node ‘C’ Capacitance Calculation
+
+Node C is the output of another **CBUF2**, and it drives:
+
+- Two load capacitors: **C3** and **C4**
+- Each assumed to be **25fF**
+
+Total Cap at Node C = C3 + C4 = 25fF + 25fF = 50fF
+
+| Node | What It Drives            | Capacitance Calculation | Total Cap |
+| ---- | ------------------------- | ----------------------- | --------- |
+| A    | 2 CBUF's                  | 30fF + 30fF             | 60fF      |
+| B    | Load capacitors C1 and C2 | 25fF + 25fF             | 50fF      |
+| C    | Load capacitors C3 and C4 | 25fF + 25fF             | 50fF      |
