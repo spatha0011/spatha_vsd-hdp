@@ -84,7 +84,7 @@ The delay values are stored in **2D LUTs (Lookup Tables)** as shown below.
 
 ![Alt Text](Images/3.png)
 
-#### Delay Table Structure
+**Delay Table Structure:**
 
 Each buffer cell (CBUF) has a delay table indexed by:
 - Rows → Input Slew (e.g., 20ps, 40ps, 60ps, 80ps)
