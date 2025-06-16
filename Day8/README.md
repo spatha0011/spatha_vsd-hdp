@@ -20,7 +20,7 @@ SPICE (Simulation Program with Integrated Circuit Emphasis) simulations are a vi
 4. **Optimize Design:**
    - Experiment with different configurations to improve circuit performance.
 
-#### Example: Inverter Circuit
+### Example: Inverter Circuit
 
 An inverter is a simple circuit that reverses the input signal:
 
