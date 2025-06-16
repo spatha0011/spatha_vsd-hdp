@@ -74,7 +74,7 @@ The `top graph` indicates the current-voltage `(I-V) characteristics` of a CMOS 
 
 The `bottom graph` indicates the `voltage transfer characteristics (VTC)` of a CMOS inverter, showing how the output voltage (Vout) varies with the input voltage (Vin) to analyze the inverter's switching behavior and logic levels.
 
-### Power-Aware CTS: Understanding Delay Tables & Buffer Insertion
+### Understanding Delay Tables
 
 In digital timing analysis, **cell delay** is not a fixed number—it depends on two main factors:
 - **Input Slew (transition time of the input signal)**
