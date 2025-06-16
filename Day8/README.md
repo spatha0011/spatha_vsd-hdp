@@ -98,42 +98,11 @@ This table helps STA tools interpolate the **actual delay** for a cell based on 
 
 **Total Capacitance Calculation:**
 
-In a buffer tree or any multi-stage driving network, the **total capacitance** seen at the output node of a driving cell (e.g., buffer, inverter) is the sum of:
+If a cell output pin drives multiple fanout cells, the total capacitance on the output pin of the cell is the sum of all the input capacitances of the cells that it is driving plus the sum of the capacitance of all the wire segments that comprise the net plus the output capacitance of the driving cell. Note that in a CMOS cell, the inputs to the cell present a capacitive load only.
 
-- The intrinsic input capacitance of the driven gates
-- Any external load capacitance (e.g., routing, fanout, parasitics)
-
-`C_total = Σ C_gate_inputs + Σ C_load`
-
-**Node ‘A’ Capacitance Calculation**
-
-Node A is the output of the first buffer (**CBUF1**), and it drives:
-
-- Two buffers: **CBUF2** at nodes B and C
-- Each CBUF2 has an **input capacitance** of **30fF**
-
-Total Cap at Node A = Input Cap of B + Input Cap of C = 30fF + 30fF = 60fF
-
-**Node ‘B’ Capacitance Calculation**
-
-Node B is the output of a **CBUF2**, and it drives:
-
-- Two load capacitors: **C1** and **C2**
-- Each assumed to be **25fF**
-
-Total Cap at Node B = C1 + C2 = 25fF + 25fF = 50fF
-
-**Node ‘C’ Capacitance Calculation**
-
-Node C is the output of another **CBUF2**, and it drives:
-
-- Two load capacitors: **C3** and **C4**
-- Each assumed to be **25fF**
-
-Total Cap at Node C = C3 + C4 = 25fF + 25fF = 50fF
 
 | Node | What It Drives            | Capacitance Calculation | Total Cap |
 | ---- | ------------------------- | ----------------------- | --------- |
-| A    | 2 CBUF2's                 | 30fF + 30fF             | 60fF      |
+| A    | 2 CBUF's                 | 30fF + 30fF             | 60fF      |
 | B    | Load capacitors C1 and C2 | 25fF + 25fF             | 50fF      |
 | C    | Load capacitors C3 and C4 | 25fF + 25fF             | 50fF      |
