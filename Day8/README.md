@@ -105,7 +105,7 @@ In a buffer tree or any multi-stage driving network, the **total output capacita
 
 `C_total = Σ C_gate_inputs + Σ C_load`
 
-#### Node ‘A’ Capacitance Calculation
+**Node ‘A’ Capacitance Calculation**
 
 Node A is the output of the first buffer (**CBUF1**), and it drives:
 
@@ -114,7 +114,7 @@ Node A is the output of the first buffer (**CBUF1**), and it drives:
 
 Total Cap at Node A = Input Cap of B + Input Cap of C = 30fF + 30fF = 60fF
 
-#### Node ‘B’ Capacitance Calculation
+**Node ‘B’ Capacitance Calculation**
 
 Node B is the output of a **CBUF2**, and it drives:
 
@@ -123,7 +123,7 @@ Node B is the output of a **CBUF2**, and it drives:
 
 Total Cap at Node B = C1 + C2 = 25fF + 25fF = 50fF
 
-#### Node ‘C’ Capacitance Calculation
+**Node ‘C’ Capacitance Calculation**
 
 Node C is the output of another **CBUF2**, and it drives:
 
