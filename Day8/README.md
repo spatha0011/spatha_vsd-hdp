@@ -74,3 +74,24 @@ The `top graph` indicates the current-voltage `(I-V) characteristics` of a CMOS 
 
 The `bottom graph` indicates the `voltage transfer characteristics (VTC)` of a CMOS inverter, showing how the output voltage (Vout) varies with the input voltage (Vin) to analyze the inverter's switching behavior and logic levels.
 
+### Power-Aware CTS: Understanding Delay Tables & Buffer Insertion
+
+In digital timing analysis, **cell delay** is not a fixed number—it depends on two main factors:
+- **Input Slew (transition time of the input signal)**
+- **Output Load (capacitive load at the output)**
+
+The delay values are stored in **2D LUTs (Lookup Tables)** as shown below.
+
+![Alt Text](Images/3.png)
+
+#### Delay Table Structure
+
+Each buffer cell (CBUF) has a delay table indexed by:
+- Rows → Input Slew (e.g., 20ps, 40ps, 60ps, 80ps)
+- Columns → Output Load (e.g., 10fF to 110fF)
+
+Example tables shown:
+- **CBUF1:** Delay values `x1–x24`
+- **CBUF2:** Delay values `y1–y24`
+
+This table helps STA tools interpolate the **actual delay** for a cell based on current slew and load.
