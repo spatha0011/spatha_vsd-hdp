@@ -95,3 +95,11 @@ Example tables shown:
 - **CBUF2:** Delay values `y1–y24`
 
 This table helps STA tools interpolate the **actual delay** for a cell based on current slew and load.
+
+**Output Load Calculation:**
+
+Node 'A': The total capacitance at node 'A' is calculated as the sum of the capacitance of CBUF1 and the load capacitance driven by node 'A'. Therefore, total Cap at node 'A' = 60fF (30fF from CBUF1 + 30fF from the load).
+
+Node 'B': The total capacitance at node 'B' is calculated as the sum of the capacitance of CBUF2 and the load capacitance driven by node 'B'. Therefore, total Cap at node 'B' = 50fF (25fF from C2 + 25fF from the load).
+
+Node 'C': Similarly, the total capacitance at node 'C' is 50fF (25fF from C3 + 25fF from the load).
