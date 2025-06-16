@@ -45,3 +45,33 @@ An inverter is a simple circuit that reverses the input signal:
   - Determine the power usage of the inverter during operation.
 
 SPICE simulations are essential for designing circuits that are reliable and efficient. They help identify issues early and allow for optimization before the physical circuit is built.
+
+#### CMOS Inverter Circuit Diagram
+
+![Alt Text](Images/1.png)
+
+This schematic shows a standard **CMOS inverter**:
+- **Vin** is applied to both PMOS and NMOS gates.
+- **Vout** is taken at the common drain node.
+- **PMOS** connects from **VDD** to the output.
+- **NMOS** connects from the output to **VSS (GND)**.
+- **CL** represents the load capacitance, mimicking the next stage or parasitic load.
+
+#### Operation Summary
+
+| Vin       | PMOS State | NMOS State | Vout     |
+|-----------|------------|------------|----------|
+| Low (0 V) | ON         | OFF        | High (VDD) |
+| High (VDD)| OFF        | ON         | Low (GND)  |
+
+This forms the basis of digital NOT gates used in logic families.
+
+### SPICE Simulation Results
+
+![Alt Text](Images/2.png)
+
+Top graph indicates the drain current (I<sub>ds</sub>) variation of PMOS and NMOS with output voltage (V<sub>out</sub>) across different input levels, showing their operating regions.
+
+Bottom graph indicates the Voltage Transfer Characteristic (VTC) of the inverter, showing how V<sub>out</sub> changes with V<sub>in</sub> and helping determine switching threshold and noise margins.
+.
+
