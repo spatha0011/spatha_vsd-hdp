@@ -107,7 +107,7 @@ If a cell output pin drives multiple fanout cells, the total capacitance on the 
 | B    | Load capacitors C1 and C2 | 25fF + 25fF             | 50fF      |
 | C    | Load capacitors C3 and C4 | 25fF + 25fF             | 50fF      |
 
-**example :** The figure below illustrates a scenario where a logic gate **G1** drives three other gates (**G2**, **G3**, and **G4**) through a shared interconnect network. The net includes multiple parasitic capacitances due to interconnect segments.
+**Illustrative Scenario::** The figure below illustrates a scenario where a logic gate **G1** drives three other gates (**G2**, **G3**, and **G4**) through a shared interconnect network. The net includes multiple parasitic capacitances due to interconnect segments.
 
 ![Alt Text](Images/7.png)
 
