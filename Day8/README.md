@@ -70,8 +70,7 @@ This forms the basis of digital NOT gates used in logic families.
 
 ![Alt Text](Images/2.png)
 
-Top graph indicates the drain current (I<sub>ds</sub>) variation of PMOS and NMOS with output voltage (V<sub>out</sub>) across different input levels, showing their operating regions.
+The top graph indicates the current-voltage (I-V) characteristics of a CMOS inverter. It shows the relationship between the drain-source current (Ids) and the output voltage (Vout) for various input voltages (Vin).
 
-Bottom graph indicates the Voltage Transfer Characteristic (VTC) of the inverter, showing how V<sub>out</sub> changes with V<sub>in</sub> and helping determine switching threshold and noise margins.
-.
+The bottom graph indicates the voltage transfer characteristics (VTC) of a CMOS inverter, showing how the output voltage (Vout) varies with the input voltage (Vin) to analyze the inverter's switching behavior and logic levels.
 
