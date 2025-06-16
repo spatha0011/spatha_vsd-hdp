@@ -98,8 +98,15 @@ This table helps STA tools interpolate the **actual delay** for a cell based on 
 
 **Output Load Calculation:**
 
-Node 'A': The total capacitance at node 'A' is calculated as the sum of the capacitance of CBUF1 and the load capacitance driven by node 'A'. Therefore, total Cap at node 'A' = 60fF (30fF from CBUF1 + 30fF from the load).
+In a buffer tree or any multi-stage driving network, the **total output capacitance** seen at the output node of a driving cell (buffer, inverter, etc.) is the sum of:
 
-Node 'B': The total capacitance at node 'B' is calculated as the sum of the capacitance of CBUF2 and the load capacitance driven by node 'B'. Therefore, total Cap at node 'B' = 50fF (25fF from C2 + 25fF from the load).
+- The intrinsic input capacitance of the driven gates
+- Any external load capacitance (e.g., routing, fanout, parasitics)
 
-Node 'C': Similarly, the total capacitance at node 'C' is 50fF (25fF from C3 + 25fF from the load).
+`C_total = Σ C_gate_inputs + Σ C_load`
+
+**Node 'A':** The total capacitance at node 'A' is calculated as the sum of the capacitance of CBUF1 and the load capacitance driven by node 'A'. Therefore, total Cap at node 'A' = 60fF (30fF from CBUF1 + 30fF from the load).
+
+**Node 'B':** The total capacitance at node 'B' is calculated as the sum of the capacitance of CBUF2 and the load capacitance driven by node 'B'. Therefore, total Cap at node 'B' = 50fF (25fF from C2 + 25fF from the load).
+
+**Node 'C':** Similarly, the total capacitance at node 'C' is 50fF (25fF from C3 + 25fF from the load).
