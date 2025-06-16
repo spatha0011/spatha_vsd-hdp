@@ -103,7 +103,7 @@ If a cell output pin drives multiple fanout cells, the total capacitance on the 
 
 | Node | What It Drives            | Capacitance Calculation | Total Cap |
 | ---- | ------------------------- | ----------------------- | --------- |
-| A    | 2 CBUF's                  | 30fF + 30fF             | 60fF      |
+| A    | 2 CBUF2's                  | 30fF + 30fF             | 60fF      |
 | B    | Load capacitors C1 and C2 | 25fF + 25fF             | 50fF      |
 | C    | Load capacitors C3 and C4 | 25fF + 25fF             | 50fF      |
 
