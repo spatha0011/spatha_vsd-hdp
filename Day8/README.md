@@ -120,8 +120,20 @@ The **total capacitance seen at the output of G1** is the sum of:
 
 ####  Delay Calculation from LUTs
 
-To interpolate the delay for CBUF1, focus on the delay table where the input slew is 40ps, and the output loads are 50fF and 70fF, corresponding to delay values x9 and x10, respectively. 
+In practical timing analysis, it’s rare for the exact **input slew** and **output load** values to match the entries in a cell’s **delay lookup table (LUT)**. To estimate delays for intermediate values, **linear interpolation** is used.
 
-If you need to estimate the delay for an output load of 60fF, which is not directly listed, you perform linear interpolation between x9 and x10
+In the example below, we want to estimate the delay for **CBUF1** when:
+
+- **Input Slew** = `40ps`
+- **Output Load** = `60fF`
+
+However, `60fF` is not explicitly listed in the LUT. The closest columns are:
+
+- `50fF` → delay = `x9`
+- `70fF` → delay = `x10`
+
+To estimate the delay at `60fF`, we perform linear interpolation between `x9` and `x10`.
+
+Delay_60fF = x9 + [(60fF - 50fF) / (70fF - 50fF)] * (x10 - x9)
 
 ![Alt Text](Images/4.png)
