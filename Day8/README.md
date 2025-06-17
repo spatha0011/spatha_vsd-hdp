@@ -154,4 +154,4 @@ Therefore, the delay of CBUF2 under these conditions is taken directly as `y15`.
 
 ![Alt Text](Images/5.png)
 
-
+❗**Note:** If the required input slew or output load falls **outside the bounds** of the LUT (e.g., >110fF or <10fF), then **extrapolation** is used. However, extrapolated values are **less accurate** and can deviate from actual SPICE results. Designers should aim to stay within the characterized table ranges whenever possible for reliable STA.
