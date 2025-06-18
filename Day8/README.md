@@ -199,8 +199,6 @@ Resistive Region of Operation (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</s
 
 ![Alt Text](Images/16.png)
 
-This image shows an NMOS transistor operating in the resistive region (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</sub>)
-
 At this stage:
 
 - The channel is formed (strong inversion), and charge carriers flow from source to drain.
