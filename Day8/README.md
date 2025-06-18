@@ -221,7 +221,7 @@ In the resistive region of NMOS operation (V<sub>GS</sub> > V<sub>t</sub>, small
 
 - The total drain current I<sub>D</sub> is:
 
-  `I<sub>D</sub> = (velocity of charge carriers) × (available charge) × (channel width)`
+  I<sub>D</sub> = (velocity of charge carriers) × (available charge) × (channel width)
 
 Where:
 
