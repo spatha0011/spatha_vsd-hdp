@@ -450,9 +450,12 @@ setplot dc1
 ```
 </details>
 
-### To plot the waveforms in ngspice
+<inst>plot the waveforms in ngspice</inst>
+
+```shell
     ngspice day1_nfet_idvds_L2_W5.spice
     plot -vdd#branch
+```
 
 **Id vs Vds for different Vgs - sky130 NMOS (W=5um, L=2um)**
 
