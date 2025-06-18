@@ -291,3 +291,11 @@ These images illustrate how the **pinch-off condition** is reached in an NMOS tr
 ![Alt Text](Images/24.png)
 
 ![Alt Text](Images/25.png)
+
+### Drain Current Model for Saturation Region of Operation
+
+These images show how the **effective channel length** reduces due to **pinch-off** and how the drain current (**I<sub>D</sub>**) becomes weakly dependent on **V<sub>DS</sub>**, leading to the **saturation region equation** with channel length modulation.
+
+![Alt Text](Images/26.png)
+
+![Alt Text](Images/27.png)
