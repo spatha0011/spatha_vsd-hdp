@@ -192,3 +192,9 @@ This effect is known as the **Body Effect** or **Substrate Bias Effect**.
 ![Alt Text](Images/14.png)
 
 **γ (Body Effect Coefficient)** and **Φ<sub>f</sub> (Fermi Potential)** are constants provided by the foundry, which characterize the physical properties of the transistor. These constants are used by **SPICE simulators** to model the device behavior under various body bias conditions and enable accurate circuit simulations.
+
+### NMOS Resistive and Saturation Regions of Operation
+
+Resistive Region of Operation (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</sub>)
+
+![Alt Text](Images/16.png)
