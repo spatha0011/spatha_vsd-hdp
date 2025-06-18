@@ -221,7 +221,7 @@ In the resistive region of NMOS operation (V<sub>GS</sub> > V<sub>t</sub>, small
 
 - The total drain current I<sub>D</sub> is:
 
-  I<sub>D</sub> = (velocity of charge carriers) × (available charge) × (channel width)
+  **I<sub>D</sub> = (velocity of charge carriers) × (available charge) × (channel width)**
 
 Where:
 
@@ -242,3 +242,11 @@ In this region, NMOS behaves like a voltage-controlled resistor. The drift curre
 ![Alt Text](Images/20.png)
 
 ### Drain current model for linear region of operation
+
+These images illustrate the derivation of **I<sub>D</sub>** equation for NMOS in linear region, starting from first-order analysis and device physics.
+
+![Alt Text](Images/d1.png)
+
+![Alt Text](Images/d2.png)
+
+![Alt Text](Images/d3.png)
