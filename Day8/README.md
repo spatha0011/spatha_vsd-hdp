@@ -413,7 +413,7 @@ To use SPICE with sky130 technology, you can clone the relevant GitHub repositor
 3. `/sky130CircuitDesignWorkshop/design/sky130_fd_pr/models/sky130.lib.pm3.spice` 
    This library file contains all the SPICE models for components in the sky130 process node.
 
-ℹ️Note: You will find all the SPICE example files inside the `**design**` directory.
+ℹ️Note: You will find all the SPICE example files inside the **`design`** directory.
 
 ```shell
 spatha@spatha-VirtualBox:~/VLSI/sky130CircuitDesignWorkshop/design$ ls
