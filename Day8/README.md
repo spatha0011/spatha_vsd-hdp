@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## CMOS Circuit Design
+## CMOS Circuit Design and SPICE Simulations
 
 ### 📚 Contents
 
