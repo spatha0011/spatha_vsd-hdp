@@ -281,3 +281,13 @@ This helps in generating accurate **I<sub>D</sub>-V<sub>DS</sub>** curves and un
 ![Alt Text](Images/21.png)
 
 ![Alt Text](Images/22.png)
+
+### Pinch-off Region Condition
+
+These images illustrate how the **pinch-off condition** is reached in an NMOS transistor when **V<sub>GS</sub> - V<sub>DS</sub> ≤ V<sub>t</sub>**, causing the channel near the drain to disappear — marking the transition from linear to saturation region.
+
+![Alt Text](Images/23.png)
+
+![Alt Text](Images/24.png)
+
+![Alt Text](Images/25.png)
