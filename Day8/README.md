@@ -193,7 +193,7 @@ This effect is known as the **Body Effect** or **Substrate Bias Effect**.
 
 **γ (Body Effect Coefficient)** and **Φ<sub>f</sub> (Fermi Potential)** are constants provided by the foundry, which characterize the physical properties of the transistor. These constants are used by **SPICE simulators** to model the device behavior under various body bias conditions and enable accurate circuit simulations.
 
-### NMOS Resistive and Saturation Regions of Operation
+### NMOS Resistive region of operation with small drain-source voltage
 
 Resistive Region of Operation (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</sub>)
 
@@ -208,3 +208,37 @@ At this stage:
 - This is the region where the transistor behaves like a voltage-controlled resistor.
 
 ![Alt Text](Images/15.png)
+
+### Drift current theory
+
+In the resistive region of NMOS operation (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</sub>), current flow is mainly governed by **drift current**:
+
+- **Drift current** arises due to the electric field created across the channel by the applied V<sub>DS</sub>.
+- Charge carriers (electrons for NMOS) are accelerated through the channel by this field.
+- The induced charge in the channel at point *x* is given by:
+
+  Q<sub>i</sub>(x) = -C<sub>ox</sub> × [(V<sub>GS</sub> - V(x)) - V<sub>t</sub>]
+
+- The total drain current I<sub>D</sub> is:
+
+  I<sub>D</sub> = (velocity of charge carriers) × (available charge) × (channel width)
+
+Where:
+
+- C<sub>ox</sub> = Gate oxide capacitance
+- V(x) = potential at point x along the channel
+- L = effective channel length
+- W = channel width
+
+In this region, NMOS behaves like a voltage-controlled resistor. The drift current dominates due to the potential difference between source and drain.
+
+
+![Alt Text](Images/17.png)
+
+![Alt Text](Images/18.png)
+
+![Alt Text](Images/19.png)
+
+![Alt Text](Images/20.png)
+
+
