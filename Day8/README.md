@@ -271,3 +271,13 @@ These images illustrate the derivation of **I<sub>D</sub>** equation for NMOS in
 ![Alt Text](Images/d2.png)
 
 ![Alt Text](Images/d3.png)
+
+### SPICE Simulation Conclusion for Resistive Operation
+
+SPICE simulations allow us to calculate the drain current (**I<sub>D</sub>**) for different **V<sub>GS</sub>** values by sweeping **V<sub>DS</sub>** for each **V<sub>GS</sub>** up to **V<sub>GS</sub> - V<sub>t</sub>**.  
+
+This helps in generating accurate **I<sub>D</sub>-V<sub>DS</sub>** curves and understanding the transistor’s behavior in the linear (resistive) region.
+
+![Alt Text](Images/21.png)
+
+![Alt Text](Images/22.png)
