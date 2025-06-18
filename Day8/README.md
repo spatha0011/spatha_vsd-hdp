@@ -24,6 +24,7 @@
     - [Pinch-off Region Condition](#pinch-off-region-condition)
     - [Drain Current Model for Saturation Region of Operation](#drain-current-model-for-saturation-region-of-operation)
 
+3. **Introduction to SPICE**
    
 ### SPICE Simulations in Electronic Circuit Design
 
@@ -301,3 +302,14 @@ These images show how the **effective channel length** reduces due to **pinch-of
 ![Alt Text](Images/26.png)
 
 ![Alt Text](Images/27.png)
+
+### Basic SPICE Setup
+
+Overview of **SPICE netlist creation** and how model parameters (**V<sub>t</sub>**, **γ**, **Φ<sub>f</sub>**) are used in SPICE simulations to model NMOS transistor behavior in both linear and saturation regions.
+
+![Alt Text](Images/28.png)
+
+![Alt Text](Images/29.png)
+
+![Alt Text](Images/30.png)
+
