@@ -2,6 +2,25 @@
 
 ## CMOS Circuit Design
 
+### 📚 Contents
+
+1. [CMOS Circuit Design](#cmos-circuit-design)
+    - [SPICE Simulations in Electronic Circuit Design](#spice-simulations-in-electronic-circuit-design)
+    - [Why Use SPICE Simulations?](#why-use-spice-simulations)
+    - [Example: Inverter Circuit](#example-inverter-circuit)
+    - [Role of SPICE in Inverter Design](#role-of-spice-in-inverter-design)
+    - [CMOS Inverter Circuit Diagram](#cmos-inverter-circuit-diagram)
+    - [Operation Summary](#operation-summary)
+    - [SPICE Simulation Results](#spice-simulation-results)
+    - [Understanding Delay Tables](#understanding-delay-tables)
+    - [Delay Calculation from LUTs](#delay-calculation-from-luts)
+2. [Introduction to Basic Element in Circuit Design - NMOS Transistor](#introduction-to-basic-element-in-circuit-design---nmos-transistor)
+3. [NMOS Transistor - Body Effect (Substrate Bias Effect)](#nmos-transistor---body-effect-substrate-bias-effect)
+4. [NMOS Resistive region of operation with small drain-source voltage](#nmos-resistive-region-of-operation-with-small-drain-source-voltage)
+5. [Drift current theory](#drift-current-theory)
+6. [Drain current model for linear region of operation](#drain-current-model-for-linear-region-of-operation)
+
+   
 ### SPICE Simulations in Electronic Circuit Design
 
 SPICE (Simulation Program with Integrated Circuit Emphasis) simulations are a vital tool in electronic circuit design. They allow us to test and verify circuits before building them, ensuring they function correctly and efficiently.
