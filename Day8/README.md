@@ -21,6 +21,8 @@
     - [NMOS Resistive region of operation with small drain-source voltage](#nmos-resistive-region-of-operation-with-small-drain-source-voltage)
     - [Drift current theory](#drift-current-theory)
     - [Drain current model for linear region of operation](#drain-current-model-for-linear-region-of-operation)
+    - [Pinch-off Region Condition](#pinch-off-region-condition)
+    - [Drain Current Model for Saturation Region of Operation](#drain-current-model-for-saturation-region-of-operation)
 
    
 ### SPICE Simulations in Electronic Circuit Design
