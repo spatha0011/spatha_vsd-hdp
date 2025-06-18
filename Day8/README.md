@@ -412,7 +412,15 @@ To use SPICE with Sky130 technology, you can clone the relevant GitHub repositor
 3. **`/sky130CircuitDesignWorkshop/design/sky130_fd_pr/models/sky130.lib.pm3.spice`**  
    This library file contains all the **SPICE models** for components in the Sky130 process node.
 
-<details> <summary><strong>SPICE File: day1_nfet_idvds_L2_W5.spice</strong></summary>
+You will find all the SPICE files inside the design directory.
+
+```shell
+spatha@spatha-VirtualBox:~/VLSI/sky130CircuitDesignWorkshop/design$ ls
+day1_nfet_idvds_L2_W5.spice      day2_nfet_idvgs_L015_W039.spice  day3_inv_vtc_Wp084_Wn036.spice        day5_inv_devicevariation_wp7_wn042.spice  sky130_fd_pr
+day2_nfet_idvds_L015_W039.spice  day3_inv_tran_Wp084_Wn036.spice  day4_inv_noisemargin_wp1_wn036.spice  day5_inv_supplyvariation_Wp1_Wn036.spice
+```
+
+<details> <summary><strong>day1_nfet_idvds_L2_W5.spice</strong></summary>
 
 ```
 *** Model Description ***
