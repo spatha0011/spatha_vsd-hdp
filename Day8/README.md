@@ -217,11 +217,11 @@ In the resistive region of NMOS operation (V<sub>GS</sub> > V<sub>t</sub>, small
 - Charge carriers (electrons for NMOS) are accelerated through the channel by this field.
 - The induced charge in the channel at point *x* is given by:
 
-  Q<sub>i</sub>(x) = -C<sub>ox</sub> × [(V<sub>GS</sub> - V(x)) - V<sub>t</sub>]
+  `Q<sub>i</sub>(x) = -C<sub>ox</sub> × [(V<sub>GS</sub> - V(x)) - V<sub>t</sub>]`
 
 - The total drain current I<sub>D</sub> is:
 
-  I<sub>D</sub> = (velocity of charge carriers) × (available charge) × (channel width)
+  `I<sub>D</sub> = (velocity of charge carriers) × (available charge) × (channel width)`
 
 Where:
 
@@ -241,4 +241,4 @@ In this region, NMOS behaves like a voltage-controlled resistor. The drift curre
 
 ![Alt Text](Images/20.png)
 
-
+### Drain current model for linear region of operation
