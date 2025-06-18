@@ -27,6 +27,7 @@
 3. **Introduction to SPICE**
     - [Basic SPICE Setup](#basic-spice-setup)
     - [Circuit description in SPICE syntax](#circuit-description-in-spice-syntax)
+    - [SPICE Lab with sky130 models](#spice-lab-with-sky130-models)
    
 ### SPICE Simulations in Electronic Circuit Design
 
@@ -401,7 +402,7 @@ To use SPICE with Sky130 technology, you can clone the relevant GitHub repositor
   git clone https://github.com/kunalg123/sky130CircuitDesignWorkshop.git
   ```
 
-**3 Important Files in the Repo**:
+**Important Files in the Repo**:
 
 1. **`/sky130CircuitDesignWorkshop/design/sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.pm3.spice`**  
    This file contains the SPICE model for the **NFET (N-channel MOSFET)** in the Sky130 process at typical (tt) conditions.
