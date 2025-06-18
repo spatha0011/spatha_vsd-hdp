@@ -344,7 +344,7 @@ A circuit simulator is provided with an input file that contains:
 <br>
 
 
-Overview of **SPICE netlist creation** and how model parameters (**V<sub>t</sub>**, **γ**, **Φ<sub>f</sub>**) are used in SPICE simulations to model NMOS transistor behavior in both linear and saturation regions.
+The following images show how a SPICE deck is written to perform DC analysis of an NMOS transistor:
 
 ![Alt Text](Images/28.png)
 
