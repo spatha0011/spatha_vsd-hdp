@@ -6,7 +6,7 @@
 
 SPICE (Simulation Program with Integrated Circuit Emphasis) simulations are a vital tool in electronic circuit design. They allow us to test and verify circuits before building them, ensuring they function correctly and efficiently.
 
-### Why Use SPICE Simulations?
+#### Why Use SPICE Simulations?
 
 1. **Verify Circuit Functionality:**
    - Ensure that circuits, like logic gates, perform as expected.
@@ -20,7 +20,7 @@ SPICE (Simulation Program with Integrated Circuit Emphasis) simulations are a vi
 4. **Optimize Design:**
    - Experiment with different configurations to improve circuit performance.
 
-### Example: Inverter Circuit
+#### Example: Inverter Circuit
 
 An inverter is a simple circuit that reverses the input signal:
 
@@ -33,7 +33,7 @@ An inverter is a simple circuit that reverses the input signal:
   - When the input is high, the NMOS transistor conducts, making the output low.
   - When the input is low, the PMOS transistor conducts, making the output high.
 
-### Role of SPICE in Inverter Design
+#### Role of SPICE in Inverter Design
 
 - **Functionality Check:**
   - Verify that the inverter correctly flips the input signal.
