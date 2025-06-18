@@ -405,15 +405,15 @@ To use SPICE with sky130 technology, you can clone the relevant GitHub repositor
 **Important Files in the Repo**:
 
 1. `/sky130CircuitDesignWorkshop/design/sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.pm3.spice`  
-   This file contains the SPICE model for the **NFET (N-channel MOSFET)** in the sky130 process at typical (tt) conditions.
+   This file contains the SPICE model for the NFET in the sky130 process at typical (tt) conditions.
 
 2. `/sky130CircuitDesignWorkshop/design/sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice`
-   This file provides the corner model for the **NFET**, used for simulating different process variations.
+   This file provides the corner model for the NFET, used for simulating different process variations.
 
 3. `/sky130CircuitDesignWorkshop/design/sky130_fd_pr/models/sky130.lib.pm3.spice` 
-   This library file contains all the **SPICE models** for components in the sky130 process node.
+   This library file contains all the SPICE models for components in the sky130 process node.
 
-ℹ️Note: You will find all the SPICE example files inside the `design` directory.
+ℹ️Note: You will find all the SPICE example files inside the `**design**` directory.
 
 ```shell
 spatha@spatha-VirtualBox:~/VLSI/sky130CircuitDesignWorkshop/design$ ls
