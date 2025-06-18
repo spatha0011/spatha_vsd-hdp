@@ -328,8 +328,30 @@ Overview of **SPICE netlist creation** and how model parameters (**V<sub>t</sub>
 
 **Purpose:** This circuit biases an NMOS transistor using `Vin` and `Vdd`, allowing SPICE simulation of its I<sub>D</sub>-V<sub>DS</sub> behavior under specified geometry (W/L) and resistive input.
 
-**Note:**
-The technology file defines NMOS/PMOS model parameters (e.g., threshold voltage `Vt`, mobility `U0`, oxide thickness `TOX`, body effect `γ`, etc.).  
+**Note:**  
+To simulate transistor behavior accurately, SPICE requires a **technology file** that defines the physical and electrical parameters of NMOS/PMOS devices.  
+These parameters include:
 
-The `.include` and `.LIB` commands in the SPICE netlist are used to link these models to the circuit. 
+- **Threshold voltage** (V<sub>t</sub>)
+- **Body effect coefficient** (γ)
+- **Oxide thickness** (TOX)
+- **Carrier mobility** (U<sub>0</sub>)
+- Other technology-specific constants.
+
+![Alt Text](Images/32.png)
+
+![Alt Text](Images/33.png)
+
+In this example:
+
+- The `.include` or `.LIB` command loads the **technology model file** into the simulation (`xxxx_025um_model.mod`).
+- The NMOS/PMOS **model names** (like `nmos`, `pmos`) used in the netlist must match those defined in the technology file.
+
+**Simulation goal:**  
+To observe how the drain current (I<sub>D</sub>) varies with drain-source voltage (V<sub>DS</sub>) for a fixed gate-source voltage (V<sub>GS</sub>).  
+
+Here:
+
+- V<sub>GS</sub> is fixed at **2.5 V**.
+- V<sub>DS</sub> is swept from **0 V to 2.5 V**.
 
