@@ -394,7 +394,7 @@ Here:
 
 ### SPICE Lab with sky130 models
 
-To use SPICE with Sky130 technology, you can clone the relevant GitHub repository containing Sky130 models and circuits for simulation.
+To use SPICE with sky130 technology, you can clone the relevant GitHub repository containing sky130 models and circuits for simulation.
 
 - **Clone the repo**:  
   Clone the repository with the following command:  
@@ -405,13 +405,13 @@ To use SPICE with Sky130 technology, you can clone the relevant GitHub repositor
 **Important Files in the Repo**:
 
 1. **`/sky130CircuitDesignWorkshop/design/sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.pm3.spice`**  
-   This file contains the SPICE model for the **NFET (N-channel MOSFET)** in the Sky130 process at typical (tt) conditions.
+   This file contains the SPICE model for the **NFET (N-channel MOSFET)** in the sky130 process at typical (tt) conditions.
 
 2. **`/sky130CircuitDesignWorkshop/design/sky130_fd_pr/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice`**  
    This file provides the corner model for the **NFET**, used for simulating different process variations.
 
 3. **`/sky130CircuitDesignWorkshop/design/sky130_fd_pr/models/sky130.lib.pm3.spice`**  
-   This library file contains all the **SPICE models** for components in the Sky130 process node.
+   This library file contains all the **SPICE models** for components in the sky130 process node.
 
 You will find all the SPICE files inside the design directory.
 
@@ -450,7 +450,7 @@ setplot dc1
 ```
 </details>
 
---> **plot the waveforms in ngspice**
+📈**plot the waveforms in ngspice**
 
 ```shell
 ngspice day1_nfet_idvds_L2_W5.spice
