@@ -450,7 +450,7 @@ setplot dc1
 ```
 </details>
 
-<u>plot the waveforms in ngspice</u>
+--> **plot the waveforms in ngspice**
 
 ```shell
 ngspice day1_nfet_idvds_L2_W5.spice
