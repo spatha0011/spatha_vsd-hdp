@@ -412,7 +412,7 @@ To use SPICE with Sky130 technology, you can clone the relevant GitHub repositor
 3. **`/sky130CircuitDesignWorkshop/design/sky130_fd_pr/models/sky130.lib.pm3.spice`**  
    This library file contains all the **SPICE models** for components in the Sky130 process node.
 
-<details> <summary> SPICE File: day1_nfet_idvds_L2_W5.spice </summary>
+<details> <summary> <bold>SPICE File: day1_nfet_idvds_L2_W5.spice </bold></summary>
 
 ```
 *** Model Description ***
@@ -445,4 +445,5 @@ setplot dc1
     ngspice day1_nfet_idvds_L2_W5.spice
     plot -vdd#branch
 
+**ID vs. VDS for different VGS - sky130 NMOS (W=5um, L=2um)**
 ![Alt Text](Images/lab1.png)
