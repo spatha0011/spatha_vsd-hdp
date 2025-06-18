@@ -4,7 +4,7 @@
 
 ### 📚 Contents
 
-1. [Introduction to Circuit Design and SPICE simulations]
+1. **Introduction to Circuit Design and SPICE simulations**
     - [SPICE Simulations in Electronic Circuit Design](#spice-simulations-in-electronic-circuit-design)
     - [Why Use SPICE Simulations?](#why-use-spice-simulations)
     - [Example: Inverter Circuit](#example-inverter-circuit)
@@ -15,7 +15,7 @@
     - [Understanding Delay Tables](#understanding-delay-tables)
     - [Delay Calculation from LUTs](#delay-calculation-from-luts)
     - 
-2. [NMOS resistive region and saturation region of operation]
+2. **NMOS resistive region and saturation region of operation**
     - [Introduction to Basic Element in Circuit Design - NMOS Transistor](#introduction-to-basic-element-in-circuit-design---nmos-transistor)
     - [NMOS Transistor - Body Effect (Substrate Bias Effect)](#nmos-transistor---body-effect-substrate-bias-effect)
     - [NMOS Resistive region of operation with small drain-source voltage](#nmos-resistive-region-of-operation-with-small-drain-source-voltage)
