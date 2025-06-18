@@ -329,6 +329,8 @@ A circuit simulator is provided with an input file that contains:
   - Inputs to the circuit, called _**stimulus**_
   - _**Simulation options**_ & _**analysis commands**_ that explain the type of simulation to be run.
 
+![Alt Text](Images/ref1.png)
+
 ![Alt Text](Images/ref.png)
 
 **Analysis Types supported by SPICE:**
@@ -344,8 +346,6 @@ A circuit simulator is provided with an input file that contains:
 <br>
 
 The following images show how a SPICE deck is written to perform DC analysis of an NMOS transistor:
-
-![Alt Text](Images/ref1.png)
 
 ![Alt Text](Images/28.png)
 
