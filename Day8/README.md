@@ -14,7 +14,8 @@
     - [SPICE Simulation Results](#spice-simulation-results)
     - [Understanding Delay Tables](#understanding-delay-tables)
     - [Delay Calculation from LUTs](#delay-calculation-from-luts)
-2.[NMOS resistive region and saturation region of operation]
+    - 
+2. [NMOS resistive region and saturation region of operation]
     - [Introduction to Basic Element in Circuit Design - NMOS Transistor](#introduction-to-basic-element-in-circuit-design---nmos-transistor)
     - [NMOS Transistor - Body Effect (Substrate Bias Effect)](#nmos-transistor---body-effect-substrate-bias-effect)
     - [NMOS Resistive region of operation with small drain-source voltage](#nmos-resistive-region-of-operation-with-small-drain-source-voltage)
