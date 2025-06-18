@@ -4,7 +4,7 @@
 
 ### 📚 Contents
 
-1. **Introduction to Circuit Design and SPICE simulations**
+**1. Introduction to Circuit Design and SPICE simulations**
     - [SPICE Simulations in Electronic Circuit Design](#spice-simulations-in-electronic-circuit-design)
     - [Why Use SPICE Simulations?](#why-use-spice-simulations)
     - [Example: Inverter Circuit](#example-inverter-circuit)
@@ -14,8 +14,8 @@
     - [SPICE Simulation Results](#spice-simulation-results)
     - [Understanding Delay Tables](#understanding-delay-tables)
     - [Delay Calculation from LUTs](#delay-calculation-from-luts)
-    - 
-2. **NMOS resistive region and saturation region of operation**
+      
+**2. NMOS resistive region and saturation region of operation**
     - [Introduction to Basic Element in Circuit Design - NMOS Transistor](#introduction-to-basic-element-in-circuit-design---nmos-transistor)
     - [NMOS Transistor - Body Effect (Substrate Bias Effect)](#nmos-transistor---body-effect-substrate-bias-effect)
     - [NMOS Resistive region of operation with small drain-source voltage](#nmos-resistive-region-of-operation-with-small-drain-source-voltage)
@@ -27,7 +27,7 @@
 
 SPICE (Simulation Program with Integrated Circuit Emphasis) simulations are a vital tool in electronic circuit design. They allow us to test and verify circuits before building them, ensuring they function correctly and efficiently.
 
-#### Why Use SPICE Simulations?
+### Why Use SPICE Simulations?
 
 1. **Verify Circuit Functionality:**
    - Ensure that circuits, like logic gates, perform as expected.
@@ -67,7 +67,7 @@ An inverter is a simple circuit that reverses the input signal:
 
 SPICE simulations are essential for designing circuits that are reliable and efficient. They help identify issues early and allow for optimization before the physical circuit is built.
 
-#### CMOS Inverter Circuit Diagram
+### CMOS Inverter Circuit Diagram
 
 ![Alt Text](Images/1.png)
 
