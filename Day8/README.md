@@ -25,6 +25,7 @@
     - [Drain Current Model for Saturation Region of Operation](#drain-current-model-for-saturation-region-of-operation)
 
 3. **Introduction to SPICE**
+    - [Basic SPICE Setup](#basic-spice-setup)
    
 ### SPICE Simulations in Electronic Circuit Design
 
@@ -312,4 +313,17 @@ Overview of **SPICE netlist creation** and how model parameters (**V<sub>t</sub>
 ![Alt Text](Images/29.png)
 
 ![Alt Text](Images/30.png)
+
+### Circuit description in SPICE syntax
+
+![Alt Text](Images/31.png)
+
+| Line in Netlist | Explanation |
+| --------------- | ----------- |
+| `M1 vdd n1 0 0 nmoss W=1.8u L=1.2u` | Defines NMOS transistor `M1`. Connections: Drain → `vdd`, Gate → `n1`, Source → `0` (ground), Bulk → `0` (ground). Model name `nmoss` comes from technology file. `W` = gate width (1.8µm), `L` = gate length (1.2µm). |
+| `R1 in n1 55` | Series resistor `R1` of 55 ohms between input node `in` and gate node `n1`. |
+| `Vdd vdd 0 2.5` | Voltage source `Vdd` applying 2.5V between `vdd` and ground. |
+| `Vin in 0 2.5` | Voltage source `Vin` applying 2.5V between input node `in` and ground. |
+
+**Purpose:** This circuit biases an NMOS transistor using `Vin` and `Vdd`, allowing SPICE simulation of its I<sub>D</sub>-V<sub>DS</sub> behavior under specified geometry (W/L) and resistive input.
 
