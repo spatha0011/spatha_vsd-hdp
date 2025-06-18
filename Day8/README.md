@@ -327,3 +327,9 @@ Overview of **SPICE netlist creation** and how model parameters (**V<sub>t</sub>
 | `Vin in 0 2.5` | Voltage source `Vin` applying 2.5V between input node `in` and ground. |
 
 **Purpose:** This circuit biases an NMOS transistor using `Vin` and `Vdd`, allowing SPICE simulation of its I<sub>D</sub>-V<sub>DS</sub> behavior under specified geometry (W/L) and resistive input.
+
+**Note:**
+The technology file defines NMOS/PMOS model parameters (e.g., threshold voltage `Vt`, mobility `U0`, oxide thickness `TOX`, body effect `γ`, etc.).  
+
+The `.include` and `.LIB` commands in the SPICE netlist are used to link these models to the circuit. 
+
