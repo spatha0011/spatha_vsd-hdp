@@ -328,7 +328,7 @@ Overview of **SPICE netlist creation** and how model parameters (**V<sub>t</sub>
 
 **Purpose:** This circuit biases an NMOS transistor using `Vin` and `Vdd`, allowing SPICE simulation of its I<sub>D</sub>-V<sub>DS</sub> behavior under specified geometry (W/L) and resistive input.
 
-**Note:**  
+🔽**Note:**  
 To simulate transistor behavior accurately, SPICE requires a **technology file** that defines the physical and electrical parameters of NMOS/PMOS devices.  
 These parameters include:
 
