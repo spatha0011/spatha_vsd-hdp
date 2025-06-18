@@ -343,7 +343,6 @@ A circuit simulator is provided with an input file that contains:
 | Noise Analysis | Measures the device-generated noise for a given circuit. |
 <br>
 
-
 The following images show how a SPICE deck is written to perform DC analysis of an NMOS transistor:
 
 ![Alt Text](Images/28.png)
