@@ -180,7 +180,7 @@ Therefore, the delay of CBUF2 under these conditions is taken directly as `y15`.
 
 ![Alt Text](Images/5.png)
 
---> **Note:** If the required input slew or output load falls **outside the bounds** of the LUT (e.g., >110fF or <10fF), then **extrapolation** is used. However, extrapolated values are **less accurate** and can deviate from actual SPICE results. Designers should aim to stay within the characterized table ranges whenever possible for reliable STA.
+ℹ️**Note:** If the required input slew or output load falls **outside the bounds** of the LUT (e.g., >110fF or <10fF), then **extrapolation** is used. However, extrapolated values are **less accurate** and can deviate from actual SPICE results. Designers should aim to stay within the characterized table ranges whenever possible for reliable STA.
 
 
 ### Introduction to Basic Element in Circuit Design - NMOS Transistor
@@ -328,7 +328,7 @@ Overview of **SPICE netlist creation** and how model parameters (**V<sub>t</sub>
 
 **Purpose:** This circuit biases an NMOS transistor using `Vin` and `Vdd`, allowing SPICE simulation of its I<sub>D</sub>-V<sub>DS</sub> behavior under specified geometry (W/L) and resistive input.
 
---> **Note:**  To simulate transistor behavior accurately, SPICE requires a **technology file** that defines the physical and electrical parameters of NMOS/PMOS devices.These parameters include:
+ℹ️**Note:**  To simulate transistor behavior accurately, SPICE requires a **technology file** that defines the physical and electrical parameters of NMOS/PMOS devices.These parameters include:
 
 - **Threshold voltage** (V<sub>t</sub>)
 - **Body effect coefficient** (γ)
