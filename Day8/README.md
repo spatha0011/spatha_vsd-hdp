@@ -155,3 +155,32 @@ Therefore, the delay of CBUF2 under these conditions is taken directly as `y15`.
 ![Alt Text](Images/5.png)
 
 ❗**Note:** If the required input slew or output load falls **outside the bounds** of the LUT (e.g., >110fF or <10fF), then **extrapolation** is used. However, extrapolated values are **less accurate** and can deviate from actual SPICE results. Designers should aim to stay within the characterized table ranges whenever possible for reliable STA.
+
+
+### Introduction to Basic Element in Circuit Design - NMOS Transistor
+
+This image shows the structure of an NMOS transistor with its key components and terminals labeled.
+
+![Alt Text](Images/8.png)
+
+This image shows the NMOS transistor when **Vgs = 0**
+
+![Alt Text](Images/9.png)
+
+This image shows the NMOS transistor when **Vgs > Vth (threshold voltage)**:
+
+![Alt Text](Images/10.png)
+
+### NMOS Transistor - Body Effect (Substrate Bias Effect)
+
+This image compares NMOS operation with **Vsb = 0** and **Vsb = positive value**:
+
+- On the left: when **Vsb = 0**, normal channel formation happens as Vgs increases.
+- On the right: when **Vsb > 0**, an **additional reverse bias** is introduced between Source and Body (substrate).  
+  → This increases the threshold voltage (Vth).  
+  → The depletion layer near Source becomes wider.  
+  → More Vgs is required to turn ON the transistor (stronger inversion).
+
+This effect is known as the **Body Effect** or **Substrate Bias Effect**.
+
+![Alt Text](Images/11.png)
