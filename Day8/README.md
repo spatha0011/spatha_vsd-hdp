@@ -198,3 +198,15 @@ This effect is known as the **Body Effect** or **Substrate Bias Effect**.
 Resistive Region of Operation (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</sub>)
 
 ![Alt Text](Images/16.png)
+
+This image shows an NMOS transistor operating in the resistive region (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</sub>)
+
+At this stage:
+
+- The channel is formed (strong inversion), and charge carriers flow from source to drain.
+- The gate-to-channel voltage at a point ‘x’ along the channel is: **V<sub>GS</sub> - V(x)**.
+- The **induced charge density (Q<sub>i</sub>)** in the channel is proportional to **(V<sub>GS</sub> - V<sub>t</sub>)**.
+- The effective channel length **L** and voltage V(x) profile along x-axis determine the current flow.
+- This is the region where the transistor behaves like a voltage-controlled resistor.
+
+![Alt Text](Images/15.png)
