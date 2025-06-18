@@ -184,3 +184,11 @@ This image compares NMOS operation with **Vsb = 0** and **Vsb = positive value**
 This effect is known as the **Body Effect** or **Substrate Bias Effect**.
 
 ![Alt Text](Images/11.png)
+
+![Alt Text](Images/12.png)
+
+![Alt Text](Images/13.png)
+
+![Alt Text](Images/14.png)
+
+**γ (Body Effect Coefficient)** and **Φ<sub>f</sub> (Fermi Potential)** are constants provided by the foundry, which characterize the physical properties of the transistor. These constants are used by **SPICE simulators** to model the device behavior under various body bias conditions and enable accurate circuit simulations.
