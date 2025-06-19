@@ -16,18 +16,14 @@ The plot below shows the output characteristics of an NMOS device with W=1.8μm,
   The drain current (Id) depends on channel length modulation and Vds.  
   It is defined for Vds ≥ (Vgs - Vt).
 
-**Explanation:**  
 - The region **before** Vds = Vgs - Vt is the **Linear Region**, where Id varies linearly with Vds.  
 - The region **after** Vds = Vgs - Vt is the **Saturation Region**, where Id is influenced by channel length modulation and Vds.
 
-**Formulas:**  
 **Linear region:**  
-_Id = kn ⋅ [(Vgs - Vt)Vds - (Vds² / 2)]_
+Id = kn ⋅ [(Vgs - Vt)Vds - (Vds² / 2)]
 
 **Saturation region:**  
-_Id = (kn / 2) ⋅ (W/L) ⋅ (Vgs - Vt)² ⋅ [1 + λVds]_
-
----
+Id = (kn / 2) ⋅ (W/L) ⋅ (Vgs - Vt)² ⋅ [1 + λVds]
 
 #### Observation 1: Long Channel vs. Short Channel NMOS Characteristics
 
