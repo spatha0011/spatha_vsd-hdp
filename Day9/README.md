@@ -224,4 +224,8 @@ The figure below shows the **CMOS inverter** in both **transistor-level** and **
 
 This basic **CMOS inverter** behavior is the foundation of all CMOS logic circuits — demonstrating **low static power** and **sharp transitions** in the voltage transfer characteristics.
 
+#### Load Line Curves for NMOS and PMOS
 
+The figure below shows the **CMOS inverter** circuit and the corresponding **load curves** for both **NMOS** and **PMOS** transistors:
+
+![Alt Text](Images/13.png)
