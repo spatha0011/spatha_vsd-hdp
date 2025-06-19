@@ -4,7 +4,7 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 
 ## 🔽 Links to Detailed Logs
 
-| Day # | Topic(s) Covered | Status |
+| Day  | Topic(s) Covered | Status |
 |---|---|---|
 | [Day 0](Day0/README.md) | Tools Installation | ✅ Done |
 | [Day 1](Day1/README.md) | Introduction to Verilog RTL design and Synthesis | ✅ Done |
