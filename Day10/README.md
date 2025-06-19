@@ -146,3 +146,13 @@ Below image shows the output waveform of transient analysis of a CMOS inverter, 
 
 ![Alt Text](Images/4.png)
 
+### 📊 Comparison of Voltage Transfer Characteristics (.dc) vs. Transient Response (.tran) Simulations
+
+| Aspect                    | Voltage Transfer Characteristics (DC Sweep)          | Transient Response (Dynamic Simulation)                                  |
+|---------------------------|-----------------------------------------------------|-------------------------------------------------------------------------|
+| Simulation Type           | DC Sweep (Voltage Transfer Characteristics - VTC)    | Transient (Dynamic behavior over time)                                   |
+| Input Signal (`Vin`)      | Fixed DC sweep: 0V to 1.8V in 0.01V steps             | Pulse waveform: 0V to 1.8V, 2ns width, 4ns period                        |
+| Simulation Command        | `.dc Vin 0 1.8 0.01`                                 | `.tran 1n 10n`                                                           |
+| Purpose                   | Plot static VTC curve of CMOS inverter               | Analyze rise/fall times and delays under dynamic switching                |
+| Typical Output            | Vout vs Vin graph                                    | Vout vs Time, Vin vs Time waveforms                                       |
+| Analysis Goal             | Understand switching threshold & noise margins       | Measure timing parameters (propagation delay, rise time, fall time)       |
