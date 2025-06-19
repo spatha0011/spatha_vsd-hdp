@@ -19,40 +19,22 @@ The plot below shows the output characteristics of an NMOS device with W=1.8μm,
 - The region **before** Vds = Vgs - Vt is the **Linear Region**, where Id varies linearly with Vds.  
 - The region **after** Vds = Vgs - Vt is the **Saturation Region**, where Id is influenced by channel length modulation and Vds.
 
-**Linear region:**  
-Id = kn ⋅ [(Vgs - Vt)Vds - (Vds² / 2)]
-
-**Saturation region:**  
-Id = (kn / 2) ⋅ (W/L) ⋅ (Vgs - Vt)² ⋅ [1 + λVds]
-
 #### Observation 1: Long Channel vs. Short Channel NMOS Characteristics
 
 The plot below compares NMOS output characteristics for long channel and short channel devices with **same W/L ratio**:
 
 ![Alt Text](Images/2.png)
 
-In this figure:
+In this figure, the **left plot** corresponds to a device with W = 1.8μm and L = 1.2μm (long-channel device), and the **right plot** corresponds to W = 0.375μm and L = 0.25μm (short-channel device). Since the channel length is < 0.25μm in the second case, it is classified as a short-channel device.
 
-- **Left Plot**: W = 1.8μm, L = 1.2μm device → Long channel device
-- **Right Plot**: W = 0.375μm, L = 0.25μm device → Short channel device  
-  (Since channel length < 0.25μm, it is considered a short channel device)
+Both devices have the **same W/L ratio**, but different absolute Width (W) and Length (L), allowing us to compare their electrical behavior directly.
 
-- Both devices have the **same W/L ratio**, but different Width (W) and Length (L).
-- **Id behavior:**
-  - For the **long channel device**:  
-    Id is a **quadratic function of Vgs**.
-  - For the **short channel device**:  
-    Id is **quadratic at low Vgs**, but becomes more **linear at high Vgs**.
+When we apply a constant Vds and sweep Vgs:
 
-To observe this behavior, we apply a constant Vds and sweep Vgs:
+- In **long-channel devices**, the drain current (Id) shows an **ideal quadratic dependence on Vgs**.
+- In **short-channel devices**, Id remains quadratic at low Vgs but gradually becomes **linear at higher Vgs**. This is due to **velocity saturation**, which limits carrier velocity as the electric field increases. Once the carrier velocity reaches its maximum limit (velocity saturation), the Id-Vgs curve flattens into a linear region.
 
-- In long channel devices, Id follows the ideal quadratic dependence on Vgs.
-- In short channel devices:
-  - At **low Vgs**, the device behaves similarly to long channel — quadratic Id-Vgs.
-  - At **high Vgs**, the Id-Vgs curve becomes linear due to **velocity saturation**.
-    - This velocity saturation occurs because the carrier velocity reaches a maximum limit at high electric fields in short channel devices.
-
-Thus, this plot demonstrates how **velocity saturation** affects Id in short channel devices — transitioning the behavior from quadratic to linear at high Vgs.
+Thus, this plot clearly demonstrates how **velocity saturation** alters the Id behavior in short-channel devices — causing a transition from quadratic to linear dependence at higher Vgs.
 
 ![Alt Text](Images/3.png)
 
@@ -85,15 +67,17 @@ The figure below compares the **peak drain current (Id)** between a long-channel
 
 ![Alt Text](Images/8.png)
 
-- **Left Plot**: W = 1.8μm, L = 1.2μm → **Long-channel device**
+**Left Plot**: W = 1.8μm, L = 1.2μm → **Long-channel device**
   - Peak current = **410 μA**
   
-- **Right Plot**: W = 0.375μm, L = 0.25μm → **Short-channel device**
+**Right Plot**: W = 0.375μm, L = 0.25μm → **Short-channel device**
   - Peak current = **210 μA**
 
-- Even though **short-channel devices** allow for faster switching and smaller sizes, their **peak drain current (Id)** is lower than long-channel devices.
-- The reduction in peak current is due to **velocity saturation** — which limits carrier velocity in short-channel devices.
-- In long-channel devices, carriers accelerate freely, giving higher Id.
+Even though **short-channel devices** allow for faster switching and smaller sizes, their **peak drain current (Id)** is lower than long-channel devices.
+
+The reduction in peak current is due to **velocity saturation** — which limits carrier velocity in short-channel devices.
+
+In long-channel devices, carriers accelerate freely, giving higher Id.
 
  ### Labs Sky130 Id-Vgs
 
