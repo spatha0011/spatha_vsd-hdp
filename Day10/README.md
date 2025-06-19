@@ -48,7 +48,7 @@ This image shows a complete SPICE deck and corresponding CMOS inverter circuit.
 5. **End Statement:**
     - `.end`: End of SPICE deck.
 
-#### `Labs Sky130 SPICE simulation for CMOS`
+### `Labs Sky130 SPICE simulation for CMOS`
 
 <details> <summary><strong>day3_inv_vtc_Wp084_Wn036.spice </strong></summary>
 
@@ -96,6 +96,8 @@ ngspice day3_inv_vtc_Wp084_Wn036.spice
 plot out vs in
 ```
 
+Below image shows the Voltage Transfer Characteristics (VTC) of a CMOS Inverter:
+
 ![Alt Text](Images/3.png)
 
 <details> <summary><strong>day3_inv_tran_Wp084_Wn036.spice </strong></summary>
@@ -139,6 +141,8 @@ run
 ngspice day3_inv_tran_Wp084_Wn036.spice
 plot out vs time in
 ```
+
+Below image shows the output waveform of transient analysis of a CMOS inverter, illustrating rise time delay and fall time delay:
 
 ![Alt Text](Images/4.png)
 
