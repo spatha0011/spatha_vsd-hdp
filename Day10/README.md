@@ -5,8 +5,8 @@
 ### 📚 Contents
 
 
-### Voltage Transfer Characteristics and Spice simulations
-------------------------------
+### `Voltage Transfer Characteristics and Spice simulations`
+
 #### CMOS Inverter SPICE Deck
 
 This image illustrates how to construct a SPICE deck for a CMOS inverter.
