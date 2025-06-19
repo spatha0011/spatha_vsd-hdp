@@ -34,6 +34,7 @@ Both devices have the **same W/L ratio**, but different absolute Width (W) and L
 When we apply a constant Vds and sweep Vgs:
 
 > In **long-channel devices**, the drain current (Id) shows an **ideal quadratic dependence on Vgs**.
+
 > In **short-channel devices**, Id remains quadratic at low Vgs but gradually becomes **linear at higher Vgs**. This is due to **velocity saturation**, which limits carrier velocity as the electric field increases. Once the carrier velocity reaches its maximum limit (velocity saturation), the Id-Vgs curve flattens into a linear region.
 
 Thus, this plot clearly demonstrates how **velocity saturation** alters the Id behavior in short-channel devices — causing a transition from quadratic to linear dependence at higher Vgs.
@@ -213,7 +214,7 @@ Convert PMOS and NMOS drain-source voltages to **Vout**.
 
 > **Step 4**
 
-Merge the NMOS and PMOS load curves by equating their \( I_{ds} \) characteristics with respect to **Vout**.  
+Merge the NMOS and PMOS load curves by equating their Ids characteristics with respect to **Vout**.  
 
 Plot the **Voltage Transfer Characteristic (VTC)** by sweeping **Vin** and mapping the corresponding **Vout**, showing the inverter switching behavior from logic HIGH to LOW.
 
