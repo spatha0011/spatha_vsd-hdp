@@ -62,4 +62,6 @@ To observe this behavior, we apply a constant Vds and sweep Vgs:
 
 Thus, this plot demonstrates how **velocity saturation** affects Id in short channel devices — transitioning the behavior from quadratic to linear at high Vgs.
 
+![Alt Text](Images/3.png)
+
 
