@@ -226,24 +226,26 @@ This basic **CMOS inverter** behavior is the foundation of all CMOS logic circui
 
 #### Load Line Curves for NMOS and PMOS
 
->Step 1:
+#### Load Line Curves for NMOS and PMOS
 
-Convert the **PMOS gate-source voltage (Vgsp)** into an equivalent **Vin**.  
+> **Step 1:**
 
-Replace all internal node voltages with **Vin**, **Vdd**, **Vss**, and **Vout**.  
+Convert the **PMOS gate-source voltage (VgsP)** into an equivalent **Vin**.
+
+Replace all internal node voltages with **Vin**, **Vdd**, **Vss**, and **Vout**.
 
 ![Alt Text](Images/14.png)
 
->Step 2 & Step 3:
+> **Step 2 & Step 3:**
 
 Convert PMOS and NMOS drain-source voltages to **Vout**.
 
 ![Alt Text](Images/15.png)
 
->Step 4:
+> **Step 4:**
 
-Merge the NMOS and PMOS load curves by equating their Ids characteristics with respect to Vout.  
+Merge the NMOS and PMOS load curves by equating their \( I_{ds} \) characteristics with respect to **Vout**.  
 
-Plot the **Voltage Transfer Characteristic (VTC)** by sweeping Vin and mapping the corresponding Vout, showing the inverter switching behavior from logic HIGH to LOW.
+Plot the **Voltage Transfer Characteristic (VTC)** by sweeping **Vin** and mapping the corresponding **Vout**, showing the inverter switching behavior from logic HIGH to LOW.
 
 ![Alt Text](Images/16.png)
