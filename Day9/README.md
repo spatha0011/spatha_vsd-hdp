@@ -3,7 +3,8 @@
 ## Velocity Saturation and basics of CMOS inverter VTC
 
 ### 📚 Contents
-- SPICE Simulation for Lower Nodes
+
+- SPICE Simulation for Lower Nodes(#spice-simulation-for-lower-nodes)
   - Observation 1: [Long Channel vs. Short Channel NMOS Characteristics](#observation-1-long-channel-vs-short-channel-nmos-characteristics)
   - Observation 2: [Peak Current Comparison — Long Channel vs Short Channel Devices](#observation-2-peak-current-comparison--long-channel-vs-short-channel-devices)
 - [Labs: Sky130 Id-Vgs](#labs-sky130-id-vgs)
