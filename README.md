@@ -13,3 +13,4 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 - [VSDBabySoC Post-Synthesis Simulation](Day6/README.md)
 - [Timing Graphs using openSTA](Day7/README.md)
 - [CMOS Circuit Design and SPICE Simulations](Day8/README.md)
+- [Velocity Saturation and basics of CMOS inverter VTC](Day9/README.md)
