@@ -5,8 +5,8 @@
 ### 📚 Contents
 
 - [SPICE Simulation for Lower Nodes](#spice-simulation-for-lower-nodes)
-  - Observation 1: [Long Channel vs. Short Channel NMOS Characteristics](#observation-1-long-channel-vs-short-channel-nmos-characteristics)
-  - Observation 2: [Peak Current Comparison — Long Channel vs Short Channel Devices](#observation-2-peak-current-comparison--long-channel-vs-short-channel-devices)
+  - [Observation 1: Long Channel vs. Short Channel NMOS Characteristics](#observation-1-long-channel-vs-short-channel-nmos-characteristics)
+  - [Observation 2: Peak Current Comparison — Long Channel vs Short Channel Devices](#observation-2-peak-current-comparison--long-channel-vs-short-channel-devices)
 - [Labs: Sky130 Id-Vgs](#labs-sky130-id-vgs)
 - [CMOS Voltage Transfer Characteristics](#cmos-voltage-transfer-characteristics)
 - [CMOS Inverter — Transistor-Level and Switch-Level View](#cmos-inverter--transistor-level-and-switch-level-view)
