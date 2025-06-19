@@ -6,7 +6,7 @@
 
 - [Voltage Transfer Characteristics and Spice simulations](#voltage-transfer-characteristics-and-spice-simulations)
 - [Labs Sky130 SPICE simulation for CMOS](#labs-sky130-spice-simulation-for-cmos)
-   - [Comparison of Voltage Transfer Characteristics (.dc) vs. Transient Response (.tran) Simulations](#comparison-of-voltage-transfer-characteristics-dc-vs-transient-response-tran-simulations)
+   - [Comparison: VTC (.dc) vs. Transient (.tran) Simulations](#comparison-vtc-dc-vs-transient-tran-simulations)
 
 ### `Voltage Transfer Characteristics and Spice simulations`
 
@@ -149,7 +149,7 @@ Below image shows the output waveform of transient analysis of a CMOS inverter, 
 
 ![Alt Text](Images/4.png)
 
-### 📊 Comparison of Voltage Transfer Characteristics (.dc) vs. Transient Response (.tran) Simulations
+### 📊 Comparison: VTC (.dc) vs. Transient (.tran) Simulations
 
 | Aspect                    | Voltage Transfer Characteristics (DC Sweep)          | Transient Response (Dynamic Simulation)                                  |
 |---------------------------|-----------------------------------------------------|-------------------------------------------------------------------------|
