@@ -137,7 +137,7 @@ ngspice day2_nfet_idvds_L015_W039.spice
 plot -vdd#branch
 ```
 
-Below image is output waveform of Id vs Vds curve for short channel of NMOS
+**The plot of Ids vs Vds over constant Vgs:**
 
 ![Alt Text](Images/9.png)
 
@@ -177,6 +177,6 @@ ngspice day2_nfet_idvgs_L015_W039.spice
 plot -vdd#branch
 ```
 
-Below image is output waveform of Id vs Vgs
+**The plot of Ids vs Vgs over constant Vds:**
 
 ![Alt Text](Images/10.png)
