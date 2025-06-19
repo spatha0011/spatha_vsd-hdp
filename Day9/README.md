@@ -174,7 +174,7 @@ plot -vdd#branch
 
 ![Alt Text](Images/10.png)
 
-### CMOS voltage Transfer Characteristics
+### `CMOS voltage Transfer Characteristics`
 
 **MOSFET as a Switch:**
 
