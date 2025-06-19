@@ -24,6 +24,8 @@ This forms the foundation of writing an accurate and functional SPICE netlist fo
 
 This image shows a complete SPICE deck and corresponding CMOS inverter circuit.
 
+![Alt Text](Images/2.png)
+
 **Key Sections of the SPICE Deck:**
 
 1. **Model & Netlist Description:**
@@ -46,5 +48,5 @@ This image shows a complete SPICE deck and corresponding CMOS inverter circuit.
 5. **End Statement:**
     - `.end`: End of SPICE deck.
 
-![Alt Text](Images/2.png)
+
 
