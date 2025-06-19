@@ -206,7 +206,7 @@ The **right diagram** shows the switch model when **Vin = 0**: the PMOS transist
 
 This basic **CMOS inverter** behavior is the foundation of all CMOS logic circuits — demonstrating **low static power** and **sharp transitions** in the voltage transfer characteristics.
 
-#### `Load Line Curves for NMOS and PMOS`
+### `Load Line Curves for NMOS and PMOS`
 
 > **Step 1**
 
