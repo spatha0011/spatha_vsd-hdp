@@ -4,12 +4,12 @@
 
 ## 📚 Contents
 
-- [Combinational Logic Optimisation](#Combinational-Logic-Optimisation)
-- [Sequential Logic Optimisation](#Sequential-Logic-Optimisation)
-- [Combinational Logic Optimisation-labs](#Combinational-Logic-Optimisation-examples)
-- [Sequential-Logic-Optimisation-labs](#Sequential-Logic-Optimisation-examples)
+- [Combinational Logic Optimization](#Combinational-Logic-Optimization)
+- [Sequential Logic Optimization](#Sequential-Logic-Optimization)
+- [Combinational Logic Optimization-labs](#Combinational-Logic-Optimization-examples)
+- [Sequential-Logic-Optimization-labs](#Sequential-Logic-Optimization-examples)
 
-### Combinational Logic Optimisation
+### Combinational Logic Optimization
 
 #### Objective:
 Squeeze and simplify logic to get the most optimized design in terms of **area** and **power**.
@@ -25,7 +25,7 @@ Squeeze and simplify logic to get the most optimized design in terms of **area**
     ```
   - **Result:** Complex gate logic (6 MOS transistors) simplifies to a single inverter (2 MOS transistors).
 
-- **Boolean Logic Optimisation**
+- **Boolean Logic Optimization**
   - Simplify Boolean expressions using:
     - Karnaugh Map (K-Map)
     - Quine McCluskey Method
@@ -51,7 +51,7 @@ The additional switch, purge also removes the internal nets if they have a publi
 ```
 ---
 
-### Sequential Logic Optimisation
+### Sequential Logic Optimization
 
 #### Basic:
 - **Sequential Constant Propagation**  
@@ -65,7 +65,7 @@ The additional switch, purge also removes the internal nets if they have a publi
 - **Sequential Logic Cloning**
   - Duplicates logic in floorplan-aware synthesis to meet timing and congestion goals.
     
-## Combinational Logic Optimisation examples
+## Combinational Logic Optimization examples
 ## lab1
 
 ![Alt Text](Images/1.png)
@@ -253,7 +253,7 @@ show
 ```
 ![Alt Text](Images/18.png)
 
-## Sequential Logic Optimisation examples
+## Sequential Logic Optimization examples
 
 ## lab1
 
