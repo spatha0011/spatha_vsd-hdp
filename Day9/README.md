@@ -218,20 +218,8 @@ The figure below shows the **CMOS inverter** in both **transistor-level** and **
 - NMOS is OFF → open switch  
 - Output Vout = Vdd
 
-**Key Variables:**
-
-- G = Gate  
-- S = Source  
-- D = Drain  
-
-- Vgs = Gate-Source Voltage  
-- Vds = Drain-Source Voltage  
-
-- IdSN = Drain-Source Current through NMOS  
-- IdSP = Drain-Source Current through PMOS
-
-- When **Vin = Vdd → Vout = 0** (NMOS ON, PMOS OFF)
-- When **Vin = 0 → Vout = Vdd** (PMOS ON, NMOS OFF)
+> When **Vin = Vdd → Vout = 0** (NMOS ON, PMOS OFF)`
+> When **Vin = 0 → Vout = Vdd** (PMOS ON, NMOS OFF)
 
 This basic **CMOS inverter** behavior is the foundation of all CMOS logic circuits — demonstrating **low static power** and **sharp transitions** in the voltage transfer characteristics.
 
