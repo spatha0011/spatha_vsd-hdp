@@ -92,7 +92,7 @@ The reduction in peak current is due to **velocity saturation** — which limits
 
 In long-channel devices, carriers accelerate freely, giving higher Id.
 
- ### Labs Sky130 Id-Vgs
+ ### `Labs Sky130 Id-Vgs`
 
  <details> <summary><strong>day2_nfet_idvds_L015_W039.spice </strong></summary>
 
@@ -188,7 +188,7 @@ plot -vdd#branch
 
 ![Alt Text](Images/11.png)
 
-### CMOS Inverter — Transistor-Level and Switch-Level View
+### `CMOS Inverter — Transistor-Level and Switch-Level View`
 
 The figure below shows the **CMOS inverter** in both **transistor-level** and **switch-level** representations:
 
@@ -206,7 +206,7 @@ The **right diagram** shows the switch model when **Vin = 0**: the PMOS transist
 
 This basic **CMOS inverter** behavior is the foundation of all CMOS logic circuits — demonstrating **low static power** and **sharp transitions** in the voltage transfer characteristics.
 
-#### Load Line Curves for NMOS and PMOS
+#### `Load Line Curves for NMOS and PMOS`
 
 > **Step 1**
 
