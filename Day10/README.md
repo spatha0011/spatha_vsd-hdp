@@ -147,6 +147,11 @@ plot out vs time in
 
 Below image shows the output waveform of transient analysis of a CMOS inverter, illustrating rise time delay and fall time delay:
 
+**How to calculate rise time and fall time from the transient analysis:**
+
+- Output **rise time delay** = Time at 50% of rising edge − Time at 50% of falling edge  
+- Output **fall time delay** = Time at 50% of falling edge − Time at 50% of rising edge  
+
 ![Alt Text](Images/4.png)
 
 <a name="comparison-vtc-vs-tran"></a>
