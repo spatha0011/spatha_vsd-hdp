@@ -136,6 +136,9 @@ The figure below compares the **peak drain current (Id)** between a long-channel
 ngspice day2_nfet_idvds_L015_W039.spice 
 plot -vdd#branch
 ```
+
+Below image is output waveform of Id vs Vds curve for short channel of NMOS
+
 ![Alt Text](Images/9.png)
 
  <details> <summary><strong>day2_nfet_idvgs_L015_W039.spice </strong></summary>
@@ -173,4 +176,7 @@ plot -vdd#branch
 ngspice day2_nfet_idvgs_L015_W039.spice
 plot -vdd#branch
 ```
+
+Below image is output waveform of Id vs Vgs
+
 ![Alt Text](Images/10.png)
