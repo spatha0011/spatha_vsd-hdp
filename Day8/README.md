@@ -29,11 +29,11 @@
     - [Circuit description in SPICE syntax](#circuit-description-in-spice-syntax)
     - [SPICE Lab with sky130 models](#spice-lab-with-sky130-models)
    
-### SPICE Simulations in Electronic Circuit Design
+### `SPICE Simulations in Electronic Circuit Design`
 
 SPICE (Simulation Program with Integrated Circuit Emphasis) simulations are a vital tool in electronic circuit design. They allow us to test and verify circuits before building them, ensuring they function correctly and efficiently.
 
-### Why Use SPICE Simulations?
+### `Why Use SPICE Simulations?`
 
 1. **Verify Circuit Functionality:**
    - Ensure that circuits, like logic gates, perform as expected.
@@ -47,7 +47,7 @@ SPICE (Simulation Program with Integrated Circuit Emphasis) simulations are a vi
 4. **Optimize Design:**
    - Experiment with different configurations to improve circuit performance.
 
-#### Example: Inverter Circuit
+#### `Example: Inverter Circuit`
 
 An inverter is a simple circuit that reverses the input signal:
 
@@ -60,7 +60,7 @@ An inverter is a simple circuit that reverses the input signal:
   - When the input is high, the NMOS transistor conducts, making the output low.
   - When the input is low, the PMOS transistor conducts, making the output high.
 
-#### Role of SPICE in Inverter Design
+#### `Role of SPICE in Inverter Design`
 
 - **Functionality Check:**
   - Verify that the inverter correctly flips the input signal.
@@ -73,7 +73,7 @@ An inverter is a simple circuit that reverses the input signal:
 
 SPICE simulations are essential for designing circuits that are reliable and efficient. They help identify issues early and allow for optimization before the physical circuit is built.
 
-### CMOS Inverter Circuit Diagram
+### `CMOS Inverter Circuit Diagram`
 
 ![Alt Text](Images/1.png)
 
@@ -84,7 +84,7 @@ This schematic shows a standard **CMOS inverter**:
 - **NMOS** connects from the output to **VSS (GND)**.
 - **CL** represents the load capacitance, mimicking the next stage or parasitic load.
 
-#### Operation Summary
+#### `Operation Summary`
 
 | Vin       | PMOS State | NMOS State | Vout     |
 |-----------|------------|------------|----------|
@@ -93,7 +93,7 @@ This schematic shows a standard **CMOS inverter**:
 
 This forms the basis of digital NOT gates used in logic families.
 
-#### SPICE Simulation Results
+#### `SPICE Simulation Results`
 
 ![Alt Text](Images/2.png)
 
@@ -101,7 +101,7 @@ The `top graph` indicates the current-voltage `(I-V) characteristics` of a CMOS 
 
 The `bottom graph` indicates the `voltage transfer characteristics (VTC)` of a CMOS inverter, showing how the output voltage (Vout) varies with the input voltage (Vin) to analyze the inverter's switching behavior and logic levels.
 
-### Understanding Delay Tables
+### `Understanding Delay Tables`
 
 In digital timing analysis, **cell delay** is not a fixed number—it depends on two main factors:
 - **Input Slew (transition time of the input signal)**
@@ -145,7 +145,7 @@ The **total capacitance seen at the output of G1** is the sum of:
 
 `C_total (Output of G1) = Cout(G1) + Cin(G2) + Cin(G3) + Cin(G4) + Cs1 + Cs2 + Cs3 + Cs4`
 
-####  Delay Calculation from LUTs
+####  `Delay Calculation from LUTs`
 
 In practical timing analysis, it’s rare for the exact **input slew** and **output load** values to match the entries in a cell’s **delay lookup table (LUT)**. To estimate delays for intermediate values, **linear interpolation** is used.
 
@@ -184,7 +184,7 @@ Therefore, the delay of CBUF2 under these conditions is taken directly as `y15`.
 ℹ️**Note:** If the required input slew or output load falls **outside the bounds** of the LUT (e.g., >110fF or <10fF), then **extrapolation** is used. However, extrapolated values are **less accurate** and can deviate from actual SPICE results. Designers should aim to stay within the characterized table ranges whenever possible for reliable STA.
 
 
-### Introduction to Basic Element in Circuit Design - NMOS Transistor
+### `Introduction to Basic Element in Circuit Design - NMOS Transistor`
 
 This image shows the structure of an NMOS transistor with its key components and terminals labeled.
 
@@ -198,7 +198,7 @@ This image shows the NMOS transistor when **Vgs > Vth (threshold voltage)**:
 
 ![Alt Text](Images/10.png)
 
-### NMOS Transistor - Body Effect (Substrate Bias Effect)
+### `NMOS Transistor - Body Effect (Substrate Bias Effect)`
 
 This image compares NMOS operation with **Vsb = 0** and **Vsb = positive value**:
 
@@ -220,7 +220,7 @@ This effect is known as the **Body Effect** or **Substrate Bias Effect**.
 
 **γ (Body Effect Coefficient)** and **Φ<sub>f</sub> (Fermi Potential)** are constants provided by the foundry, which characterize the physical properties of the transistor. These constants are used by **SPICE simulators** to model the device behavior under various body bias conditions and enable accurate circuit simulations.
 
-### NMOS Resistive region of operation with small drain-source voltage
+### `NMOS Resistive region of operation with small drain-source voltage`
 
 Resistive Region of Operation (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</sub>)
 
@@ -236,7 +236,7 @@ At this stage:
 
 ![Alt Text](Images/15.png)
 
-### Drift current theory
+### `Drift current theory`
 
 In the resistive region of NMOS operation (V<sub>GS</sub> > V<sub>t</sub>, small V<sub>DS</sub>), current flow is mainly governed by **drift current**:
 
@@ -268,7 +268,7 @@ In this region, NMOS behaves like a voltage-controlled resistor. The drift curre
 
 ![Alt Text](Images/20.png)
 
-### Drain current model for linear region of operation
+### `Drain current model for linear region of operation`
 
 These images illustrate the derivation of **I<sub>D</sub>** equation for NMOS in linear region, starting from first-order analysis and device physics.
 
@@ -278,7 +278,7 @@ These images illustrate the derivation of **I<sub>D</sub>** equation for NMOS in
 
 ![Alt Text](Images/d3.png)
 
-### SPICE Simulation Conclusion for Resistive Operation
+### `SPICE Simulation Conclusion for Resistive Operation`
 
 SPICE simulations allow us to calculate the drain current (**I<sub>D</sub>**) for different **V<sub>GS</sub>** values by sweeping **V<sub>DS</sub>** for each **V<sub>GS</sub>** up to **V<sub>GS</sub> - V<sub>t</sub>**.  
 
@@ -288,7 +288,7 @@ This helps in generating accurate **I<sub>D</sub>-V<sub>DS</sub>** curves and un
 
 ![Alt Text](Images/22.png)
 
-### Pinch-off Region Condition
+### `Pinch-off Region Condition`
 
 These images illustrate how the **pinch-off condition** is reached in an NMOS transistor when **V<sub>GS</sub> - V<sub>DS</sub> ≤ V<sub>t</sub>**, causing the channel near the drain to disappear — marking the transition from linear to saturation region.
 
@@ -298,7 +298,7 @@ These images illustrate how the **pinch-off condition** is reached in an NMOS tr
 
 ![Alt Text](Images/25.png)
 
-### Drain Current Model for Saturation Region of Operation
+### `Drain Current Model for Saturation Region of Operation`
 
 These images show how the **effective channel length** reduces due to **pinch-off** and how the drain current (**I<sub>D</sub>**) becomes weakly dependent on **V<sub>DS</sub>**, leading to the **saturation region equation** with channel length modulation.
 
@@ -306,7 +306,7 @@ These images show how the **effective channel length** reduces due to **pinch-of
 
 ![Alt Text](Images/27.png)
 
-### Basic SPICE Setup
+### `Basic SPICE Setup`
 
 Fabricating ICs is very expensive and time-consuming, so designers need simulation tools to explore the design space and verify designs before they are fabricated. Simulation is cheap, but silicon revisions (even a single Metal layer change) are prohibitively expensive.  
 
@@ -354,7 +354,7 @@ The following images show how a SPICE deck is written to perform DC analysis of 
 
 ![Alt Text](Images/30.png)
 
-### Circuit description in SPICE syntax
+### `Circuit description in SPICE syntax`
 
 ![Alt Text](Images/31.png)
 
@@ -392,7 +392,7 @@ Here:
 - V<sub>GS</sub> is fixed at **2.5 V**.
 - V<sub>DS</sub> is swept from **0 V to 2.5 V**.
 
-### SPICE Lab with sky130 models
+### `SPICE Lab with sky130 models`
 
 To use SPICE with sky130 technology, you can clone the relevant GitHub repository containing sky130 models and circuits for simulation.
 
