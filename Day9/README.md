@@ -35,15 +35,11 @@ The plot below compares NMOS output characteristics for long channel and short c
 
 ![Alt Text](Images/2.png)
 
-**Description:**
-
 In this figure:
 
 - **Left Plot**: W = 1.8μm, L = 1.2μm device → Long channel device
 - **Right Plot**: W = 0.375μm, L = 0.25μm device → Short channel device  
   (Since channel length < 0.25μm, it is considered a short channel device)
-
-**Key Observations:**
 
 - Both devices have the **same W/L ratio**, but different Width (W) and Length (L).
 - **Id behavior:**
@@ -70,3 +66,35 @@ For short-channel devices, it is quadratic at low gate voltage but becomes linea
 
 ![Alt Text](Images/4.png)
 
+At lower electric fields, carrier velocity increases linearly with the electric field.
+
+At higher electric fields, velocity saturates and becomes constant due to velocity saturation.
+
+![Alt Text](Images/5.png)
+
+![Alt Text](Images/6.png)
+
+- For **Long Channel (> 250 nm)** devices:
+  - Modes: Cutoff → Resistive → Saturation
+
+- For **Short Channel (< 250 nm)** devices:
+  - Modes: Cutoff → Resistive → **Velocity Saturation** → Saturation
+  - An additional mode appears due to **velocity saturation** effects in short channel devices.
+
+![Alt Text](Images/7.png)
+
+### Observation 2: Peak Current Comparison — Long Channel vs Short Channel Devices
+
+The figure below compares the **peak drain current (Id)** between a long-channel and short-channel NMOS device:
+
+![Alt Text](Images/8.png)
+
+- **Left Plot**: W = 1.8μm, L = 1.2μm → **Long-channel device**
+  - Peak current = **410 μA**
+  
+- **Right Plot**: W = 0.375μm, L = 0.25μm → **Short-channel device**
+  - Peak current = **210 μA**
+
+- Even though **short-channel devices** allow for faster switching and smaller sizes, their **peak drain current (Id)** is lower than long-channel devices.
+- The reduction in peak current is due to **velocity saturation** — which limits carrier velocity in short-channel devices.
+- In long-channel devices, carriers accelerate freely, giving higher Id.
