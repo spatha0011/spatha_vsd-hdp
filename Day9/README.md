@@ -8,16 +8,16 @@ The plot below shows the output characteristics of an NMOS device with W=1.8μm,
 
 ![Alt Text](Images/1.png)
 
-- **Linear Region:**  
+**Linear Region:**  
   The drain current (Id) is a linear function of Vds in this region.  
   It is defined for Vds < (Vgs - Vt).
 
-- **Saturation Region:**  
+**Saturation Region:**  
   The drain current (Id) depends on channel length modulation and Vds.  
   It is defined for Vds ≥ (Vgs - Vt).
 
-- The region **before** Vds = Vgs - Vt is the **Linear Region**, where Id varies linearly with Vds.  
-- The region **after** Vds = Vgs - Vt is the **Saturation Region**, where Id is influenced by channel length modulation and Vds.
+The region **before** Vds = Vgs - Vt is the **Linear Region**, where Id varies linearly with Vds.  
+The region **after** Vds = Vgs - Vt is the **Saturation Region**, where Id is influenced by channel length modulation and Vds.
 
 #### Observation 1: Long Channel vs. Short Channel NMOS Characteristics
 
@@ -25,14 +25,16 @@ The plot below compares NMOS output characteristics for long channel and short c
 
 ![Alt Text](Images/2.png)
 
-In this figure, the **left plot** corresponds to a device with W = 1.8μm and L = 1.2μm (long-channel device), and the **right plot** corresponds to W = 0.375μm and L = 0.25μm (short-channel device). Since the channel length is < 0.25μm in the second case, it is classified as a short-channel device.
+In this figure, the **left plot** corresponds to a device with W = 1.8μm and L = 1.2μm (long-channel device), and the **right plot** corresponds to W = 0.375μm and L = 0.25μm (short-channel device). 
+
+Since the channel length is < 0.25μm in the second case, it is classified as a short-channel device.
 
 Both devices have the **same W/L ratio**, but different absolute Width (W) and Length (L), allowing us to compare their electrical behavior directly.
 
 When we apply a constant Vds and sweep Vgs:
 
-- In **long-channel devices**, the drain current (Id) shows an **ideal quadratic dependence on Vgs**.
-- In **short-channel devices**, Id remains quadratic at low Vgs but gradually becomes **linear at higher Vgs**. This is due to **velocity saturation**, which limits carrier velocity as the electric field increases. Once the carrier velocity reaches its maximum limit (velocity saturation), the Id-Vgs curve flattens into a linear region.
+> In **long-channel devices**, the drain current (Id) shows an **ideal quadratic dependence on Vgs**.
+> In **short-channel devices**, Id remains quadratic at low Vgs but gradually becomes **linear at higher Vgs**. This is due to **velocity saturation**, which limits carrier velocity as the electric field increases. Once the carrier velocity reaches its maximum limit (velocity saturation), the Id-Vgs curve flattens into a linear region.
 
 Thus, this plot clearly demonstrates how **velocity saturation** alters the Id behavior in short-channel devices — causing a transition from quadratic to linear dependence at higher Vgs.
 
@@ -52,10 +54,10 @@ At higher electric fields, velocity saturates and becomes constant due to veloci
 
 ![Alt Text](Images/6.png)
 
-- For **Long Channel (> 250 nm)** devices:
+For **Long Channel (> 250 nm)** devices:
   - Modes: Cutoff → Resistive → Saturation
 
-- For **Short Channel (< 250 nm)** devices:
+For **Short Channel (< 250 nm)** devices:
   - Modes: Cutoff → Resistive → **Velocity Saturation** → Saturation
   - An additional mode appears due to **velocity saturation** effects in short channel devices.
 
@@ -181,22 +183,11 @@ The figure below shows the **CMOS inverter** in both **transistor-level** and **
 
 ![Alt Text](Images/12.png)
 
-**Left Diagram:** CMOS Inverter — Transistor View  
-- **PMOS** connected to Vdd  
-- **NMOS** connected to Vss  
-- **Vin** is applied to both gates  
-- **Vout** is taken from the common drain node  
-- CL = load capacitance
+The **left diagram** shows a CMOS inverter at the transistor level: the **PMOS** transistor is connected to Vdd, the **NMOS** transistor is connected to Vss, and **Vin** is applied to both gates. The output **Vout** is taken from the common drain node, with CL representing the load capacitance.
 
-**Middle Diagram:** Switch model when **Vin = Vdd**  
-- NMOS is ON → acts as Rn resistor  
-- PMOS is OFF → open switch  
-- Output Vout = 0
+The **middle diagram** illustrates the switch model when **Vin = Vdd**: the NMOS transistor is ON (acting as a resistor Rn), while the PMOS is OFF (open switch), resulting in **Vout = 0**.
 
-**Right Diagram:** Switch model when **Vin = 0**  
-- PMOS is ON → acts as Rp resistor  
-- NMOS is OFF → open switch  
-- Output Vout = Vdd
+The **right diagram** shows the switch model when **Vin = 0**: the PMOS transistor is ON (acting as a resistor Rp), while the NMOS is OFF (open switch), producing **Vout = Vdd**.
 
 > When **Vin = Vdd → Vout = 0** (NMOS ON, PMOS OFF)
 
