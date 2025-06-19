@@ -180,3 +180,59 @@ plot -vdd#branch
 **The plot of Ids vs Vgs over constant Vds:**
 
 ![Alt Text](Images/10.png)
+
+### CMOS voltage Transfer Characteristics
+
+**MOSFET as a Switch:**
+
+- **OFF State:**  
+  The MOSFET behaves as an **open switch** (infinite OFF resistance) when:  
+  _|Vgs| < |Vth|_
+
+- **ON State:**  
+  The MOSFET behaves as a **closed switch** (finite ON resistance) when:  
+  _|Vgs| > |Vth|_
+
+![Alt Text](Images/11.png)
+
+### CMOS Inverter — Transistor-Level and Switch-Level View
+
+The figure below shows the **CMOS inverter** in both **transistor-level** and **switch-level** representations:
+
+![Alt Text](Images/12.png)
+
+**Left Diagram:** CMOS Inverter — Transistor View  
+- **PMOS** connected to Vdd  
+- **NMOS** connected to Vss  
+- **Vin** is applied to both gates  
+- **Vout** is taken from the common drain node  
+- CL = load capacitance
+
+**Middle Diagram:** Switch model when **Vin = Vdd**  
+- NMOS is ON → acts as Rn resistor  
+- PMOS is OFF → open switch  
+- Output Vout = 0
+
+**Right Diagram:** Switch model when **Vin = 0**  
+- PMOS is ON → acts as Rp resistor  
+- NMOS is OFF → open switch  
+- Output Vout = Vdd
+
+**Key Variables:**
+
+- G = Gate  
+- S = Source  
+- D = Drain  
+
+- Vgs = Gate-Source Voltage  
+- Vds = Drain-Source Voltage  
+
+- IdSN = Drain-Source Current through NMOS  
+- IdSP = Drain-Source Current through PMOS
+
+- When **Vin = Vdd → Vout = 0** (NMOS ON, PMOS OFF)
+- When **Vin = 0 → Vout = Vdd** (PMOS ON, NMOS OFF)
+
+This basic **CMOS inverter** behavior is the foundation of all CMOS logic circuits — demonstrating **low static power** and **sharp transitions** in the voltage transfer characteristics.
+
+
