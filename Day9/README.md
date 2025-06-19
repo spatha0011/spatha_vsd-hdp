@@ -3,14 +3,13 @@
 ## Velocity Saturation and basics of CMOS inverter VTC
 
 ### 📚 Contents
-
-1. [SPICE Simulation for Lower Nodes](#spice-simulation-for-lower-nodes)
-2. [Observation 1: Long Channel vs. Short Channel NMOS Characteristics](#observation-1-long-channel-vs-short-channel-nmos-characteristics)
-3. [Observation 2: Peak Current Comparison — Long Channel vs Short Channel Devices](#observation-2-peak-current-comparison--long-channel-vs-short-channel-devices)
-4. [Labs: Sky130 Id-Vgs](#labs-sky130-id-vgs)
-5. [CMOS Voltage Transfer Characteristics](#cmos-voltage-transfer-characteristics)
-6. [CMOS Inverter — Transistor-Level and Switch-Level View](#cmos-inverter--transistor-level-and-switch-level-view)
-7. [Load Line Curves for NMOS and PMOS](#load-line-curves-for-nmos-and-pmos)
+- SPICE Simulation for Lower Nodes
+  - Observation 1: [Long Channel vs. Short Channel NMOS Characteristics](#observation-1-long-channel-vs-short-channel-nmos-characteristics)
+  - Observation 2: [Peak Current Comparison — Long Channel vs Short Channel Devices](#observation-2-peak-current-comparison--long-channel-vs-short-channel-devices)
+- [Labs: Sky130 Id-Vgs](#labs-sky130-id-vgs)
+- [CMOS Voltage Transfer Characteristics](#cmos-voltage-transfer-characteristics)
+- [CMOS Inverter — Transistor-Level and Switch-Level View](#cmos-inverter--transistor-level-and-switch-level-view)
+- [Load Line Curves for NMOS and PMOS](#load-line-curves-for-nmos-and-pmos)
 
 ### SPICE simulation for lower nodes
 
