@@ -12,7 +12,7 @@
 - [CMOS Inverter — Transistor-Level and Switch-Level View](#cmos-inverter--transistor-level-and-switch-level-view)
 - [Load Line Curves for NMOS and PMOS](#load-line-curves-for-nmos-and-pmos)
 
-### SPICE simulation for lower nodes
+### `SPICE simulation for lower nodes`
 
 The plot below shows the output characteristics of an NMOS device with W=1.8μm, L=1.2μm (W/L = 1.5).
 
