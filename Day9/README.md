@@ -29,7 +29,7 @@ _Id = (kn / 2) ⋅ (W/L) ⋅ (Vgs - Vt)² ⋅ [1 + λVds]_
 
 ---
 
-### Observation 1: Long Channel vs. Short Channel NMOS Characteristics
+#### Observation 1: Long Channel vs. Short Channel NMOS Characteristics
 
 The plot below compares NMOS output characteristics for long channel and short channel devices with **same W/L ratio**:
 
@@ -83,7 +83,7 @@ At higher electric fields, velocity saturates and becomes constant due to veloci
 
 ![Alt Text](Images/7.png)
 
-### Observation 2: Peak Current Comparison — Long Channel vs Short Channel Devices
+#### Observation 2: Peak Current Comparison — Long Channel vs Short Channel Devices
 
 The figure below compares the **peak drain current (Id)** between a long-channel and short-channel NMOS device:
 
@@ -98,3 +98,42 @@ The figure below compares the **peak drain current (Id)** between a long-channel
 - Even though **short-channel devices** allow for faster switching and smaller sizes, their **peak drain current (Id)** is lower than long-channel devices.
 - The reduction in peak current is due to **velocity saturation** — which limits carrier velocity in short-channel devices.
 - In long-channel devices, carriers accelerate freely, giving higher Id.
+
+ ### Labs Sky130 Id-Vgs
+
+ <details> <summary><strong>day2_nfet_idvds_L015_W039.spice </strong></summary>
+
+```
+  *Model Description
+  .param temp=27
+
+  *Including sky130 library files
+  .lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+  *Netlist Description
+   XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.39 l=0.15
+   R1 n1 in 55
+   Vdd vdd 0 1.8V
+   Vin in 0 1.8V
+
+  *simulation commands
+   .op
+   .dc Vdd 0 1.8 0.1 Vin 0 1.8 0.2
+
+   .control
+
+   run
+   display
+   setplot dc1
+   .endc
+   .end
+```
+</details>
+
+📈**plot the waveforms in ngspice**
+
+```shell
+ngspice day2_nfet_idvds_L015_W039.spice 
+plot -vdd#branch
+```
+![Alt Text](Images/9.png)
