@@ -64,4 +64,9 @@ Thus, this plot demonstrates how **velocity saturation** affects Id in short cha
 
 ![Alt Text](Images/3.png)
 
+For long-channel devices, drain current shows a quadratic dependence on gate voltage.
+
+For short-channel devices, it is quadratic at low gate voltage but becomes linear at higher voltages due to velocity saturation.
+
+![Alt Text](Images/4.png)
 
