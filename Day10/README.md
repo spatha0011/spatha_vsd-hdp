@@ -166,3 +166,51 @@ Below image shows the output waveform of transient analysis of a CMOS inverter, 
 | Purpose                   | Plot static VTC curve of CMOS inverter               | Analyze rise/fall times and delays under dynamic switching                |
 | Typical Output            | Vout vs Vin graph                                    | Vout vs Time, Vin vs Time waveforms                                       |
 | Analysis Goal             | Understand switching threshold & noise margins       | Measure timing parameters (propagation delay, rise time, fall time)       |
+
+
+### `Static behavior evaluation-CMOS inverter robustnes-Switching threshold voltage`
+
+The characteristics that define the **CMOS inverter robustness** are:
+
+- **Switching Threshold Voltage (Vm)**
+- **Noise Margin**
+- **Power Supply Variation**
+- **Device Variations**
+
+#### Switching Threshold Voltage of CMOS Inverter (Vm):
+
+- The **Switching Threshold Voltage (Vm)** is the voltage at which the input voltage equals the output voltage:  
+  `Vin = Vout`
+- It is an important parameter that impacts the noise margin and robustness of the inverter.
+- At **Vm**, both the NMOS and PMOS transistors are operating in the **saturation region**, and both are turned **ON**, giving high voltage gain.
+
+The image compares two CMOS inverters with different PMOS/NMOS sizing:
+
+![Alt Text](Images/5.png)
+
+  1. **Left graph**:  
+     - `Wn = Wp = 0.375 μm`, `Ln = Lp = 0.25 μm`  
+     - `(W/L)n = (W/L)p = 1.5` (equal aspect ratios)  
+     - Resulting `Vm ≈ 0.98 V`
+
+  2. **Right graph**:  
+     - `Wn = 0.375 μm`, `Wp = 0.9375 μm`, `Ln = Lp = 0.25 μm`  
+     - `(W/L)p = 3.75`, `(W/L)n = 1.5`  
+     - Resulting `Vm ≈ 1.2 V`
+
+**Regions of operation:**
+
+- Different regions of the curve correspond to the transistor operating regions:
+  - **PMOS Linear / NMOS OFF**
+  - **PMOS Linear / NMOS Saturation**
+  - **PMOS Saturation / NMOS Saturation** — This is where `Vm` is located.
+  - **PMOS Saturation / NMOS Linear**
+  - **PMOS OFF / NMOS Linear**
+
+![Alt Text](Images/6.png)
+
+**Current balance at Vm:**
+
+- At `Vm`, the condition:  
+  `Idsp = -Idsn`  
+  is satisfied — the current through **PMOS** equals the current through **NMOS** in magnitude but opposite in direction.
