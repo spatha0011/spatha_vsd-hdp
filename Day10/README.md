@@ -214,3 +214,14 @@ The image compares two CMOS inverters with different PMOS/NMOS sizing:
 - At `Vm`, the condition:  
   `Idsp = -Idsn`  
   is satisfied — the current through **PMOS** equals the current through **NMOS** in magnitude but opposite in direction.
+
+We are evaluating this at Vm, so `Vgs = Vm` for NMOS and `Vgs = Vm − Vdd` for PMOS
+
+![Alt Text](Images/7.png)
+
+Equating **Idsp + Idsn = 0** and solving for **R**, we can express **Vm** as a function of the sizing ratio and mobility factors.
+
+![Alt Text](Images/8.png)
+
+
+
