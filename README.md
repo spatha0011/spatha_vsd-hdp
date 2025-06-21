@@ -16,7 +16,7 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 | **Day 7** | [**Timing Graphs using openSTA**](Day7/README.md) | **✅ Done** |
 | **Day 8** | [**CMOS Circuit Design and SPICE Simulations**](Day8/README.md) | **✅ Done** |
 | **Day 9** | [**Velocity Saturation and basics of CMOS inverter VTC**](Day9/README.md) | **✅ Done** |
-| **Day 10** | [**CMOS Switching threshold and dynamic simulations**](Day10/README.md) | **In Progress** |
+| **Day 10** | [**CMOS Switching threshold and dynamic simulations**](Day10/README.md) | **✅ Done**  |
 
 
 
