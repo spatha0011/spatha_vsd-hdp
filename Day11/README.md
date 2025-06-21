@@ -4,7 +4,7 @@
 
 ### 📚 Contents
 
-### Introduction to noise margin
+### `Introduction to noise margin`
 
 Noise margin is the maximum noise voltage a CMOS circuit can tolerate without logic errors.
 
@@ -16,7 +16,7 @@ This image compares:
 
 **Actual inverter characteristic** with **finite slope** — gradual transition region (right side)
 
-### Noise Margin Definition — VTC and Undefined Region
+### `Noise Margin Definition — VTC and Undefined Region`
 
 This figure illustrates how **Noise Margin** is derived from the **Voltage Transfer Characteristic (VTC)** of a CMOS inverter.
 
@@ -46,7 +46,7 @@ This figure illustrates how **Noise Margin** is derived from the **Voltage Trans
 
  Noise margins quantify how much noise a logic signal can tolerate before causing errors — ensuring **reliable logic levels** in noisy environments.
 
-### Noise Margin Summary — Handling Input "Bumps"
+### `Noise Margin Summary — Handling Input "Bumps"`
 
 This figure summarizes how **Noise Margins** help handle noisy "bumps" on signals — ensuring correct logic detection.
 
