@@ -208,7 +208,15 @@ This image compares NMOS operation with **Vsb = 0** and **Vsb = positive value**
   → The depletion layer near Source becomes wider.  
   → More Vgs is required to turn ON the transistor (stronger inversion).
 
-This effect is known as the **Body Effect** or **Substrate Bias Effect**.
+This effect is known as the **Body Effect** or **Substrate Bias Effect**. 
+
+```
+Body Effect Equation:
+
+Vth = Vth0 + γ [ sqrt( |2ϕf + VSB| ) - sqrt( |2ϕf| ) ]
+
+As VSB ↑ → Vth ↑
+```
 
 ![Alt Text](Images/11.png)
 
