@@ -223,5 +223,7 @@ Equating **Idsp + Idsn = 0** and solving for **R**, we can express **Vm** as a f
 
 ![Alt Text](Images/8.png)
 
+This expression shows how the required **(Wp/Lp) / (Wn/Ln)** ratio can be computed for a given **Vm**, by balancing NMOS and PMOS currents at the switching threshold point **(Vin = Vout = Vm)**.
 
+![Alt Text](Images/9.png)
 
