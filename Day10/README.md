@@ -169,7 +169,7 @@ Below image shows the output waveform of transient analysis of a CMOS inverter, 
 | Analysis Goal             | Understand switching threshold & noise margins       | Measure timing parameters (propagation delay, rise time, fall time)       |
 
 
-### `Static behavior evaluation-CMOS inverter robustnes-Switching threshold voltage`
+### `Static behavior evaluation — CMOS inverter robustness — Switching threshold voltage`
 
 The characteristics that define the **CMOS inverter robustness** are:
 
