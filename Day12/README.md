@@ -8,7 +8,7 @@
   - [Sky130 Supply Variation Labs](#sky130-supply-variation-labs)
 - [Static behaviour evaluation — CMOS inverter robustness — Device variation](#static-behaviour-evaluation--cmos-inverter-robustness--device-variation)
   - [Etching Variation](#etching-variation)
-  - [Oxide Thickness (T<sub>ox</sub>) Variation](#oxide-thickness-tox-variation)
+  - [Oxide Thickness (T<sub>ox</sub>) Variation](#oxide-thickness-variation)
   - [Transistor Strength Definitions](#transistor-strength-definitions)
   - [Sky130 Device Variation Labs](#sky130-device-variation-labs)
     
@@ -125,7 +125,7 @@ Gain = (y0 − y1) / (x0 − x1)
 - **Etching Variation**
 - **Oxide Thickness Variation**
 
-#### `Etching Variation`
+### `Etching Variation`
 
 - **Etching** is a critical step in semiconductor fabrication.
 - It defines the **physical structures** in the CMOS layout — such as **Width (W)** and **Length (L)** of transistors.
@@ -163,7 +163,7 @@ Such chains are commonly used to study **delay**, **robustness**, and **variatio
 
 ![Alt Text](Images/5.png)
 
-### `Oxide Thickness (T<sub>ox</sub>) Variation`
+### `Oxide Thickness Variation`
 
 During MOSFET fabrication, there is often a difference between the **ideal oxide thickness** of the gate and the **actual oxide thickness** achieved.
 
