@@ -125,7 +125,7 @@ Gain = (y0 − y1) / (x0 − x1)
 - **Etching Variation**
 - **Oxide Thickness Variation**
 
-#### Etching Variation
+#### `Etching Variation`
 
 - **Etching** is a critical step in semiconductor fabrication.
 - It defines the **physical structures** in the CMOS layout — such as **Width (W)** and **Length (L)** of transistors.
@@ -163,7 +163,7 @@ Such chains are commonly used to study **delay**, **robustness**, and **variatio
 
 ![Alt Text](Images/5.png)
 
-### Oxide Thickness (T<sub>ox</sub>) Variation
+### `Oxide Thickness (T<sub>ox</sub>) Variation`
 
 During MOSFET fabrication, there is often a difference between the **ideal oxide thickness** of the gate and the **actual oxide thickness** achieved.
 
@@ -179,7 +179,7 @@ Next, let's perform a **sweep of the PMOS and NMOS widths** as shown below:
 
 ![Alt Text](Images/7.png)
 
-### Transistor Strength Definitions:
+### `Transistor Strength Definitions:`
 
 - **Strong PMOS**:
   - Lower resistance PMOS — provides an easier path to charge the output capacitor.
