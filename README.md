@@ -18,6 +18,6 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 | **Day 9** | [**Velocity Saturation and basics of CMOS inverter VTC**](Day9/README.md) | **✅ Done** |
 | **Day 10** | [**CMOS Switching threshold and dynamic simulations**](Day10/README.md) | **✅ Done**  |
 | **Day 11** | [**Static Behavior Evaluation: CMOS Inverter Robustness and Noise Margin**](Day11/README.md) | **✅ Done** |
-
+| **Day 12** | [**CMOS power supply and device variation robustness evaluation**](Day12/README.md) | **✅ Done** |
 
 
