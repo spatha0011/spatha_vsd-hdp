@@ -128,6 +128,8 @@ ngspice day4_inv_noisemargin_wp1_wn036.spice
 plot out vs in
 ```
 
+Below image is the waveform of VTC curve to get the Noise Margin:
+
 ![Alt Text](Images/4.png)
 
 >🤔 **How to Calculate Noise Margin from SPICE VTC Plot ??**
