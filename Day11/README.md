@@ -4,6 +4,11 @@
 
 ### 📚 Contents
 
+- [Introduction to noise margin](#introduction-to-noise-margin)
+- [Noise Margin Definition — VTC and Undefined Region](#noise-margin-definition--vtc-and-undefined-region)
+- [Noise Margin Summary — Handling Input "Bumps"](#noise-margin-summary--handling-input-bumps)
+- [Sky130 Noise margin labs](#sky130-noise-margin-labs)
+  
 ### `Introduction to noise margin`
 
 Noise margin is the maximum noise voltage a CMOS circuit can tolerate without logic errors.
@@ -74,3 +79,70 @@ This figure summarizes how **Noise Margins** help handle noisy "bumps" on signal
   Bump height lies between `VIH` and `VOH` → signal treated as **logic '1'**.
 
 For any signal to be reliably interpreted as **logic '0'** or **logic '1'**, it must stay within the corresponding **Noise Margin (NML or NMH)** range — outside the **undefined region**.
+
+### `Sky130 Noise margin labs`
+
+<details> <summary><strong>day4_inv_noisemargin_wp1_wn036.spice </strong></summary>
+
+```
+*Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+
+
+Cload out 0 50fF
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+
+.dc Vin 0 1.8 0.01
+
+.control
+run
+setplot dc1
+display
+.endc
+
+.end
+```
+</details>
+
+📈**plot the waveforms in ngspice**
+
+```shell
+ngspice day4_inv_noisemargin_wp1_wn036.spice
+plot out vs in
+```
+
+![Alt Text](Images/4.png)
+
+🤔 **How to Calculate Noise Margin from SPICE VTC Plot ??**
+
+In the interactive **ngspice VTC plot**, you can manually extract values for Noise Margin:
+
+1️⃣ **Click on PMOS slope** (left edge of the transition):  
+→ Terminal displays: `x0 = VIL`, `y0 = VOH`
+
+2️⃣ **Click on NMOS slope** (right edge of the transition):  
+→ Terminal displays: `x1 = VIH`, `y1 = VOL`
+
+
+✅ **Noise Margin High (NMH)**:  
+`NMH = VOH − VIH = y0 − x1`
+
+✅ **Noise Margin Low (NML)**:  
+`NML = VIL − VOL = x0 − y1`
