@@ -227,3 +227,19 @@ This expression shows how the required **(Wp/Lp) / (Wn/Ln)** ratio can be comput
 
 ![Alt Text](Images/9.png)
 
+This table shows how varying the **Wp/Wn ratio** affects:
+
+✅ Rise Delay  
+✅ Fall Delay  
+✅ Switching Threshold Voltage (Vm)
+
+- When **Wp/Lp ≈ 2 × Wn/Ln**, the inverter achieves **balanced rise and fall delays** (≈ 80 ps each).
+- At this point, the switching threshold **Vm ≈ 1.2 V**.
+
+![Alt Text](Images/10.png)
+
+If the **rise delay** and **fall delay** of the clock buffer are well-matched, no **duty cycle distortion** correction is needed.  
+
+However, if they are imbalanced due to PMOS/NMOS Ron mismatch, **duty cycle correction** circuits are used in the clock tree to maintain a 50% duty cycle.
+
+![Alt Text](Images/11.png)
