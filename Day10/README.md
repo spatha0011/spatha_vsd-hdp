@@ -6,7 +6,8 @@
 
 - [Voltage Transfer Characteristics and Spice simulations](#voltage-transfer-characteristics-and-spice-simulations)
 - [Labs Sky130 SPICE simulation for CMOS](#labs-sky130-spice-simulation-for-cmos)
-  - [Comparison of Voltage Transfer Characteristics (.dc) vs. Transient Response (.tran) Simulations](#comparison-vtc-vs-tran)
+  - [Comparison of Voltage Transfer Characteristics (.dc) vs. Transient Response (.tran) Simulations](#comparison-of-voltage-transfer-characteristics-dc-vs-transient-response-tran-simulations)
+- [Static behavior evaluation — CMOS inverter robustness — Switching threshold voltage](#static-behavior-evaluation--cmos-inverter-robustness--switching-threshold-voltage)
 
 ### `Voltage Transfer Characteristics and Spice simulations`
 
