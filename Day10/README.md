@@ -241,6 +241,6 @@ This table shows how varying the **Wp/Wn ratio** affects:
 
 If the **rise delay** and **fall delay** of the clock buffer are well-matched, no **duty cycle distortion** correction is needed.  
 
-However, if they are imbalanced due to PMOS/NMOS Ron mismatch, **duty cycle correction** circuits are used in the clock tree to maintain a 50% duty cycle.
+However, if they are imbalanced due to PMOS/NMOS `Ron mismatch`, **duty cycle correction** circuits are used in the clock tree to maintain a 50% duty cycle.
 
 ![Alt Text](Images/11.png)
