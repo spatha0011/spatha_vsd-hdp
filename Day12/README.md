@@ -12,7 +12,7 @@
   - [Transistor Strength Definitions](#transistor-strength-definitions)
   - [Sky130 Device Variation Labs](#sky130-device-variation-labs)
     
-### `Static behaviour evaluation-CMOS inverter robustness-Power supply variation`
+### `Static behaviour evaluation — CMOS inverter robustness — Power supply variation`
 
 **Overview:**
 
