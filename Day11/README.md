@@ -130,7 +130,7 @@ plot out vs in
 
 ![Alt Text](Images/4.png)
 
-🤔 >**How to Calculate Noise Margin from SPICE VTC Plot ??**
+>🤔 **How to Calculate Noise Margin from SPICE VTC Plot ??**
 
 In the interactive **ngspice VTC plot**, you can manually extract values for Noise Margin:
 
