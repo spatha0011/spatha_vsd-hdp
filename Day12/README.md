@@ -4,6 +4,14 @@
 
 ### 📚 Contents
 
+- [Static behaviour evaluation — CMOS inverter robustness — Power supply variation](#static-behaviour-evaluation--cmos-inverter-robustness--power-supply-variation)
+  - [Sky130 Supply Variation Labs](#sky130-supply-variation-labs)
+- [Static behaviour evaluation — CMOS inverter robustness — Device variation](#static-behaviour-evaluation--cmos-inverter-robustness--device-variation)
+  - [Etching Variation](#etching-variation)
+  - [Oxide Thickness (T<sub>ox</sub>) Variation](#oxide-thickness-tox-variation)
+  - [Transistor Strength Definitions](#transistor-strength-definitions)
+  - [Sky130 Device Variation Labs](#sky130-device-variation-labs)
+    
 ### `Static behaviour evaluation-CMOS inverter robustness-Power supply variation`
 
 **Overview:**
@@ -223,6 +231,7 @@ display
 
 .end
 ```
+</details>
 
 📈**plot the waveforms in ngspice**
 
