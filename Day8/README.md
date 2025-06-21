@@ -210,13 +210,7 @@ This image compares NMOS operation with **Vsb = 0** and **Vsb = positive value**
 
 This effect is known as the **Body Effect** or **Substrate Bias Effect**. 
 
-```
-Body Effect Equation:
-
-Vth = Vth0 + γ [ sqrt( |2ϕf + VSB| ) - sqrt( |2ϕf| ) ]
-
-As VSB ↑ → Vth ↑
-```
+![Alt Text](Images/equation.png)
 
 ![Alt Text](Images/11.png)
 
