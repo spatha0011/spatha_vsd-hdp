@@ -228,6 +228,7 @@ display
 
 ```shell
 ngspice day5_inv_supplyvariation_Wp1_Wn036.spice
+plot out vs in
 ```
 
 Below image is output waveform of device variation:
