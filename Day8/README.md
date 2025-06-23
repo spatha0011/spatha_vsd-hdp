@@ -276,7 +276,7 @@ These images illustrate the derivation of **I<sub>D</sub>** equation for NMOS in
 
 ![Alt Text](Images/d1.png)
 
-![Alt Text](Images/derivation.png)
+![Alt Text](Images/der.png)
 
 ![Alt Text](Images/d3.png)
 
