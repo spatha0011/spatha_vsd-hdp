@@ -211,7 +211,7 @@ This image compares NMOS operation with **Vsb = 0** and **Vsb = positive value**
 This effect is known as the **Body Effect** or **Substrate Bias Effect**. 
 
 <p align="center">
-  <img src="Images/images.png" width="500">
+  <img src="Images/equation.png" width="500">
 </p>
 
 ![Alt Text](Images/11.png)
