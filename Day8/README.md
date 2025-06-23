@@ -276,8 +276,6 @@ In this region, NMOS behaves like a voltage-controlled resistor. The drift curre
 
 These images illustrate the derivation of **I<sub>D</sub>** equation for NMOS in linear region, starting from first-order analysis and device physics.
 
-![Alt Text](Images/d1.png)
-
 <p align="center">
   <img src="Images/der.png" width="500">
 </p>
