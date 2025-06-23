@@ -282,7 +282,6 @@ These images illustrate the derivation of **I<sub>D</sub>** equation for NMOS in
   <img src="Images/der.png" width="500">
 </p>
 
-![Alt Text](Images/d3.png)
 
 ### `SPICE Simulation Conclusion for Resistive Operation`
 
