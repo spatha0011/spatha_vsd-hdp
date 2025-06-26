@@ -4,7 +4,7 @@
 
 ### `How to talk to computers`
 
-#### QFN-48 Package Overview
+### QFN-48 Package Overview
 
 The QFN-48 (Quad Flat No-leads) package is a compact IC package with 48 connection pads, ideal for high-density applications. It offers excellent thermal and electrical performance in a 7mm x 7mm form factor.
 
@@ -26,7 +26,7 @@ The QFN-48 (Quad Flat No-leads) package is a compact IC package with 48 connecti
 
 ![Alt Text](Images/package.png)
 
-#### Chip Overview
+### Chip Overview
 
 The chip is an integrated circuit (IC) that houses various functional blocks such as memory, processing units, and I/O interfaces within a silicon substrate. It is designed for specific applications in electronics, providing essential functionalities in a compact form.
 
@@ -48,7 +48,7 @@ Chips are used in a wide range of electronic devices, including:
 
 ![Alt Text](Images/chip.png)
 
-#### Chip Components Overview
+### Chip Components Overview
 
 **Pads**
 
@@ -64,7 +64,7 @@ The die is the section of a silicon wafer that contains an individual IC before 
 
 ![Alt Text](Images/pads.png)
 
-#### Foundry IPs Overview
+### Foundry IPs Overview
 
 Foundry IPs (Intellectual Properties) are pre-designed and verified circuit blocks provided by semiconductor foundries. These IPs are essential components in the design and manufacturing of integrated circuits (ICs), offering standardized functionalities that can be integrated into custom chip designs.
 
