@@ -106,3 +106,28 @@ Macros are pre-designed functional blocks within an integrated circuit (IC) that
 | **Purpose**           | Optimized for specific design goals like low power, high speed, or area efficiency                 | Intended to accelerate time-to-market by using validated and reusable components                       |
 
 Macros and Foundry IPs both play crucial roles in IC design, offering standardized functionalities that streamline the development process and enhance performance.
+
+### From Software Applications to Hardware Flow
+
+Running an application on hardware involves a series of processes that translate high-level software instructions into machine-readable binary code. This transformation is facilitated by system software components, including the Operating System (OS), Compiler, and Assembler.
+
+#### Process Overview
+
+1. **Application Software**: Applications, such as web browsers, document editors, and virtual machines, are written in high-level programming languages like C++, Java, or Visual Basic. These applications are designed to perform specific tasks for users.
+
+2. **System Software**: The system software acts as an intermediary between application software and hardware. It includes:
+   - **Operating System (OS)**: Manages application functions and allocates resources, handling I/O operations and memory allocation.
+   - **Compiler**: Translates high-level language instructions into low-level instructions tailored to the hardware architecture.
+   - **Assembler**: Converts low-level instructions into binary format, known as machine language, which the hardware can execute.
+
+3. **Hardware Execution**: The binary code produced by the assembler is fed into the hardware. This code directs the hardware to perform specific tasks, enabling the application to function as intended.
+
+## Key Functions of System Software
+
+- **Handle I/O Operations**: Manages input and output operations between the application and hardware.
+- **Allocate Memory**: Ensures efficient memory usage and allocation for running applications.
+- **Low-Level System Functions**: Executes essential system functions to support application operations.
+
+This flow from application software to hardware ensures that complex user applications can be executed efficiently on physical devices, leveraging the capabilities of system software to bridge the gap between human-readable code and machine operations.
+
+![Alt Text](Images/sw_to_hw_flow.png)
