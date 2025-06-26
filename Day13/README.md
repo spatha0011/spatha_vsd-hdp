@@ -87,4 +87,21 @@ Foundry IPs are used in various applications, including:
 
 ![Alt Text](Images/FIPs.png)
 
+### Macros Overview
 
+Macros are pre-designed functional blocks within an integrated circuit (IC) that perform specific tasks. They are typically larger than standard cells and can include complex functionalities such as memory blocks, processors, or interface controllers. Macros are essential for building complex systems-on-chip (SoCs) efficiently.
+
+![Alt Text](Images/macros.png)
+
+#### Differences Between Macros and Foundry IPs
+
+| Feature          | Macros                                      | Foundry IPs                                  |
+|------------------|---------------------------------------------|----------------------------------------------|
+| **Definition**   | Pre-designed functional blocks within an IC | Pre-designed and verified circuit blocks     |
+| **Complexity**   | Typically larger and more complex           | Can vary from simple to complex              |
+| **Customization**| Often customizable for specific applications| Customizable to meet design requirements     |
+| **Usage**        | Used in SoCs, memory, and interface designs | Used in SoCs, microcontrollers, and processors|
+| **Development**  | Developed by IC designers                   | Provided by semiconductor foundries          |
+| **Verification** | Verified within the IC design process       | Pre-verified by foundries                    |
+
+Macros and Foundry IPs both play crucial roles in IC design, offering standardized functionalities that streamline the development process and enhance performance.
