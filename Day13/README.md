@@ -93,15 +93,16 @@ Macros are pre-designed functional blocks within an integrated circuit (IC) that
 
 ![Alt Text](Images/macros.png)
 
-#### Differences Between Macros and Foundry IPs
+### 📌 Differences Between Macros and Foundry IPs
 
-| Feature          | Macros                                      | Foundry IPs                                  |
-|------------------|---------------------------------------------|----------------------------------------------|
-| **Definition**   | Pre-designed functional blocks within an IC | Pre-designed and verified circuit blocks     |
-| **Complexity**   | Typically larger and more complex           | Can vary from simple to complex              |
-| **Customization**| Often customizable for specific applications| Customizable to meet design requirements     |
-| **Usage**        | Used in SoCs, memory, and interface designs | Used in SoCs, microcontrollers, and processors|
-| **Development**  | Developed by IC designers                   | Provided by semiconductor foundries          |
-| **Verification** | Verified within the IC design process       | Pre-verified by foundries                    |
+| **Feature**           | **Macros**                                                                                         | **Foundry IPs**                                                                                        |
+| --------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Definition**        | Pre-implemented functional blocks (e.g., memory, PLL, SerDes) integrated into larger ASICs or SoCs | Silicon-proven, pre-characterized Intellectual Property blocks delivered by the foundry                |
+| **Source**            | Designed in-house or by third-party IP vendors                                                     | Developed, validated, and licensed directly by semiconductor foundries (e.g., TSMC, GF)                |
+| **Complexity**        | Medium to high complexity (e.g., SRAM, FIFO, custom logic)                                         | Can range from basic I/O cells to complex analog/digital subsystems (e.g., USB, DDR PHY)               |
+| **Customization**     | Can be modified or parameterized by SoC integrators to meet PPA or functional goals                | Limited customization; parameters like voltage range, process corner, or bit-width may be configurable |
+| **Integration Scope** | Typically integrated at the block or subsystem level                                               | Integrated at the device level, often as black-box models with GDSII and Liberty views                 |
+| **Verification**      | Requires integration-level validation, DRC/LVS, STA within SoC context                             | Pre-verified for DRC, LVS, timing, and reliability at the foundry across multiple PVT corners          |
+| **Purpose**           | Optimized for specific design goals like low power, high speed, or area efficiency                 | Intended to accelerate time-to-market by using validated and reusable components                       |
 
 Macros and Foundry IPs both play crucial roles in IC design, offering standardized functionalities that streamline the development process and enhance performance.
