@@ -8,7 +8,7 @@
 
 The QFN-48 (Quad Flat No-leads) package is a compact IC package with 48 connection pads, ideal for high-density applications. It offers excellent thermal and electrical performance in a 7mm x 7mm form factor.
 
-##### Features
+#### Features
 
 - **Leadless Design**: Minimizes footprint for high-density PCB layouts.
 - **48 Pads**: Provides extensive connectivity options.
@@ -16,7 +16,7 @@ The QFN-48 (Quad Flat No-leads) package is a compact IC package with 48 connecti
 - **Thermal Efficiency**: Facilitates effective heat dissipation.
 - **Electrical Performance**: Ensures low inductance and resistance.
 
-##### Applications
+#### Applications
 
 - Microcontrollers
 - Wireless devices
@@ -30,13 +30,13 @@ The QFN-48 (Quad Flat No-leads) package is a compact IC package with 48 connecti
 
 The chip is an integrated circuit (IC) that houses various functional blocks such as memory, processing units, and I/O interfaces within a silicon substrate. It is designed for specific applications in electronics, providing essential functionalities in a compact form.
 
-##### Key Components
+#### Key Components
 
 - **Memory**: Stores data and instructions for processing tasks.
 - **Processing Units**: Execute computations and control operations.
 - **I/O Interfaces**: Facilitate communication with external devices.
 
-##### Applications
+#### Applications
 
 Chips are used in a wide range of electronic devices, including:
 
@@ -68,14 +68,14 @@ The die is the section of a silicon wafer that contains an individual IC before 
 
 Foundry IPs (Intellectual Properties) are pre-designed and verified circuit blocks provided by semiconductor foundries. These IPs are essential components in the design and manufacturing of integrated circuits (ICs), offering standardized functionalities that can be integrated into custom chip designs.
 
-##### Key Features
+#### Key Features
 
 - **Pre-verified Designs**: Foundry IPs come with pre-verified designs, reducing development time and ensuring reliability.
 - **Standardized Functionality**: They provide standardized functionalities such as analog-to-digital converters (ADC), digital-to-analog converters (DAC), memory blocks, and interface protocols.
 - **Customization**: Foundry IPs can be customized to meet specific design requirements, allowing for flexibility in chip design.
 - **Cost Efficiency**: Utilizing foundry IPs can significantly reduce development costs by leveraging existing designs and expertise.
 
-##### Applications
+#### Applications
 
 Foundry IPs are used in various applications, including:
 
