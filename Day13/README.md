@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-### Inception of open-source EDA, OpenLane and Sky130 PDK
+## Inception of open-source EDA, OpenLane and Sky130 PDK
 
 ### `How to talk to computers`
 
