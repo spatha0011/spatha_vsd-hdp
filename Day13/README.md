@@ -122,7 +122,7 @@ Running an application on hardware involves a series of processes that translate
 
 3. **Hardware Execution**: The binary code produced by the assembler is fed into the hardware. This code directs the hardware to perform specific tasks, enabling the application to function as intended.
 
-## Key Functions of System Software
+#### Key Functions of System Software
 
 - **Handle I/O Operations**: Manages input and output operations between the application and hardware.
 - **Allocate Memory**: Ensures efficient memory usage and allocation for running applications.
