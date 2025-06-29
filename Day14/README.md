@@ -64,6 +64,7 @@ make
 
 OpenROAD-flow-scripts/
 
+```shell
 ├── OpenROAD-flow-scripts             
 │   ├── docker           -> It has Docker based installation, run scripts and all saved here
 │   ├── docs             -> Documentation for OpenROAD or its flow scripts.  
@@ -72,11 +73,12 @@ OpenROAD-flow-scripts/
 │   ├── tools            -> It contains all the required tools to run RTL to GDS flow
 │   ├── etc              -> Has the dependency installer script and other things
 │   ├── setup_env.sh     -> Its the source file to source all our OpenROAD rules to run the RTL to GDS flow
-
+```
 Inside the `flow/` Directory
 
 flow/
 
+```shell
 ├── flow           
 │   ├── design           -> It has built-in examples from RTL to GDS flow across different technology nodes
 │   ├── makefile         -> The automated flow runs through makefile setup
@@ -84,5 +86,6 @@ flow/
 |   ├── tutorials        
 │   ├── util            
 │   ├── scripts                 
+```
 
 ![Alt Text](Images/installation7.jpg)
