@@ -18,7 +18,7 @@ cd OpenROAD-flow-scripts
 ```bash
 sudo ./setup.sh
 ```
-<img src="Images/installation1.jpg" alt="Setup Script" style="width:100%;">
+[<img src="Images/installation1.jpg" alt="Setup" style="width:100%;">](Images/installation1.jpg)
 
 
 ### 3. Build OpenROAD
