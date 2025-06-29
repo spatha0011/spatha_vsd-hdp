@@ -63,6 +63,7 @@ make
 ### ORFS Directory Structure and File formats
 
 OpenROAD-flow-scripts/
+
 ├── docker/ → Docker-based installation and run scripts.
 ├── docs/ → Documentation for OpenROAD tools and flow usage.
 ├── flow/ → Core directory to run the RTL-to-GDSII flow.
@@ -74,6 +75,7 @@ OpenROAD-flow-scripts/
 Inside the `flow/` Directory
 
 flow/
+
 ├── design/ → Contains example designs and configs across tech nodes.
 ├── makefile → Automates RTL-to-GDS flow using GNU Make.
 ├── platform/ → Technology libraries, LEF files, GDS, and PDK assets.
