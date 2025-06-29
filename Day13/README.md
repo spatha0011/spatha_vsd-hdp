@@ -230,51 +230,19 @@ OpenLane is an open-source, automated ASIC design flow that enables users to go 
 
 Below is a step-by-step list of tools used at each stage of the OpenLane RTL-to-GDSII flow:
 
-1. **RTL Synthesis, Technology Mapping, and Formal Verification**
-   - Tools: `Yosys` (RTL synthesis), `ABC` (technology mapping & formal verification)
+| Step # | Stage                                             | Tool(s) Used                                                                 |
+|--------|---------------------------------------------------|------------------------------------------------------------------------------|
+| 1      | RTL Synthesis, Tech Mapping, Formal Verification  | `Yosys` (synthesis), `ABC` (mapping & formal verification)                   |
+| 2      | Static Timing Analysis (STA)                      | `OpenSTA`                                                                    |
+| 3      | Floor Planning                                    | `init_fp`, `ioPlacer`, `pdn`, `tapcell`                                      |
+| 4      | Placement                                         | `RePLace`, `Resizer` (optional), `OpenDP`, `OpenPhySyn` (deprecated)         |
+| 5      | Clock Tree Synthesis (CTS)                        | `TritonCTS`                                                                  |
+| 6      | Fill Insertion                                    | `OpenDP` (for filler cell placement)                                         |
+| 7      | Routing                                           | `FastRoute`, `TritonRoute`, `CU-GR` (deprecated), `DR-CU` (deprecated)       |
+| 8      | SPEF Extraction                                   | `OpenRCX`, `SPEF-Extractor` (deprecated)                                     |
+| 9      | GDSII Streaming Out                               | `Magic`, `KLayout`                                                           |
+| 10     | Design Rule Check (DRC)                           | `Magic`, `KLayout`                                                           |
+| 11     | Layout vs. Schematic (LVS) Check                  | `Netgen`                                                                     |
+| 12     | Antenna Checks                                    | `Magic`            
 
-2. **Static Timing Analysis (STA)**
-   - Tool: `OpenSTA`
-
-3. **Floor Planning**
-   - Tools:
-     - `init_fp`: Initial floorplanning
-     - `ioPlacer`: I/O pad placement
-     - `pdn`: Power Distribution Network planning
-     - `tapcell`: Tap cell insertion
-
-4. **Placement**
-   - Tools:
-     - `RePLace`: Global placement
-     - `Resizer` (optional): Cell resizing for optimization
-     - `OpenPhySyn` (deprecated): Previously used for placement
-     - `OpenDP`: Detailed placement
-
-5. **Clock Tree Synthesis (CTS)**
-   - Tool: `TritonCTS`
-
-6. **Fill Insertion**
-   - Tool: `OpenDP` (for filler cell insertion)
-
-7. **Routing**
-   - Tools:
-     - `FastRoute`: Global routing
-     - `TritonRoute`: Detailed routing
-     - `CU-GR` and `DR-CU` (deprecated): Previously used routers
-
-8. **SPEF Extraction**
-   - Tools: `OpenRCX` or `SPEF-Extractor` (deprecated)
-
-9. **GDSII Streaming Out**
-    - Tools: `Magic` and `KLayout` (for generating, viewing, and editing GDSII files)
-
-10. **Design Rule Checking (DRC)**
-    - Tools: `Magic` and `KLayout`
-
-11. **Layout vs. Schematic (LVS) Check**
-    - Tool: `Netgen`
-
-12. **Antenna Checks**
-    - Tool: `Magic`
-      
 These tools form the foundation of the OpenLane flow, enabling a fully open-source, automated RTL to GDSII design pipeline.
