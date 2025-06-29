@@ -281,7 +281,7 @@ flowchart LR
 ```
 
 
-## OpenROAD Mission
+#### OpenROAD Mission
 
 [OpenROAD](https://theopenroadproject.org/) eliminates the barriers of cost, schedule risk and uncertainty in hardware design to promote open access to rapid, low-cost IC design software and expertise and system innovation. The OpenROAD application enables flexible flow control through an API with bindings in Tcl and Python.
 
@@ -299,13 +299,21 @@ OpenROAD is used in research and commercial applications such as,
 
 OpenROAD fosters a vibrant ecosystem of users through active collaboration and partnership through software development and key alliances. Our growing user community includes hardware designers, software engineers, industry collaborators, VLSI enthusiasts,students and researchers.
 
-OpenROAD strongly advocates and enables IC design-based education and workforce development initiatives through training content and courses across several global universities, the Google-SkyWater [shuttles (https://platform.efabless.com/projects/public) also includes GlobalFoundries shuttles, design contests and IC design workshops. The OpenROAD flow has been successfully used to date in over 600 silicon-ready tapeouts for technologies up to 12nm.
+#### Why OpenROAD Matters in Digital ASIC Design
 
-        FLOW --> H[GDSII
-        Final Layout]
-        %% H --- H1[ ]
-        %% style H1 stroke-width:0px, fill: #FFFFFF00
-        %% linkStyle 11 stroke-width:0px
-        style H fill:#ff0000,stroke:#000000,stroke-width:4px
-    end
+The **OpenROAD Project** is revolutionizing the way digital integrated circuits are designed by **democratizing access** to EDA tools and **accelerating physical design automation**. With its fully open-source ecosystem, OpenROAD provides a seamless, automated **RTL-to-GDSII flow**—enabling individuals, startups, and academic institutions to **build real silicon chips without relying on expensive proprietary tools**.
 
+
+- **Automation-first philosophy**  
+  Designed around a "No Human-In-Loop" flow, OpenROAD minimizes manual intervention, making digital design more accessible and scalable for iterative development.
+
+- **Open ecosystem integration**  
+  OpenROAD serves as the **core backend engine** in many open-source flows like OpenLane, OpenFASoC, and SiliconCompiler, powering a wide variety of digital and mixed-signal designs.
+
+- **Empowerment of education and research**  
+  OpenROAD has become a cornerstone in VLSI and digital design education, allowing students, researchers, and hobbyists to **learn by doing**—from RTL to silicon.
+
+- **Accelerating innovation**  
+  By eliminating licensing constraints and offering robust APIs in **Tcl and Python**, OpenROAD encourages **custom tool development, research experiments, and silicon tapeouts** at minimal cost.
+
+Whether you're building a stopwatch on a RISC-V processor or designing complex SoCs, **OpenROAD enables you to go from ideas to GDSII** using a truly open, production-grade flow.
