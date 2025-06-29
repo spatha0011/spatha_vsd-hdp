@@ -150,7 +150,7 @@ For example, consider a **stopwatch app** running on a **RISC-V core**. The user
 
 This **machine-level binary** is then fed to the **hardware layer**, where it is executed by the RISC-V processor. In physical design workflows, these binary instructions are synthesized and mapped into a **chip layout** using tools like:
 
-- 🏗**OpenLane** – For RTL-to-GDSII flow
+- **OpenLane** – For RTL-to-GDSII flow
 - **Sky130 PDK** – A 130nm open-source process design kit
 
 Finally, the generated **layout is fabricated into silicon**, producing a chip that can independently execute the stopwatch functionality at the hardware level.
@@ -158,12 +158,12 @@ Finally, the generated **layout is fabricated into silicon**, producing a chip t
 This demonstrates the full-stack hardware design flow:  
 **from software → to compiler → to silicon.**
 
-![Alt Text](Images/3_levels.png)
+![Alt Text](Images/3_levels.png.PNG)
 
 For the above stopwatch the below figure shows the input and output of the compiler and assembler.
 
-![Alt Text](Images/codes.png)
+![Alt Text](Images/codes.png.jpg)
 
 This image demonstrates the complete transformation of a machine instruction (e.g., add x6, x10, x6) into real, executable hardware logic. At the top, the instruction is part of a RISC-V program defined by the Instruction Set Architecture (ISA) — the abstract interface between software and hardware. The assembler converts these instructions into binary machine code (e.g., 010001101...), which is then interpreted by the RTL (Register Transfer Level) hardware description written in Verilog. This RTL is synthesized into a gate-level netlist, comprising logic gates like NAND, NOR, and flip-flops. Finally, the logic is placed and routed into a physical layout on silicon — shown at the bottom right — where real transistors switch to implement the behavior defined by the instruction. This showcases how a single line of code flows from abstract software into concrete hardware functionality.
 
-![Alt Text](Images/flow.png)
+![Alt Text](Images/flow.png.jpg)
