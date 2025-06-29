@@ -281,7 +281,7 @@ flowchart LR
 ```
 
 
-#### OpenROAD Mission
+### OpenROAD Mission
 
 [OpenROAD](https://theopenroadproject.org/) eliminates the barriers of cost, schedule risk and uncertainty in hardware design to promote open access to rapid, low-cost IC design software and expertise and system innovation. The OpenROAD application enables flexible flow control through an API with bindings in Tcl and Python.
 
@@ -299,7 +299,7 @@ OpenROAD is used in research and commercial applications such as,
 
 OpenROAD fosters a vibrant ecosystem of users through active collaboration and partnership through software development and key alliances. Our growing user community includes hardware designers, software engineers, industry collaborators, VLSI enthusiasts,students and researchers.
 
-#### Why OpenROAD Matters in Digital ASIC Design
+### Why OpenROAD Matters in Digital ASIC Design
 
 The **OpenROAD Project** is revolutionizing the way digital integrated circuits are designed by **democratizing access** to EDA tools and **accelerating physical design automation**. With its fully open-source ecosystem, OpenROAD provides a seamless, automated **RTL-to-GDSII flow**—enabling individuals, startups, and academic institutions to **build real silicon chips without relying on expensive proprietary tools**.
 
