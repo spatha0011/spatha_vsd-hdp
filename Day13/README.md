@@ -11,10 +11,10 @@
 - [Chip Components Overview](#chip-components-overview)
 - [Foundry IPs Overview](#foundry-ips-overview)
 - [Macros Overview](#macros-overview)
-- [📌 Differences Between Macros and Foundry IPs](#-differences-between-macros-and-foundry-ips)
+- [Differences Between Macros and Foundry IPs](#-differences-between-macros-and-foundry-ips)
 - [From Software Applications to Hardware Flow](#from-software-applications-to-hardware-flow)
-  - [🔁 From Software to Silicon – Stopwatch App on RISC-V](#️-from-software-to-silicon--stopwatch-app-on-risc-v)
-- [`SoC design and OpenROAD`](#soc-design-and-openroad)
+  - [From Software to Silicon – Stopwatch App on RISC-V](#️-from-software-to-silicon--stopwatch-app-on-risc-v)
+- [SoC design and OpenROAD](#soc-design-and-openroad)
 - [Components of opensource digital ASIC design](#components-of-opensource-digital-asic-design)
 - [Simplified RTL2GDS Flow](#simplified-rtl2gds-flow)
 - [OpenROAD ASIC Flow](#openroad-asic-flow)
@@ -111,7 +111,7 @@ Macros are pre-designed functional blocks within an integrated circuit (IC) that
 
 ![Alt Text](Images/macros.png)
 
-### 📌 Differences Between Macros and Foundry IPs
+📌### Differences Between Macros and Foundry IPs
 
 | **Feature**           | **Macros**                                                                                         | **Foundry IPs**                                                                                        |
 | --------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -150,7 +150,7 @@ This flow from application software to hardware ensures that complex user applic
 
 ![Alt Text](Images/sw_to_hw_flow.png)
 
-#### 🔁 From Software to Silicon – Stopwatch App on RISC-V
+#### From Software to Silicon – Stopwatch App on RISC-V
 
 For example, consider a **stopwatch app** running on a **RISC-V core**. The user writes a simple function in C to implement timekeeping logic (hours, minutes, seconds). This high-level application code is first handled by the **system software**, including:
 
