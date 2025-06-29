@@ -174,11 +174,11 @@ This image demonstrates the complete transformation of a machine instruction (e.
 
 In digital ASIC design, three essential components must come together to produce a successful chip: RTL IPs, EDA tools, and PDK data.
 
-- RTL IPs (Register Transfer Level Intellectual Property) define the functional behavior of the design and serve as reusable logic blocks.
+- **RTL IPs** (Register Transfer Level Intellectual Property) define the functional behavior of the design and serve as reusable logic blocks.
 
-- EDA Tools (Electronic Design Automation) enable the complete design flow—from logic synthesis to placement, routing, verification, and signoff.
+- **EDA Tools** (Electronic Design Automation) enable the complete design flow—from logic synthesis to placement, routing, verification, and signoff.
 
-- PDK (Process Design Kit) Data provides foundry-specific information such as layer definitions, design rules, and transistor models.
+- **PDK** (Process Design Kit) Data provides foundry-specific information such as layer definitions, design rules, and transistor models.
 
 When these inputs are integrated, the result is a fully functional, fabricated ASIC (Application-Specific Integrated Circuit) tailored to meet specific application requirements.
 
@@ -213,6 +213,18 @@ When these inputs are integrated, the result is a fully functional, fabricated A
 - **GDSII File Generation**  
   Produces the **GDSII** file containing all physical layout data. This file is used by foundries to generate photomasks and manufacture the silicon chip. The GDSII is essentially the **final blueprint** for chip fabrication.
 
+### OpenLANE ASIC Flow
+
+OpenLane is an open-source, automated ASIC design flow that enables users to go from RTL to GDSII with **no human intervention** — a principle known as **"no-human-in-the-loop"**. It’s built to be fully scriptable, repeatable, and scalable for modern digital design workflows.
+
+#### Key Features
+
+- **Tuned for SkyWater 130nm Open PDK**  
+  OpenLane is designed to work seamlessly with the Sky130 PDK from Google and SkyWater Foundry.
+
+- **Fully Containerized**
+  - Works **out of the box** using Docker containers.
+  - Native build/run instructions are provided for those who want full control.
 
 
 
