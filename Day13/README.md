@@ -216,6 +216,7 @@ When these inputs are integrated, the result is a fully functional, fabricated A
 ### OpenROAD ASIC Flow
 OpenROAD is the leading open-source, foundational application for semiconductor digital design. The OpenROAD flow delivers an Autonomous, No-Human-In-Loop (NHIL) flow, 24 hour turnaround from RTL-GDSII for rapid design exploration and physical design implementation.
 
+```mermaid
 %%{
   init: {
     'theme': 'neutral',
@@ -268,6 +269,37 @@ flowchart LR
             style F fill:#fa6800,stroke:#000000,stroke-width:4px
             style G fill:#ff6666,stroke:#000000,stroke-width:4px
         end
+
+        FLOW --> H[GDSII
+        Final Layout]
+        %% H --- H1[ ]
+        %% style H1 stroke-width:0px, fill: #FFFFFF00
+        %% linkStyle 11 stroke-width:0px
+        style H fill:#ff0000,stroke:#000000,stroke-width:4px
+    end
+
+```
+
+
+## OpenROAD Mission
+
+[OpenROAD](https://theopenroadproject.org/) eliminates the barriers of cost, schedule risk and uncertainty in hardware design to promote open access to rapid, low-cost IC design software and expertise and system innovation. The OpenROAD application enables flexible flow control through an API with bindings in Tcl and Python.
+
+OpenROAD is used in research and commercial applications such as,
+- [OpenROAD-flow-scripts](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts)
+  from [OpenROAD](https://theopenroadproject.org/)
+- [OpenLane](https://github.com/The-OpenROAD-Project/OpenLane) from
+  [Efabless](https://efabless.com/)
+- [Silicon Compiler](https://github.com/siliconcompiler/siliconcompiler)
+  from [Zero ASIC](https://www.zeroasic.com/)
+- [Hammer](https://docs.hammer-eda.org/en/latest/Examples/openroad-nangate45.html)
+  from [UC Berkeley](https://github.com/ucb-bar)
+- [OpenFASoC](https://github.com/idea-fasoc/OpenFASOC) from
+  [IDEA-FASoC](https://github.com/idea-fasoc) for mixed-signal design flows
+
+OpenROAD fosters a vibrant ecosystem of users through active collaboration and partnership through software development and key alliances. Our growing user community includes hardware designers, software engineers, industry collaborators, VLSI enthusiasts,students and researchers.
+
+OpenROAD strongly advocates and enables IC design-based education and workforce development initiatives through training content and courses across several global universities, the Google-SkyWater [shuttles (https://platform.efabless.com/projects/public) also includes GlobalFoundries shuttles, design contests and IC design workshops. The OpenROAD flow has been successfully used to date in over 600 silicon-ready tapeouts for technologies up to 12nm.
 
         FLOW --> H[GDSII
         Final Layout]
