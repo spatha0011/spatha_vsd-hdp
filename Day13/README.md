@@ -5,7 +5,7 @@
 ### 📚 Contents
 
 - [Inception of open-source EDA, OpenROAD and Sky130 PDK](#inception-of-open-source-eda-openroad-and-sky130-pdk)
-  - [`How to talk to computers`](#how-to-talk-to-computers)
+  - [How to talk to computers](#how-to-talk-to-computers)
 - [QFN-48 Package Overview](#qfn-48-package-overview)
 - [Chip Overview](#chip-overview)
 - [Chip Components Overview](#chip-components-overview)
@@ -13,7 +13,7 @@
 - [Macros Overview](#macros-overview)
 - [Differences Between Macros and Foundry IPs](#-differences-between-macros-and-foundry-ips)
 - [From Software Applications to Hardware Flow](#from-software-applications-to-hardware-flow)
-  - [From Software to Silicon – Stopwatch App on RISC-V](#️-from-software-to-silicon--stopwatch-app-on-risc-v)
+  - [From Software to Silicon – Stopwatch App on RISC-V](#from-software-to-silicon--stopwatch-app-on-risc-v)
 - [SoC design and OpenROAD](#soc-design-and-openroad)
 - [Components of opensource digital ASIC design](#components-of-opensource-digital-asic-design)
 - [Simplified RTL2GDS Flow](#simplified-rtl2gds-flow)
