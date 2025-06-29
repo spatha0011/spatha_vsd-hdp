@@ -2,7 +2,7 @@
 
 ## OpenROAD installation guide
 
-## 📚 Table of Contents
+### 📚 Contents
 
   - [Steps to Install OpenROAD and Run GUI](#steps-to-install-openroad-and-run-gui)
     - [1. Clone the OpenROAD Repository](#1-clone-the-openroad-repository)
