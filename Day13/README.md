@@ -223,7 +223,9 @@ OpenLane is an open-source, automated ASIC design flow that enables users to go 
 - **Fully Containerized**
   - Works **out of the box** using Docker containers.
   - Native build/run instructions are provided for those who want full control.
+    
 ![Alt Text](Images/openlane_flow.jpg)
+
 Below is a step-by-step list of tools used at each stage of the OpenLane RTL-to-GDSII flow:
 
 | Step   | Stage                                             | Tool(s) Used                                                                 |
