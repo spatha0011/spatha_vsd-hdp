@@ -2,6 +2,18 @@
 
 ## OpenROAD installation guide
 
+## 📚 Table of Contents
+
+  - [Steps to Install OpenROAD and Run GUI](#steps-to-install-openroad-and-run-gui)
+    - [1. Clone the OpenROAD Repository](#1-clone-the-openroad-repository)
+    - [2. Run the Setup Script](#2-run-the-setup-script)
+    - [3. Build OpenROAD](#3-build-openroad)
+    - [4. Verify Installation](#4-verify-installation)
+    - [5. Run the OpenROAD Flow](#5-run-the-openroad-flow)
+    - [6. Launch the GUI](#6-launch-the-graphical-user-interface-gui-to-visualize-the-final-layout)
+- [ORFS Directory Structure and File Formats](#orfs-directory-structure-and-file-formats)
+
+
 **OpenROAD** is an open-source, fully automated RTL-to-GDSII flow for digital integrated circuit (IC) design. It supports synthesis, floorplanning, placement, clock tree synthesis, routing, and final layout generation. OpenROAD enables rapid design iterations, making it ideal for academic research and industry prototyping.
 
 ### `Steps to Install OpenROAD and Run GUI`
