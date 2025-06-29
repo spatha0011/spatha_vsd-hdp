@@ -64,7 +64,7 @@ make
 
 OpenROAD-flow-scripts/
 
-```shell
+```plaintext
 ├── OpenROAD-flow-scripts             
 │   ├── docker           -> It has Docker based installation, run scripts and all saved here
 │   ├── docs             -> Documentation for OpenROAD or its flow scripts.  
@@ -76,9 +76,7 @@ OpenROAD-flow-scripts/
 ```
 Inside the `flow/` Directory
 
-flow/
-
-```shell
+```plaintext
 ├── flow           
 │   ├── design           -> It has built-in examples from RTL to GDS flow across different technology nodes
 │   ├── makefile         -> The automated flow runs through makefile setup
