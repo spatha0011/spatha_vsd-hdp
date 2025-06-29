@@ -227,10 +227,9 @@ OpenLane is an open-source, automated ASIC design flow that enables users to go 
   - Native build/run instructions are provided for those who want full control.
 
 ![Alt Text](Images/openlane_flow.jpg)
-
 Below is a step-by-step list of tools used at each stage of the OpenLane RTL-to-GDSII flow:
 
-| Step # | Stage                                             | Tool(s) Used                                                                 |
+| Step   | Stage                                             | Tool(s) Used                                                                 |
 |--------|---------------------------------------------------|------------------------------------------------------------------------------|
 | 1      | RTL Synthesis, Tech Mapping, Formal Verification  | `Yosys` (synthesis), `ABC` (mapping & formal verification)                   |
 | 2      | Static Timing Analysis (STA)                      | `OpenSTA`                                                                    |
