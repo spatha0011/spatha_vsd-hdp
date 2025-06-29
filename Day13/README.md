@@ -214,18 +214,15 @@ When these inputs are integrated, the result is a fully functional, fabricated A
   Produces the **GDSII** file containing all physical layout data. This file is used by foundries to generate photomasks and manufacture the silicon chip. The GDSII is essentially the **final blueprint** for chip fabrication.
 
 ### OpenLANE ASIC Flow
-
 OpenLane is an open-source, automated ASIC design flow that enables users to go from RTL to GDSII with **no human intervention** — a principle known as **"no-human-in-the-loop"**. It’s built to be fully scriptable, repeatable, and scalable for modern digital design workflows.
 
 #### Key Features
-
 - **Tuned for SkyWater 130nm Open PDK**  
   OpenLane is designed to work seamlessly with the Sky130 PDK from Google and SkyWater Foundry.
 
 - **Fully Containerized**
   - Works **out of the box** using Docker containers.
   - Native build/run instructions are provided for those who want full control.
-
 ![Alt Text](Images/openlane_flow.jpg)
 Below is a step-by-step list of tools used at each stage of the OpenLane RTL-to-GDSII flow:
 
