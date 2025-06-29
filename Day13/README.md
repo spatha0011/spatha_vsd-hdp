@@ -170,7 +170,7 @@ This image demonstrates the complete transformation of a machine instruction (e.
 
 ### `SoC design and OpenLANE`
 
-#### Components of opensource digital ASIC design
+### Components of opensource digital ASIC design
 
 In digital ASIC design, three essential components must come together to produce a successful chip: RTL IPs, EDA tools, and PDK data.
 
@@ -226,5 +226,6 @@ OpenLane is an open-source, automated ASIC design flow that enables users to go 
   - Works **out of the box** using Docker containers.
   - Native build/run instructions are provided for those who want full control.
 
+![Alt Text](Images/openlane_flow.jpg)
 
 
