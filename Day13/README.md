@@ -2,6 +2,24 @@
 
 ## Inception of open-source EDA, OpenROAD and Sky130 PDK
 
+### 📚 Contents
+
+- [Inception of open-source EDA, OpenROAD and Sky130 PDK](#inception-of-open-source-eda-openroad-and-sky130-pdk)
+  - [`How to talk to computers`](#how-to-talk-to-computers)
+- [QFN-48 Package Overview](#qfn-48-package-overview)
+- [Chip Overview](#chip-overview)
+- [Chip Components Overview](#chip-components-overview)
+- [Foundry IPs Overview](#foundry-ips-overview)
+- [Macros Overview](#macros-overview)
+- [📌 Differences Between Macros and Foundry IPs](#-differences-between-macros-and-foundry-ips)
+- [From Software Applications to Hardware Flow](#from-software-applications-to-hardware-flow)
+  - [🔁 From Software to Silicon – Stopwatch App on RISC-V](#️-from-software-to-silicon--stopwatch-app-on-risc-v)
+- [`SoC design and OpenROAD`](#soc-design-and-openroad)
+- [Components of opensource digital ASIC design](#components-of-opensource-digital-asic-design)
+- [Simplified RTL2GDS Flow](#simplified-rtl2gds-flow)
+- [OpenROAD ASIC Flow](#openroad-asic-flow)
+- [Why OpenROAD Matters in Digital ASIC Design](#why-openroad-matters-in-digital-asic-design)
+  
 ### `How to talk to computers`
 
 ### QFN-48 Package Overview
@@ -168,7 +186,7 @@ This image demonstrates the complete transformation of a machine instruction (e.
 
 ![Alt Text](Images/flow.png.jpg)
 
-### `SoC design and OpenLANE`
+### `SoC design and OpenROAD`
 
 ### Components of opensource digital ASIC design
 
