@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## Inception of open-source EDA, OpenLane and Sky130 PDK
+## Inception of open-source EDA, OpenROAD and Sky130 PDK
 
 ### `How to talk to computers`
 
@@ -213,34 +213,67 @@ When these inputs are integrated, the result is a fully functional, fabricated A
 - **GDSII File Generation**  
   Produces the **GDSII** file containing all physical layout data. This file is used by foundries to generate photomasks and manufacture the silicon chip. The GDSII is essentially the **final blueprint** for chip fabrication.
 
-### OpenLANE ASIC Flow
-OpenLane is an open-source, automated ASIC design flow that enables users to go from RTL to GDSII with **no human intervention** — a principle known as **"no-human-in-the-loop"**. It’s built to be fully scriptable, repeatable, and scalable for modern digital design workflows.
+### OpenROAD ASIC Flow
+OpenROAD is the leading open-source, foundational application for semiconductor digital design. The OpenROAD flow delivers an Autonomous, No-Human-In-Loop (NHIL) flow, 24 hour turnaround from RTL-GDSII for rapid design exploration and physical design implementation.
 
-#### Key Features
-- **Tuned for SkyWater 130nm Open PDK**  
-  OpenLane is designed to work seamlessly with the Sky130 PDK from Google and SkyWater Foundry.
+%%{
+  init: {
+    'theme': 'neutral',
+    'themeVariables': {
+      'textColor': '#000000',
+      'noteTextColor' : '#000000',
+      'fontSize': '20px'
+    }
+  }
+}%%
 
-- **Fully Containerized**
-  - Works **out of the box** using Docker containers.
-  - Native build/run instructions are provided for those who want full control.
-    
-![Alt Text](Images/openlane_flow.jpg)
+flowchart LR
+    b0[                  ] --- b2[ ] --- b4[ ] --- ORFlow --- b1[ ] --- b3[ ] --- b5[                  ]
+    style b0 stroke-width:0px, fill: #FFFFFF00, color:#FFFFFF00
+    style b1 stroke-width:0px, fill: #FFFFFF00
+    style b2 stroke-width:0px, fill: #FFFFFF00
+    style b3 stroke-width:0px, fill: #FFFFFF00
+    style b4 stroke-width:0px, fill: #FFFFFF00
+    style b5 stroke-width:0px, fill: #FFFFFF00, color:#FFFFFF00
 
-Below is a step-by-step list of tools used at each stage of the OpenLane RTL-to-GDSII flow:
+    linkStyle 0 stroke-width:0px
+    linkStyle 1 stroke-width:0px
+    linkStyle 2 stroke-width:0px
+    linkStyle 3 stroke-width:0px
+    linkStyle 4 stroke-width:0px
+    linkStyle 5 stroke-width:0px
 
-| Step   | Stage                                             | Tool(s) Used                                                                 |
-|--------|---------------------------------------------------|------------------------------------------------------------------------------|
-| 1      | RTL Synthesis, Tech Mapping, Formal Verification  | `Yosys` (synthesis), `ABC` (mapping & formal verification)                   |
-| 2      | Static Timing Analysis (STA)                      | `OpenSTA`                                                                    |
-| 3      | Floor Planning                                    | `init_fp`, `ioPlacer`, `pdn`, `tapcell`                                      |
-| 4      | Placement                                         | `RePLace`, `Resizer` (optional), `OpenDP`, `OpenPhySyn` (deprecated)         |
-| 5      | Clock Tree Synthesis (CTS)                        | `TritonCTS`                                                                  |
-| 6      | Fill Insertion                                    | `OpenDP` (for filler cell placement)                                         |
-| 7      | Routing                                           | `FastRoute`, `TritonRoute`, `CU-GR` (deprecated), `DR-CU` (deprecated)       |
-| 8      | SPEF Extraction                                   | `OpenRCX`, `SPEF-Extractor` (deprecated)                                     |
-| 9      | GDSII Streaming Out                               | `Magic`, `KLayout`                                                           |
-| 10     | Design Rule Check (DRC)                           | `Magic`, `KLayout`                                                           |
-| 11     | Layout vs. Schematic (LVS) Check                  | `Netgen`                                                                     |
-| 12     | Antenna Checks                                    | `Magic`            
 
-These tools form the foundation of the OpenLane flow, enabling a fully open-source, automated RTL to GDSII design pipeline.
+    subgraph ORFlow
+    direction TB
+    style ORFlow fill:#ffffff00, stroke-width:0px
+        A[Verilog
+        + libraries
+        + constraints] --> FLOW
+        style A fill:#74c2b5,stroke:#000000,stroke-width:4px
+        subgraph FLOW
+        style FLOW fill:#FFFFFF00,stroke-width:4px
+
+        direction TB
+            B[Synthesis]
+            B --> C[Floorplan]
+            C --> D[Placement]
+            D --> E[Clock Tree Synthesis]
+            E --> F[Routing]
+            F --> G[Finishing]
+            style B fill:#f8cecc,stroke:#000000,stroke-width:4px
+            style C fill:#fff2cc,stroke:#000000,stroke-width:4px
+            style D fill:#cce5ff,stroke:#000000,stroke-width:4px
+            style E fill:#67ab9f,stroke:#000000,stroke-width:4px
+            style F fill:#fa6800,stroke:#000000,stroke-width:4px
+            style G fill:#ff6666,stroke:#000000,stroke-width:4px
+        end
+
+        FLOW --> H[GDSII
+        Final Layout]
+        %% H --- H1[ ]
+        %% style H1 stroke-width:0px, fill: #FFFFFF00
+        %% linkStyle 11 stroke-width:0px
+        style H fill:#ff0000,stroke:#000000,stroke-width:4px
+    end
+
