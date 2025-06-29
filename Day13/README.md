@@ -131,3 +131,39 @@ Running an application on hardware involves a series of processes that translate
 This flow from application software to hardware ensures that complex user applications can be executed efficiently on physical devices, leveraging the capabilities of system software to bridge the gap between human-readable code and machine operations.
 
 ![Alt Text](Images/sw_to_hw_flow.png)
+
+#### 🔁 From Software to Silicon – Stopwatch App on RISC-V
+
+For example, consider a **stopwatch app** running on a **RISC-V core**. The user writes a simple function in C to implement timekeeping logic (hours, minutes, seconds). This high-level application code is first handled by the **system software**, including:
+
+- **Operating System (OS)**:  
+  Manages low-level operations like memory allocation, I/O handling, and system calls (e.g., `sleep()` and `clear()` in the C code).
+
+- **Compiler**:  
+  Translates the high-level C code into **RISC-V-specific assembly instructions** tailored to the target architecture.
+
+- **Assembler**:  
+  Converts the human-readable assembly code into **binary machine instructions**.
+
+- **Linker**:  
+  Combines all object files and dependencies into the final **`.exe` or binary executable**.
+
+This **machine-level binary** is then fed to the **hardware layer**, where it is executed by the RISC-V processor. In physical design workflows, these binary instructions are synthesized and mapped into a **chip layout** using tools like:
+
+- 🏗**OpenLane** – For RTL-to-GDSII flow
+- **Sky130 PDK** – A 130nm open-source process design kit
+
+Finally, the generated **layout is fabricated into silicon**, producing a chip that can independently execute the stopwatch functionality at the hardware level.
+
+This demonstrates the full-stack hardware design flow:  
+**from software → to compiler → to silicon.**
+
+![Alt Text](Images/3_levels.png)
+
+For the above stopwatch the below figure shows the input and output of the compiler and assembler.
+
+![Alt Text](Images/codes.png)
+
+This image demonstrates the complete transformation of a machine instruction (e.g., add x6, x10, x6) into real, executable hardware logic. At the top, the instruction is part of a RISC-V program defined by the Instruction Set Architecture (ISA) — the abstract interface between software and hardware. The assembler converts these instructions into binary machine code (e.g., 010001101...), which is then interpreted by the RTL (Register Transfer Level) hardware description written in Verilog. This RTL is synthesized into a gate-level netlist, comprising logic gates like NAND, NOR, and flip-flops. Finally, the logic is placed and routed into a physical layout on silicon — shown at the bottom right — where real transistors switch to implement the behavior defined by the instruction. This showcases how a single line of code flows from abstract software into concrete hardware functionality.
+
+![Alt Text](Images/flow.png)
