@@ -167,3 +167,57 @@ For the above stopwatch the below figure shows the input and output of the compi
 This image demonstrates the complete transformation of a machine instruction (e.g., add x6, x10, x6) into real, executable hardware logic. At the top, the instruction is part of a RISC-V program defined by the Instruction Set Architecture (ISA) — the abstract interface between software and hardware. The assembler converts these instructions into binary machine code (e.g., 010001101...), which is then interpreted by the RTL (Register Transfer Level) hardware description written in Verilog. This RTL is synthesized into a gate-level netlist, comprising logic gates like NAND, NOR, and flip-flops. Finally, the logic is placed and routed into a physical layout on silicon — shown at the bottom right — where real transistors switch to implement the behavior defined by the instruction. This showcases how a single line of code flows from abstract software into concrete hardware functionality.
 
 ![Alt Text](Images/flow.png.jpg)
+
+### `SoC design and OpenLANE`
+
+### Introduction to all components of open-source digital asic design
+
+#### Components of opensource digital ASIC design
+
+In digital ASIC design, three essential components must come together to produce a successful chip: RTL IPs, EDA tools, and PDK data.
+
+RTL IPs (Register Transfer Level Intellectual Property) define the functional behavior of the design and serve as reusable logic blocks.
+
+EDA Tools (Electronic Design Automation) enable the complete design flow—from logic synthesis to placement, routing, verification, and signoff.
+
+PDK (Process Design Kit) Data provides foundry-specific information such as layer definitions, design rules, and transistor models.
+
+When these inputs are integrated, the result is a fully functional, fabricated ASIC (Application-Specific Integrated Circuit) tailored to meet specific application requirements.
+
+![Alt Text](Images/design_inputs.jpg)
+
+### Simplified RTL2GDS flow
+
+![Alt Text](Images/rtl2gds.jpg)
+
+**RTL Design**  
+  Describes the circuit's functional behavior using HDLs like **Verilog** or **VHDL**, defining its logic, data paths, and control flow at the register-transfer level.
+
+- **RTL Synthesis**  
+  Converts RTL code into a **gate-level netlist**, mapping the design to standard cells (e.g., AND gates, flip-flops, multiplexers), while optimizing for **area**, **power**, and **timing**.
+
+- **Floor and Power Planning**  
+  Partitions the chip area, places key components (macros/IPs), and defines the power grid and I/O pad placement. This step aims to reduce power consumption and improve **signal integrity** by optimizing physical layout.
+
+- **Placement**  
+  Assigns physical locations to standard cells, targeting **minimal wirelength**, low signal delay, and better area utilization. A well-placed design improves performance, reduces congestion, and eases routing complexity.
+
+- **Clock Tree Synthesis (CTS)**  
+  Builds a clock distribution network to deliver the clock signal uniformly to all sequential elements like flip-flops and registers. CTS ensures **minimal skew**, balanced paths, and robust clock propagation.
+
+- **Routing**  
+  Connects all placed components based on netlist connectivity. The router optimizes wire paths for **signal integrity**, avoids **congestion**, and satisfies **design rule constraints** set by the foundry.
+
+- **Sign-off**  
+  The final validation stage:
+  - **Timing analysis** checks setup and hold violations.
+  - **Power analysis** verifies the design stays within power budgets.
+  - **Physical verification (DRC/LVS)** ensures layout complies with PDK rules.  
+  This stage ensures the design is **fabrication-ready**.
+
+- **GDSII File Generation**  
+  Produces the **GDSII** file containing all physical layout data. This file is used by foundries to generate photomasks and manufacture the silicon chip. The GDSII is essentially the **final blueprint** for chip fabrication.
+
+
+
+
