@@ -170,17 +170,15 @@ This image demonstrates the complete transformation of a machine instruction (e.
 
 ### `SoC design and OpenLANE`
 
-### Introduction to all components of open-source digital asic design
-
 #### Components of opensource digital ASIC design
 
 In digital ASIC design, three essential components must come together to produce a successful chip: RTL IPs, EDA tools, and PDK data.
 
-RTL IPs (Register Transfer Level Intellectual Property) define the functional behavior of the design and serve as reusable logic blocks.
+- RTL IPs (Register Transfer Level Intellectual Property) define the functional behavior of the design and serve as reusable logic blocks.
 
-EDA Tools (Electronic Design Automation) enable the complete design flow—from logic synthesis to placement, routing, verification, and signoff.
+- EDA Tools (Electronic Design Automation) enable the complete design flow—from logic synthesis to placement, routing, verification, and signoff.
 
-PDK (Process Design Kit) Data provides foundry-specific information such as layer definitions, design rules, and transistor models.
+- PDK (Process Design Kit) Data provides foundry-specific information such as layer definitions, design rules, and transistor models.
 
 When these inputs are integrated, the result is a fully functional, fabricated ASIC (Application-Specific Integrated Circuit) tailored to meet specific application requirements.
 
@@ -189,9 +187,6 @@ When these inputs are integrated, the result is a fully functional, fabricated A
 ### Simplified RTL2GDS flow
 
 ![Alt Text](Images/rtl2gds.jpg)
-
-**RTL Design**  
-  Describes the circuit's functional behavior using HDLs like **Verilog** or **VHDL**, defining its logic, data paths, and control flow at the register-transfer level.
 
 - **RTL Synthesis**  
   Converts RTL code into a **gate-level netlist**, mapping the design to standard cells (e.g., AND gates, flip-flops, multiplexers), while optimizing for **area**, **power**, and **timing**.
