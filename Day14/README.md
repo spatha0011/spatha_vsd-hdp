@@ -64,23 +64,25 @@ make
 
 OpenROAD-flow-scripts/
 
-├── docker/ → Docker-based installation and run scripts.
-├── docs/ → Documentation for OpenROAD tools and flow usage.
-├── flow/ → Core directory to run the RTL-to-GDSII flow.
-├── jenkins/ → Regression tests for validating build updates.
-├── tools/ → Required tools for synthesis, placement, routing, etc.
-├── etc/ → Dependency installers and helper scripts.
-├── setup_env.sh → Shell script to source environment variables for the flow.
+├── OpenROAD-flow-scripts             
+│   ├── docker           -> It has Docker based installation, run scripts and all saved here
+│   ├── docs             -> Documentation for OpenROAD or its flow scripts.  
+│   ├── flow             -> Files related to run RTL to GDS flow  
+|   ├── jenkins          -> It contains the regression test designed for each build update
+│   ├── tools            -> It contains all the required tools to run RTL to GDS flow
+│   ├── etc              -> Has the dependency installer script and other things
+│   ├── setup_env.sh     -> Its the source file to source all our OpenROAD rules to run the RTL to GDS flow
 
 Inside the `flow/` Directory
 
 flow/
 
-├── design/ → Contains example designs and configs across tech nodes.
-├── makefile → Automates RTL-to-GDS flow using GNU Make.
-├── platform/ → Technology libraries, LEF files, GDS, and PDK assets.
-├── tutorials/ → Tutorial examples and flow walkthroughs.
-├── util/ → Utility scripts for report generation and management.
-├── scripts/ → TCL, Python, and helper scripts used across flow steps.         
+├── flow           
+│   ├── design           -> It has built-in examples from RTL to GDS flow across different technology nodes
+│   ├── makefile         -> The automated flow runs through makefile setup
+│   ├── platform         -> It has different technology note libraries, lef files, GDS etc 
+|   ├── tutorials        
+│   ├── util            
+│   ├── scripts                 
 
 ![Alt Text](Images/installation7.jpg)
