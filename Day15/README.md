@@ -17,6 +17,8 @@
   - [Run Floorplan](#run-floorplan)
     - [Floorplan Error and Fix](#floorplan-error-and-fix)
     - [Floorplan Result (GUI)](#floorplan-result-gui)
+ -  [Run Placement](#run-placement)
+    - [Placement Result (GUI)](#placement-result-gui)
 
 ###  `RTL2GDS Flow for VSDBabySoC: Initial Steps`
 
@@ -340,3 +342,21 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ make DESIGN_CONFIG=./desi
 ```
 
 ![Alt Text](Images/floorplan.jpg)
+
+#### Run Placement
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
+```
+
+![Alt Text](Images/9.jpg)
+
+![Alt Text](Images/10.jpg)
+
+#### Placement Result (GUI)
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
+```
+
+![Alt Text](Images/11.jpg)
