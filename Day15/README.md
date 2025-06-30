@@ -281,7 +281,43 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
      of which used for sequential elements: 22901.964800 (43.27%)
 ```
 
+#### Commands for floorplan:
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
+```
+
+❗**Note:** You may encounter the following error:
+
+```shell
+[ERROR STA-0164] .../vsdbabysoc/lib/avsdpll.lib line 54, syntax error
+Error: floorplan.tcl, 4 STA-0164
+```
+
+**Fix:**
+This error is caused by commented block structures in your Liberty file avsdpll.lib. OpenROAD’s parser does not tolerate partially commented blocks like:
+
+```shell
+//pin (GND#2) {
+//  direction : input;
+//  max_transition : 2.5;
+//  capacitance : 0.001;
+//}
+```
+
+✅ To fix it, simply delete the entire commented block starting at line 54:
+
+![Alt Text](Images/error.jpg)
+
+After saving the changes, re-run the floorplan step and the flow should proceed without syntax errors. 
 
 
-         
+![Alt Text](Images/7.jpg)
 
+![Alt Text](Images/8.jpg)
+
+```shell
+spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
+```
+
+![Alt Text](Images/floorpan.jpg)
