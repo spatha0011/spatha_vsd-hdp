@@ -100,46 +100,65 @@
 
 This script sets up environment variables and configurations for the design and synthesis of a System-on-Chip (SoC) using the OpenROAD flow. The design is based on the "vsdbabysoc" and targets the "sky130hd" platform.
 
-### `Key Components`
+### `Key Components of config.mk`
 
 #### Design and Platform Configuration
-- **DESIGN_NICKNAME & DESIGN_NAME**: Both set to "vsdbabysoc," identifying the design project.
-- **PLATFORM**: Specifies the technology platform as "sky130hd."
+- **DESIGN_NICKNAME & DESIGN_NAME**: Both are set to "vsdbabysoc," serving as the identifier for the design project.
+- **PLATFORM**: Specifies the technology platform as "sky130hd," indicating the process node and design rules to be used.
 
 #### Design Paths
-- **vsdbabysoc_DIR**: Defines the directory path for the design files, using the DESIGN_NICKNAME variable.
+- **vsdbabysoc_DIR**: Defines the directory path for the design files as `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc`. This path is constructed using the DESIGN_NICKNAME variable, ensuring consistency and easy access to design resources.
 
 #### Verilog Files for Synthesis
-- **VERILOG_FILES**: Lists the Verilog source files required for synthesis, including the main SoC design and additional modules like `rvmyth` and `clk_gate`.
+- **VERILOG_FILES**: Lists the Verilog source files required for synthesis:
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/src/vsdbabysoc/vsdbabysoc.v`: The main Verilog file for the SoC design.
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/src/vsdbabysoc/rvmyth.v`: A module within the design, possibly a RISC-V core or related component.
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/src/vsdbabysoc/clk_gate.v`: A module for clock gating, used to manage power consumption by controlling clock signals.
 
 #### Verilog Header Files
-- **VERILOG_INCLUDE_DIRS**: Specifies the directory for Verilog header files.
+- **VERILOG_INCLUDE_DIRS**: Specifies the directory for Verilog header files as `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/include`.
 
 #### Constraints and Additional Files
-- **SDC_FILE**: Points to the constraints file for synthesis.
-- **ADDITIONAL_GDS, LEFS, LIBS**: Lists additional GDS, LEF, and LIB files required for the design, including DAC and PLL components.
+- **SDC_FILE**: Points to the constraints file for synthesis located at `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/vsdbabysoc_synthesis.sdc`.
+- **ADDITIONAL_GDS**: Lists additional GDS files required for the design:
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/gds/avsddac.gds`
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/gds/avsdpll.gds`
+- **ADDITIONAL_LEFS**: Lists additional LEF files:
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/lef/avsddac.lef`
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/lef/avsdpll.lef`
+- **ADDITIONAL_LIBS**: Lists additional LIB files:
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/lib/avsddac.lib`
+  - `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/lib/avsdpll.lib`
 
 #### Pin Order and Macro Placement
-- **FP_PIN_ORDER_CFG & MACRO_PLACEMENT_CFG**: Configuration files for pin order and macro placement.
+- **FP_PIN_ORDER_CFG**: Configuration file for pin order located at `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/pin_order.cfg`.
+- **MACRO_PLACEMENT_CFG**: Configuration file for macro placement located at `/home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/macro.cfg`.
 
 #### Clock Configuration
-- **CLOCK_PORT & CLOCK_NET**: Defines the clock port and net.
-- **CLOCK_PERIOD**: Sets the clock period to 20.0 units.
+- **CLOCK_PORT & CLOCK_NET**: Defines the clock port and net as `CLK`.
+- **CLOCK_PERIOD**: Sets the clock period to `20.0` units.
 
 #### Floorplanning Configuration
-- **DIE_AREA & CORE_AREA**: Specifies the die and core area dimensions for floorplanning.
+- **DIE_AREA**: Specifies the die area dimensions as `0 0 1600 1600`.
+- **CORE_AREA**: Specifies the core area dimensions as `20 20 1590 1590`.
 
 #### Placement Configuration
-- **PLACE_PINS_ARGS**: Arguments for pin placement, excluding certain areas on the die.
+- **PLACE_PINS_ARGS**: Arguments for pin placement, excluding certain areas on the die:
+  - `-exclude left:0-600`
+  - `-exclude left:1000-1600`
+  - `-exclude right:*`
+  - `-exclude top:*`
+  - `-exclude bottom:*`
 
 #### Timing and Buffer Tuning
-- **TNS_END_PERCENT**: Sets the target negative slack end percentage.
-- **REMOVE_ABC_BUFFERS**: Enables removal of ABC buffers.
-- **CTS_BUF_DISTANCE**: Sets the buffer distance for clock tree synthesis.
-- **SKIP_GATE_CLONING**: Skips gate cloning during synthesis.
+- **TNS_END_PERCENT**: Sets the target negative slack end percentage to `100`.
+- **REMOVE_ABC_BUFFERS**: Enables removal of ABC buffers, set to `1`.
+- **CTS_BUF_DISTANCE**: Sets the buffer distance for clock tree synthesis to `600`.
+- **SKIP_GATE_CLONING**: Skips gate cloning during synthesis, set to `1`.
 
 #### Magic Tool Configuration
-- **MAGIC_ZEROIZE_ORIGIN & MAGIC_EXT_USE_GDS**: Configurations for the Magic tool, affecting origin zeroization and GDS usage.
+- **MAGIC_ZEROIZE_ORIGIN**: Configuration for zeroizing the origin, set to `0`.
+- **MAGIC_EXT_USE_GDS**: Configuration for using GDS files, set to `1`.
 
 This setup script is crucial for defining the environment and parameters needed for successful synthesis and layout of the "vsdbabysoc" design on the "sky130hd" platform, ensuring that all necessary files and configurations are in place for the design flow.
 
