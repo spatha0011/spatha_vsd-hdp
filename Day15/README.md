@@ -3,6 +3,20 @@
 ## Floorplan and Placement of VSDBabySoC
 
 ### 📚 Contents
+ - [RTL2GDS Flow for VSDBabySoC: Initial Steps](#rtl2gds-flow-for-vsdbabysoc-initial-steps)
+    - [1. Create Directories](#1-create-directories)
+    - [2. Copy Folders](#2-copy-folders)
+    - [3. Copy Constraint and Configuration Files](#3-copy-constraint-and-configuration-files)
+    - [4. Create Config File](#4-create-config-file)
+  - [Directory Structure After Setup](#directory-structure-after-setup)
+  - [Run Synthesis](#run-synthesis)
+    - [Synthesis Netlist](#synthesis-netlist)
+    - [Synthesis Log](#synthesis-log)
+    - [Synthesis Check](#synthesis-check)
+    - [Synthesis Stats](#synthesis-stats)
+  - [Run Floorplan](#run-floorplan)
+    - [Floorplan Error and Fix](#floorplan-error-and-fix)
+    - [Floorplan Result (GUI)](#floorplan-result-gui)
 
 ###  `RTL2GDS Flow for VSDBabySoC: Initial Steps`
 
@@ -281,11 +295,13 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
      of which used for sequential elements: 22901.964800 (43.27%)
 ```
 
-#### Commands for floorplan:
+#### Run Floorplan
 
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
 ```
+
+#### Floorplan Error and Fix
 
 ❗**Note:** You may encounter the following error:
 
@@ -311,13 +327,14 @@ This error is caused by commented block structures in your Liberty file avsdpll.
 
 After saving the changes, re-run the floorplan step and the flow should proceed without syntax errors. 
 
-
 ![Alt Text](Images/7.jpg)
 
 ![Alt Text](Images/8.jpg)
+
+#### Floorplan Result (GUI)
 
 ```shell
 spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
 ```
 
-![Alt Text](Images/floorpan.jpg)
+![Alt Text](Images/floorplan.jpg)
