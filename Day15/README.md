@@ -163,7 +163,7 @@ This script sets up environment variables and configurations for the design and 
 
 This setup script is crucial for defining the environment and parameters needed for successful synthesis and layout of the "vsdbabysoc" design on the "sky130hd" platform, ensuring that all necessary files and configurations are in place for the design flow.
 
-**Below is a sample view of the file structure after setup:**
+### `File Structure After Setup`
 
 ```shell
 spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ ls -ltrh designs/src/vsdbabysoc/
@@ -201,7 +201,7 @@ source env.sh
 cd flow
 ```
    
-#### Run Synthesis
+### `Run Synthesis`
 
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
@@ -367,7 +367,7 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
 ```
 </details>
 
-#### Run Floorplan
+### `Run Floorplan`
 
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
@@ -411,7 +411,7 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ make DESIGN_CONFIG=./desi
 
 ![Alt Text](Images/floorplan.jpg)
 
-#### Run Placement
+### `Run Placement`
 
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
