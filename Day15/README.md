@@ -117,4 +117,174 @@ lrwxrwxrwx 1 spatha spatha   69 Jun 29 15:55 pin_order.cfg -> /home/spatha/VLSI/
 drwxrwxr-x 2 spatha spatha 4.0K Jun 29 16:06 lib
 ```
 
+#### Now go to terminal and run the following commands:
+cd OpenROAD-flow-scripts
+source env.sh
+cd flow
+   
+#### Commands for synthesis:
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
+
+![Alt Text](Images/1.jpg)
+
+![Alt Text](Images/2.jpg)
+
+#### Synthesis netlist
+
+```shell
+patha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim results/sky130hd/vsdbabysoc/base/1_1_yosys.v
+```
+![Alt Text](Images/3.jpg)
+
+#### Synthesis log
+
+```shell
+spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim logs/sky130hd/vsdbabysoc/base/1_1_yosys.log
+```
+![Alt Text](Images/4.jpg)
+
+#### Synthesis Check
+
+```shell
+spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsdbabysoc/base/synth_check.txt
+```
+![Alt Text](Images/5.jpg)
+
+
+#### Synthesis Stats
+```shell
+spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsdbabysoc/base/synth_stat.txt
+```
+<details>
+<summary>VSDBabySoC Yosys Statistics</summary>
+```shell
+20. Printing statistics.
+
+=== vsdbabysoc ===
+
+   Number of wires:               6551
+   Number of wire bits:           6551
+   Number of public wires:        1285
+   Number of public wire bits:    1285
+   Number of ports:                  7
+   Number of port bits:              7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6440
+     avsddac                         1
+     avsdpll                         1
+     sky130_fd_sc_hd__a2111o_1       1
+     sky130_fd_sc_hd__a2111oi_0      3
+     sky130_fd_sc_hd__a2111oi_2      1
+     sky130_fd_sc_hd__a211o_1        9
+     sky130_fd_sc_hd__a211o_2        1
+     sky130_fd_sc_hd__a211oi_1      47
+     sky130_fd_sc_hd__a21bo_2        1
+     sky130_fd_sc_hd__a21boi_1       1
+     sky130_fd_sc_hd__a21o_1        29
+     sky130_fd_sc_hd__a21oi_1      816
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a221o_1       10
+     sky130_fd_sc_hd__a221oi_1      51
+     sky130_fd_sc_hd__a221oi_2       4
+     sky130_fd_sc_hd__a22o_1        45
+     sky130_fd_sc_hd__a22oi_1      183
+     sky130_fd_sc_hd__a22oi_2        1
+     sky130_fd_sc_hd__a2bb2oi_1      4
+     sky130_fd_sc_hd__a311o_1        3
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__a311oi_1      37
+     sky130_fd_sc_hd__a311oi_2       1
+     sky130_fd_sc_hd__a31o_2        16
+     sky130_fd_sc_hd__a31oi_1       44
+     sky130_fd_sc_hd__a31oi_2        1
+     sky130_fd_sc_hd__a32o_1         2
+     sky130_fd_sc_hd__a32oi_1        5
+     sky130_fd_sc_hd__a41o_1         4
+     sky130_fd_sc_hd__a41oi_1        3
+     sky130_fd_sc_hd__a41oi_2        2
+     sky130_fd_sc_hd__and2_0         2
+     sky130_fd_sc_hd__and2_1        22
+     sky130_fd_sc_hd__and3_1        38
+     sky130_fd_sc_hd__and4_1         3
+     sky130_fd_sc_hd__buf_1         38
+     sky130_fd_sc_hd__buf_2         35
+     sky130_fd_sc_hd__buf_4          8
+     sky130_fd_sc_hd__buf_6          7
+     sky130_fd_sc_hd__buf_8          2
+     sky130_fd_sc_hd__clkbuf_1     502
+     sky130_fd_sc_hd__clkbuf_2       7
+     sky130_fd_sc_hd__clkbuf_8       1
+     sky130_fd_sc_hd__clkinv_1       6
+     sky130_fd_sc_hd__conb_1         1
+     sky130_fd_sc_hd__dfxtp_1     1144
+     sky130_fd_sc_hd__fa_1           4
+     sky130_fd_sc_hd__ha_1         101
+     sky130_fd_sc_hd__inv_1         94
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_2        39
+     sky130_fd_sc_hd__mux2i_1       76
+     sky130_fd_sc_hd__mux2i_2        3
+     sky130_fd_sc_hd__mux2i_4        4
+     sky130_fd_sc_hd__mux4_1        12
+     sky130_fd_sc_hd__mux4_2        79
+     sky130_fd_sc_hd__nand2_1     1371
+     sky130_fd_sc_hd__nand2b_1      24
+     sky130_fd_sc_hd__nand3_1      228
+     sky130_fd_sc_hd__nand3b_1      37
+     sky130_fd_sc_hd__nand4_1       51
+     sky130_fd_sc_hd__nand4b_1       1
+     sky130_fd_sc_hd__nor2_1       264
+     sky130_fd_sc_hd__nor2b_1       54
+     sky130_fd_sc_hd__nor3_1        52
+     sky130_fd_sc_hd__nor3b_1        7
+     sky130_fd_sc_hd__nor4_1        20
+     sky130_fd_sc_hd__o2111ai_1      1
+     sky130_fd_sc_hd__o211a_1        1
+     sky130_fd_sc_hd__o211ai_1      48
+     sky130_fd_sc_hd__o211ai_2       4
+     sky130_fd_sc_hd__o21a_1        28
+     sky130_fd_sc_hd__o21ai_0      385
+     sky130_fd_sc_hd__o21ai_1       22
+     sky130_fd_sc_hd__o21ai_2        9
+     sky130_fd_sc_hd__o21ba_2        2
+     sky130_fd_sc_hd__o21bai_1       8
+     sky130_fd_sc_hd__o221a_2        2
+     sky130_fd_sc_hd__o221ai_1      19
+     sky130_fd_sc_hd__o22a_1        33
+     sky130_fd_sc_hd__o22ai_1       17
+     sky130_fd_sc_hd__o2bb2ai_1      6
+     sky130_fd_sc_hd__o311a_1        3
+     sky130_fd_sc_hd__o311ai_0       4
+     sky130_fd_sc_hd__o311ai_1       2
+     sky130_fd_sc_hd__o31a_1         7
+     sky130_fd_sc_hd__o31ai_1       34
+     sky130_fd_sc_hd__o31ai_4        1
+     sky130_fd_sc_hd__o32a_1         2
+     sky130_fd_sc_hd__o32ai_1        3
+     sky130_fd_sc_hd__o41ai_1        4
+     sky130_fd_sc_hd__o41ai_2        1
+     sky130_fd_sc_hd__or2_1          1
+     sky130_fd_sc_hd__or2_2          8
+     sky130_fd_sc_hd__or3_1         20
+     sky130_fd_sc_hd__or3b_1         2
+     sky130_fd_sc_hd__or3b_2         2
+     sky130_fd_sc_hd__or4_1          9
+     sky130_fd_sc_hd__or4b_2         1
+     sky130_fd_sc_hd__xnor2_1       57
+     sky130_fd_sc_hd__xor2_1        27
+
+   Area for cell type \avsddac is unknown!
+   Area for cell type \avsdpll is unknown!
+
+   Chip area for module '\vsdbabysoc': 52933.267200
+     of which used for sequential elements: 22901.964800 (43.27%)
+```
+</details>
+
+
+
+
+         
 
