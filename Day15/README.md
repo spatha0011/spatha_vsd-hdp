@@ -4,6 +4,7 @@
 
 ### 📚 Contents
  - [RTL2GDS Flow for VSDBabySoC: Initial Steps](#rtl2gds-flow-for-vsdbabysoc-initial-steps)
+    - [Key Components of config.mk](#key-components-of-config.mk)
   - [Run Synthesis](#run-synthesis)
     - [Synthesis Netlist](#synthesis-netlist)
     - [Synthesis Log](#synthesis-log)
