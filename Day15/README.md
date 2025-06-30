@@ -170,7 +170,7 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
 spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsdbabysoc/base/synth_stat.txt
 ```
 
-<details> <summary>synth_stat.txt<strong></strong></summary>
+<details> <summary><strong>synth_stat.txt<strong></strong></summary>
 
 ```
 20. Printing statistics.
