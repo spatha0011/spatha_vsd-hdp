@@ -4,11 +4,6 @@
 
 ### 📚 Contents
  - [RTL2GDS Flow for VSDBabySoC: Initial Steps](#rtl2gds-flow-for-vsdbabysoc-initial-steps)
-    - [1. Create Directories](#1-create-directories)
-    - [2. Copy Folders](#2-copy-folders)
-    - [3. Copy Constraint and Configuration Files](#3-copy-constraint-and-configuration-files)
-    - [4. Create Config File](#4-create-config-file)
-  - [Directory Structure After Setup](#directory-structure-after-setup)
   - [Run Synthesis](#run-synthesis)
     - [Synthesis Netlist](#synthesis-netlist)
     - [Synthesis Log](#synthesis-log)
