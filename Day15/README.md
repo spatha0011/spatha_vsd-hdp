@@ -102,8 +102,9 @@
 
 This script sets up environment variables and configurations for the design and synthesis of a System-on-Chip (SoC) using the OpenROAD flow. The design is based on the "vsdbabysoc" and targets the "sky130hd" platform.
 
+--------
+
 ### `Key Components of config.mk`
-------------
 
 #### Design and Platform Configuration
 - **DESIGN_NICKNAME & DESIGN_NAME**: Both are set to "vsdbabysoc," serving as the identifier for the design project.
@@ -202,7 +203,8 @@ cd OpenROAD-flow-scripts
 source env.sh
 cd flow
 ```
-   
+----
+ 
 ### `Run Synthesis`
 
 ```shell
@@ -369,6 +371,8 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
 ```
 </details>
 
+----------
+
 ### `Run Floorplan`
 
 ```shell
@@ -412,6 +416,8 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ make DESIGN_CONFIG=./desi
 ```
 
 ![Alt Text](Images/floorplan.jpg)
+
+------
 
 ### `Run Placement`
 
