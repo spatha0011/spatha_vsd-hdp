@@ -1,1 +1,71 @@
+# VSD Hardware Design Program
 
+##  Advanced Physical Design using OpenLane
+
+### OpenLane ASIC Flow:
+
+The OpenLane flow is an automated, open-source framework designed to convert RTL designs into manufacturable layouts, integrating multiple stages of the digital IC design process. Starting with RTL synthesis using Yosys and ABC, the flow performs static timing analysis (STA) with OpenSTA and incorporates Design for Testability (DFT) to ensure fault coverage. The OpenROAD App facilitates floorplanning, placement, clock tree synthesis (CTS), optimization, and global routing, streamlining the physical design process. Custom scripts handle antenna diode insertion, while Yosys performs Logic Equivalence Checking (LEC) to verify design integrity. TritonRoute manages detailed routing, ensuring signal integrity and minimizing congestion. RC extraction is conducted using DEF2SPEF, followed by STA to confirm timing compliance. Magic and Netgen are employed for physical verification, including Design Rule Checking (DRC) and Layout vs. Schematic (LVS) checks, ensuring the design adheres to manufacturing constraints. The final output is a GDSII/LEF file, ready for fabrication, supported by the SW PDK which provides technology-specific data and libraries. This comprehensive flow enables efficient design exploration and optimization, leveraging open-source tools to deliver high-quality, manufacturable designs.
+
+![Alt Text](Images/openlane.jpeg)
+
+The OpenLane flow utilizes a suite of open-source tools to efficiently transform RTL designs into manufacturable layouts. Each stage of the design process is supported by specialized tools, ensuring optimal performance and compliance with design rules.
+
+#### RTL Synthesis, Technology Mapping, and Formal Verification
+- **Tools Used**: 
+  - **Yosys**: For RTL synthesis, converting high-level design into a gate-level netlist.
+  - **ABC**: For technology mapping and formal verification, optimizing logic for specific technology nodes.
+
+#### Static Timing Analysis
+- **Tools Used**: 
+  - **OpenSTA**: For static timing analysis, ensuring the design meets timing constraints.
+
+#### Floor Planning
+- **Tools Used**: 
+  - **init_fp**: For initial floorplanning, defining the physical layout of the chip.
+  - **ioPlacer**: For I/O placement, organizing input/output pins efficiently.
+  - **pdn**: For power distribution network planning, ensuring robust power delivery.
+  - **tapcell**: For tap cell insertion, maintaining well connections across the design.
+
+#### Placement
+- **Tools Used**: 
+  - **RePLace**: For global placement, arranging standard cells within the floorplan.
+  - **Resizer**: Optional tool for resizing cells to optimize area and performance.
+  - **OpenPhySyn**: Formerly used for placement optimization.
+  - **OpenDP**: For detailed placement, finalizing cell positions.
+
+#### Clock Tree Synthesis
+- **Tools Used**: 
+  - **TritonCTS**: For clock tree synthesis, distributing clock signals uniformly.
+
+#### Fill Insertion
+- **Tools Used**: 
+  - **OpenDP**: For filler placement, ensuring density requirements are met.
+
+#### Routing
+- **Tools Used**: 
+  - **FastRoute or CU-GR**: Formerly used for global routing.
+  - **TritonRoute**: For detailed routing, ensuring signal integrity and minimizing congestion.
+  - **DR-CU**: Formerly used for detailed routing.
+
+### SPEF Extraction
+- **Tools Used**: 
+  - **OpenRCX**: For Standard Parasitic Exchange Format (SPEF) extraction, capturing parasitic effects.
+  - **SPEF-Extractor**: Formerly used for SPEF extraction.
+
+### GDSII Streaming Out
+- **Tools Used**: 
+  - **Magic and KLayout**: For viewing and editing GDSII files, preparing for fabrication.
+
+### Design Rule Checking (DRC) Checks
+- **Tools Used**: 
+  - **Magic and KLayout**: For DRC checks, ensuring compliance with manufacturing rules.
+
+### Layout vs. Schematic (LVS) Check
+- **Tools Used**: 
+  - **Netgen**: For LVS checks, verifying the layout matches the schematic.
+
+### Antenna Checks
+- **Tools Used**: 
+  - **Magic**: For antenna checks, preventing damage during fabrication.
+
+This toolchain provides a robust framework for digital IC design, leveraging open-source tools to deliver high-quality, manufacturable designs efficiently.
