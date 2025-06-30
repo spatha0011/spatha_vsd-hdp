@@ -118,8 +118,8 @@ display
 .endc
 
 .end
-</details>
 ```
+</details>
 
 📈**plot the waveforms in ngspice**
 
