@@ -71,3 +71,19 @@ The OpenLane flow utilizes a suite of open-source tools to efficiently transform
   - **Magic**: For antenna checks, preventing damage during fabrication.
 
 This toolchain provides a robust framework for digital IC design, leveraging open-source tools to deliver high-quality, manufacturable designs efficiently.
+
+###  OpenLANE Directory Structure
+
+The OpenLANE directory structure is organized to facilitate efficient design and process management for digital IC design using open-source tools. Below is an overview of the directory structure and its contents:
+
+├── OOpenLane             -> directory where the tool can be invoked (run docker first)
+│   ├── designs          -> All designs must be extracted from this folder
+│   │   │   ├── picorv32a -> Design used as case study for this workshop
+│   |   |   ├── ...
+|   |   ├── ...
+├── pdks                 -> contains pdk related files 
+│   ├── skywater-pdk     -> all Skywater 130nm PDKs
+│   ├── open-pdks        -> contains scripts that makes the commerical PDK (which is normally just compatible to commercial tools) to also be compatible with the open-source EDA tool
+│   ├── sky130A          -> pdk variant made especially compatible for open-source tools
+│   │   │  ├── libs.ref  -> files specific to node process (timing lib, cell lef, tech lef) for example is `sky130_fd_sc_hd` (Sky130nm Foundry Standard Cell High Density)  
+│   │   │  ├── libs.tech -> files specific for the tool (klayout,netgen,magic...) 
