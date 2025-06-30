@@ -47,24 +47,24 @@ The OpenLane flow utilizes a suite of open-source tools to efficiently transform
   - **TritonRoute**: For detailed routing, ensuring signal integrity and minimizing congestion.
   - **DR-CU**: Formerly used for detailed routing.
 
-### SPEF Extraction
+#### SPEF Extraction
 - **Tools Used**: 
   - **OpenRCX**: For Standard Parasitic Exchange Format (SPEF) extraction, capturing parasitic effects.
   - **SPEF-Extractor**: Formerly used for SPEF extraction.
 
-### GDSII Streaming Out
+#### GDSII Streaming Out
 - **Tools Used**: 
   - **Magic and KLayout**: For viewing and editing GDSII files, preparing for fabrication.
 
-### Design Rule Checking (DRC) Checks
+#### Design Rule Checking (DRC) Checks
 - **Tools Used**: 
   - **Magic and KLayout**: For DRC checks, ensuring compliance with manufacturing rules.
 
-### Layout vs. Schematic (LVS) Check
+#### Layout vs. Schematic (LVS) Check
 - **Tools Used**: 
   - **Netgen**: For LVS checks, verifying the layout matches the schematic.
 
-### Antenna Checks
+#### Antenna Checks
 - **Tools Used**: 
   - **Magic**: For antenna checks, preventing damage during fabrication.
 
