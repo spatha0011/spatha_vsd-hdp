@@ -35,8 +35,9 @@
 4. **Create Config File:**
    - Create a `config.mk` file in `sky130hd/vsdbabysoc` with the required configuration details. 
 
- ##### The file details are given below:
- ```shell
+<details> <summary><strong>config.mk</strong></summary>
+
+```
   # Design and Platform Configuration
    export DESIGN_NICKNAME = vsdbabysoc
    export DESIGN_NAME = vsdbabysoc
@@ -95,7 +96,52 @@
    export MAGIC_ZEROIZE_ORIGIN = 0
    export MAGIC_EXT_USE_GDS    = 1
 ```
- 
+</details>
+
+This script sets up environment variables and configurations for the design and synthesis of a System-on-Chip (SoC) using the OpenROAD flow. The design is based on the "vsdbabysoc" and targets the "sky130hd" platform.
+
+### Key Components
+
+#### Design and Platform Configuration
+- **DESIGN_NICKNAME & DESIGN_NAME**: Both set to "vsdbabysoc," identifying the design project.
+- **PLATFORM**: Specifies the technology platform as "sky130hd."
+
+#### Design Paths
+- **vsdbabysoc_DIR**: Defines the directory path for the design files, using the DESIGN_NICKNAME variable.
+
+#### Verilog Files for Synthesis
+- **VERILOG_FILES**: Lists the Verilog source files required for synthesis, including the main SoC design and additional modules like `rvmyth` and `clk_gate`.
+
+#### Verilog Header Files
+- **VERILOG_INCLUDE_DIRS**: Specifies the directory for Verilog header files.
+
+#### Constraints and Additional Files
+- **SDC_FILE**: Points to the constraints file for synthesis.
+- **ADDITIONAL_GDS, LEFS, LIBS**: Lists additional GDS, LEF, and LIB files required for the design, including DAC and PLL components.
+
+#### Pin Order and Macro Placement
+- **FP_PIN_ORDER_CFG & MACRO_PLACEMENT_CFG**: Configuration files for pin order and macro placement.
+
+#### Clock Configuration
+- **CLOCK_PORT & CLOCK_NET**: Defines the clock port and net.
+- **CLOCK_PERIOD**: Sets the clock period to 20.0 units.
+
+#### Floorplanning Configuration
+- **DIE_AREA & CORE_AREA**: Specifies the die and core area dimensions for floorplanning.
+
+#### Placement Configuration
+- **PLACE_PINS_ARGS**: Arguments for pin placement, excluding certain areas on the die.
+
+#### Timing and Buffer Tuning
+- **TNS_END_PERCENT**: Sets the target negative slack end percentage.
+- **REMOVE_ABC_BUFFERS**: Enables removal of ABC buffers.
+- **CTS_BUF_DISTANCE**: Sets the buffer distance for clock tree synthesis.
+- **SKIP_GATE_CLONING**: Skips gate cloning during synthesis.
+
+#### Magic Tool Configuration
+- **MAGIC_ZEROIZE_ORIGIN & MAGIC_EXT_USE_GDS**: Configurations for the Magic tool, affecting origin zeroization and GDS usage.
+
+This setup script is crucial for defining the environment and parameters needed for successful synthesis and layout of the "vsdbabysoc" design on the "sky130hd" platform, ensuring that all necessary files and configurations are in place for the design flow.
 
 **Below is a sample view of the file structure after setup:**
 
