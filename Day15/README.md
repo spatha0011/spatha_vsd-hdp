@@ -155,8 +155,7 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
 ```shell
 spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsdbabysoc/base/synth_stat.txt
 ```
-<details>
-<summary>VSDBabySoC Yosys Statistics</summary>
+
 ```shell
 20. Printing statistics.
 
@@ -281,7 +280,6 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
    Chip area for module '\vsdbabysoc': 52933.267200
      of which used for sequential elements: 22901.964800 (43.27%)
 </details>
-```
 
 
 
