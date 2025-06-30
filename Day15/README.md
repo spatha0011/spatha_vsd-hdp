@@ -445,7 +445,7 @@ This command executes the placement process for the `vsdbabysoc` design, utilizi
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 ```
 
-![Alt Text](Images/11.jpg)
+![Alt Text](Images/new.png.jpg)
 
 To view the Placement Density heatmap in OpenROAD:
 
