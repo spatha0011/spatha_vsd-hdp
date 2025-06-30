@@ -134,12 +134,16 @@ drwxrwxr-x 2 spatha spatha 4.0K Jun 29 16:06 lib
 ```
 
 #### Now go to terminal and run the following commands:
+`shell
 cd OpenROAD-flow-scripts
 source env.sh
 cd flow
+```
    
 #### Run Synthesis
+```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
+```
 
 ![Alt Text](Images/1.jpg)
 
