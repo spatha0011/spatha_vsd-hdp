@@ -131,7 +131,6 @@ exit
 
 ![Alt Text](Images/1.jpg)
 
-<p float="left">
-  <img src="Images/2.jpg" width="48%" />
-  <img src="Images/3.jpg" width="48%" />
-</p>
+![Alt Text](Images/2.jpg)
+
+![Alt Text](Images/3.jpg)
