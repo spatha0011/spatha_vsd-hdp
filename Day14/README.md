@@ -71,7 +71,7 @@ make
 
 ✅ Installation Complete! You can now explore the full RTL-to-GDSII flow using OpenROAD.
 
-### ORFS Directory Structure and File formats
+### `ORFS Directory Structure and File formats`
 
 OpenROAD-flow-scripts/
 
