@@ -198,9 +198,13 @@ drwxrwxr-x 2 spatha spatha 4.0K Jun 29 16:06 lib
 ```
 
 #### Now go to terminal and run the following commands:
+
 ```shell
+# Navigate to the OpenROAD flow scripts directory
 cd OpenROAD-flow-scripts
+# Source the environment setup script
 source env.sh
+# Change to the flow directory
 cd flow
 ```
 ----
@@ -208,8 +212,11 @@ cd flow
 ### `Run Synthesis`
 
 ```shell
+# Ensure you are in the 'flow' directory before running the synthesis command
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
 ```
+
+This command runs the synthesis process using the specified design configuration file `config.mk` for the `vsdbabysoc` design on the `sky130hd` platform.
 
 ![Alt Text](Images/1.jpg)
 
@@ -379,6 +386,8 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
 ```
 
+This command initiates the floorplanning process for the `vsdbabysoc` design using the specified configuration file `config.mk` on the `sky130hd` platform.
+
 #### Floorplan Error and Fix
 
 ❗**Note:** You may encounter the following error:
@@ -424,6 +433,7 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ make DESIGN_CONFIG=./desi
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
 ```
+This command executes the placement process for the `vsdbabysoc` design, utilizing the configuration file `config.mk` on the `sky130hd` platform to arrange the circuit components optimally within the defined floorplan.
 
 ![Alt Text](Images/9.jpg)
 
