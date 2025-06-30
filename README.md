@@ -21,3 +21,4 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 | **Day 12** | [**CMOS power supply and device variation robustness evaluation**](Day12/README.md) | **✅ Done** |
 | **Day 13** | [**Inception of open-source EDA, OpenROAD and Sky130 PDK**](Day13/README.md) | **✅ Done** |
 | **Day 14** | [**OpenROAD installation guide**](Day14/README.md) | **✅ Done** |
+| **Day 15** | [**Floorplan and Placement of VSDBabySoC**](Day15/README.md) | **✅ Done** |
