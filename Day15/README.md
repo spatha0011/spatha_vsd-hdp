@@ -138,7 +138,7 @@ cd OpenROAD-flow-scripts
 source env.sh
 cd flow
    
-#### Commands for synthesis:
+#### Run Synthesis
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
 
 ![Alt Text](Images/1.jpg)
