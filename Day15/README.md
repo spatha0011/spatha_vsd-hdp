@@ -279,7 +279,7 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
 
    Chip area for module '\vsdbabysoc': 52933.267200
      of which used for sequential elements: 22901.964800 (43.27%)
-</details>
+```
 
 
 
