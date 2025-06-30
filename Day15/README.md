@@ -449,7 +449,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 
 To view the Placement Density heatmap in OpenROAD:
 
-Go to **Tools → Heat maps → Placement Density**
+Go to **Tools → Heat maps → Placement Density** → **✓ Show numbers**
 
 ![Alt Text](Images/density.png)
 
