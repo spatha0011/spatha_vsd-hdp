@@ -138,3 +138,26 @@ exit
 ![Alt Text](Images/4.jpg)
 
 ![Alt Text](Images/5.jpg)
+
+#### To view the netlist:
+
+```shell
+# Navigate to the directory containing synthesis results
+cd ~/openlane_working_dir/openlane/designs/picorv32a/runs/30-06_21-13/results/synthesis/
+# Open the synthesized netlist file using gvim
+gvim picorv32a.synthesis.v
+```
+![Alt Text](Images/6.jpg)
+
+#### To view the yosys report:
+
+```shell
+cd ~/openlane_working_dir/openlane/designs/picorv32a/runs/30-06_21-13/reports/synthesis/
+gvim 1-yosys_4.stat.rpt
+```
+
+<details> <summary><strong>yosys_4.stat.rpt</strong></summary>
+
+```
+```
+</details>
