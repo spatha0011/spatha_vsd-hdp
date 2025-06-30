@@ -95,7 +95,7 @@ The OpenLANE directory structure is organized to facilitate efficient design and
 First, clone the necessary files from the GitHub repository to your local machine:
 
 ```shell
-git clone https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd.git
+git clone https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd
 ```
 
 Commands to invoke the OpenLANE flow and perform synthesis
@@ -134,3 +134,7 @@ exit
 ![Alt Text](Images/2.jpg)
 
 ![Alt Text](Images/3.jpg)
+
+![Alt Text](Images/4.jpg)
+
+![Alt Text](Images/5.jpg)
