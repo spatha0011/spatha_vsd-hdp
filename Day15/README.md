@@ -100,7 +100,7 @@
 
 This script sets up environment variables and configurations for the design and synthesis of a System-on-Chip (SoC) using the OpenROAD flow. The design is based on the "vsdbabysoc" and targets the "sky130hd" platform.
 
-### Key Components
+### `Key Components`
 
 #### Design and Platform Configuration
 - **DESIGN_NICKNAME & DESIGN_NAME**: Both set to "vsdbabysoc," identifying the design project.
@@ -219,7 +219,8 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
 spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsdbabysoc/base/synth_stat.txt
 ```
 
-**synth_stat.txt**
+<details> <summary><strong>synth_stat.txt</strong></summary>
+
 ```
 20. Printing statistics.
 
@@ -344,6 +345,7 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
    Chip area for module '\vsdbabysoc': 52933.267200
      of which used for sequential elements: 22901.964800 (43.27%)
 ```
+</details>
 
 #### Run Floorplan
 
