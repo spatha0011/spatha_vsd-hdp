@@ -4,7 +4,8 @@
 
 ### 📚 Contents
  - [RTL2GDS Flow for VSDBabySoC: Initial Steps](#rtl2gds-flow-for-vsdbabysoc-initial-steps)
-    - [Key Components of config.mk](#key-components-of-config.mk)
+    - [Key Components of config.mk](#key-components-of-configmk)
+    - [File Structure After Setup](#file-structure-after-setup)
   - [Run Synthesis](#run-synthesis)
     - [Synthesis Netlist](#synthesis-netlist)
     - [Synthesis Log](#synthesis-log)
@@ -102,6 +103,7 @@
 This script sets up environment variables and configurations for the design and synthesis of a System-on-Chip (SoC) using the OpenROAD flow. The design is based on the "vsdbabysoc" and targets the "sky130hd" platform.
 
 ### `Key Components of config.mk`
+------------
 
 #### Design and Platform Configuration
 - **DESIGN_NICKNAME & DESIGN_NAME**: Both are set to "vsdbabysoc," serving as the identifier for the design project.
