@@ -282,3 +282,14 @@ Flop Ratio = Number of D Flip-Flops / Total Number of Cells
            = 1613 / 15134
            ≈ 0.1065
 ```
+
+📍**NOTE:** The order of precedence of the config files in the OpenLANE flow is as follows, with the settings in the highest priority config overriding the values set in the previous config files:
+
+**_From lowest to highest:_**
+
+- Default OpenLANE config values
+- openlane/designs//config.tcl
+- openlane/designs//sky130A_sky130_fd_sc_hd_config.tcl
+
+### `Good floorplan vs bad floorplan and introduction to library cells`
+
