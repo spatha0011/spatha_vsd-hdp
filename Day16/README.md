@@ -300,18 +300,20 @@ Flop Ratio = Number of D Flip-Flops / Total Number of Cells
            * Utilization Factor = (Area occupied by netlist)/(Total area of the core)
            * Usually we aim for 50-60 % Utilization Factor
         * Aspect Ratio = Height/ Width
-        
-  2) Define locations of pre-placed cells (macros and IPs ?)
+
+      ![Alt Text](Images/fp1.jpeg)
+     
+  3) Define locations of pre-placed cells (macros and IPs ?)
        * IPs/ blocks have user-defined locations and hence placed before automated PnR and are called as pre-placed cells
        * Automated PnR tools places the remaining logical cells in the design onto the chip
         
-  3) Decaps
+  4) Decaps
        * Decouples the circuit from the VDD rail
        * Reduce Zpdn for the required frequencies of operation
        * Serve as a charge reservoir for the switching current demands that the VDD rail cannot satisfy.
        * Surround pre-placed cells with Decaps to compensate for the switching current demands (di/dt)
         
-  4) Power Planning
+  5) Power Planning
      * SSN
        * L*di/dt
          * Discharging : Ground bounce
@@ -320,10 +322,10 @@ Flop Ratio = Number of D Flip-Flops / Total Number of Cells
          * Power grid
          * Multiple VDD, VSS pins/ balls 
     
-  5) Pin Placement
+  6) Pin Placement
      * Usually: East -> West, North -> South, {East, North} -> {West, South}
      * Pin ordering is random (unless we specify explicitly ?)
      * Front-End to Back-End team communication/ handshaking needed for optimal pin placement
      * CLK ports/ pins are usually bigger to reduce the clk net resistance
         
-  6) Logical Cell placement blockage - so that no cells are placed by the PnR tool inside the IP blocks/ macro area.
+  7) Logical Cell placement blockage - so that no cells are placed by the PnR tool inside the IP blocks/ macro area.
