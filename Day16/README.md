@@ -297,7 +297,7 @@ Flop Ratio = Number of D Flip-Flops / Total Number of Cells
 
   1) Utilization factor and aspect ratio
        * Define W, H of core and die
-           * Utilization Factor = (Area occupied by netlist)/(Total area of the core)*
+           * Utilization Factor = (Area occupied by netlist)/(Total area of the core)
            * Usually we aim for 50-60 % Utilization Factor
         * Aspect Ratio = Height/ Width
         
