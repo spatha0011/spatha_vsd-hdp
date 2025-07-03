@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## Floorplan and Placement of VSDBabySoC
+## Floorplan and Placement of VSDBabySoC in OpenROAD
 
 ### 📚 Contents
  - [RTL2GDS Flow for VSDBabySoC: Initial Steps](#rtl2gds-flow-for-vsdbabysoc-initial-steps)
