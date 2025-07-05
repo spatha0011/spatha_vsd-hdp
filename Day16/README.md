@@ -106,7 +106,7 @@ This toolchain provides a robust framework for digital IC design, leveraging ope
 The OpenLANE directory structure is organized to facilitate efficient design and process management for digital IC design using open-source tools. Below is an overview of the directory structure and its contents:
 
 ```text
-├── OOpenLane             -> directory where the tool can be invoked (run docker first)
+├── OpenLane             -> directory where the tool can be invoked (run docker first)
 │   ├── designs          -> All designs must be extracted from this folder
 │   │   │   ├── picorv32a -> Design used as case study for this workshop
 │   |   |   ├── ...
