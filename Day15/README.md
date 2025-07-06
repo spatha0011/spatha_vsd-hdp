@@ -421,7 +421,7 @@ After saving the changes, re-run the floorplan step and the flow should proceed 
 #### Floorplan Result (GUI)
 
 ```shell
-spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
 ```
 
 ![Alt Text](Images/floorplan.jpg)
