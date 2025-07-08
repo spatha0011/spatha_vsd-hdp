@@ -64,6 +64,9 @@ This method resizes the `.vdi` file from the host OS (Windows) and expands the p
     - Drag the slider to use all **unallocated space**
     - Click **Apply**
 
+
+![Alt Text](Images/2.jpg)
+
 5. Once done, verify the new size:
 
     ```bash
