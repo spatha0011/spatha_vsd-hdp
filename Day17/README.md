@@ -1,4 +1,4 @@
-# 🧠 Expand Ubuntu VM Disk Space in VirtualBox
+# 🚀 Expand Ubuntu VM Disk Space in VirtualBox
 
 A quick guide to increase disk size for an Ubuntu virtual machine running inside VirtualBox.  
 This method resizes the `.vdi` file from the host OS (Windows) and expands the partition inside Ubuntu using GParted.
