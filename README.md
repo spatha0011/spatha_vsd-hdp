@@ -23,3 +23,4 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 | **Day 14** | [**OpenROAD installation guide**](Day14/README.md) | **✅ Done** |
 | **Day 15** | [**Floorplan and Placement of VSDBabySoC in OpenROAD**](Day15/README.md) | **✅ Done** |
 | **Day 16** | [**Advanced Physical Design using OpenLane**](Day16/README.md) | **ℹ️In progress** |
+| **Day 17** | [**Expand Ubuntu VM Disk Space in VirtualBox**](Day17/README.md) | **✅ Done** |
