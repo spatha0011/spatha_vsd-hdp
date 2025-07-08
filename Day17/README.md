@@ -82,7 +82,7 @@ Your Ubuntu VM now has expanded disk space available
 
 ---
 
-## 📎 Notes
+## Notes
 
 - This method works for **VDI** files only (for VMDK, you must convert first).
 - It is **non-destructive** — your data remains safe.
