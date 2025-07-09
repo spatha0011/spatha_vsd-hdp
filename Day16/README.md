@@ -126,7 +126,6 @@ The OpenLANE directory structure is organized to facilitate efficient design and
 - Default OpenLANE config values
 - openlane/designs/config.tcl
 - openlane/designs/sky130A_sky130_fd_sc_hd_config.tcl
-![image](https://github.com/user-attachments/assets/0c3b20b3-9495-45dc-a129-576ab0e8601c)
 
 ### `Good floorplan vs bad floorplan and introduction to library cells`
 
