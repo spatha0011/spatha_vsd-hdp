@@ -119,6 +119,15 @@ The OpenLANE directory structure is organized to facilitate efficient design and
 │   │   │  ├── libs.tech -> files specific for the tool (klayout,netgen,magic...) 
 ```
 
+📍**NOTE:** The order of precedence of the config files in the OpenLANE flow is as follows, with the settings in the highest priority config overriding the values set in the previous config files:
+
+**_From lowest to highest:_**
+
+- Default OpenLANE config values
+- openlane/designs/config.tcl
+- openlane/designs/sky130A_sky130_fd_sc_hd_config.tcl
+![image](https://github.com/user-attachments/assets/0c3b20b3-9495-45dc-a129-576ab0e8601c)
+
 ### `Good floorplan vs bad floorplan and introduction to library cells`
 
 #### Floorplan considerations
