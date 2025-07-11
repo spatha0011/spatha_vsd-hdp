@@ -177,12 +177,12 @@ vsdflow/
 
 > ✅ **Note:** This flow automatically runs the full RTL-to-GDSII flow on the default `spm` design upon successful installation.
 
-![Alt Text](Images/inst1.jpg)
+![Alt Text](Images/ins1.jpg)
 
 
 Calculation of Flop Ratio and DFF % from synthesis statistics report file
 
-![Alt Text](Images/inst2.jpg)
+![Alt Text](Images/ins2.jpg)
 
 ```math
 Flop\ Ratio = \frac{64}{317} = 0.201892
