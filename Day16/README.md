@@ -171,13 +171,9 @@ prep -design picorv32a
 
 run_synthesis
 
- 
-
 # Exit from OpenLANE flow
 
 exit
-
- 
 
 # Exit from OpenLANE flow docker sub-system
 
