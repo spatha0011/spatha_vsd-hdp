@@ -175,12 +175,12 @@ vsdflow/
 
 ```
 
-> ✅ **Note:** This flow automatically runs the full RTL-to-GDSII flow on the default `spm` design upon successful installation.
+✅ **Note:** This flow automatically runs the full RTL-to-GDSII flow on the default `spm` design upon successful installation.
 
 ![Alt Text](Images/ins1.jpg)
 
 
-Calculation of Flop Ratio and DFF % from synthesis statistics report file
+### Calculation of Flop Ratio and DFF % from synthesis statistics report file
 
 ![Alt Text](Images/ins2.jpg)
 
@@ -232,7 +232,7 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
   7) Logical Cell placement blockage - so that no cells are placed by the PnR tool inside the IP blocks/ macro area.
 
 
-### Calculate the die area in microns from the values in floorplan def.
+#### Calculate the die area in microns from the values in floorplan def
 
   ![Alt Text](Images/ins3.jpg)
 
