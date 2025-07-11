@@ -127,6 +127,54 @@ The OpenLANE directory structure is organized to facilitate efficient design and
 - openlane/designs/config.tcl
 - openlane/designs/sky130A_sky130_fd_sc_hd_config.tcl
 
+
+### openlane_installation_guide
+
+This guide walks through the steps to install OpenLane and all its dependencies on an Ubuntu system using an automated build script.
+
+The scripts referenced here are:
+ - `openlane_script.sh`
+ - `openlane_script_wo_depends.sh`
+
+**openlane_script.sh** is a standalone script that installs OpenLane (latest version) and all its dependencies.  
+**openlane_script_wo_depends.sh** is a lighter version that works alongside the [vsdflow script](https://github.com/kunalg123/vsdflow), assuming some tools are already pre-installed.
+
+### STEPS TO BUILD OPENLANE
+
+1. `git clone https://github.com/nickson-jose/openlane_build_script`
+2. `sudo -i`  # switch to root user
+3. Change directory to where openlane_build_script was cloned:  
+   `cd /path/to/openlane_build_script`
+4. Execute the script based on your setup:
+
+   - **For standalone build (OpenLane + dependencies + PDK):**
+     - `chmod 775 openlane_script.sh`
+     - `./openlane_script.sh`
+
+   - **For build in conjunction with vsdflow (OpenLane only):**
+     - Copy the `openlane_script_wo_depends.sh` to your vsdflow directory.
+     - `chmod 775 openlane_script_wo_depends.sh`
+     - `./openlane_script_wo_depends.sh`
+
+5. This script will create the following directory structures:
+
+- **For build in conjunction with vsdflow**
+```bash
+vsdflow/
+└── work
+    └── tools
+        ├── cmake-3.13.0
+        ├── graywolf
+        ├── magic-8.3.50
+        ├── netgen-1.5.134
+        ├── openlane_working_dir
+        ├── OpenSTA
+        ├── OpenTimer
+        ├── qflow-1.3.17
+        ├── qrouter-1.4.59
+
+```
+
 ### `Good floorplan vs bad floorplan and introduction to library cells`
 
 #### Floorplan considerations
