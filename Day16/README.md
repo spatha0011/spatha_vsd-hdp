@@ -9,7 +9,7 @@
 - [OpenLane Flow Toolchain Overview](#openlane-flow-toolchain-overview)
 - [OpenLANE Directory Structure](#openlane-directory-structure)
 - [OpenLane Installation Guide](#openlane_installation_guide)
-- [Steps to Run OpenLane](#steps-to-run-openlane)
+- [Steps to Run OpenLane for `spm` design](#steps-to-run-openlane)
 - [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff--from-synthesis-statistics-report-file)
 - [Good Floorplan vs Bad Floorplan and Library Cells](#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
 - [Calculate Die Area in Microns](#calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
