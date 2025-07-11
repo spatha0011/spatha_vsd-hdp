@@ -127,6 +127,323 @@ The OpenLANE directory structure is organized to facilitate efficient design and
 - openlane/designs/config.tcl
 - openlane/designs/sky130A_sky130_fd_sc_hd_config.tcl
 
+### `Synthesis in Openlane for 'picorv32a' design`
+
+ 
+
+First, clone the necessary files from the GitHub repository to your local machine:
+
+ 
+
+```shell
+
+git clone https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd
+
+```
+
+ 
+
+Commands to invoke the OpenLANE flow and perform synthesis
+
+ 
+
+```shell
+
+# Change directory to openlane flow directory
+
+cd ~/openlane_working_dir/openlane
+
+ 
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+
+docker
+
+```
+
+ 
+
+```shell
+
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+
+./flow.tcl -interactive
+
+ 
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+
+package require openlane 0.9
+
+ 
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+
+prep -design picorv32a
+
+ 
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+
+run_synthesis
+
+ 
+
+# Exit from OpenLANE flow
+
+exit
+
+ 
+
+# Exit from OpenLANE flow docker sub-system
+
+exit
+
+```
+
+ 
+
+![Alt Text](Images/1.jpg)
+
+ 
+
+![Alt Text](Images/2.jpg)
+
+ 
+
+![Alt Text](Images/3.jpg)
+
+ 
+
+![Alt Text](Images/4.jpg)
+
+ 
+
+![Alt Text](Images/5.jpg)
+
+ 
+
+#### To view the netlist:
+
+ 
+
+```shell
+
+# Navigate to the directory containing synthesis results
+
+cd ~/openlane_working_dir/openlane/designs/picorv32a/runs/30-06_21-13/results/synthesis/
+
+# Open the synthesized netlist file using gvim
+
+gvim picorv32a.synthesis.v
+
+```
+
+![Alt Text](Images/6.jpg)
+
+ 
+
+#### To view the yosys report:
+
+ 
+
+```shell
+
+cd ~/openlane_working_dir/openlane/designs/picorv32a/runs/30-06_21-13/reports/synthesis/
+
+gvim 1-yosys_4.stat.rpt
+
+```
+
+ 
+
+<details> <summary><strong>yosys_4.stat.rpt</strong></summary>
+
+ 
+
+```
+
+ 
+
+28. Printing statistics.
+
+ 
+
+=== picorv32a ===
+
+ 
+
+   Number of wires:              14854
+
+   Number of wire bits:          15236
+
+   Number of public wires:        1565
+
+   Number of public wire bits:    1947
+
+   Number of memories:               0
+
+   Number of memory bits:            0
+
+   Number of processes:              0
+
+   Number of cells:              15134
+
+     sky130_fd_sc_hd__a2111o_2       1
+
+     sky130_fd_sc_hd__a211o_2       35
+
+     sky130_fd_sc_hd__a211oi_2      60
+
+     sky130_fd_sc_hd__a21bo_2      149
+
+     sky130_fd_sc_hd__a21boi_2       8
+
+     sky130_fd_sc_hd__a21o_2        57
+
+     sky130_fd_sc_hd__a21oi_2      244
+
+     sky130_fd_sc_hd__a221o_2       86
+
+     sky130_fd_sc_hd__a22o_2      1013
+
+     sky130_fd_sc_hd__a2bb2o_2    1748
+
+     sky130_fd_sc_hd__a2bb2oi_2     81
+
+     sky130_fd_sc_hd__a311o_2        2
+
+     sky130_fd_sc_hd__a31o_2        49
+
+     sky130_fd_sc_hd__a31oi_2        7
+
+     sky130_fd_sc_hd__a32o_2        46
+
+     sky130_fd_sc_hd__a41o_2         1
+
+     sky130_fd_sc_hd__and2_2       157
+
+     sky130_fd_sc_hd__and2b_2        1
+
+     sky130_fd_sc_hd__and3_2        58
+
+     sky130_fd_sc_hd__and4_2       345
+
+     sky130_fd_sc_hd__and4b_2        1
+
+     sky130_fd_sc_hd__buf_1       1914
+
+     sky130_fd_sc_hd__buf_2          8
+
+     sky130_fd_sc_hd__conb_1        42
+
+     sky130_fd_sc_hd__dfxtp_2     1613
+
+     sky130_fd_sc_hd__inv_2        743
+
+     sky130_fd_sc_hd__mux2_1      1224
+
+     sky130_fd_sc_hd__mux2_2         2
+
+     sky130_fd_sc_hd__mux4_1       221
+
+     sky130_fd_sc_hd__nand2_2       78
+
+     sky130_fd_sc_hd__nor2_2       524
+
+     sky130_fd_sc_hd__nor3_2        42
+
+     sky130_fd_sc_hd__nor4_2         1
+
+     sky130_fd_sc_hd__o2111a_2       2
+
+     sky130_fd_sc_hd__o211a_2       69
+
+     sky130_fd_sc_hd__o211ai_2       6
+
+     sky130_fd_sc_hd__o21a_2        54
+
+     sky130_fd_sc_hd__o21ai_2      141
+
+     sky130_fd_sc_hd__o21ba_2      209
+
+     sky130_fd_sc_hd__o21bai_2       1
+
+     sky130_fd_sc_hd__o221a_2      204
+
+     sky130_fd_sc_hd__o221ai_2       7
+
+     sky130_fd_sc_hd__o22a_2      1312
+
+     sky130_fd_sc_hd__o22ai_2       59
+
+     sky130_fd_sc_hd__o2bb2a_2     119
+
+     sky130_fd_sc_hd__o2bb2ai_2     92
+
+     sky130_fd_sc_hd__o311a_2        8
+
+     sky130_fd_sc_hd__o31a_2        19
+
+     sky130_fd_sc_hd__o31ai_2        1
+
+     sky130_fd_sc_hd__o32a_2       109
+
+     sky130_fd_sc_hd__o41a_2         2
+
+     sky130_fd_sc_hd__or2_2       1088
+
+     sky130_fd_sc_hd__or2b_2        25
+
+     sky130_fd_sc_hd__or3_2         68
+
+     sky130_fd_sc_hd__or3b_2         5
+
+     sky130_fd_sc_hd__or4_2         93
+
+     sky130_fd_sc_hd__or4b_2         6
+
+     sky130_fd_sc_hd__or4bb_2        2
+
+     sky130_vsdinv                 872
+
+ 
+
+   Chip area for module '\picorv32a': 148681.347200
+
+ 
+
+```
+
+</details>
+
+ 
+
+### `Flop Ratio Calculation`
+
+ 
+
+The Flop Ratio is an important metric in digital design that indicates the proportion of D Flip-Flops used in a design relative to the total number of standard cells. A higher ratio often suggests a control- or register-heavy design, while a lower ratio may indicate more combinational logic.
+
+ 
+
+For this design, the flip-flop used is:
+
+ 
+
+```shell
+
+Flop Ratio = Number of D Flip-Flops / Total Number of Cells
+
+           = sky130_fd_sc_hd__dfxtp_2 count / Total cell count
+
+           = 1613 / 15134
+
+           ≈ 0.1065
+
+```
 ### `Good floorplan vs bad floorplan and introduction to library cells`
 
 #### Floorplan considerations
