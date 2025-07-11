@@ -231,3 +231,17 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
         
   7) Logical Cell placement blockage - so that no cells are placed by the PnR tool inside the IP blocks/ macro area.
 
+
+### Calculate the die area in microns from the values in floorplan def.
+
+  ![Alt Text](Images/ins3.jpg)
+
+  ### 📐 Die Area from spm.def
+
+- Unit to micron scale: `1000 units = 1 micron`
+- DIEAREA: (0 0) to (101850 112750)
+
+**Calculated Dimensions:**
+- Die width  = `101850 / 1000 = 101.85 µm`
+- Die height = `112750 / 1000 = 112.75 µm`
+- **Die area = 101.85 × 112.75 = 11,481.04 µm²**
