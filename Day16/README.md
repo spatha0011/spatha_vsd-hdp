@@ -200,7 +200,7 @@ vsdflow/
 
 ### Calculation of Flop Ratio and DFF % from synthesis statistics report file
 
-![Alt Text](Images/ins2.jpg)
+![Alt Text](Images/ins5.jpg)
 
 ```math
 Flop\ Ratio = \frac{64}{317} = 0.201892
@@ -252,7 +252,7 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
 
 #### Calculate the die area in microns from the values in floorplan def
 
-  ![Alt Text](Images/ins3.jpg)
+  ![Alt Text](Images/ins6.jpg)
 
   ### 📐 Die Area from spm.def
 
