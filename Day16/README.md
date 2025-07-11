@@ -281,3 +281,6 @@ klayout /home/spatha/openlane_build_script/work/tools/openlane_working_dir/OpenL
 ```
 
 ![Alt Text](Images/final.jpg)
+
+
+![Alt Text](Images/fina2.jpg)
