@@ -43,6 +43,7 @@ The OpenLane flow is an automated, open-source framework designed to convert RTL
 
 ![Alt Text](Images/openlane.jpeg)
 
+```mermaid
 timeline
   title The OpenLane Infrastructure
   RTL to Netlist
@@ -88,7 +89,7 @@ timeline
     : Spice Extraction / Magic
     : Layout vs. Schematic / Netgen
     : Equivalence Check (Alpha) / Yosys EQY
-
+```
 ### `OpenLane Flow Toolchain Overview`
 
 The OpenLane flow utilizes a suite of open-source tools to efficiently transform RTL designs into manufacturable layouts. Each stage of the design process is supported by specialized tools, ensuring optimal performance and compliance with design rules.
