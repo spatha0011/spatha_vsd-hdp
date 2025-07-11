@@ -269,7 +269,7 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
 
 Open the final layout using KLayout. This will open the window of KLayout in editing mode -e with sky130 technology.
 
-# Open the spm.gds using KLayout
+### Open the spm.gds using KLayout
 ```shell
 klayout /home/spatha/openlane_build_script/work/tools/openlane_working_dir/OpenLane/designs/spm/runs/RUN_2025.07.11_01.32.20/results/final/gds/spm.gds
 ```
