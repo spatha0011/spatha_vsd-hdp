@@ -175,6 +175,8 @@ vsdflow/
 
 ```
 
+![Alt Text](Images/ins1.jpg)
+
 ### STEPS TO RUN OPENLANE
 
 1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/Openlane)
@@ -195,9 +197,6 @@ vsdflow/
 5. Refer to: https://github.com/efabless/openlane for detailed instructions.
 
 ![Alt Text](Images/ins4.jpg)
-
-![Alt Text](Images/ins1.jpg)
-
 
 ### Calculation of Flop Ratio and DFF % from synthesis statistics report file
 
