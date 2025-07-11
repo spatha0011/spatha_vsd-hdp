@@ -3,10 +3,17 @@
 ##  Advanced Physical Design using OpenLane
 
 ### 📚 Contents
-  - [ASIC flow](#asic-flow)
-  - [OpenLane ASIC Flow](#openlane-asic-flow)
-  - [OpenLane Flow Toolchain Overview](#openlane-flow-toolchain-overview)
-  - [OpenLANE Directory Structure](#openlane-directory-structure)
+
+- [ASIC flow](#asic-flow)
+- [OpenLane ASIC Flow](#openlane-asic-flow)
+- [OpenLane Flow Toolchain Overview](#openlane-flow-toolchain-overview)
+- [OpenLANE Directory Structure](#openlane-directory-structure)
+- [OpenLane Installation Guide](#openlane_installation_guide)
+- [Steps to Run OpenLane](#steps-to-run-openlane)
+- [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff--from-synthesis-statistics-report-file)
+- [Good Floorplan vs Bad Floorplan and Library Cells](#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
+- [Calculate Die Area in Microns](#calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
+- [Viewing Test Design Outputs](#viewing-test-design-outputs)
 
 
 ### `ASIC Flow`
@@ -250,11 +257,12 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
   7) Logical Cell placement blockage - so that no cells are placed by the PnR tool inside the IP blocks/ macro area.
 
 
-#### Calculate the die area in microns from the values in floorplan def
+### Calculate the die area in microns from the values in floorplan def
 
  ![Alt Text](Images/ins6.jpg)
 
-  ### 📐 Die Area from spm.def
+
+#### 📐 Die Area from spm.def
 
 - Unit to micron scale: `1000 units = 1 micron`
 - DIEAREA: (0 0) to (101850 112750)
@@ -269,7 +277,7 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
 
 Open the final layout using KLayout. This will open the window of KLayout in editing mode -e with sky130 technology.
 
-### Open the spm.gds using KLayout
+#### Open the spm.gds using KLayout
 ```shell
 klayout /home/spatha/openlane_build_script/work/tools/openlane_working_dir/OpenLane/designs/spm/runs/RUN_2025.07.11_01.32.20/results/final/gds/spm.gds
 ```
