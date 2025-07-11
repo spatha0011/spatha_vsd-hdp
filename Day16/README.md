@@ -7,7 +7,6 @@
 - [ASIC flow](#asic-flow)
 - [OpenLane ASIC Flow](#openlane-asic-flow)
 - [OpenLane Flow Toolchain Overview](#openlane-flow-toolchain-overview)
-- [OpenLANE Directory Structure](#openlane-directory-structure)
 - [OpenLane Installation Guide](#openlane_installation_guide)
 - [Steps to Run OpenLane for `spm` design](#steps-to-run-openlane-for-spm-design)
 - [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff--from-synthesis-statistics-report-file)
@@ -43,6 +42,52 @@ Please note that the `five mentioned steps` are the major ones. There are severa
 The OpenLane flow is an automated, open-source framework designed to convert RTL designs into manufacturable layouts, integrating multiple stages of the digital IC design process. Starting with RTL synthesis using Yosys and ABC, the flow performs static timing analysis (STA) with OpenSTA and incorporates Design for Testability (DFT) to ensure fault coverage. The OpenROAD App facilitates floorplanning, placement, clock tree synthesis (CTS), optimization, and global routing, streamlining the physical design process. Custom scripts handle antenna diode insertion, while Yosys performs Logic Equivalence Checking (LEC) to verify design integrity. TritonRoute manages detailed routing, ensuring signal integrity and minimizing congestion. RC extraction is conducted using DEF2SPEF, followed by STA to confirm timing compliance. Magic and Netgen are employed for physical verification, including Design Rule Checking (DRC) and Layout vs. Schematic (LVS) checks, ensuring the design adheres to manufacturing constraints. The final output is a GDSII/LEF file, ready for fabrication, supported by the SW PDK which provides technology-specific data and libraries. This comprehensive flow enables efficient design exploration and optimization, leveraging open-source tools to deliver high-quality, manufacturable designs.
 
 ![Alt Text](Images/openlane.jpeg)
+
+timeline
+  title The OpenLane Infrastructure
+  RTL to Netlist
+    : Linting / Verilator
+    : Power Distribution Network Hierarchy / Yosys
+    : Synthesis / Yosys
+    : Synthesis / Design Compiler (with proprietary plugin)
+    : Multi-corner Netlist STA / OpenSTA
+  Floorplanning
+    : Floorplan Initialization / OpenROAD
+    : Manual Macro Placement / OpenDB
+    : Tap/Endcap Insertion / OpenROAD
+    : PDN Generation / OpenROAD
+  Placement
+    : Pin Placement (from config file) / OpenROAD, OpenDB
+    : Pin Placement (Random/Matching/Annealing) / OpenROAD
+    : Pin Placement (from template DEF) / OpenDB
+    : Global Placement / OpenROAD
+    : Resizer Design Repair (Post-GPL) / OpenROAD
+    : Detailed Placement / OpenROAD
+  Clock Tree Synthesis
+    : Clock-Tree Synthesis / OpenROAD
+    : Resizer Timing Repair (Post-CTS) / OpenROAD
+  Routing
+    : Global Routing / OpenROAD
+    : Resizer Design Repair (Post-GRT) / OpenROAD
+    : Diode Insertion on Ports / OpenDB
+    : Heuristic Diode Insertion / OpenDB
+    : Antenna Repair / OpenROAD
+    : Resizer Timing Repair (Post-GRT) / OpenROAD
+    : Detailed Routing / OpenROAD
+    : Row Filling / OpenROAD
+  Signoff (Timing)
+    : Parasitics Extraction / OpenROAD
+    : Multi-corner Static Timing Analysis / OpenSTA
+    : SI-Enabled Multi-corner Static Timing Analysis / PrimeTime (with proprietary plugin)
+  Signoff (Physical)
+    : GDSII Stream-Out / Magic
+    : GDSII Stream-Out / KLayout
+    : Magic vs. KLayout Stream XOR / KLayout
+    : Design Rule Checks / Magic
+    : Design Rule Checks / KLayout
+    : Spice Extraction / Magic
+    : Layout vs. Schematic / Netgen
+    : Equivalence Check (Alpha) / Yosys EQY
 
 ### `OpenLane Flow Toolchain Overview`
 
@@ -107,33 +152,6 @@ The OpenLane flow utilizes a suite of open-source tools to efficiently transform
   - **Magic**: For antenna checks, preventing damage during fabrication.
 
 This toolchain provides a robust framework for digital IC design, leveraging open-source tools to deliver high-quality, manufacturable designs efficiently.
-
-### `OpenLANE Directory Structure`
-
-The OpenLANE directory structure is organized to facilitate efficient design and process management for digital IC design using open-source tools. Below is an overview of the directory structure and its contents:
-
-```text
-├── OpenLane             -> directory where the tool can be invoked (run docker first)
-│   ├── designs          -> All designs must be extracted from this folder
-│   │   │   ├── picorv32a -> Design used as case study for this workshop
-│   |   |   ├── ...
-|   |   ├── ...
-├── pdks                 -> contains pdk related files 
-│   ├── skywater-pdk     -> all Skywater 130nm PDKs
-│   ├── open-pdks        -> contains scripts that makes the commerical PDK (which is normally just compatible to commercial tools) to also be compatible with the open-source EDA tool
-│   ├── sky130A          -> pdk variant made especially compatible for open-source tools
-│   │   │  ├── libs.ref  -> files specific to node process (timing lib, cell lef, tech lef) for example is `sky130_fd_sc_hd` (Sky130nm Foundry Standard Cell High Density)  
-│   │   │  ├── libs.tech -> files specific for the tool (klayout,netgen,magic...) 
-```
-
-📍**NOTE:** The order of precedence of the config files in the OpenLANE flow is as follows, with the settings in the highest priority config overriding the values set in the previous config files:
-
-**_From lowest to highest:_**
-
-- Default OpenLANE config values
-- openlane/designs/config.tcl
-- openlane/designs/sky130A_sky130_fd_sc_hd_config.tcl
-
 
 ### `openlane_installation_guide`
 
