@@ -175,7 +175,26 @@ vsdflow/
 
 ```
 
-✅ **Note:** This flow automatically runs the full RTL-to-GDSII flow on the default `spm` design upon successful installation.
+### STEPS TO RUN OPENLANE
+
+1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/Openlane)
+2. There are two ways of invoking openlane. The easiest of the two would be:
+   - `make mount`
+
+   The second way would be to explicitly specify the path to PDK_ROOT and OPENLANE_IMAGE_NAME and invoking docker with these inputs
+   - `export PDK_ROOT=<absolute path to where skywater-pdk and open_pdks reside>`
+   - `export OPENLANE_IMAGE_NAME=<docker image name>`
+   - `docker run -it -v $(pwd):/openlane -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) $OPENLANE_IMAGE_NAME`
+   
+3. **Note:** If you face "permission denied" during docker invocation in setup or in above step, do refer below link to resolve:
+   - [Fix Docker Permission Denied Issue](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue)
+
+4. `./flow.tcl -design spm`
+(the above flow.tcl command will run RTL2GDS flow for design named "spm". Same can be done for other designs which are present in ~/work/tools/openlane_working_dir/Openlane/designs)
+
+5. Refer to: https://github.com/efabless/openlane for detailed instructions.
+
+![Alt Text](Images/ins4.jpg)
 
 ![Alt Text](Images/ins1.jpg)
 
