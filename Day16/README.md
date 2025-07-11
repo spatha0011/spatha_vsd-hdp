@@ -252,7 +252,7 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
 
 #### Calculate the die area in microns from the values in floorplan def
 
-  ![Alt Text](Images/ins6.jpg)
+ ![Alt Text](Images/ins6.jpg)
 
   ### 📐 Die Area from spm.def
 
@@ -263,3 +263,15 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
 - Die width  = `101850 / 1000 = 101.85 µm`
 - Die height = `112750 / 1000 = 112.75 µm`
 - **Die area = 101.85 × 112.75 = 11,481.04 µm²**
+
+
+### Viewing Test Design Outputs
+
+Open the final layout using KLayout. This will open the window of KLayout in editing mode -e with sky130 technology.
+
+# Open the spm.gds using KLayout
+```shell
+klayout /home/spatha/openlane_build_script/work/tools/openlane_working_dir/OpenLane/designs/spm/runs/RUN_2025.07.11_01.32.20/results/final/gds/spm.gds
+```
+
+![Alt Text](Images/final.jpg)
