@@ -135,7 +135,7 @@ The OpenLANE directory structure is organized to facilitate efficient design and
 - openlane/designs/sky130A_sky130_fd_sc_hd_config.tcl
 
 
-### openlane_installation_guide
+### `openlane_installation_guide`
 
 This guide walks through the steps to install OpenLane and all its dependencies on an Ubuntu system using an automated build script.
 
@@ -184,7 +184,7 @@ vsdflow/
 
 ![Alt Text](Images/ins1.jpg)
 
-### STEPS TO RUN OPENLANE FOR SPM DESIGN
+### `STEPS TO RUN OPENLANE FOR SPM DESIGN`
 
 1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/Openlane)
 2. There are two ways of invoking openlane. The easiest of the two would be:
@@ -205,7 +205,7 @@ vsdflow/
 
 ![Alt Text](Images/ins4.jpg)
 
-### Calculation of Flop Ratio and DFF % from synthesis statistics report file
+### `Calculation of Flop Ratio and DFF % from synthesis statistics report file`
 
 ![Alt Text](Images/ins5.jpg)
 
@@ -257,7 +257,7 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
   7) Logical Cell placement blockage - so that no cells are placed by the PnR tool inside the IP blocks/ macro area.
 
 
-### Calculate the die area in microns from the values in floorplan def
+### `Calculate the die area in microns from the values in floorplan def`
 
  ![Alt Text](Images/ins6.jpg)
 
@@ -273,7 +273,7 @@ Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
 - **Die area = 101.85 × 112.75 = 11,481.04 µm²**
 
 
-### Viewing Test Design Outputs
+### `Viewing Test Design Outputs`
 
 Open the final layout using KLayout. This will open the window of KLayout in editing mode -e with sky130 technology.
 
