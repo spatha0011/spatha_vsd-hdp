@@ -15,7 +15,8 @@
 - [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff))
 - [Floorplanning and library cells](#floorplanning-and-library-cells)
 - [Files of importance in increasing priority order](#files-of-importance-in-increasing-priority-order)
-- [Viewing the Floorplan DEF in Magic](#step-8-viewing-the-floorplan-def-in-magic)
+- [Floorplaning using OpenLANE & view in Magic](#step-8-floorplanning-using-openlane--viewing-in-magic)
+- [Viewing the Floorplan DEF in Magic](#step-9-viewing-the-floorplan-def-in-magic)
 - [Calculate the die area in microns from the values in floorplan def](#calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
 
 
@@ -539,7 +540,7 @@ set ::env(RUN_BASIC_MP) 0
 ```
 </details>
 
-#### Step 8:Floorplaning using OpenLANE & view in Magic
+#### Step 8: Floorplaning using OpenLANE & view in Magic
 
 ```shell
 run_floorplan
@@ -571,7 +572,7 @@ Replace the contents of:
 /openLANE_flow/scripts/openroad/or_basic_mp.tcl
 ```
 
-#### Step 8: Viewing the Floorplan DEF in Magic
+#### Step 9: Viewing the Floorplan DEF in Magic
 
 To visually inspect the floorplan (DEF) file in the Magic layout editor, use the following command in your terminal from the floorplan results directory:
 
