@@ -346,15 +346,15 @@ Aspect Ratio =  Height
                 Width
 ```
 
-Pre-placed cells : Pre-placed cells are essential functional blocks, such as memory, custom processors, and analog circuits, positioned manually in fixed locations. These blocks are crucial for the chip’s performance and remain fixed during placement and routing to preserve their functionality and layout integrity.
+**Pre-placed cells :** Pre-placed cells are essential functional blocks, such as memory, custom processors, and analog circuits, positioned manually in fixed locations. These blocks are crucial for the chip’s performance and remain fixed during placement and routing to preserve their functionality and layout integrity.
 
-Decoupling Capacitors : Decoupling capacitors are placed near logic circuits to stabilize power supply voltages during transient events. Acting as local energy reserves, they help reduce voltage fluctuations, crosstalk, and electromagnetic interference (EMI), ensuring reliable power delivery to sensitive circuits.
+**Decoupling Capacitors :** Decoupling capacitors are placed near logic circuits to stabilize power supply voltages during transient events. Acting as local energy reserves, they help reduce voltage fluctuations, crosstalk, and electromagnetic interference (EMI), ensuring reliable power delivery to sensitive circuits.
 
-Power Planning: A robust power planning strategy includes creating a power and ground mesh to distribute VDD and VSS evenly across the chip. This setup ensures stable power delivery, minimizes voltage drops, and improves overall efficiency. Multiple power and ground points reduce the risk of instability and voltage drop issues, supporting the design’s power needs effectively.
+**Power Planning:** A robust power planning strategy includes creating a power and ground mesh to distribute VDD and VSS evenly across the chip. This setup ensures stable power delivery, minimizes voltage drops, and improves overall efficiency. Multiple power and ground points reduce the risk of instability and voltage drop issues, supporting the design’s power needs effectively.
 
-Pin Placement: Pin placement (I/O planning) is crucial for functionality and reliability. Strategic pin assignment minimizes signal degradation, preserves data integrity, and helps manage heat dissipation. Proper positioning of power and ground pins supports thermal management and enhances signal strength, contributing to overall system stability and manufacturability.
+**Pin Placement:** Pin placement (I/O planning) is crucial for functionality and reliability. Strategic pin assignment minimizes signal degradation, preserves data integrity, and helps manage heat dissipation. Proper positioning of power and ground pins supports thermal management and enhances signal strength, contributing to overall system stability and manufacturability.
 
-### Step 8:Floorplaning using OpenLANE & view in Magic
+#### Step 8:Floorplaning using OpenLANE & view in Magic
 
 Files of importance in increasing priority order:
 
@@ -362,6 +362,87 @@ Files of importance in increasing priority order:
 2. config.tcl  
 3. sky130A_sky130_fd_sc_hd_config.tcl
 
+#### Floorplan Defaults (floorplan.tcl)
+
+The following configuration sets the default parameters used during the floorplanning stage of the ASIC design in the OpenLane flow. These environment variables control core sizing, utilization, power grid, IO placement, and margins.
+
+```shell
+# Copyright 2020 Efabless Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Floorplan defaults
+set ::env(FP_IO_VMETAL) 3
+set ::env(FP_IO_HMETAL) 4
+
+set ::env(FP_SIZING) relative
+set ::env(FP_CORE_UTIL) 50
+set ::env(FP_CORE_MARGIN) 0
+set ::env(FP_ASPECT_RATIO) 1
+
+set ::env(FP_PDN_VOFFSET) 16.32
+set ::env(FP_PDN_VPITCH) 153.6
+set ::env(FP_PDN_HOFFSET) 16.65
+set ::env(FP_PDN_HPITCH) 153.18
+
+set ::env(FP_PDN_AUTO_ADJUST) 1
+
+set ::env(FP_PDN_CORE_RING) 0
+set ::env(FP_PDN_ENABLE_RAILS) 1
+
+set ::env(FP_PDN_CHECK_NODES) 1
+
+set ::env(FP_IO_MODE) 1; # 0 matching mode - 1 random equidistant mode
+set ::env(FP_IO_HLENGTH) 4
+set ::env(FP_IO_VLENGTH) 4
+set ::env(FP_IO_VEXTEND) -1
+set ::env(FP_IO_HEXTEND) -1
+set ::env(FP_IO_VTHICKNESS_MULT) 2
+set ::env(FP_IO_HTHICKNESS_MULT) 2
+
+set ::env(BOTTOM_MARGIN_MULT) 4
+set ::env(TOP_MARGIN_MULT) 4
+set ::env(LEFT_MARGIN_MULT) 12
+set ::env(RIGHT_MARGIN_MULT) 12
+
+set ::env(FP_HORIZONTAL_HALO) 10
+set ::env(FP_VERTICAL_HALO) $::env(FP_HORIZONTAL_HALO)
+
+set ::env(DESIGN_IS_CORE) 1
+```
+
+**Explanation of Key Parameters**
+
+- **Core Utilization (`FP_CORE_UTIL`)**:  
+  Controls how densely the core area is filled with standard cells. A 50% utilization provides routing space and reduces congestion.
+
+- **Aspect Ratio (`FP_ASPECT_RATIO`)**:  
+  Defines the shape of the core. A ratio of 1 means a square core.
+
+- **Power Distribution Network (PDN)**:  
+  Offsets and pitches define spacing and placement of power/ground rings and rails to ensure stable power delivery.
+
+- **IO Placement Mode (`FP_IO_MODE`)**:  
+  Mode 1 evenly spaces IO pins randomly; mode 0 aligns them to match a template.
+
+- **Margins (`BOTTOM_MARGIN_MULT`, etc.)**:  
+  Define spacing around the core for IO pads, routing, and design rules. Larger left/right margins accommodate more IO pins or pads.
+
+- **Halo (`FP_HORIZONTAL_HALO`)**:  
+  Additional guardband space around the core to isolate it from block boundaries and ensure timing and routing integrity.
+
+- **`DESIGN_IS_CORE`**:  
+  Signals the flow to treat this design as a core block for appropriate floorplanning behavior.
 
 
 
