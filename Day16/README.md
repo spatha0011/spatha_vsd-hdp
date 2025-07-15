@@ -186,7 +186,7 @@ make
 sudo make install
 ```
 
-**Design used for this exercise: picorv32a**
+### Design used for this exercise: picorv32a
 
 Step-by-Step OpenLANE Synthesis Flow Commands
 
