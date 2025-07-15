@@ -154,152 +154,39 @@ The OpenLane flow utilizes a suite of open-source tools to efficiently transform
 
 This toolchain provides a robust framework for digital IC design, leveraging open-source tools to deliver high-quality, manufacturable designs efficiently.
 
-### `openlane_installation_guide`
+### 20.1.3 Lab: Familiarize with OpenLANE flow
 
-This guide walks through the steps to install OpenLane and all its dependencies on an Ubuntu system using an automated build script.
+**Objectives**:  
+Using an existing design provided in the OpenLANE package to:
+  * Familiarize with the OpenLANE directory structure and different input files
+  * Familiarize with the OpenLANE flow
+  * Analyse the intermediate step results
+  * Learn about the different control knobs and switches available for design space exploration  
+    The OpenLANE flow can be configured using the following available variables for design
+    * **Flow Configuration variables**: [https://openlane.readthedocs.io/en/latest/reference/configuration.html](https://openlane.readthedocs.io/en/latest/reference/configuration.html)
+    * **PDK Configuration variables**: [https://openlane.readthedocs.io/en/latest/reference/pdk_configuration.html](https://openlane.readthedocs.io/en/latest/reference/pdk_configuration.html)  
 
-The scripts referenced here are:
- - `openlane_script.sh`
- - `openlane_script_wo_depends.sh`
+**Design used for this exercise: picorv32a**
+  
+  1) To invoke OpenLANE, cd to the home directory of OpenLANE and run docker:  
+    `docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21`  
+    where the env variable PDK_ROOT points to the directory path containing the **sky130A** library.
 
-**openlane_script.sh** is a standalone script that installs OpenLane (latest version) and all its dependencies.  
-**openlane_script_wo_depends.sh** is a lighter version that works alongside the [vsdflow script](https://github.com/kunalg123/vsdflow), assuming some tools are already pre-installed.
+  2) The entry point for OpenLANE is the `./flow.tcl` script. This script is used to run the flow, start interactive sessions, select the configuration and create OpenLane design files.
+     * To run the automated flow for a design:
+       ```
+       ./flow.tcl -design <design_name>
+       ```
+     * To start an [**interactive session**](https://openlane.readthedocs.io/en/latest/reference/interactive_mode.html):
+       ```
+       ./flow.tcl -interactive
+       ```
+  3) We will be using the interactive mode to learn about the different steps in the flow.
+     * The commands to start an interactive session and run the synthesis of the **picorv32a** example design are given below:
+       ```
+       ./flow.tcl -interactive
+       package require openlane 0.9
+       prep -design picorv32a
+       run_synthesis
+       ```
 
-### STEPS TO BUILD OPENLANE
-
-1. `git clone https://github.com/nickson-jose/openlane_build_script`
-2. `sudo -i`  # switch to root user
-3. Change directory to where openlane_build_script was cloned:  
-   `cd /path/to/openlane_build_script`
-4. Execute the script based on your setup:
-
-   - **For standalone build (OpenLane + dependencies + PDK):**
-     - `chmod 775 openlane_script.sh`
-     - `./openlane_script.sh`
-
-   - **For build in conjunction with vsdflow (OpenLane only):**
-     - Copy the `openlane_script_wo_depends.sh` to your vsdflow directory.
-     - `chmod 775 openlane_script_wo_depends.sh`
-     - `./openlane_script_wo_depends.sh`
-
-5. This script will create the following directory structures:
-
-- **For build in conjunction with vsdflow**
-```bash
-vsdflow/
-└── work
-    └── tools
-        ├── cmake-3.13.0
-        ├── graywolf
-        ├── magic-8.3.50
-        ├── netgen-1.5.134
-        ├── openlane_working_dir
-        ├── OpenSTA
-        ├── OpenTimer
-        ├── qflow-1.3.17
-        ├── qrouter-1.4.59
-
-```
-
-![Alt Text](Images/ins1.jpg)
-
-### `STEPS TO RUN OPENLANE FOR SPM DESIGN`
-
-1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/Openlane)
-2. There are two ways of invoking openlane. The easiest of the two would be:
-   - `make mount`
-
-   The second way would be to explicitly specify the path to PDK_ROOT and OPENLANE_IMAGE_NAME and invoking docker with these inputs
-   - `export PDK_ROOT=<absolute path to where skywater-pdk and open_pdks reside>`
-   - `export OPENLANE_IMAGE_NAME=<docker image name>`
-   - `docker run -it -v $(pwd):/openlane -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) $OPENLANE_IMAGE_NAME`
-   
-3. **Note:** If you face "permission denied" during docker invocation in setup or in above step, do refer below link to resolve:
-   - [Fix Docker Permission Denied Issue](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue)
-
-4. `./flow.tcl -design spm`
-(the above flow.tcl command will run RTL2GDS flow for design named "spm". Same can be done for other designs which are present in ~/work/tools/openlane_working_dir/Openlane/designs)
-
-5. Refer to: https://github.com/efabless/openlane for detailed instructions.
-
-![Alt Text](Images/ins4.jpg)
-
-### `Calculation of Flop Ratio and DFF % from synthesis statistics report file`
-
-![Alt Text](Images/ins5.jpg)
-
-```math
-Flop\ Ratio = \frac{64}{317} = 0.201892
-```
-```math
-Percentage\ of\ DFF's = 0.201892 * 100 = 20.1892\ \%
-```
-
-
-### `Good floorplan vs bad floorplan and introduction to library cells`
-
-#### Floorplan considerations
-
-  1) Utilization factor and aspect ratio
-       * Define W, H of core and die
-           * Utilization Factor = (Area occupied by netlist)/(Total area of the core)
-           * Usually we aim for 50-60 % Utilization Factor
-        * Aspect Ratio = Height/ Width
-
-      ![Alt Text](Images/fp1.jpeg)
-     
-  3) Define locations of pre-placed cells (macros and IPs ?)
-       * IPs/ blocks have user-defined locations and hence placed before automated PnR and are called as pre-placed cells
-       * Automated PnR tools places the remaining logical cells in the design onto the chip
-        
-  4) Decaps
-       * Decouples the circuit from the VDD rail
-       * Reduce Zpdn for the required frequencies of operation
-       * Serve as a charge reservoir for the switching current demands that the VDD rail cannot satisfy.
-       * Surround pre-placed cells with Decaps to compensate for the switching current demands (di/dt)
-        
-  5) Power Planning
-     * SSN
-       * L*di/dt
-         * Discharging : Ground bounce
-         * Charging    : Voltage Droop
-       * **Solution:** Reduce the Vdd/ Vss parasitics ->
-         * Power grid
-         * Multiple VDD, VSS pins/ balls 
-    
-  6) Pin Placement
-     * Usually: East -> West, North -> South, {East, North} -> {West, South}
-     * Pin ordering is random (unless we specify explicitly ?)
-     * Front-End to Back-End team communication/ handshaking needed for optimal pin placement
-     * CLK ports/ pins are usually bigger to reduce the clk net resistance
-        
-  7) Logical Cell placement blockage - so that no cells are placed by the PnR tool inside the IP blocks/ macro area.
-
-
-### `Calculate the die area in microns from the values in floorplan def`
-
- ![Alt Text](Images/ins6.jpg)
-
-
-#### 📐 Die Area from spm.def
-
-- Unit to micron scale: `1000 units = 1 micron`
-- DIEAREA: (0 0) to (101850 112750)
-
-**Calculated Dimensions:**
-- Die width  = `101850 / 1000 = 101.85 µm`
-- Die height = `112750 / 1000 = 112.75 µm`
-- **Die area = 101.85 × 112.75 = 11,481.04 µm²**
-
-
-### `Viewing Test Design Outputs`
-
-#### Open the spm.gds using KLayout
-```shell
-klayout /home/spatha/openlane_build_script/work/tools/openlane_working_dir/OpenLane/designs/spm/runs/RUN_2025.07.11_01.32.20/results/final/gds/spm.gds
-```
-
-![Alt Text](Images/final.jpg)
-
-
-![Alt Text](Images/final1.jpg)
