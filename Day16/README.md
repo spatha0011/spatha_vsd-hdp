@@ -203,3 +203,22 @@ docker
 ./flow.tcl -interactive
 ```
 ![Alt Text](Images/s2.jpg)
+
+#### Step 6: Run the OpenLANE Flow Commands from the Interactive Shell
+```shell
+# Load the required OpenLANE package for proper functionality
+package require openlane 0.9
+
+# Prep the design (creates necessary directory structure, config files, and copies RTL files)
+prep -design picorv32a
+
+# Run synthesis step
+run_synthesis
+
+# Exit the OpenLANE interactive shell
+exit
+
+# Exit the Docker container
+exit
+```
+![Alt Text](Images/s3.jpg)
