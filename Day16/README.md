@@ -17,7 +17,7 @@
 - [Files of importance in increasing priority order](#files-of-importance-in-increasing-priority-order)
 - [Floorplaning using OpenLANE & view in Magic](#step-8-floorplaning-using-openlane--view-in-magic)
 - [Viewing the Floorplan DEF in Magic](#step-9-viewing-the-floorplan-def-in-magic)
-- [Calculate the die area in microns from the values in floorplan def](#calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
+- [Calculate the die area in microns from the values in floorplan def](#step-10-calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
 
 
 ### `ASIC Flow`
@@ -594,7 +594,7 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/floorplan1.jpg)
 
-#### Calculate the die area in microns from the values in floorplan def
+#### Step 10: Calculate the die area in microns from the values in floorplan def
 
 ![Alt Text](Images/def.jpg)
 
