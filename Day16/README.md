@@ -12,10 +12,10 @@
 - [Getting started](#getting-started)
 - [Building PDKs from Source](#building-pdks-from-source)
 - [Step-by-Step OpenLANE Synthesis Flow Commands for picorv32a design](#step-by-step-openlane-synthesis-flow-commands-for-picorv32a-design)
-- [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff-)
+- [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff))
 - [Floorplanning and library cells](#floorplanning-and-library-cells)
 - [Files of importance in increasing priority order](#files-of-importance-in-increasing-priority-order)
-- [Viewing the Floorplan DEF in Magic](#viewing-the-floorplan-def-in-magic)
+- [Viewing the Floorplan DEF in Magic](#step-8-viewing-the-floorplan-def-in-magic)
 
 
 ### `ASIC Flow`
