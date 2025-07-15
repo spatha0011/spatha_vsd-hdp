@@ -387,9 +387,9 @@ Aspect Ratio =  Height
 **Files of importance in increasing priority order:**
 ---------------
 
-1. floorplan.tcl - System default environment variables  
-2. config.tcl  
-3. sky130A_sky130_fd_sc_hd_config.tcl
+**1. floorplan.tcl - System default environment variables**
+**2. config.tcl**
+**3. sky130A_sky130_fd_sc_hd_config.tcl**
 
 > Floorplan Defaults (floorplan.tcl)
 
