@@ -592,3 +592,30 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/floorplan1.jpg)
 
+#### Calculate the die area in microns from the values in floorplan def
+
+![Alt Text](Images/def.jpg)
+
+According to floorplan def
+
+```math
+1000\ Unit\ Distance = 1\ Micron
+```
+```math
+Die\ width\ in\ unit\ distance = 662810 - 0 = 662810
+```
+```math
+Die\ height\ in\ unit\ distance = 673530 - 0 = 673530
+```
+```math
+Distance\ in\ microns = \frac{Value\ in\ Unit\ Distance}{1000}
+```
+```math
+Die\ width\ in\ microns = \frac{662810}{1000} = 662.810\ Microns
+```
+```math
+Die\ height\ in\ microns = \frac{673530}{1000} = 673.530\ Microns
+```
+```math
+Area\ of\ die\ in\ microns = 662.81 * 673.53 = 446422.4193\ Square\ Microns
+```
