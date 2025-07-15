@@ -154,7 +154,7 @@ The OpenLane flow utilizes a suite of open-source tools to efficiently transform
 
 This toolchain provides a robust framework for digital IC design, leveraging open-source tools to deliver high-quality, manufacturable designs efficiently.
 
-### 20.1.3 Lab: Familiarize with OpenLANE flow
+### Familiarize with OpenLANE flow
 
 **Objectives**:  
 Using an existing design provided in the OpenLANE package to:
@@ -165,6 +165,21 @@ Using an existing design provided in the OpenLANE package to:
     The OpenLANE flow can be configured using the following available variables for design
     * **Flow Configuration variables**: [https://openlane.readthedocs.io/en/latest/reference/configuration.html](https://openlane.readthedocs.io/en/latest/reference/configuration.html)
     * **PDK Configuration variables**: [https://openlane.readthedocs.io/en/latest/reference/pdk_configuration.html](https://openlane.readthedocs.io/en/latest/reference/pdk_configuration.html)  
+
+**OpenLANE Directory structure:**
+```text
+├── OOpenLane             -> directory where the tool can be invoked (run docker first)
+│   ├── designs          -> All designs must be extracted from this folder
+│   │   │   ├── picorv32a -> Design used as case study for this workshop
+│   |   |   ├── ...
+|   |   ├── ...
+├── pdks                 -> contains pdk related files 
+│   ├── skywater-pdk     -> all Skywater 130nm PDKs
+│   ├── open-pdks        -> contains scripts that makes the commerical PDK (which is normally just compatible to commercial tools) to also be compatible with the open-source EDA tool
+│   ├── sky130A          -> pdk variant made especially compatible for open-source tools
+│   │   │  ├── libs.ref  -> files specific to node process (timing lib, cell lef, tech lef) for example is `sky130_fd_sc_hd` (Sky130nm Foundry Standard Cell High Density)  
+│   │   │  ├── libs.tech -> files specific for the tool (klayout,netgen,magic...) 
+```
 
 **Design used for this exercise: picorv32a**
   
