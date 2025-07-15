@@ -330,3 +330,38 @@ Flop Ratio = DFFs / Total Cells = 1613 / 15134 ≈ 0.1065
 #### ➤ DFF Percentage:
 
 DFF % = (DFFs / Total Cells) × 100 = (1613 / 15134) × 100 ≈ 10.65%
+
+### `Floorplanning and library cells`
+
+Utilization Factor and Aspect Ratio: In IC floor planning, utilization factor and aspect ratio are key parameters. The utilization factor is the ratio of the area occupied by the netlist to the total core area. While a perfect utilization of 1 (100%) is ideal, practical designs target a factor of 0.5 to 0.6 to allow space for buffer zones, routing channels, and future adjustments. The aspect ratio, defined as height divided by width, indicates the chip’s shape; an aspect ratio of 1 denotes a square, while other values result in a rectangular layout. The aspect ratio is chosen based on functional, packaging, and manufacturing needs.
+
+```shell
+Utilisation Factor =  Area occupied by netlist
+                     __________________________
+                         Total area of core
+                         
+
+Aspect Ratio =  Height
+               ________
+                Width
+```
+
+Pre-placed cells : Pre-placed cells are essential functional blocks, such as memory, custom processors, and analog circuits, positioned manually in fixed locations. These blocks are crucial for the chip’s performance and remain fixed during placement and routing to preserve their functionality and layout integrity.
+
+Decoupling Capacitors : Decoupling capacitors are placed near logic circuits to stabilize power supply voltages during transient events. Acting as local energy reserves, they help reduce voltage fluctuations, crosstalk, and electromagnetic interference (EMI), ensuring reliable power delivery to sensitive circuits.
+
+Power Planning: A robust power planning strategy includes creating a power and ground mesh to distribute VDD and VSS evenly across the chip. This setup ensures stable power delivery, minimizes voltage drops, and improves overall efficiency. Multiple power and ground points reduce the risk of instability and voltage drop issues, supporting the design’s power needs effectively.
+
+Pin Placement: Pin placement (I/O planning) is crucial for functionality and reliability. Strategic pin assignment minimizes signal degradation, preserves data integrity, and helps manage heat dissipation. Proper positioning of power and ground pins supports thermal management and enhances signal strength, contributing to overall system stability and manufacturability.
+
+### Step 8:Floorplaning using OpenLANE & view in Magic
+
+Files of importance in increasing priority order:
+
+1. floorplan.tcl - System default environment variables  
+2. config.tcl  
+3. sky130A_sky130_fd_sc_hd_config.tcl
+
+
+
+
