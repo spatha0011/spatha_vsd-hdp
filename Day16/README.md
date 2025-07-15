@@ -362,9 +362,9 @@ Files of importance in increasing priority order:
 2. config.tcl  
 3. sky130A_sky130_fd_sc_hd_config.tcl
 
-#### Floorplan Defaults (floorplan.tcl)
-
 The following configuration sets the default parameters used during the floorplanning stage of the ASIC design in the OpenLane flow. These environment variables control core sizing, utilization, power grid, IO placement, and margins.
+
+<details> <summary><strong>floorplan.tcl</strong></summary>
 
 ```shell
 # Copyright 2020 Efabless Corporation
@@ -420,6 +420,7 @@ set ::env(FP_VERTICAL_HALO) $::env(FP_HORIZONTAL_HALO)
 
 set ::env(DESIGN_IS_CORE) 1
 ```
+</details>
 
 **Explanation of Key Parameters**
 
