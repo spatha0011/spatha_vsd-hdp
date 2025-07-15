@@ -557,59 +557,6 @@ Replace the contents of:
 ```shell
 /openLANE_flow/scripts/openroad/or_basic_mp.tcl
 ```
-### updated or_basic_mp.tcl script
-```shell
-# Copyright 2020 Efabless Corporation
-# Licensed under the Apache License, Version 2.0
-
-# Load LEF/DEF and Liberty
-if {[catch {read_lef $::env(MERGED_LEF_UNPADDED)} errmsg]} {
-    puts stderr "ERROR: $errmsg"
-    exit 1
-}
-
-foreach lib $::env(LIB_SYNTH) {
-    read_liberty $lib
-}
-
-if {[catch {read_def $::env(CURRENT_DEF)} errmsg]} {
-    puts stderr "ERROR: $errmsg"
-    exit 1
-}
-
-# Create a global configuration file for macro placement
-set glb_cfg_file [open $::env(TMP_DIR)/glb.cfg w]
-puts $glb_cfg_file {
-set ::HALO_WIDTH_V 0
-set ::HALO_WIDTH_H 0
-set ::CHANNEL_WIDTH_V 0
-set ::CHANNEL_WIDTH_H 0
-}
-close $glb_cfg_file
-
-# Check for macros manually (avoiding unsupported -filter)
-set macro_found 0
-foreach cell [get_cells -hierarchical] {
-    if {[catch {get_attribute $cell cell_type} cell_type_val]} {
-        continue
-    }
-    if {$cell_type_val eq "macro"} {
-        set macro_found 1
-        break
-    }
-}
-
-# Conditional macro placement
-if {$macro_found == 0} {
-    puts "INFO: No macros found, skipping macro placement."
-} else {
-    puts "INFO: Macros found, running macro placement..."
-    macro_placement -global_config $::env(TMP_DIR)/glb.cfg
-}
-
-# Save updated DEF
-write_def $::env(SAVE_DEF)
-```
 
 #### Step 8: Viewing the Floorplan DEF in Magic
 
