@@ -7,13 +7,6 @@
 - [ASIC flow](#asic-flow)
 - [OpenLane ASIC Flow](#openlane-asic-flow)
 - [OpenLane Flow Toolchain Overview](#openlane-flow-toolchain-overview)
-- [OpenLane Installation Guide](#openlane_installation_guide)
-- [Steps to Run OpenLane for `spm` design](#steps-to-run-openlane-for-spm-design)
-- [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff--from-synthesis-statistics-report-file)
-- [Good Floorplan vs Bad Floorplan and Library Cells](#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
-- [Calculate Die Area in Microns](#calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
-- [Viewing Test Design Outputs](#viewing-test-design-outputs)
-
 
 ### `ASIC Flow`
 
@@ -191,7 +184,7 @@ export PDK_ROOT=/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/to
 ```
 
 # Step 2: Change directory to the OpenLANE flow working directory
-`shell
+```shell
 cd ~/Desktop/work/tools/openlane_working_dir/openlane
 ```
 
