@@ -194,6 +194,8 @@ make
 sudo make install
 ```
 
+![Alt Text](Images/s6.jpg)
+
 ### Design used for this exercise: picorv32a
 
 Step-by-Step OpenLANE Synthesis Flow Commands
