@@ -366,9 +366,8 @@ Aspect Ratio =  Height
 
 **Pin Placement:** Pin placement (I/O planning) is crucial for functionality and reliability. Strategic pin assignment minimizes signal degradation, preserves data integrity, and helps manage heat dissipation. Proper positioning of power and ground pins supports thermal management and enhances signal strength, contributing to overall system stability and manufacturability.
 
-#### Step 8:Floorplaning using OpenLANE & view in Magic
-
-Files of importance in increasing priority order:
+**Files of importance in increasing priority order:**
+---------------
 
 1. floorplan.tcl - System default environment variables  
 2. config.tcl  
@@ -518,3 +517,98 @@ set ::env(PL_TARGET_DENSITY) [expr {($::env(FP_CORE_UTIL) + 5) / 100.0}]
 set ::env(RUN_BASIC_MP) 0
 ```
 </details>
+
+#### Step 8:Floorplaning using OpenLANE & view in Magic
+
+```shell
+run_floorplan
+```
+
+![Alt Text](Images/s5.jpg)
+
+⚠️ **Potential Errors During Floorplanning**
+When running:
+```shell
+run_floorplan
+```
+you may encounter errors, especially for macro-less designs like picorv32a. These errors are typically due to macro_placement steps within the OpenROAD flow that expect macros to be present in the design.
+
+🧩 **Why the Error Occurs?**
+The script or_basic_mp.tcl, which handles macro placement, assumes that the design contains macros (like SRAMs or IPs). If no such macros are present, OpenROAD may crash or throw errors during this step:
+```shell
+macro_placement -global_config glb.cfg
+```
+For designs without any macros, this command should be skipped to avoid unnecessary failures.
+
+🛠️ **How to Fix It?**
+You need to modify the or_basic_mp.tcl script to check whether the design contains macros, and only run macro_placement if macros are found.
+
+✅ This change ensures macro placement is only performed when necessary.
+
+Replace the contents of:
+```shell
+/openLANE_flow/scripts/openroad/or_basic_mp.tcl
+```
+### updated or_basic_mp.tcl script
+```shell
+# Copyright 2020 Efabless Corporation
+# Licensed under the Apache License, Version 2.0
+
+# Load LEF/DEF and Liberty
+if {[catch {read_lef $::env(MERGED_LEF_UNPADDED)} errmsg]} {
+    puts stderr "ERROR: $errmsg"
+    exit 1
+}
+
+foreach lib $::env(LIB_SYNTH) {
+    read_liberty $lib
+}
+
+if {[catch {read_def $::env(CURRENT_DEF)} errmsg]} {
+    puts stderr "ERROR: $errmsg"
+    exit 1
+}
+
+# Create a global configuration file for macro placement
+set glb_cfg_file [open $::env(TMP_DIR)/glb.cfg w]
+puts $glb_cfg_file {
+set ::HALO_WIDTH_V 0
+set ::HALO_WIDTH_H 0
+set ::CHANNEL_WIDTH_V 0
+set ::CHANNEL_WIDTH_H 0
+}
+close $glb_cfg_file
+
+# Check for macros manually (avoiding unsupported -filter)
+set macro_found 0
+foreach cell [get_cells -hierarchical] {
+    if {[catch {get_attribute $cell cell_type} cell_type_val]} {
+        continue
+    }
+    if {$cell_type_val eq "macro"} {
+        set macro_found 1
+        break
+    }
+}
+
+# Conditional macro placement
+if {$macro_found == 0} {
+    puts "INFO: No macros found, skipping macro placement."
+} else {
+    puts "INFO: Macros found, running macro placement..."
+    macro_placement -global_config $::env(TMP_DIR)/glb.cfg
+}
+
+# Save updated DEF
+write_def $::env(SAVE_DEF)
+```
+
+#### Step 8: Viewing the Floorplan DEF in Magic
+
+To visually inspect the floorplan (DEF) file in the Magic layout editor, use the following command in your terminal from the floorplan results directory:
+
+```shell
+magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+
+![Alt Text](Images/floorplan.jpg)
