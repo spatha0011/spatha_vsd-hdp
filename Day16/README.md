@@ -182,26 +182,31 @@ Using an existing design provided in the OpenLANE package to:
 ```
 
 **Design used for this exercise: picorv32a**
-  
-  1) To invoke OpenLANE, cd to the home directory of OpenLANE and run docker:  
-    `docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21`  
-    where the env variable PDK_ROOT points to the directory path containing the **sky130A** library.
 
-  2) The entry point for OpenLANE is the `./flow.tcl` script. This script is used to run the flow, start interactive sessions, select the configuration and create OpenLane design files.
-     * To run the automated flow for a design:
-       ```
-       ./flow.tcl -design <design_name>
-       ```
-     * To start an [**interactive session**](https://openlane.readthedocs.io/en/latest/reference/interactive_mode.html):
-       ```
-       ./flow.tcl -interactive
-       ```
-  3) We will be using the interactive mode to learn about the different steps in the flow.
-     * The commands to start an interactive session and run the synthesis of the **picorv32a** example design are given below:
-       ```
-       ./flow.tcl -interactive
-       package require openlane 0.9
-       prep -design picorv32a
-       run_synthesis
-       ```
+Step-by-Step OpenLANE Synthesis Flow Commands
 
+# Step 1: Export the PDK_ROOT variable to point to your sky130A PDK
+```shell
+export PDK_ROOT=/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks
+```
+
+# Step 2: Change directory to the OpenLANE flow working directory
+`shell
+cd ~/Desktop/work/tools/openlane_working_dir/openlane
+```
+
+# Step 3: (Optional) Alias the docker command to simplify OpenLANE invocation
+```shell
+alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+```
+
+# Step 4: Launch the Docker container (OpenLANE interactive shell)
+```shell
+docker
+```
+
+# Step 5: Once inside the Docker container, launch the OpenLANE interactive shell using:
+```shell
+./flow.tcl -interactive
+```
+![Alt Text](Images/s2.jpg)
