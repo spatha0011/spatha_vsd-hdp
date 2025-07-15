@@ -314,3 +314,19 @@ cd 15-07_02-11/reports/synthesis
 
 ```
 </details>
+
+
+### 📊 **Calculation of Flop Ratio and DFF %**
+
+To evaluate the sequential logic content in the synthesized design:
+
+- **Total Cells** = 15134  
+- **DFF Cells** = 1613 (from `sky130_fd_sc_hd__dfxtp_2`)
+
+#### ➤ Flop Ratio:
+
+Flop Ratio = DFFs / Total Cells = 1613 / 15134 ≈ 0.1065
+
+#### ➤ DFF Percentage:
+
+DFF % = (DFFs / Total Cells) × 100 = (1613 / 15134) × 100 ≈ 10.65%
