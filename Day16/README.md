@@ -174,6 +174,14 @@ Using an existing design provided in the OpenLANE package to:
 │   │   │  ├── libs.tech -> files specific for the tool (klayout,netgen,magic...) 
 ```
 
+### Getting started
+
+To get started, clone the required files and project setup from the below GitHub repository:
+```shell
+git clone https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd
+```
+This repository contains all the necessary resources, scripts, and design files to follow along with the OpenLANE-based Advanced Physical Design flow, including the picorv32a case study.
+
 ### Building PDKs from Source
 
 To build and install the OpenPDKs (Process Design Kits) for the Sky130 process node, follow these steps:
