@@ -16,6 +16,7 @@
 - [Floorplanning and library cells](#floorplanning-and-library-cells)
 - [Files of importance in increasing priority order](#files-of-importance-in-increasing-priority-order)
 - [Viewing the Floorplan DEF in Magic](#step-8-viewing-the-floorplan-def-in-magic)
+- [Calculate the die area in microns from the values in floorplan def](#calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
 
 
 ### `ASIC Flow`
