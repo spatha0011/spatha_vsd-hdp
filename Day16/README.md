@@ -178,27 +178,27 @@ Using an existing design provided in the OpenLANE package to:
 
 Step-by-Step OpenLANE Synthesis Flow Commands
 
-# Step 1: Export the PDK_ROOT variable to point to your sky130A PDK
+#### Step 1: Export the PDK_ROOT variable to point to your sky130A PDK
 ```shell
 export PDK_ROOT=/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks
 ```
 
-# Step 2: Change directory to the OpenLANE flow working directory
+#### Step 2: Change directory to the OpenLANE flow working directory
 ```shell
 cd ~/Desktop/work/tools/openlane_working_dir/openlane
 ```
 
-# Step 3: (Optional) Alias the docker command to simplify OpenLANE invocation
+#### Step 3: (Optional) Alias the docker command to simplify OpenLANE invocation
 ```shell
 alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
 ```
 
-# Step 4: Launch the Docker container (OpenLANE interactive shell)
+#### Step 4: Launch the Docker container (OpenLANE interactive shell)
 ```shell
 docker
 ```
 
-# Step 5: Once inside the Docker container, launch the OpenLANE interactive shell using:
+#### Step 5: Once inside the Docker container, launch the OpenLANE interactive shell using:
 ```shell
 ./flow.tcl -interactive
 ```
