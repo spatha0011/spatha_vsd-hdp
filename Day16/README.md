@@ -4,9 +4,19 @@
 
 ### 📚 Contents
 
-- [ASIC flow](#asic-flow)
+- [ASIC Flow](#asic-flow)
 - [OpenLane ASIC Flow](#openlane-asic-flow)
 - [OpenLane Flow Toolchain Overview](#openlane-flow-toolchain-overview)
+- [Familiarize with OpenLANE flow](#familiarize-with-openlane-flow)
+- [OpenLANE Directory Structure](#openlane-directory-structure)
+- [Getting started](#getting-started)
+- [Building PDKs from Source](#building-pdks-from-source)
+- [Step-by-Step OpenLANE Synthesis Flow Commands for picorv32a design](#step-by-step-openlane-synthesis-flow-commands-for-picorv32a-design)
+- [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff-)
+- [Floorplanning and library cells](#floorplanning-and-library-cells)
+- [Files of importance in increasing priority order](#files-of-importance-in-increasing-priority-order)
+- [Viewing the Floorplan DEF in Magic](#viewing-the-floorplan-def-in-magic)
+
 
 ### `ASIC Flow`
 
@@ -174,7 +184,7 @@ Using an existing design provided in the OpenLANE package to:
 │   │   │  ├── libs.tech -> files specific for the tool (klayout,netgen,magic...) 
 ```
 
-### Getting started
+### `Getting started`
 
 To get started, clone the required files and project setup from the below GitHub repository:
 ```shell
@@ -182,7 +192,7 @@ git clone https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd
 ```
 This repository contains all the necessary resources, scripts, and design files to follow along with the OpenLANE-based Advanced Physical Design flow, including the picorv32a case study.
 
-### Building PDKs from Source
+### `Building PDKs from Source`
 
 To build and install the OpenPDKs (Process Design Kits) for the Sky130 process node, follow these steps:
 
@@ -196,9 +206,7 @@ sudo make install
 
 ![Alt Text](Images/s6.jpg)
 
-### Design used for this exercise: picorv32a
-
-Step-by-Step OpenLANE Synthesis Flow Commands
+### `Step-by-Step OpenLANE Synthesis Flow Commands for picorv32a design`
 
 #### Step 1: Export the PDK_ROOT variable to point to your sky130A PDK
 ```shell
@@ -247,7 +255,7 @@ exit
 
 ![Alt Text](Images/s4.jpg)
 
-### Step 7: View the Yosys Synthesis Report
+#### Step 7: View the Yosys Synthesis Report
 
 After synthesis, navigate to the report directory to view synthesis results:
 
