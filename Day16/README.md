@@ -502,7 +502,9 @@ run_floorplan
 ![Alt Text](Images/s5.jpg)
 
 ⚠️ **Potential Errors During Floorplanning**
+
 When running:
+
 ```shell
 run_floorplan
 ```
