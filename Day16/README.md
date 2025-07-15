@@ -228,12 +228,14 @@ exit
 ### Step 7: View the Yosys Synthesis Report
 
 After synthesis, navigate to the report directory to view synthesis results:
-``shell
+
+```shell
 cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/
 ls -ltrh  # Choose the latest run directory (e.g., 15-07_02-11)
 cd 15-07_02-11/reports/synthesis
 ```
 <details> <summary><strong>1-yosys_4.stat.rpt</strong></summary>
+  
 ```shell
 
 28. Printing statistics.
