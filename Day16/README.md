@@ -569,3 +569,16 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 ```
 
 ![Alt Text](Images/floorplan.jpg)
+
+- Press s and v to fit the layout properly on the screen.
+
+- Move the cursor onto a particular object and then press s.
+
+- Go to the tkcon main window.
+
+- Type the command shown in the screenshot (or observe the details displayed).
+
+- The tkcon window will show the details of the selected object.
+
+![Alt Text](Images/floorplan1.jpg)
+
