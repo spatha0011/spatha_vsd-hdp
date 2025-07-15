@@ -174,6 +174,18 @@ Using an existing design provided in the OpenLANE package to:
 │   │   │  ├── libs.tech -> files specific for the tool (klayout,netgen,magic...) 
 ```
 
+### Building PDKs from Source
+
+To build and install the OpenPDKs (Process Design Kits) for the Sky130 process node, follow these steps:
+
+```bash
+git clone https://github.com/RTimothyEdwards/open_pdks.git
+cd open_pdks
+./configure --sky130
+make
+sudo make install
+```
+
 **Design used for this exercise: picorv32a**
 
 Step-by-Step OpenLANE Synthesis Flow Commands
@@ -362,6 +374,8 @@ Files of importance in increasing priority order:
 2. config.tcl  
 3. sky130A_sky130_fd_sc_hd_config.tcl
 
+> Floorplan Defaults (floorplan.tcl)
+
 The following configuration sets the default parameters used during the floorplanning stage of the ASIC design in the OpenLane flow. These environment variables control core sizing, utilization, power grid, IO placement, and margins.
 
 <details> <summary><strong>floorplan.tcl</strong></summary>
@@ -445,5 +459,62 @@ set ::env(DESIGN_IS_CORE) 1
 - **`DESIGN_IS_CORE`**:  
   Signals the flow to treat this design as a core block for appropriate floorplanning behavior.
 
+> config.tcl — Design Configuration File
+
+The config.tcl file is the primary user-editable configuration file in an OpenLane ASIC design flow. It defines design-specific parameters that control various aspects of the flow, including design name, clock settings, technology libraries, floorplan overrides, power planning, and tool options.
+
+This file allows users to customize the flow behavior without modifying the underlying scripts
+
+<details> <summary><strong>config.tcl</strong></summary>
+
+```shell
+# Design
+set ::env(DESIGN_NAME) "picorv32a"
+
+set ::env(VERILOG_FILES) "./designs/picorv32a/src/picorv32a.v"
+set ::env(SDC_FILE) "./designs/picorv32a/src/picorv32a.sdc"
+
+set ::env(CLOCK_PERIOD) "5.000"
+set ::env(CLOCK_PORT) "clk"
 
 
+set ::env(CLOCK_NET) $::env(CLOCK_PORT)
+
+set ::env(FP_CORE_UTIL) 65
+set ::env(FP_IO_VMETAL) 4
+set ::env(FP_IO_HMETAL) 3
+
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+
+set filename $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/$::env(PDK)_$::env(STD_CELL_LIBRARY)_config.tcl
+if { [file exists $filename] == 1} {
+	source $filename
+}
+```
+</details>
+
+> sky130A_sky130_fd_sc_hd_config.tcl — Standard Cell Library Specific Configuration
+
+This configuration file contains parameters tailored for the SkyWater 130nm technology node using the sky130_fd_sc_hd standard cell library. These parameters fine-tune synthesis and floorplanning steps, ensuring better alignment with the technology’s characteristics and design goals.
+
+<details> <summary><strong>sky130A_sky130_fd_sc_hd_config.tcl</strong></summary>
+
+```shell
+# SCL Configs
+set ::env(GLB_RT_ADJUSTMENT) 0.1
+set ::env(SYNTH_CAP_LOAD) 30
+set ::env(SYNTH_MAX_FANOUT) 6
+set ::env(CLOCK_PERIOD) "24.73"
+
+# Floorplan utilization and density
+set ::env(FP_CORE_UTIL) 35
+set ::env(PL_TARGET_DENSITY) [expr {($::env(FP_CORE_UTIL) + 5) / 100.0}]
+
+set ::env(RUN_BASIC_MP) 0
+```
+</details>
