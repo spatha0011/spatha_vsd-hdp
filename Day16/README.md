@@ -15,7 +15,7 @@
 - [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff))
 - [Floorplanning and library cells](#floorplanning-and-library-cells)
 - [Files of importance in increasing priority order](#files-of-importance-in-increasing-priority-order)
-- [Floorplaning using OpenLANE & view in Magic](#step-8-floorplanning-using-openlane--viewing-in-magic)
+- [Floorplaning using OpenLANE & view in Magic](#step-8-floorplaning-using-openlane--view-in-magic)
 - [Viewing the Floorplan DEF in Magic](#step-9-viewing-the-floorplan-def-in-magic)
 - [Calculate the die area in microns from the values in floorplan def](#calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
 
