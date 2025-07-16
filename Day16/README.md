@@ -546,7 +546,7 @@ To visually inspect the floorplan (DEF) file in the Magic layout editor, use the
 magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 ```
 
-![Alt Text](Images/floorplan.jpg)
+![Alt Text](Images/miss6.jpg)
 
 - Press s and v to fit the layout properly on the screen.
 
