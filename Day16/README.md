@@ -218,9 +218,16 @@ After synthesis, navigate to the report directory to view synthesis results:
 
 ```shell
 cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/
-ls -ltrh  # Choose the latest run directory (e.g., 15-07_02-11)
-cd 15-07_02-11/reports/synthesis
+ls -ltrh  # Choose the latest run directory (e.g., 16-07_22-34)
+cd 16-07_22-34/reports/synthesis
 ```
+
+```shell
+patha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-07_22-34/reports/synthesis$ ls
+1-yosys_4.chk.rpt   1-yosys_dff.stat  2-opensta.min_max.rpt  2-opensta.slew.rpt    2-opensta_tns.rpt
+1-yosys_4.stat.rpt  1-yosys_pre.stat  2-opensta.rpt          2-opensta.timing.rpt  2-opensta_wns.rpt
+```
+
 <details> <summary><strong>1-yosys_4.stat.rpt</strong></summary>
   
 ```shell
