@@ -20,6 +20,7 @@
 - [Calculate the die area in microns from the values in floorplan def](#step-10-calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
 - [Run Placement using OpenLANE](#step-11-run-placement-using-openlane)  
 - [Viewing the Placement DEF in Magic](#step-12-viewing-the-placement-def-in-magic)
+- [Viewing the Placement PNG Output](#viewing-the-placement-png-output)
 
 
 ### `ASIC Flow`
@@ -598,7 +599,7 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/plc1.jpg)
 
-### 🖼️ Viewing the Placement PNG Output
+### Viewing the Placement PNG Output
 
 After running the placement step (`run_placement`), a visualization of the placed standard cells is automatically generated.
 
