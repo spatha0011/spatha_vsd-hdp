@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-##  Advanced Physical Design using OpenLane for picorv32a design
+##  Advanced Physical Design using OpenLane for `picorv32a` design
 
 ### 📚 Contents
 
