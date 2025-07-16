@@ -208,6 +208,8 @@ prep -design picorv32a
 run_synthesis
 ```
 
+![Alt Text](Images/miss1.jpg)
+
 #### Step 7: View the Yosys Synthesis Report
 
 After synthesis, navigate to the report directory to view synthesis results:
