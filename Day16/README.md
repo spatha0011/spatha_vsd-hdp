@@ -558,7 +558,7 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 - The tkcon window will show the details of the selected object.
 
-![Alt Text](Images/floorplan1.jpg)
+![Alt Text](Images/miss9.jpg)
 
 #### Step 10: Calculate the die area in microns from the values in floorplan def
 
