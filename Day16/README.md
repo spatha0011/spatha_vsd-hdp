@@ -154,7 +154,7 @@ To build and install the OpenPDKs (Process Design Kits) for the Sky130 process n
 ```bash
 git clone https://github.com/RTimothyEdwards/open_pdks.git
 cd open_pdks
-./configure --sky130
+./configure --enable-sky130-pdk
 make
 sudo make install
 ```
