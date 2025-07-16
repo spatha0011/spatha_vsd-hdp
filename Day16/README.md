@@ -598,3 +598,18 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/plc1.jpg)
 
+### 🖼️ Viewing the Placement PNG Output
+
+After running the placement step (`run_placement`), a visualization of the placed standard cells is automatically generated.
+
+📁 You can find this file in the placement results directory:
+
+To open this PNG file from the terminal (inside the appropriate directory), use:
+
+```bash
+xdg-open picorv32a.placement.def.png
+```
+
+![Alt Text](Images/plc2.jpg)
+
+
