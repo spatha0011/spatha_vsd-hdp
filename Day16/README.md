@@ -200,7 +200,10 @@ package require openlane 0.9
 
 # Prep the design (creates necessary directory structure, config files, and copies RTL files)
 prep -design picorv32a
+```
+![Alt Text](Images/miss.jpg)
 
+```shell
 # Run synthesis step
 run_synthesis
 ```
