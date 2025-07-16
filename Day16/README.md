@@ -174,7 +174,7 @@ export PDK_ROOT=/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/to
 
 #### Step 2: Change directory to the OpenLANE flow working directory
 ```shell
-cd ~/Desktop/work/tools/openlane_working_dir/openlane
+cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane
 ```
 
 #### Step 3: (Optional) Alias the docker command to simplify OpenLANE invocation
