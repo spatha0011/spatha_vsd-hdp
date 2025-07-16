@@ -18,6 +18,8 @@
 - [Floorplaning using OpenLANE & view in Magic](#step-8-floorplaning-using-openlane--view-in-magic)
 - [Viewing the Floorplan DEF in Magic](#step-9-viewing-the-floorplan-def-in-magic)
 - [Calculate the die area in microns from the values in floorplan def](#step-10-calculate-the-die-area-in-microns-from-the-values-in-floorplan-def)
+- [Run Placement using OpenLANE](#step-11-run-placement-using-openlane)  
+- [Viewing the Placement DEF in Magic](#step-12-viewing-the-placement-def-in-magic)
 
 
 ### `ASIC Flow`
@@ -576,3 +578,23 @@ Die\ height\ in\ microns = \frac{673530}{1000} = 673.530\ Microns
 ```math
 Area\ of\ die\ in\ microns = 662.81 * 673.53 = 446422.4193\ Square\ Microns
 ```
+
+#### Step 11: Run Placement using OpenLANE
+
+After successful floorplanning, the next major step in the digital backend flow is cell placement. This stage involves arranging the standard cells within the defined core area while minimizing congestion, wire length, and optimizing performance metrics like timing and power.
+
+To initiate placement:
+```shell
+run_placement
+```
+![Alt Text](Images/plc.jpg)
+
+
+#### Step 12: Viewing the Placement DEF in Magic
+
+```shell
+magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+
+![Alt Text](Images/plc1.jpg)
+
