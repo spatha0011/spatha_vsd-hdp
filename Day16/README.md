@@ -203,16 +203,7 @@ prep -design picorv32a
 
 # Run synthesis step
 run_synthesis
-
-# Exit the OpenLANE interactive shell
-exit
-
-# Exit the Docker container
-exit
 ```
-![Alt Text](Images/s3.jpg)
-
-![Alt Text](Images/s4.jpg)
 
 #### Step 7: View the Yosys Synthesis Report
 
