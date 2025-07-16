@@ -210,6 +210,8 @@ run_synthesis
 
 ![Alt Text](Images/miss1.jpg)
 
+![Alt Text](Images/miss2.jpg)
+
 #### Step 7: View the Yosys Synthesis Report
 
 After synthesis, navigate to the report directory to view synthesis results:
