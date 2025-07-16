@@ -228,6 +228,8 @@ patha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools
 1-yosys_4.stat.rpt  1-yosys_pre.stat  2-opensta.rpt          2-opensta.timing.rpt  2-opensta_wns.rpt
 ```
 
+![Alt Text](Images/miss4.jpg)
+
 <details> <summary><strong>1-yosys_4.stat.rpt</strong></summary>
   
 ```shell
