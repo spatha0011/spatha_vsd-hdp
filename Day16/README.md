@@ -127,7 +127,8 @@ Using an existing design provided in the OpenLANE package to:
     * **Flow Configuration variables**: [https://openlane.readthedocs.io/en/latest/reference/configuration.html](https://openlane.readthedocs.io/en/latest/reference/configuration.html)
     * **PDK Configuration variables**: [https://openlane.readthedocs.io/en/latest/reference/pdk_configuration.html](https://openlane.readthedocs.io/en/latest/reference/pdk_configuration.html)  
 
-**OpenLANE Directory structure:**
+### OpenLANE Directory structure:
+
 ```text
 ├── OOpenLane             -> directory where the tool can be invoked (run docker first)
 │   ├── designs          -> All designs must be extracted from this folder
