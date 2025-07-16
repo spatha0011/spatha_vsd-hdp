@@ -510,7 +510,7 @@ set ::env(RUN_BASIC_MP) 0
 run_floorplan
 ```
 
-![Alt Text](Images/s5.jpg)
+![Alt Text](Images/miss5.jpg)
 
 ⚠️ **Potential Errors During Floorplanning**
 
