@@ -607,6 +607,7 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/plc1.jpg)
 
+![Alt Text](Images/miss10.jpg)
 
 ### Viewing the Placement PNG Output
 
