@@ -607,6 +607,9 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/plc1.jpg)
 
+![Alt Text](Images/miss7.jpg)
+
+
 ### Viewing the Placement PNG Output
 
 After running the placement step (`run_placement`), a visualization of the placed standard cells is automatically generated.
