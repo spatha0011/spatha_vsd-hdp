@@ -320,7 +320,7 @@ patha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools
 </details>
 
 
-### 📊 **Calculation of Flop Ratio and DFF %**
+### 📊 Calculation of Flop Ratio and DFF %
 
 To evaluate the sequential logic content in the synthesized design:
 
