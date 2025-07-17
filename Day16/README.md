@@ -21,7 +21,7 @@
 - [Run Placement using OpenLANE](#step-11-run-placement-using-openlane)  
 - [Viewing the Placement DEF in Magic](#step-12-viewing-the-placement-def-in-magic)
 - [Viewing the Placement PNG Output](#viewing-the-placement-png-output)
-- [Error: common_pdn.tcl not found](#️-error-common_pdntcl-not-found)
+- [Error: common_pdn.tcl not found](#error-common_pdntcl-not-found)
 - [Steps to fix common_pdn.tcl missing using correct OpenLane clone](#steps-to-fix-common_pdntcl-missing-using-correct-openlane-clone)
 
 
