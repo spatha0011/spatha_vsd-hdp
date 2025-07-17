@@ -667,7 +667,7 @@ cp -r * ../
 
 After a successful make when you run `make test` you will have a `Basic test passed` on your terminal. At this step when openlane is running, include the [**picorv32a**](https://github.com/spatha0011/spatha_vsd-hdp/tree/main/Day16/picorv32a).   In order to start open lane and run synthesis we would follow the next steps.
 
-#### run synthesis
+### `run synthesis`
 
 ```shell
 cd ~/OpenLane
