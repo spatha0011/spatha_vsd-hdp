@@ -1,4 +1,4 @@
-<img width="1853" height="955" alt="image" src="https://github.com/user-attachments/assets/51083a69-efdb-4de9-a698-5815af6d3c9f" /># VSD Hardware Design Program
+# VSD Hardware Design Program
 
 ##  Advanced Physical Design using OpenLane for `picorv32a` design
 
