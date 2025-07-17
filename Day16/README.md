@@ -648,7 +648,9 @@ To resolve this, follow these steps to properly set up OpenLane with all require
 ### `Steps to fix common_pdn.tcl missing using correct OpenLane clone`
 ------------
 
-By following these steps, you should resolve any issues related to PDN generation and ensure that OpenLane is set up correctly with all necessary configuration files.
+- By following these steps, you should resolve any issues related to PDN generation and ensure that OpenLane is set up correctly with all necessary configuration files.
+
+- This setup includes the **pdn.tcl** file, which is crucial for PDN configuration.
 
 **Steps to install OpenLane, PDKs and Tools:**
 
