@@ -676,6 +676,8 @@ After a successful make when you run `make test` you will have a `Basic test pas
 
 ### `run synthesis`
 
+The `run_synthesis` command initiates the synthesis process, where the high-level RTL (Register Transfer Level) design is converted into a gate-level netlist. This step involves mapping the design to standard cells from the technology library, optimizing for area, speed, and power. Synthesis is crucial for ensuring that the design meets its functional and performance requirements before proceeding to physical implementation stages.
+
 ```shell
 cd ~/OpenLane
 make mount
@@ -717,6 +719,8 @@ Flop ratio = Number of D Flip flops = 1596  = 0.15795 or 15.79%
 
 ### `run floorplan`
 
+The `run_floorplan` command initiates the floorplanning stage of the ASIC design flow. This step involves defining the physical layout of the chip, including the arrangement of the core area, placement of macros, and setup of the power distribution network. Floorplanning is essential for optimizing the design's area, performance, and power consumption, as it lays the groundwork for efficient placement and routing.
+
 ```shell
 run_floorplan
 ```
@@ -745,6 +749,8 @@ Once you are in the magic layout, we can zoom in and zoom out and select the lay
 
 ### `run placement`
 
+The `run_placement` command starts the placement process, where standard cells are arranged within the defined core area. This step aims to minimize wire length, reduce congestion, and optimize timing and power metrics. Proper placement is crucial for ensuring that the design meets its performance targets and is ready for routing.
+
 ```shell
 run_placement
 ```
@@ -765,6 +771,8 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 ![Alt Text](Images/p16.jpg)
 
 ### `run cts`
+
+The `run_cts` command performs Clock Tree Synthesis (CTS), a critical step in the design flow. CTS involves inserting clock buffers and routing the clock net to balance skew and ensure proper timing across all sequential elements. This process is vital for maintaining synchronization throughout the design and achieving reliable operation.
 
 ```shell
 run_cts
@@ -859,6 +867,8 @@ Fanout     Cap    Slew   Delay    Time   Description
 ```
 
 ### `run routing`
+
+The `run_routing` command executes the detailed routing stage, connecting all placed standard cells and macros with metal tracks to realize the netlist connections physically. Routing ensures signal integrity, minimizes crosstalk, and meets design rules for manufacturability. This step is essential for completing the physical implementation of the design.
 
 ```shell
 run_routing
