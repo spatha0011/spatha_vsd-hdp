@@ -885,7 +885,7 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 ![Alt Text](Images/rou3.jpg)
 
 
-🚀### Flow Stage Cheatsheet
+### `Flow Stage Cheatsheet`
 
 | 🔢 Step | 📄 Log File                   | 🧩 Stage Name                               | 🛠️ Description                                                       |
 | ------- | ----------------------------- | ------------------------------------------- | --------------------------------------------------------------------- |
