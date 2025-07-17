@@ -1,4 +1,4 @@
-# VSD Hardware Design Program
+<img width="1853" height="955" alt="image" src="https://github.com/user-attachments/assets/51083a69-efdb-4de9-a698-5815af6d3c9f" /># VSD Hardware Design Program
 
 ##  Advanced Physical Design using OpenLane for `picorv32a` design
 
@@ -702,7 +702,7 @@ Flop ratio = Number of D Flip flops = 1596  = 0.15795 or 15.79%
 
 ```
 
-**Steps to perform Floorplanning and Placement**
+**Steps to perform Floorplanning**
 
 ```shell
 run_floorplan
@@ -710,7 +710,7 @@ run_floorplan
 
 ![Alt Text](Images/p9.jpg)
 
-**To view the floorplan in magic :**
+**To view the floorplan def in magic :**
 
 ```shell
 cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/floorplan
@@ -724,3 +724,28 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 Once you are in the magic layout, we can zoom in and zoom out and select the layers. The view of that would be like this following:
 
 ![Alt Text](Images/p12.jpg)
+
+
+**Steps to perform Placemnet**
+
+```shell
+run_placement
+```
+
+![Alt Text](Images/p13.jpg)
+
+**To view the placement def in magic :**
+
+```shell
+cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/placement
+magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
+```
+
+![Alt Text](Images/p14.jpg)
+
+![Alt Text](Images/p15.jpg)
+
+![Alt Text](Images/p16.jpg)
+
+
+
