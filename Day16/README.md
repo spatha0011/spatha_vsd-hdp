@@ -12,7 +12,7 @@
 - [Getting started](#getting-started)
 - [Building PDKs from Source](#building-pdks-from-source)
 - [Step-by-Step OpenLANE Synthesis Flow Commands for picorv32a design](#step-by-step-openlane-synthesis-flow-commands-for-picorv32a-design)
-- [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff)
+- [Calculation of Flop Ratio and DFF %](#calculation-of-flop-ratio-and-dff-)
 - [Floorplanning and library cells](#floorplanning-and-library-cells)
 - [Files of importance in increasing priority order](#files-of-importance-in-increasing-priority-order)
 - [Floorplaning using OpenLANE & view in Magic](#step-8-floorplaning-using-openlane--view-in-magic)
@@ -320,7 +320,7 @@ patha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools
 </details>
 
 
-### 📊 Calculation of Flop Ratio and DFF %
+### Calculation of Flop Ratio and DFF %
 
 To evaluate the sequential logic content in the synthesized design:
 
