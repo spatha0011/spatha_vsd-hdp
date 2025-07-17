@@ -778,8 +778,6 @@ The `run_cts` command performs Clock Tree Synthesis (CTS), a critical step in th
 run_cts
 ```
 
-The `run_cts` command performs Clock Tree Synthesis, inserting clock buffers and routing the clock net to balance skew and ensure proper timing across all sequential elements.
-
 ![Alt Text](Images/cts2.jpg)
 
 
@@ -873,8 +871,6 @@ The `run_routing` command executes the detailed routing stage, connecting all pl
 ```shell
 run_routing
 ```
-
-The `run_routing` command performs **detailed routing** of the design, connecting all placed standard cells and macros with metal tracks to realize the netlist connections physically.
 
 ```shell
 cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_08.28.01/results/routing
