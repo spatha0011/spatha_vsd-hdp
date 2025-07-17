@@ -767,6 +767,8 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/cts1.jpg)
 
+**To view STA log:**
+
 After CTS, STA is run to verify timing. The log file `cts/13-cts_sta.log` reports hold checks (min delay paths) between flip-flops.  
 
 For example, in the path from `_17638_` to `_17735_`, the inserted clock buffers distribute the clock with proper delays, and the final reported **hold slack of 0.15ns** indicates the path meets hold timing.
@@ -841,3 +843,16 @@ Fanout     Cap    Slew   Delay    Time   Description
                                   0.15   slack (MET)
 ```
 
+**Steps to perform Routing:**
+
+```shell
+run_routing
+```
+
+The `run_routing` command performs **detailed routing** of the design, connecting all placed standard cells and macros with metal tracks to realize the netlist connections physically.
+
+![Alt Text](Images/rou1.jpg)
+
+![Alt Text](Images/rou2.jpg)
+
+![Alt Text](Images/rou3.jpg)
