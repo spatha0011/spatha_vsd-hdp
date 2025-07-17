@@ -659,3 +659,45 @@ cp -r * ../
 
 ![Alt Text](Images/p4.jpg)
 
+After a successful make when you run `make test` you will have a `Basic test passed` on your terminal. At this step when openlane is running, include the `picorv32a` In order to start open lane and run synthesis we would follow the next steps.
+
+**Steps to run synthesis in OpenLane Interactive mode:**
+
+```shell
+cd ~/OpenLane
+make mount
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+run_synthesis
+```
+
+![Alt Text](Images/p5.jpg)
+
+![Alt Text](Images/p6.jpg)
+
+**To view nelist**
+
+```shell
+cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/synthesis/
+gvim picorv32a.v
+```
+
+![Alt Text](Images/p7.jpg)
+
+**To view the report:**
+
+```shell
+cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/reports/synthesis
+gvim 1-synthesis.AREA_0.stat.rpt
+```
+
+![Alt Text](Images/p8.jpg)
+
+
+```text
+Flop ratio = Number of D Flip flops = 1596  = 0.15795 or 15.79%
+             ______________________   _____
+             Total Number of cells    10104
+
+```
