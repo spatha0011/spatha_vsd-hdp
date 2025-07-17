@@ -774,6 +774,7 @@ The `run_cts` command performs Clock Tree Synthesis, inserting clock buffers and
 
 
 ```shell
+cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/cts
 magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
 ```
 
@@ -858,6 +859,7 @@ Fanout     Cap    Slew   Delay    Time   Description
 ### `run routing`
 
 ```shell
+cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/routing
 run_routing
 ```
 
