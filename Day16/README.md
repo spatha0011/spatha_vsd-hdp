@@ -634,3 +634,28 @@ could not read ".../libs.tech/openlane/common_pdn.tcl": no such file or director
 This indicates that the PDN configuration script is missing from your sky130A/libs.tech/openlane/ directory.
 
 ![Alt Text](Images/err1.jpeg)
+
+✅ **Fix: Clone OpenLane with Submodules**
+
+To resolve this, follow these steps to properly set up OpenLane with all required files (including common_pdn.tcl):
+
+**Steps to install OpenLane, PDKs and Tools**
+
+```shell
+cd $HOME
+git clone https://github.com/The-OpenROAD-Project/OpenLane --recurse-submodules 
+cd OpenLane
+make
+make test
+cd /home/spatha/OpenLane/designs/ci
+cp -r * ../
+```
+
+![Alt Text](Images/p1.jpg)
+
+![Alt Text](Images/p2.jpg)
+
+![Alt Text](Images/p3.jpg)
+
+![Alt Text](Images/p4.jpg)
+
