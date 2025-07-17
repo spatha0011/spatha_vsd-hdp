@@ -22,6 +22,7 @@
 - [Viewing the Placement DEF in Magic](#step-12-viewing-the-placement-def-in-magic)
 - [Viewing the Placement PNG Output](#viewing-the-placement-png-output)
 - [Fix: common_pdn.tcl not found](#fix-common_pdntcl-not-found)
+- [Steps to fix common_pdn.tcl missing using correct OpenLane clone](#steps-to-fix-common_pdntcl-missing-using-correct-openlane-clone)
 
 
 ### `ASIC Flow`
@@ -636,9 +637,11 @@ This indicates that the PDN configuration script is missing from your sky130A/li
 
 ![Alt Text](Images/err1.jpeg)
 
-### Fix: Clone OpenLane with Submodules
+### ✅ Fix: Clone OpenLane with Submodules
 
 To resolve this, follow these steps to properly set up OpenLane with all required files (including common_pdn.tcl):
+
+### `Steps to fix common_pdn.tcl missing using correct OpenLane clone`
 
 **Steps to install OpenLane, PDKs and Tools**
 
