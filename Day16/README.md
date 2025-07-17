@@ -23,6 +23,11 @@
 - [Viewing the Placement PNG Output](#viewing-the-placement-png-output)
 - [Error: common_pdn.tcl not found](#error-common_pdntcl-not-found)
 - [Steps to fix common_pdn.tcl missing using correct OpenLane clone](#steps-to-fix-common_pdntcl-missing-using-correct-openlane-clone)
+  - [Run Synthesis](#run-synthesis)
+  - [Run Floorplan](#run-floorplan)
+  - [Run Placement](#run-placement)
+  - [Run CTS](#run-cts)
+  - [Run Routing](#run-routing)
 
 ### `ASIC Flow`
 
@@ -662,7 +667,7 @@ cp -r * ../
 
 After a successful make when you run `make test` you will have a `Basic test passed` on your terminal. At this step when openlane is running, include the [**picorv32a**](https://github.com/spatha0011/spatha_vsd-hdp/tree/main/Day16/picorv32a).   In order to start open lane and run synthesis we would follow the next steps.
 
-**Steps to run synthesis in OpenLane Interactive mode:**
+#### run synthesis
 
 ```shell
 cd ~/OpenLane
@@ -703,7 +708,7 @@ Flop ratio = Number of D Flip flops = 1596  = 0.15795 or 15.79%
 
 ```
 
-**Steps to perform Floorplanning:**
+#### run floorplan
 
 ```shell
 run_floorplan
@@ -729,7 +734,7 @@ Once you are in the magic layout, we can zoom in and zoom out and select the lay
 ![Alt Text](Images/p12.jpg)
 
 
-**Steps to perform Placement:**
+#### run placement
 
 ```shell
 run_placement
@@ -750,7 +755,7 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/p16.jpg)
 
-**Steps to perform CTS:**
+#### run cts
 
 ```shell
 run_cts
@@ -843,7 +848,7 @@ Fanout     Cap    Slew   Delay    Time   Description
                                   0.15   slack (MET)
 ```
 
-**Steps to perform Routing:**
+#### run routing
 
 ```shell
 run_routing
