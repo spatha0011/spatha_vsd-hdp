@@ -641,7 +641,7 @@ To resolve this, follow these steps to properly set up OpenLane with all require
 
 ### `Steps to fix common_pdn.tcl missing using correct OpenLane clone`
 
-**Steps to install OpenLane, PDKs and Tools**
+**Steps to install OpenLane, PDKs and Tools:**
 
 ```shell
 cd $HOME
@@ -704,7 +704,7 @@ Flop ratio = Number of D Flip flops = 1596  = 0.15795 or 15.79%
 
 ```
 
-**Steps to perform Floorplanning**
+**Steps to perform Floorplanning:**
 
 ```shell
 run_floorplan
@@ -712,7 +712,7 @@ run_floorplan
 
 ![Alt Text](Images/p9.jpg)
 
-**To view the floorplan def in magic :**
+**To view the floorplan def in magic:**
 
 ```shell
 cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/floorplan
@@ -728,7 +728,7 @@ Once you are in the magic layout, we can zoom in and zoom out and select the lay
 ![Alt Text](Images/p12.jpg)
 
 
-**Steps to perform Placemnet**
+**Steps to perform Placement:**
 
 ```shell
 run_placement
@@ -736,7 +736,7 @@ run_placement
 
 ![Alt Text](Images/p13.jpg)
 
-**To view the placement def in magic :**
+**To view the placement def in magic:**
 
 ```shell
 cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/placement
