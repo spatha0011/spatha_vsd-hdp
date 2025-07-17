@@ -21,6 +21,7 @@
 - [Run Placement using OpenLANE](#step-11-run-placement-using-openlane)  
 - [Viewing the Placement DEF in Magic](#step-12-viewing-the-placement-def-in-magic)
 - [Viewing the Placement PNG Output](#viewing-the-placement-png-output)
+- [Fix: common_pdn.tcl not found](#fix-common_pdntcl-not-found)
 
 
 ### `ASIC Flow`
