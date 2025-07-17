@@ -708,7 +708,7 @@ Flop ratio = Number of D Flip flops = 1596  = 0.15795 or 15.79%
 
 ```
 
-#### run floorplan
+### `run floorplan`
 
 ```shell
 run_floorplan
@@ -734,7 +734,7 @@ Once you are in the magic layout, we can zoom in and zoom out and select the lay
 ![Alt Text](Images/p12.jpg)
 
 
-#### run placement
+### `run placement`
 
 ```shell
 run_placement
@@ -755,7 +755,7 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 
 ![Alt Text](Images/p16.jpg)
 
-#### run cts
+### `run cts`
 
 ```shell
 run_cts
@@ -848,7 +848,7 @@ Fanout     Cap    Slew   Delay    Time   Description
                                   0.15   slack (MET)
 ```
 
-#### run routing
+### `run routing`
 
 ```shell
 run_routing
