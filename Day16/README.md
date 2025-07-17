@@ -28,6 +28,7 @@
   - [Run Placement](#run-placement)
   - [Run CTS](#run-cts)
   - [Run Routing](#run-routing)
+  - [Flow Stage Cheatsheet](#flow-stage-cheatsheet)
 
 ### `ASIC Flow`
 
@@ -882,3 +883,32 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 ![Alt Text](Images/rou2.jpg)
 
 ![Alt Text](Images/rou3.jpg)
+
+
+🚀### Flow Stage Cheatsheet
+
+| 🔢 Step | 📄 Log File                   | 🧩 Stage Name                               | 🛠️ Description                                                       |
+| ------- | ----------------------------- | ------------------------------------------- | --------------------------------------------------------------------- |
+| 1       | `1-synthesis.log`             | **Synthesis**                               | Converts RTL (Verilog) to gate-level netlist using Yosys.             |
+| 2       | `2-sta.log`                   | **Pre-Floorplan STA**                       | Static Timing Analysis (STA) after synthesis to check for violations. |
+| 3       | `3-initial_fp.log`            | **Initial Floorplanning** (`run_floorplan`) | Sets die/core dimensions and macro placement.                         |
+| 4       | `4-io.log`                    | **IO Placement**                            | Places I/O pads around the die boundary.                              |
+| 5       | `5-tap.log`                   | **Tap & Decap Insertion**                   | Adds well taps and decap cells to ensure power integrity.             |
+| 6       | `6-pdn.log`                   | **PDN Generation**                          | Builds the power delivery network (stripes/rings for VPWR/VGND).      |
+| 7       | `7-global.log`                | **Global Placement**                        | Places standard cells approximately for optimal routing.              |
+| 8       | `8-gpl_sta.log`               | **Post-Global Placement STA**               | Verifies timing after global placement.                               |
+| 9       | `9-resizer.log`               | **Resizer Optimization**                    | Buffers or resizes cells to improve timing.                           |
+| 10      | `10-detailed.log`             | **Detailed Placement**                      | Legally places all standard cells to the site grid.                   |
+| 11      | `11-dpl_sta.log`              | **Post-DPL STA**                            | STA after detailed placement.                                         |
+| 12      | `12-cts.log`                  | **Clock Tree Synthesis (CTS)**              | Builds and balances the clock tree.                                   |
+| 13      | `13-cts_sta.log`              | **Post-CTS STA**                            | STA including the inserted clock buffers.                             |
+| 14      | `14-resizer_design.log`       | **Resizer Design Optimization**             | Placement adjustments to ease routing.                                |
+| 15      | `15-rsz_design_sta.log`       | **Post-Design STA**                         | STA after design-aware optimization.                                  |
+| 16      | `16-resizer_timing.log`       | **Resizer Timing Optimization**             | Final adjustments to meet timing.                                     |
+| 17      | `17-rsz_timing_sta.log`       | **Post-Timing STA**                         | Final STA before routing.                                             |
+| 18      | `18-global.log`               | **Global Routing**                          | Performs top-level routing estimation.                                |
+| 19      | `18-global_write_netlist.log` | **Netlist Export**                          | Writes post-routing netlist (Verilog/DEF).                            |
+| 20      | `20-grt_sta.log`              | **Post-GR STA**                             | Timing check after global routing.                                    |
+| 21      | `21-fill.log`                 | **Fill Insertion**                          | Inserts dummy metal fill cells to meet density requirements.          |
+| 22      | `22-detailed.log`             | **Detailed Routing**                        | Final detailed routing with DRC checks.                               |
+| 23      | `23-wire_lengths.log`         | **Wire Length Report**                      | Reports total wire length after routing.                              |
