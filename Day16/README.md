@@ -774,7 +774,7 @@ The `run_cts` command performs Clock Tree Synthesis, inserting clock buffers and
 
 
 ```shell
-cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/cts
+cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_08.28.01/results/cts
 magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
 ```
 
@@ -865,7 +865,7 @@ run_routing
 The `run_routing` command performs **detailed routing** of the design, connecting all placed standard cells and macros with metal tracks to realize the netlist connections physically.
 
 ```shell
-cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/routing
+cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_08.28.01/results/routing
 magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
 ```
 
