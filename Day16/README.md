@@ -28,7 +28,7 @@
   - [Run Placement](#run-placement)
   - [Run CTS](#run-cts)
   - [Run Routing](#run-routing)
-  - [Flow Stage Cheatsheet](#flow-stage-cheatsheet)
+  - [📌Flow Stage Cheatsheet](#flow-stage-cheatsheet)
 
 ### `ASIC Flow`
 
