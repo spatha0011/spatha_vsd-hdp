@@ -625,7 +625,7 @@ xdg-open picorv32a.placement.def.png
 
 ![Alt Text](Images/plc2.jpg)
 
-#### ❗ Error: common_pdn.tcl not found?
+#### ❗Error: common_pdn.tcl not found?
 
 During PDN generation, you might encounter this error:
 
