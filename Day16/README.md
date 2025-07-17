@@ -623,4 +623,14 @@ xdg-open picorv32a.placement.def.png
 
 ![Alt Text](Images/plc2.jpg)
 
+⚠️ **Error: common_pdn.tcl not found?**
 
+During PDN generation, you might encounter this error:
+
+```shell
+could not read ".../libs.tech/openlane/common_pdn.tcl": no such file or directory
+```
+
+This indicates that the PDN configuration script is missing from your sky130A/libs.tech/openlane/ directory.
+
+![Alt Text](Images/err1.jpeg)
