@@ -636,7 +636,7 @@ This indicates that the PDN configuration script is missing from your sky130A/li
 
 ![Alt Text](Images/err1.jpeg)
 
-### ✅Fix: Clone OpenLane with Submodules
+### Fix: Clone OpenLane with Submodules
 
 To resolve this, follow these steps to properly set up OpenLane with all required files (including common_pdn.tcl):
 
