@@ -676,7 +676,7 @@ run_synthesis
 
 ![Alt Text](Images/p6.jpg)
 
-**To view nelist**
+**To view nelist:**
 
 ```shell
 cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/synthesis/
@@ -701,3 +701,26 @@ Flop ratio = Number of D Flip flops = 1596  = 0.15795 or 15.79%
              Total Number of cells    10104
 
 ```
+
+**Steps to perform Floorplanning and Placement**
+
+```shell
+run_floorplan
+```
+
+![Alt Text](Images/p9.jpg)
+
+**To view the floorplan in magic :**
+
+```shell
+cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/floorplan
+magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
+```
+
+![Alt Text](Images/p10.jpg)
+
+![Alt Text](Images/p11.jpg)
+
+Once you are in the magic layout, we can zoom in and zoom out and select the layers. The view of that would be like this following:
+
+![Alt Text](Images/p12.jpg)
