@@ -23,13 +23,13 @@
 - [Viewing the Placement PNG Output](#viewing-the-placement-png-output)
 - [Error: common_pdn.tcl not found](#error-common_pdntcl-not-found)
 - [Steps to fix common_pdn.tcl missing using correct OpenLane clone](#steps-to-fix-common_pdntcl-missing-using-correct-openlane-clone)
-  - [Run Synthesis](#run-synthesis)
-  - [View Netlist and Reports](#view-netlist-and-reports)
-  - [Run Floorplan](#run-floorplan)
-  - [View Floorplan DEF in Magic](#view-floorplan-def-in-magic)
-  - [Run Placement](#run-placement)
-  - [View Placement DEF in Magic](#view-placement-def-in-magic)
-  - [Run CTS](#run-cts)
+  - [Run Synthesis](#steps-to-run-synthesis-in-openlane-interactive-mode)
+  - [View Netlist and Reports](#to-view-nelist)
+  - [Run Floorplan](#steps-to-perform-floorplanning)
+  - [View Floorplan DEF in Magic](#to-view-the-floorplan-def-in-magic)
+  - [Run Placement](#steps-to-perform-placement)
+  - [View Placement DEF in Magic](#to-view-the-placement-def-in-magic)
+  - [Run CTS](#steps-to-perform-cts)
 
 
 ### `ASIC Flow`
