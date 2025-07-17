@@ -725,6 +725,8 @@ run_floorplan
 
 **To view the floorplan def in magic:**
 
+Once the floorplan is complete, you can visualize the DEF (Design Exchange Format) file using Magic, a layout editor. Navigate to the floorplan results directory and execute the following command:
+
 ```shell
 cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/floorplan
 magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
