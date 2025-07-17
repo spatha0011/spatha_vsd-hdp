@@ -169,6 +169,8 @@ make
 sudo make install
 ```
 
+❗**Note:** Before building open_pdks, please ensure you have `Magic 8.3.530` installed and available in your path, as earlier versions may lack the required CIF interfaces.
+
 ![Alt Text](Images/s6.jpg)
 
 ### `Step-by-Step OpenLANE Synthesis Flow Commands for picorv32a design`
