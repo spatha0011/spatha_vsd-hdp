@@ -646,6 +646,7 @@ This indicates that the PDN configuration script is missing from your sky130A/li
 To resolve this, follow these steps to properly set up OpenLane with all required files (including common_pdn.tcl):
 
 ### `Steps to fix common_pdn.tcl missing using correct OpenLane clone`
+------------
 
 **Steps to install OpenLane, PDKs and Tools:**
 
