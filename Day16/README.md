@@ -719,6 +719,8 @@ cd ~/OpenLane/designs/picorv32a/runs/RUN_2025.07.17_04.48.49/results/floorplan
 magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
 ```
 
+❗**Note:** Make sure to use the correct Magic technology file (sky130A.tech) corresponding to your installed PDK version and path. An incorrect tech file may cause display issues or loading errors.
+
 ![Alt Text](Images/p10.jpg)
 
 ![Alt Text](Images/p11.jpg)
