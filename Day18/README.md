@@ -343,8 +343,8 @@ terminal values
 
 **Measured using `ngspice` waveform cursor:**
 
-- Time at **80% of V<sub>out</sub>** (2.64 V): `4.0518 ns`  
 - Time at **20% of V<sub>out</sub>** (660 mV): `4.0953 ns`
+- Time at **80% of V<sub>out</sub>** (2.64 V): `4.0518 ns`  
 
 **✅ Fall Transition Time:**
 
