@@ -54,5 +54,5 @@ All these steps are described in a configuration file and passed to a characteri
 
 These are exported in `.lib` format and used in synthesis and static timing analysis flows.
 
-![Alt Text](Images/openlane.jpg)
+![Alt Text](Images/1.jpg)
 
