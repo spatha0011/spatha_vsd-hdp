@@ -24,4 +24,4 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 | **Day 15** | [**Floorplan and Placement of VSDBabySoC in OpenROAD**](Day15/README.md) | **✅ Done** |
 | **Day 16** | [**Advanced Physical Design using OpenLane for picorv32a design**](Day16/README.md) | **✅ Done** |
 | **Day 17** | [**Expand Ubuntu VM Disk Space in VirtualBox**](Day17/README.md) | **✅ Done** |
-| **Day 18** | [**Magic Layout and ngspice characterization**](Day18/README.md) | **IN PROGRESS** |
+| **Day 18** | [**Magic Layout and ngspice characterization**](Day18/README.md) | **✅ Done** |
