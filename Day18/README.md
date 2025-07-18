@@ -303,16 +303,16 @@ terminal values
 
 #### <ins>Rise Transition Time Calculation from ngspice</ins>
 
-**Measured using `ngspice` waveform cursor:**
+> - Time at **20% of V<sub>out</sub>** (0.66 V): `t_20 = 2.1800 ns`  
+> - Time at **80% of V<sub>out</sub>** (2.64 V): `t_80 = 2.2463 ns`
 
-- Time at **20% of V<sub>out</sub>** (660 mV): `2.1800 ns`
-- Time at **80% of V<sub>out</sub>** (2.64 V): `2.2463 ns`
+> **Formula**:  
+> `Rise Time = t_80 − t_20`  
+> `= 2.2463 ns − 2.1800 ns`  
+> `= 0.0663 ns`  
+> `= 66.3 ps`
 
-**✅ Rise Transition Time:**
-
-```
-Rise Time = 2.2463 ns − 2.1800 ns = 66.3 ps
-```
+> ✅ **Rise Transition Time = 66.3 ps**
 
 ### `Fall Transition Time Calculation`
 
@@ -345,18 +345,19 @@ terminal values
 
 ![Alt Text](Images/g2_t.jpg)
 
+
 #### <ins>Fall Transition Time Calculation from ngspice</ins>
 
-**Measured using `ngspice` waveform cursor:**
+> - Time at **80% of V<sub>out</sub>** (2.64 V): `t_80 = 4.0518 ns`  
+> - Time at **20% of V<sub>out</sub>** (0.66 V): `t_20 = 4.0953 ns`
 
-- Time at **20% of V<sub>out</sub>** (660 mV): `4.0953 ns`
-- Time at **80% of V<sub>out</sub>** (2.64 V): `4.0518 ns`  
+> **Formula**:  
+> `Fall Time = t_20 − t_80`  
+> `= 4.0953 ns − 4.0518 ns`  
+> `= 0.0435 ns`  
+> `= 43.5 ps`
 
-**✅ Fall Transition Time:**
-
-```
-Fall Time = 4.0953 ns − 4.0518 ns = 43.5 ps
-```
+> ✅ **Fall Transition Time = 43.5 ps**
 
 ### `Rise Cell Delay Calculation`
 
