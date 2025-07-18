@@ -147,6 +147,14 @@ Upon running that command we would be able to see the `CMOS Inverter` in magic.
 
 ![Alt Text](Images/5.jpg)
 
+PMOS source connectivity to VDD (here VPWR) verified
+
+![Alt Text](Images/m3.jpg)
+
+NMOS source connectivity to VSS (here VGND) verified
+
+![Alt Text](Images/m4.jpg)
+
 #### 	<ins>16-Mask CMOS N-Well Process – Summary</ins>
 
 The 16-mask CMOS fabrication process is a standard method used in the semiconductor industry to manufacture integrated circuits (ICs). This process involves a series of photolithography, doping, deposition, and etching steps that define the active and passive components of a CMOS circuit. Each mask step is critical in shaping specific layers or features of the chip, ensuring proper device functionality and integration.
