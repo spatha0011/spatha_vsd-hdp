@@ -321,9 +321,9 @@ Fall transition time = Time taken for output to fall to 20% − Time taken for o
 
 The **fall transition time** is the **difference in time between the output falling from 2.64 V to 660 mV** during the falling edge of the signal.
 
-![Alt Text](Images/g2_80.jpg)
+![Alt Text](Images/g2_t80.jpg)
 
-![Alt Text](Images/g2_20.jpg)
+![Alt Text](Images/g2_t20.jpg)
 
 ![Alt Text](Images/g2_t.jpg)
 
