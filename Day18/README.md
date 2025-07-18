@@ -268,5 +268,41 @@ Screenshot of generated plot
 
 ![Alt Text](Images/m10.jpg)
 
+### <ins>Rise Transition Time Calculation</ins>
+
+#### <ins>Formula</ins>
+
+```
+Rise Transition Time = Time at 80% of Vout − Time at 20% of Vout
+```
+
+#### <ins>Reference Values (for VDD = 3.3V)</ins>
+
+- **20% of output voltage:**  
+  `0.20 × 3.3V = 660 mV`
+
+- **80% of output voltage:**  
+  `0.80 × 3.3V = 2.64 V`
+
+The **rise transition time** is the **difference in time between the output reaching 2.64 V and 660 mV** during the rising edge of the signal.
+
+![Alt Text](Images/g1_20.jpg)
+
+![Alt Text](Images/g1_80.jpg)
+
+![Alt Text](Images/g1_t.jpg)
+
+#### <ins>Rise Transition Time Calculation</ins>
+
+**Measured using `ngspice` waveform cursor:**
+
+- Time at **20% of V<sub>out</sub>** (660 mV): `2.1800 ns`
+- Time at **80% of V<sub>out</sub>** (2.64 V): `2.2463 ns`
+
+**✅ Rise Transition Time:**
+
+```
+Rise Time = 2.2463 ns − 2.1800 ns = 66.3 ps
+```
 
 
