@@ -455,4 +455,28 @@ Screenshot of poly rules from the website:
 
 ![Alt Text](Images/s5.jpg)
 
+New commands inserted in `sky130A.tech` file to update drc:
+
+![Alt Text](Images/add1.jpg)
+
+![Alt Text](Images/add2.jpg)
+
+Commands to run in tkcon window:
+
+```shell
+# Loading updated tech file
+tech load sky130A.tech
+
+# Must re-run drc check to see updated drc errors
+drc check
+
+# Selecting region displaying the new errors and getting the error messages 
+drc why
+```
+
+Screenshot of magic window with rule implemented:
+
+![Alt Text](Images/add3.jpg)
+
+
 
