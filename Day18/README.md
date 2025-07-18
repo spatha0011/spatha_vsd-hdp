@@ -311,7 +311,7 @@ terminal values
 Rise Time = 2.2463 ns − 2.1800 ns = 66.3 ps
 ```
 
-#### `Fall Transition Time Calculation`
+### `Fall Transition Time Calculation`
 
 ```
 Fall transition time = Time taken for output to fall to 20% − Time taken for output to fall to 80%
