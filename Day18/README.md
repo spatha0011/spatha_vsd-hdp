@@ -4,14 +4,14 @@
 
 A **library** is a collection of standard cells, each defined by its size, functionality, threshold voltage, and other electrical/physical properties. These libraries are fundamental to the ASIC flow for synthesis, placement, and timing analysis.
 
-#### Inputs
+#### <ins>Inputs</ins>
 
 - **PDKs (Process Design Kits):**
   - DRC & LVS decks
   - SPICE models
 - **Library & User-Defined Specifications**
 
-#### Standard Cell Design Flow
+#### <ins>Standard Cell Design Flow</ins>
 
 1. **Circuit Design**
 2. **Layout Design**
@@ -22,7 +22,7 @@ A **library** is a collection of standard cells, each defined by its size, funct
    - Power
    - Noise
 
-#### Outputs
+#### <ins>Outputs<ins>
 
 - `CDL` – Circuit Description Language file
 - `LEF` – Library Exchange Format
@@ -33,7 +33,7 @@ A **library** is a collection of standard cells, each defined by its size, funct
   - Power
   - Noise
 
-#### Standard Cell Characterization Flow
+#### <ins>Standard Cell Characterization Flow</ins>
 
 A typical standard cell characterization process includes:
 
@@ -76,7 +76,7 @@ In standard cell characterization, one of the key components is **Timing Charact
 
 #### <ins>Propagation Delay & Transition Time</ins>
 
-#### Propagation Delay
+#### <ins>Propagation Delay</ins>
 
 **Definition**:  
 The time difference between the input signal reaching 50% of its final value and the output reaching 50% of its final value.
@@ -103,7 +103,7 @@ Poor choice of threshold values lead to negative delay values. Even thought you 
 
 ![Alt Text](Images/4.jpg)
 
-#### Transition Time
+#### <ins>Transition Time</ins>
 
 **Definition**:  
 The time it takes for a signal to transition between logic states, typically measured between 10–90% or 20–80% of the voltage levels.
