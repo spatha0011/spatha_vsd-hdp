@@ -44,7 +44,7 @@ Screenshot of commands run:
 
 **Condition 2 verified:**
 
-Vertical track pitch = 0.46 µm
+Horizontal track pitch = 0.46 µm
 
 ![Alt_Text](Images/5.jpg)
 
