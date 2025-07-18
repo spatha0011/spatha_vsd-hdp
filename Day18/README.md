@@ -56,7 +56,7 @@ These are exported in `.lib` format and used in synthesis and static timing anal
 
 ![Alt Text](Images/1.jpg)
 
-### Timing Characterization
+### <ins>Timing Characterization</ins>
 
 In standard cell characterization, one of the key components is **Timing Characterization**, which defines how a cell behaves with respect to input signal changes over time.
 
@@ -74,7 +74,7 @@ In standard cell characterization, one of the key components is **Timing Charact
 | `out_fall_thr`            | 50% of signal   |
 
 
-#### Propagation Delay & Transition Time
+#### <ins>Propagation Delay & Transition Time</ins>
 
 #### Propagation Delay
 
