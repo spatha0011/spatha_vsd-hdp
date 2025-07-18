@@ -81,9 +81,23 @@ In standard cell characterization, one of the key components is **Timing Charact
 **Definition**:  
 The time difference between the input signal reaching 50% of its final value and the output reaching 50% of its final value.
 
+Poor choice of threshold values lead to negative delay values. Even thought you have taken good threshold values, sometimes depending upon how good or bad the slew, the dealy might be still +ve or -ve.
+
 ```text
 Propagation Delay = time(out_thr) - time(in_thr)
 ```
+
+**in_thr (input threshold time):**
+
+The time at which the input signal crosses its defined threshold voltage during a transition.
+
+For delay measurement, this is typically the 50% point of the input voltage swing.
+
+**out_thr (output threshold time):**
+
+The time at which the output signal crosses its threshold voltage during the response to the input transition.
+
+Also typically measured at the 50% point for consistency with in_thr.
 
 #### Transition Time
 
@@ -94,5 +108,15 @@ The time it takes for a signal to transition between logic states, typically mea
 Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
 Fall Transition Time = time(slew_high_fall_thr) - time(slew_low_fall_thr)
 ```
+**slew_low_rise_thr:**
+The time when the rising input or output crosses the lower threshold, usually 20% of the voltage swing.
 
+**slew_high_rise_thr:***
+The time when the rising input or output crosses the upper threshold, usually 80% of the voltage swing.
+
+**slew_high_fall_thr:**
+The time when the falling input or output crosses the upper threshold, typically 80%.
+
+**slew_low_fall_thr:**
+The time when the falling input or output crosses the lower threshold, typically 20%.
 
