@@ -2,7 +2,7 @@
 
 ## Magic Layout and ngspice characterization
 
-### 📚 Table of Contents
+### 📚 Contents
 
 - [Cell Design and characterization flows](#cell-design-and-characterization-flows)
   - [Inputs](#inputs)
