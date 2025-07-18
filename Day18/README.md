@@ -370,7 +370,7 @@ Fall Time = 4.0953 ns − 4.0518 ns = 43.5 ps
 
 output rising to 50% and input falls to 50%
 
-![Alt Text](Images/g3_t50.jpg)
+![Alt Text](Images/g3_50.jpg)
 
 terminal values
 
