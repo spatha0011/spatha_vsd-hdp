@@ -56,3 +56,43 @@ These are exported in `.lib` format and used in synthesis and static timing anal
 
 ![Alt Text](Images/1.jpg)
 
+### Timing Characterization
+
+In standard cell characterization, one of the key components is **Timing Characterization**, which defines how a cell behaves with respect to input signal changes over time.
+
+#### Timing Threshold Definitions
+
+| **Timing Definition**      | **Value**       |
+|---------------------------|-----------------|
+| `slew_low_rise_thr`       | 20% of signal   |
+| `slew_high_rise_thr`      | 80% of signal   |
+| `slew_low_fall_thr`       | 20% of signal   |
+| `slew_high_fall_thr`      | 80% of signal   |
+| `in_rise_thr`             | 50% of signal   |
+| `in_fall_thr`             | 50% of signal   |
+| `out_rise_thr`            | 50% of signal   |
+| `out_fall_thr`            | 50% of signal   |
+
+
+#### Propagation Delay & Transition Time
+
+#### Propagation Delay
+
+**Definition**:  
+The time difference between the input signal reaching 50% of its final value and the output reaching 50% of its final value.
+
+```text
+Propagation Delay = time(out_thr) - time(in_thr)
+```
+
+#### Transition Time
+
+**Definition**:  
+The time it takes for a signal to transition between logic states, typically measured between 10–90% or 20–80% of the voltage levels.
+
+```text
+Rise Transition Time = time(slew_high_rise_thr) - time(slew_low_rise_thr)
+Fall Transition Time = time(slew_high_fall_thr) - time(slew_low_fall_thr)
+```
+
+
