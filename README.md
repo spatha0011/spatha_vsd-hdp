@@ -25,3 +25,4 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 | **Day 16** | [**Advanced Physical Design using OpenLane for picorv32a design**](Day16/README.md) | **✅ Done** |
 | **Day 17** | [**Expand Ubuntu VM Disk Space in VirtualBox**](Day17/README.md) | **✅ Done** |
 | **Day 18** | [**Magic Layout and ngspice characterization**](Day18/README.md) | **✅ Done** |
+| **Day 19** | [**Pre-layout timing analysis and importance of good clock tree**](Day19/README.md) | **In progress** |
