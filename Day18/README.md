@@ -478,7 +478,7 @@ Screenshot of magic window with rule implemented:
 
 ![Alt Text](Images/add3.jpg)
 
-<ins>Summary:</ins>
+#### <ins>Summary:</ins>
 
 To enforce the poly.9 design rule correctly—which specifies that poly resistors must maintain a minimum spacing of 0.48 µm (480 nm) from diffusion (alldiff) and non-resistor poly (allpolynonres) layers—new DRC rules were added to the sky130A.tech file. The original implementation did not flag violations even when spacing was below the required 0.48 µm, indicating the rule was either missing or incorrectly defined. To correct this, two new spacing rules were inserted: one between npres and alldiff, and another between npres and allpolynonres, both with touching_illegal condition and corresponding rule IDs referencing poly.9. After updating the .tech file, the following commands were executed in the Magic tool’s TkCon window: tech load sky130A.tech to reload the updated tech file, drc check to rerun the DRC engine, and drc why to inspect specific violations. As seen in the final Magic screenshot, the DRC now correctly flags violations where spacing is less than 0.48 µm, confirming that the poly.9 rule is implemented and functional.
 
