@@ -39,19 +39,21 @@ Screenshot of commands run:
 
 ![Alt_Text](Images/3.jpg)
 
-Condition 1 verified:
+**Condition 1 verified:**
 
 ![Alt_Text](Images/4.jpg)
 
-Condition 2 verified:
+**Condition 2 verified:**
 
-Horizontal track pitch = 0.46 µm
+<br>
+  Height of standard cell = 2.72 µm = 0.34 × 8
+<br>
 
 ![Alt_Text](Images/5.jpg)
 
 Width of standard cell = 1.38 µm = 0.46 × 3
 
-Condition 3 verified:
+**Condition 3 verified:**
 
 Vertical track pitch = 0.34 µm
 
