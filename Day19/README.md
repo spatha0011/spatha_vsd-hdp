@@ -45,9 +45,7 @@ Screenshot of commands run:
 
 **Condition 2 verified:**
 
-<br>
-  Height of standard cell = 2.72 µm = 0.34 × 8
-<br>
+Height of standard cell = 2.72 µm = 0.34 × 8
 
 ![Alt_Text](Images/5.jpg)
 
