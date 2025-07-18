@@ -243,3 +243,30 @@ Screenshot of created spice file:
 Measuring unit distance in layout grid
 
 ![Alt Text](Images/m7.jpg)
+
+Final edited spice file ready for ngspice simulation
+
+![Alt Text](Images/m8.jpg)
+
+#### <ins>Post-layout ngspice simulations</ins>
+
+Commands for ngspice simulation
+
+```shell
+# Command to directly load spice file for simulation to ngspice
+ngspice sky130_inv.spice
+
+# Now that we have entered ngspice with the simulation spice file loaded we just have to load the plot
+plot y vs time a
+```
+
+Screenshots of ngspice run
+
+![Alt Text](Images/m9.jpg)
+
+Screenshot of generated plot
+
+![Alt Text](Images/m10.jpg)
+
+
+
