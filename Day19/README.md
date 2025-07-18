@@ -1,4 +1,4 @@
-<img width="854" height="352" alt="image" src="https://github.com/user-attachments/assets/c7066afe-9468-41a0-8d7f-d67e82cb258f" /># VSD Hardware Design Program
+# VSD Hardware Design Program
 
 ## Pre-layout timing analysis and importance of good clock tree
 
