@@ -298,7 +298,7 @@ terminal values
 
 ![Alt Text](Images/g1_t.jpg)
 
-#### <ins>Rise Transition Time Calculation</ins>
+#### <ins>Rise Transition Time Calculation from ngspice</ins>
 
 **Measured using `ngspice` waveform cursor:**
 
@@ -339,7 +339,7 @@ terminal values
 
 ![Alt Text](Images/g2_t.jpg)
 
-#### <ins>Fall Transition Time Calculation</ins>
+#### <ins>Fall Transition Time Calculation from ngspice</ins>
 
 **Measured using `ngspice` waveform cursor:**
 
