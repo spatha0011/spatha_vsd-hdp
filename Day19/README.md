@@ -7,8 +7,8 @@
 Conditions to be verified before moving forward with custom designed cell layout:
 
 - Condition 1: The input and output ports of the standard cell should lie on the intersection of the vertical and horizontal tracks.
-- Condition 2: Width of the standard cell should be odd multiples of the horizontal track pitch.
-- Condition 3: Height of the standard cell should be even multiples of the vertical track pitch.
+- Condition 2: **Width** of the standard cell should be **odd multiples** of the **horizontal track pitch**.
+- Condition 3: **Height** of the standard cell should be **even multiples** of the **vertical track pitch**.
   
 Commands to open the custom inverter layout:
 
