@@ -99,6 +99,8 @@ The time at which the output signal crosses its threshold voltage during the res
 
 Also typically measured at the 50% point for consistency with in_thr.
 
+![Alt Text](Images/3.jpg)
+
 #### Transition Time
 
 **Definition**:  
