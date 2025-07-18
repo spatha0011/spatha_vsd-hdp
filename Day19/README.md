@@ -2,8 +2,6 @@
 
 ## Pre-layout timing analysis and importance of good clock tree
 
-### 📚 Contents
-
 ### `Fix up small DRC errors and verify the design is ready to be inserted into our flow`
 
 Conditions to be verified before moving forward with custom designed cell layout:
@@ -36,3 +34,27 @@ help grid
 # Set grid values accordingly
 grid 0.46um 0.34um 0.23um 0.17um
 ```
+
+Screenshot of commands run:
+
+![Alt_Text](Images/3.jpg)
+
+Condition 1 verified:
+
+![Alt_Text](Images/4.jpg)
+
+Condition 2 verified:
+
+Horizontal track pitch = 0.46 µm
+
+![Alt_Text](Images/5.jpg)
+
+Width of standard cell = 1.38 µm = 0.46 × 3
+
+Condition 3 verified:
+
+Vertical track pitch = 0.34 µm
+
+![Alt_Text](Images/6.jpg)
+
+Height of standard cell = 2.72 µm = 0.34 × 8
