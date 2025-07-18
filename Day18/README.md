@@ -358,3 +358,27 @@ terminal values
 Fall Time = 4.0953 ns − 4.0518 ns = 43.5 ps
 ```
 
+### `Rise Cell Delay Calculation`
+
+> **Rise Cell Delay** is the time it takes for the output to reach 50% of V<sub>DD</sub> after the input begins transitioning.
+
+> **Formula**:  
+> `Rise Cell Delay = Time(output rises to 50%) − Time(input falls to 50%)`
+
+> For V<sub>DD</sub> = 3.3V,  
+> 50% of V<sub>DD</sub> = **1.65V**
+
+output rising to 50% and input falls to 50%
+
+![Alt Text](Images/g3_t50.jpg)
+
+terminal values
+
+![Alt Text](Images/g3_t.jpg)
+
+> `Rise Cell Delay = Time(output @ 50%) − Time(input @ 50%)`  
+> `= 2.21079e-09 − 2.15e-09`  
+> `= 0.06079e-09 s`  
+> `= 60.79 ps`
+
+> ✅ **Rise Cell Delay = 60.79 ps**
