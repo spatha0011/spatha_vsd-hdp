@@ -4,7 +4,8 @@
 
 ### 📚 Contents
 
-### 1. Fix up small DRC errors and verify the design is ready to be inserted into our flow.
+### `Fix up small DRC errors and verify the design is ready to be inserted into our flow`
+
 Conditions to be verified before moving forward with custom designed cell layout:
 
 - Condition 1: The input and output ports of the standard cell should lie on the intersection of the vertical and horizontal tracks.
