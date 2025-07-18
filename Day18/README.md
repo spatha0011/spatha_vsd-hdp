@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## `Cell Design and charcaterization flows`
+## `Cell Design and characterization flows`
 
 A **library** is a collection of standard cells, each defined by its size, functionality, threshold voltage, and other electrical/physical properties. These libraries are fundamental to the ASIC flow for synthesis, placement, and timing analysis.
 
@@ -111,7 +111,7 @@ Fall Transition Time = time(slew_high_fall_thr) - time(slew_low_fall_thr)
 **slew_low_rise_thr:**
 The time when the rising input or output crosses the lower threshold, usually 20% of the voltage swing.
 
-**slew_high_rise_thr:***
+**slew_high_rise_thr:**
 The time when the rising input or output crosses the upper threshold, usually 80% of the voltage swing.
 
 **slew_high_fall_thr:**
@@ -120,3 +120,4 @@ The time when the falling input or output crosses the upper threshold, typically
 **slew_low_fall_thr:**
 The time when the falling input or output crosses the lower threshold, typically 20%.
 
+### `Design Library Cell using magic layout and ngspice charcterization`
