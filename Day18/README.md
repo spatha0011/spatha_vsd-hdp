@@ -361,13 +361,14 @@ terminal values
 
 ### `Rise Cell Delay Calculation`
 
-> **Rise Cell Delay** is the time it takes for the output to reach 50% of V<sub>DD</sub> after the input begins transitioning.
+**Rise Cell Delay** is the time it takes for the output to reach 50% of V<sub>DD</sub> after the input begins transitioning.
 
-> **Formula**:  
-> `Rise Cell Delay = Time(output rises to 50%) − Time(input falls to 50%)`
+**Formula**:  
+`Rise Cell Delay = Time(output rises to 50%) − Time(input falls to 50%)`
 
-> For V<sub>DD</sub> = 3.3V,  
-> 50% of V<sub>DD</sub> = **1.65V**
+For V<sub>DD</sub> = 3.3V,  
+
+50% of V<sub>DD</sub> = **1.65V**
 
 output rising to 50% and input falling to 50%
 
