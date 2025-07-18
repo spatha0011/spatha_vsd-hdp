@@ -81,8 +81,6 @@ In standard cell characterization, one of the key components is **Timing Charact
 **Definition**:  
 The time difference between the input signal reaching 50% of its final value and the output reaching 50% of its final value.
 
-Poor choice of threshold values lead to negative delay values. Even thought you have taken good threshold values, sometimes depending upon how good or bad the slew, the dealy might be still +ve or -ve.
-
 ```text
 Propagation Delay = time(out_thr) - time(in_thr)
 ```
@@ -100,6 +98,10 @@ The time at which the output signal crosses its threshold voltage during the res
 Also typically measured at the 50% point for consistency with in_thr.
 
 ![Alt Text](Images/3.jpg)
+
+Poor choice of threshold values lead to negative delay values. Even thought you have taken good threshold values, sometimes depending upon how good or bad the slew, the dealy might be still +ve or -ve.
+
+![Alt Text](Images/4.jpg)
 
 #### Transition Time
 
