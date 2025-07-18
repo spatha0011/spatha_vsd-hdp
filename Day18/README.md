@@ -439,3 +439,20 @@ gvim .magicrc
 # Command to open magic tool in better graphics
 magic -d XR &
 ```
+Screenshot of .magicrc file:
+
+![Alt Text](Images/magicrc.jpg)
+
+First load the poly file by using the cmd 'load poly' on tkcon window:
+
+![Alt Text](Images/s3.jpg)
+
+Incorrectly implemented poly.9 rule no drc violation even though spacing < 0.48u:
+
+![Alt Text](Images/s4.jpg)
+
+Screenshot of poly rules from the website:
+
+![Alt Text](Images/s5.jpg)
+
+
