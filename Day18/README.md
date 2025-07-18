@@ -120,4 +120,7 @@ The time when the falling input or output crosses the upper threshold, typically
 **slew_low_fall_thr:**
 The time when the falling input or output crosses the lower threshold, typically 20%.
 
-### `Design Library Cell using magic layout and ngspice charcterization`
+![Alt Text](Images/2.jpg)
+
+## `Design Library Cell using magic layout and ngspice charcterization`
+
