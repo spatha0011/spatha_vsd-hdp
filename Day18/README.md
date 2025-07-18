@@ -1,5 +1,31 @@
 # VSD Hardware Design Program
 
+## Magic Layout and ngspice characterization
+
+### 📚 Table of Contents
+
+- [Cell Design and characterization flows](#cell-design-and-characterization-flows)
+  - [Inputs](#inputs)
+  - [Standard Cell Design Flow](#standard-cell-design-flow)
+  - [Outputs](#outputs)
+  - [Standard Cell Characterization Flow](#standard-cell-characterization-flow)
+- [Timing Characterization](#timing-characterization)
+  - [Timing Threshold Definitions](#timing-threshold-definitions)
+  - [Propagation Delay & Transition Time](#propagation-delay--transition-time)
+    - [Propagation Delay](#propagation-delay)
+    - [Transition Time](#transition-time)
+- [Design Library Cell using magic layout and ngspice charcterization](#design-library-cell-using-magic-layout-and-ngspice-charcterization)
+  - [16-Mask CMOS N-Well Process – Summary](#16-mask-cmos-n-well-process--summary)
+  - [Spice extraction of inverter in magic](#spice-extraction-of-inverter-in-magic)
+  - [Editing the spice model file for analysis through simulation](#editing-the-spice-model-file-for-analysis-through-simulation)
+  - [Post-layout ngspice simulations](#post-layout-ngspice-simulations)
+- [Rise Transition Time Calculation](#rise-transition-time-calculation)
+- [Fall Transition Time Calculation](#fall-transition-time-calculation)
+- [Rise Cell Delay Calculation](#rise-cell-delay-calculation)
+- [Fall Cell Delay Calculation](#fall-cell-delay-calculation)
+- [Find problem in the DRC section of the old magic tech file for the skywater process and fix them](#find-problem-in-the-drc-section-of-the-old-magic-tech-file-for-the-skywater-process-and-fix-them)
+  - [DRC Rule Debug Summary](#summary)
+  
 ## `Cell Design and characterization flows`
 
 A **library** is a collection of standard cells, each defined by its size, functionality, threshold voltage, and other electrical/physical properties. These libraries are fundamental to the ASIC flow for synthesis, placement, and timing analysis.
