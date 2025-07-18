@@ -286,9 +286,15 @@ Rise transition time = Time taken for output to rise to 80% − Time taken for o
 
 The **rise transition time** is the **difference in time between the output reaching 2.64 V and 660 mV** during the rising edge of the signal.
 
+output rising to 20%
+
 ![Alt Text](Images/g1_20.jpg)
 
+output rising to 80%
+
 ![Alt Text](Images/g1_80.jpg)
+
+terminal values
 
 ![Alt Text](Images/g1_t.jpg)
 
@@ -321,9 +327,15 @@ Fall transition time = Time taken for output to fall to 20% − Time taken for o
 
 The **fall transition time** is the **difference in time between the output falling from 2.64 V to 660 mV** during the falling edge of the signal.
 
-![Alt Text](Images/g2_t80.jpg)
+output falling to 20%
 
 ![Alt Text](Images/g2_t20.jpg)
+
+output falling to 80%
+
+![Alt Text](Images/g2_t80.jpg)
+
+terminal values
 
 ![Alt Text](Images/g2_t.jpg)
 
