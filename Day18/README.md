@@ -212,7 +212,7 @@ The completed wafer is tested to identify functional and defective chips. The fu
   <img src="Images/6.jpg" alt="Right Image" width="45%" style="display:inline-block;" />
 </p>
 
-### <ins>Spice extraction of inverter in magic.</ins>
+### <ins>Spice extraction of inverter in magic</ins>
 
 Commands for spice extraction of the custom inverter layout to be used in tkcon window of magic
 
@@ -238,7 +238,7 @@ Screenshot of created spice file:
 
 ![Alt Text](Images/m6.jpg)
 
-#### <ins>Editing the spice model file for analysis through simulation.</ins>
+#### <ins>Editing the spice model file for analysis through simulation</ins>
 
 Measuring unit distance in layout grid
 
