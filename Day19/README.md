@@ -1,4 +1,4 @@
-# VSD Hardware Design Program
+<img width="854" height="352" alt="image" src="https://github.com/user-attachments/assets/c7066afe-9468-41a0-8d7f-d67e82cb258f" /># VSD Hardware Design Program
 
 ## Pre-layout timing analysis and importance of good clock tree
 
@@ -134,7 +134,9 @@ Commands to invoke the OpenLANE flow include new lef and perform synthesis
 
 ```shell
 # Change directory to openlane flow directory
-cd Desktop/work/tools/openlane_working_dir/openlane
+cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane
+
+export PDK_ROOT=/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks
 
 # alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
 # Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
@@ -158,3 +160,55 @@ add_lefs -src $lefs
 # Now that the design is prepped and ready, we can run synthesis using following command
 run_synthesis
 ```
+
+![Alt_Text](Images/11.jpg)
+
+### 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
+
+Noting down current design values generated before modifying parameters to improve timing.
+
+![Alt_Text](Images/12.jpg)
+
+![Alt_Text](Images/13.jpg)
+
+Commands to view and change parameters to improve timing and run synthesis
+
+```shell
+# Now once again we have to prep design so as to update variables
+prep -design picorv32a -tag new -overwrite
+
+# Addiitional commands to include newly added lef to openlane flow merged.lef
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+
+add_lefs -src $lefs
+
+# Command to display current value of variable SYNTH_STRATEGY
+echo $::env(SYNTH_STRATEGY)
+
+# Command to set new value for SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+# Command to display current value of variable SYNTH_BUFFERING to check whether it's enabled
+echo $::env(SYNTH_BUFFERING)
+
+# Command to display current value of variable SYNTH_SIZING
+echo $::env(SYNTH_SIZING)
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+echo $::env(SYNTH_DRIVING_CELL)
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+```
+
+Comparing to previously noted run values area has increased and worst negative slack has become 0
+
+![Alt_Text](Images/14.jpg)
+
+![Alt_Text](Images/15.jpg)
+
+
+
