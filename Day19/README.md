@@ -210,5 +210,78 @@ Comparing to previously noted run values area has increased and worst negative s
 
 ![Alt_Text](Images/15.jpg)
 
+### 8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
 
+Now that our custom inverter is properly accepted in synthesis we can now run floorplan using following command
 
+```shell
+# Now we can run floorplan
+run_floorplan
+```
+Screenshots of command run:
+
+![Alt_Text](Images/16.jpg)
+
+Since we are facing unexpected un-explainable error while using run_floorplan command, we can instead use the following set of commands available based on information from 
+
+/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands/floorplan.tcl
+
+and also based on Floorplan Commands section in 
+
+/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/docs/source/OpenLANE_commands.md
+
+```shell
+# Follwing commands are alltogather sourced in "run_floorplan" command
+init_floorplan
+place_io
+tap_decap_or
+```
+
+Screenshots of commands run:
+
+![Alt_Text](Images/17.jpg)
+
+![Alt_Text](Images/18.jpg)
+
+![Alt_Text](Images/19.jpg)
+
+Now that floorplan is done we can do placement using following command
+
+```shell
+# Now we are ready to run placement
+run_placement
+```
+
+Screenshots of commands run:
+
+![Alt_Text](Images/20.jpg)
+
+Commands to load placement def in magic in another terminal
+
+```shell
+# Change directory to path containing generated placement def
+cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/new/results/placement/
+
+# Command to load the placement def in magic tool
+magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+
+```
+
+Screenshot of placement def in magic:
+
+![Alt_Text](Images/21.jpg)
+
+Screenshot of custom inverter inserted in placement def with proper abutment:
+
+![Alt_Text](Images/22.jpg)
+
+Command for tkcon window to view internal layers of cells
+
+```shell
+# Command to view internal connectivity layers
+expand
+```
+
+![Alt_Text](Images/23.jpg)
+
+![Alt_Text](Images/24.jpg)
