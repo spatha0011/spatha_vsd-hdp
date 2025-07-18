@@ -268,12 +268,12 @@ Screenshot of generated plot
 
 ![Alt Text](Images/m10.jpg)
 
-### <ins>Rise Transition Time Calculation</ins>
+### `Rise Transition Time Calculation`
 
 #### <ins>Formula</ins>
 
 ```
-Rise Transition Time = Time at 80% of Vout − Time at 20% of Vout
+Rise transition time = Time taken for output to rise to 80% − Time taken for output to rise to 20%
 ```
 
 #### <ins>Reference Values (for VDD = 3.3V)</ins>
@@ -305,4 +305,38 @@ The **rise transition time** is the **difference in time between the output reac
 Rise Time = 2.2463 ns − 2.1800 ns = 66.3 ps
 ```
 
+#### `Fall Transition Time Calculation`
+
+```
+Fall transition time = Time taken for output to fall to 20% − Time taken for output to fall to 80%
+```
+
+#### <ins>Reference Values (for VDD = 3.3V)<ins>
+
+- **20% of output voltage:**  
+  `0.20 × 3.3V = 660 mV`
+
+- **80% of output voltage:**  
+  `0.80 × 3.3V = 2.64 V`
+
+The **fall transition time** is the **difference in time between the output falling from 2.64 V to 660 mV** during the falling edge of the signal.
+
+![Alt Text](Images/g2_80.jpg)
+
+![Alt Text](Images/g2_20.jpg)
+
+![Alt Text](Images/g2_t.jpg)
+
+#### <ins>Fall Transition Time Calculation</ins>
+
+**Measured using `ngspice` waveform cursor:**
+
+- Time at **80% of V<sub>out</sub>** (2.64 V): `4.0518 ns`  
+- Time at **20% of V<sub>out</sub>** (660 mV): `4.0953 ns`
+
+**✅ Fall Transition Time:**
+
+```
+Fall Time = 4.0953 ns − 4.0518 ns = 43.5 ps
+```
 
