@@ -240,11 +240,11 @@ Screenshot of created spice file:
 
 #### <ins>Editing the spice model file for analysis through simulation</ins>
 
-Measuring unit distance in layout grid
+Measuring unit distance in layout grid:
 
 ![Alt Text](Images/m7.jpg)
 
-Final edited spice file ready for ngspice simulation
+Final edited spice file ready for ngspice simulation:
 
 ![Alt Text](Images/m8.jpg)
 
@@ -260,11 +260,11 @@ ngspice sky130_inv.spice
 plot y vs time a
 ```
 
-Screenshots of ngspice run
+Screenshots of ngspice run:
 
 ![Alt Text](Images/m9.jpg)
 
-Screenshot of generated plot
+Screenshot of generated plot:
 
 ![Alt Text](Images/m10.jpg)
 
@@ -289,15 +289,15 @@ Rise transition time = Time taken for output to rise to 80% − Time taken for o
 
 The **rise transition time** is the **difference in time between the output reaching 2.64 V and 660 mV** during the rising edge of the signal.
 
-output rising to 20%
+output rising to 20%:
 
 ![Alt Text](Images/g1_20.jpg)
 
-output rising to 80%
+output rising to 80%:
 
 ![Alt Text](Images/g1_80.jpg)
 
-terminal values
+terminal values:
 
 ![Alt Text](Images/g1_t.jpg)
 
@@ -333,15 +333,15 @@ Fall transition time = Time taken for output to fall to 20% − Time taken for o
 
 The **fall transition time** is the **difference in time between the output falling from 2.64 V to 660 mV** during the falling edge of the signal.
 
-output falling to 20%
+output falling to 20%:
 
 ![Alt Text](Images/g2_t20.jpg)
 
-output falling to 80%
+output falling to 80%:
 
 ![Alt Text](Images/g2_t80.jpg)
 
-terminal values
+terminal values:
 
 ![Alt Text](Images/g2_t.jpg)
 
@@ -370,11 +370,11 @@ For V<sub>DD</sub> = 3.3V,
 
 50% of V<sub>DD</sub> = **1.65V**
 
-output rising to 50% and input falling to 50%
+output rising to 50% and input falling to 50%:
 
 ![Alt Text](Images/g3_50.jpg)
 
-terminal values
+terminal values:
 
 ![Alt Text](Images/g3_t.jpg)
 
@@ -384,3 +384,29 @@ terminal values
 > `= 60.79 ps`
 
 > ✅ **Rise Cell Delay = 60.79 ps**
+
+### `Fall Cell Delay Calculation`
+
+**Fall Cell Delay** is the time it takes for the output to fall to 50% of V<sub>DD</sub> after the input begins transitioning.
+
+**Formula**:  
+`Fall Cell Delay = Time(output falls to 50%) − Time(input rises to 50%)`
+
+For V<sub>DD</sub> = 3.3V,  
+
+50% of V<sub>DD</sub> = **1.65V**
+
+output falling to 50% and input rising to 50%:
+
+![Alt Text](Images/g4_50.jpg)
+
+terminal values:
+
+![Alt Text](Images/g4_t.jpg)
+
+> `Fall Cell Delay = Time(output @ 50%) − Time(input @ 50%)`  
+> `= 4.07745e-09 − 4.05e-09`  
+> `= 0.02745e-09 s`  
+> `= 27.45 ps`
+
+> ✅ **Fall Cell Delay = 27.45 ps**
