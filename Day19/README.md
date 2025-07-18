@@ -44,7 +44,7 @@ Screenshot of commands run:
 
 **Condition 2 verified:**
 
-Height of standard cell = 2.72 µm = 0.34 × 8
+Vertical track pitch = 0.46 µm
 
 ![Alt_Text](Images/5.jpg)
 
