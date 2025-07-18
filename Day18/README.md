@@ -196,6 +196,9 @@ Photolithography is used to define the desired interconnect patterns. Unwanted m
 **15. Passivation Layer Deposition**  
 A passivation layer of silicon dioxide or silicon nitride is deposited over the entire wafer to protect the circuit from mechanical damage, moisture, and contamination.
 
+![Alt Text](Images/7.jpg)
+
+![Alt Text](Images/6.jpg)
 **16. Final Testing and Packaging**  
 The completed wafer is tested to identify functional and defective chips. The functional chips are then diced, packaged into individual components, and prepared for use in electronic systems.
 
