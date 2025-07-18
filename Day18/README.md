@@ -4,14 +4,14 @@
 
 A **library** is a collection of standard cells, each defined by its size, functionality, threshold voltage, and other electrical/physical properties. These libraries are fundamental to the ASIC flow for synthesis, placement, and timing analysis.
 
-### Inputs
+#### Inputs
 
 - **PDKs (Process Design Kits):**
   - DRC & LVS decks
   - SPICE models
 - **Library & User-Defined Specifications**
 
-### Standard Cell Design Flow
+#### Standard Cell Design Flow
 
 1. **Circuit Design**
 2. **Layout Design**
@@ -22,7 +22,7 @@ A **library** is a collection of standard cells, each defined by its size, funct
    - Power
    - Noise
 
-### Outputs
+#### Outputs
 
 - `CDL` – Circuit Description Language file
 - `LEF` – Library Exchange Format
