@@ -276,6 +276,9 @@ Screenshot of generated plot
 Rise transition time = Time taken for output to rise to 80% − Time taken for output to rise to 20%
 ```
 
+**Rise Time** = T<sub>80%</sub> − T<sub>20%</sub>
+
+
 #### <ins>Reference Values (for VDD = 3.3V)</ins>
 
 - **20% of output voltage:**  
@@ -316,6 +319,9 @@ Rise Time = 2.2463 ns − 2.1800 ns = 66.3 ps
 ```
 Fall transition time = Time taken for output to fall to 20% − Time taken for output to fall to 80%
 ```
+
+**Fall Time** = T<sub>20%</sub> − T<sub>80%</sub>
+
 
 #### <ins>Reference Values (for VDD = 3.3V)<ins>
 
