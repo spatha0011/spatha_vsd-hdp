@@ -534,7 +534,7 @@ Verified that the netlist is overwritten by checking that instance _14766_ is re
 
 Since we confirmed that netlist is replaced and will be loaded in PnR but since we want to follow up on the earlier 0 violation design we are continuing with the clean design to further stages.
 
-The or_cts.tcl script requires the variable CTS_SQR_RES (square resistance in kΩ/µm²), but it's not set in your config.tcl or environment.
+❗**Note:** The or_cts.tcl script requires the environment variables CTS_SQR_CAP (square capacitance in pF/µm²) and CTS_SQR_RES (square resistance in kΩ/µm²) for clock tree characterization, but they are not set in your config.tcl or environment.
 
 Add the following two lines to your config.tcl before initiating the runs:
 
