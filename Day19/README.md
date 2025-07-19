@@ -241,11 +241,11 @@ Screenshots of command run:
 
 Since we are facing unexpected un-explainable error while using run_floorplan command, we can instead use the following set of commands available based on information from 
 
-/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands/floorplan.tcl
+`/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands/floorplan.tcl`
 
 and also based on Floorplan Commands section in 
 
-/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/docs/source/OpenLANE_commands.md
+`/home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/docs/source/OpenLANE_commands.md`
 
 ```shell
 # Follwing commands are alltogather sourced in "run_floorplan" command
