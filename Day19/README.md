@@ -524,6 +524,10 @@ Commands to verify instance _14766_ is replaced with sky130_fd_sc_hd__or4_4
 report_checks -from _29555_ -to _30952_ -through _14766_
 ```
 
+- **`-from _29555_`**: Starting point of the path (launch pin or clock origin)
+- **`-to _30952_`**: Endpoint of the path (data capture pin or flop input)
+- **`-through _14766_`**: Ensures the path being reported includes the specific instance you replaced
+  
 Screenshot of replaced instance
 
 ![Alt_Text](Images/42.jpg)
@@ -557,7 +561,7 @@ Load pins
 ```
 ![Alt_Text](Images/43.jpg)
 
-_We started ECO fixes at WNS = -23.8900 ns, and have now improved it to WNS = -22.7650 ns, achieving a reduction of approximately 1.1250 ns in worst negative slack._
+**_We started ECO fixes at WNS = -23.8900 ns, and have now improved it to WNS = -22.7650 ns, achieving a reduction of approximately 1.1250 ns in worst negative slack._**
 
 ### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts
 
