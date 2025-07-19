@@ -595,9 +595,7 @@ lrwxrwxrwx 1 spatha spatha   29 Jul 18 18:53 merged_unpadded.lef -> ../../tmp/me
 - **picorv32a.synthesis.v	:** Gate-level netlist generated after initial synthesis of the RTL
 - **picorv32a.synthesis_cts.v	:** Generated after running Clock Tree Synthesis (CTS). This netlist includes inserted clock buffers and CTS-aware hierarchy.
 
-### Setup timing analysis using real clocks
-
-### Setup Timing Analysis using Real Clocks
+### <ins>Setup timing analysis using real clocks</ins>
 
 Setup timing analysis ensures that data launched from a source flop reaches the destination flop **before the active clock edge**, with enough time to meet the **setup time** requirement.
 
@@ -628,7 +626,7 @@ Where:
 ![Alt_Text](Images/51.jpg)
 
 
-### Hold Timing Analysis using Real Clocks
+### <ins>Hold Timing Analysis using Real Clocks</ins>
 Hold timing analysis with real clocks considers practical effects like **clock skew** and **clock jitter**, both of which can critically impact data stability at the receiving flip-flop.
 
 - **Clock Skew**: This is the variation in clock arrival time between the launch and capture flip-flops due to differing clock tree paths. For hold analysis, **negative skew** (capture clock arrives earlier) can lead to **hold violations**, as data might arrive too soon at the capture flop.
