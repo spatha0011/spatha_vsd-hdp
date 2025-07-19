@@ -364,7 +364,14 @@ sta pre_sta.conf
 
 ![Alt_Text](Images/28.jpg)
 
-Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
+Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again.
+
+- High fanout from driving cells results in **greater capacitive load**, hence **slower signal propagation**.
+- Slack reported: **-23.89 ps**  
+- TNS: **-711.59 ps**  
+- Conclusion: Design does **not meet timing** constraints.
+
+We can adjust the `SYNTH_MAX_FANOUT` parameter in the `.sdc` file and rerun synthesis to reduce loading effects.
 
 Commands to include new lef and perform synthesis
 
