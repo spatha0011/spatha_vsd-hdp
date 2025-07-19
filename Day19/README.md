@@ -329,7 +329,7 @@ Screenshot of commands run:
 
 Newly created `pre_sta.conf` for STA analysis in `openlane` directory
 
-![Alt_Text](Images/29.jpg)
+![Alt_Text](Images/32.jpg)
 
 Newly created `my_base.sdc` for STA analysis in `openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc`
 
@@ -388,3 +388,8 @@ sta pre_sta.conf
 
 ![Alt_Text](Images/31.jpg)
 
+### 10. Make timing ECO fixes to remove all violations.
+
+OR gate of drive strength 2 is driving 4 fanouts
+
+![Alt_Text](Images/33.jpg)
