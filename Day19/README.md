@@ -498,3 +498,29 @@ _We started ECO fixes at WNS = -23.8900 ns, and have now improved it to WNS = -2
 
 ### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
 
+Now to insert this updated netlist to PnR flow and we can use `write_verilog` and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist
+
+Commands to make copy of netlist
+
+```shell
+patha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane$ cd  /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis
+spatha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis$ ls
+merged_unpadded.lef  picorv32a.synthesis.v
+spatha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis$ cp picorv32a.synthesis.v picorv32a.synthesis_old.v
+spatha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis$ ls
+merged_unpadded.lef  picorv32a.synthesis_old.v  picorv32a.synthesis.v
+```
+
+Commands to write verilog
+
+```shell
+# Check syntax
+help write_verilog
+
+# Overwriting current synthesis netlist
+write_verilog /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis/picorv32a.synthesis.v
+
+# Exit from OpenSTA since timing analysis is done
+exit
+```
+![Alt_Text](Images/44.jpg)
