@@ -595,4 +595,48 @@ lrwxrwxrwx 1 spatha spatha   29 Jul 18 18:53 merged_unpadded.lef -> ../../tmp/me
 - **picorv32a.synthesis.v	:** Gate-level netlist generated after initial synthesis of the RTL
 - **picorv32a.synthesis_cts.v	:** Generated after running Clock Tree Synthesis (CTS). This netlist includes inserted clock buffers and CTS-aware hierarchy.
 
+### Setup timing analysis using real clocks
 
+### ⏰ Setup Timing Analysis using Real Clocks
+
+Setup timing analysis ensures that data launched from a source flop reaches the destination flop **before the active clock edge**, with enough time to meet the **setup time** requirement.
+
+In practical designs, the clock signal experiences delay and uncertainty due to the following:
+
+- **Clock Skew (Δ₂)**: The difference in clock arrival times at the launch and capture flip-flops. Positive skew can **help setup timing**, but negative skew can **tighten** the timing window.
+- **Clock Jitter (S)**: Variability in clock edge arrival due to noise, voltage, and temperature fluctuations. Jitter introduces uncertainty into the timing budget.
+- **Setup Time (SU)**: The minimum time before the clock edge by which data must be stable at the capture flop.
+
+#### ✅ Setup Timing Condition:
+The following condition must be met to avoid setup violations:
+
+\[
+\theta + \Delta_1 < (T + \Delta_2) - S - SU
+\]
+
+Where:
+- `θ` is the **data path delay**
+- `Δ₁` is the delay in the launch path
+- `T` is the clock period
+- `Δ₂` is the delay in the capture clock path
+- `S` is clock uncertainty (jitter)
+- `SU` is setup time of the capture flop
+
+> 📌 **Slack** = `Data Required Time − Data Arrival Time`  
+> Slack should be **≥ 0** to meet timing.
+
+![Alt_Text](Images/51.jpg)
+
+
+### Hold Timing Analysis using Real Clocks
+Hold timing analysis with real clocks considers practical effects like **clock skew** and **clock jitter**, both of which can critically impact data stability at the receiving flip-flop.
+
+- **Clock Skew**: This is the variation in clock arrival time between the launch and capture flip-flops due to differing clock tree paths. For hold analysis, **negative skew** (capture clock arrives earlier) can lead to **hold violations**, as data might arrive too soon at the capture flop.
+
+- **Clock Jitter**: Random variations in clock edges caused by noise, temperature fluctuations, and power supply instability. Jitter reduces the **minimum delay margin**, making it harder to ensure data holds stable long enough.
+
+In hold analysis, the objective is to make sure that the data launched by the clock **does not reach the capture flop too early**, violating the minimum hold time required for proper latching.
+
+> ✅ **Goal:** Ensure that `Data Arrival Time > Capture Clock Edge + Hold Time`, accounting for skew and jitter.
+
+![Alt_Text](Images/52.jpg)
