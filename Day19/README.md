@@ -489,7 +489,9 @@ Load pins
 % replace_cell _15474_ sky130_fd_sc_hd__or2_4
 1
 ```
-
+```shell
+ report_checks -fields {net cap slew input_pins} -digits 4
+```
 ![Alt_Text](Images/43.jpg)
 
 _We started ECO fixes at WNS = -23.8900 ns, and have now improved it to WNS = -22.7650 ns, achieving a reduction of approximately 1.1250 ns in worst negative slack._
