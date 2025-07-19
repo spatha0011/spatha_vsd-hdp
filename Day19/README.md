@@ -422,16 +422,39 @@ Since basic optimizations during synthesis were insufficient, we proceed with **
 
 ### 10. Make timing ECO fixes to remove all violations
 
-OR gate of drive strength 2 is driving 4 fanouts
+❗**Note:** Naming Convention: `sky130_fd_sc_hd__or3_4`
+
+- `sky130_fd_sc_hd__` → SkyWater 130nm process, Foundry Design (FD), Standard Cell (SC), High Density (HD) library
+- `or3` → 3-input OR gate
+- `_4` → Drive strength 4 (higher drive capability than `_2`)
+
+In the timing analysis report, we observe that an **OR gate with drive strength 2** (`sky130_fd_sc_hd__or3_2`) is driving **4 fanout loads**:
+
+```txt
+OR gate: sky130_fd_sc_hd__or3_2
+Fanouts: 4
+Net: _11873_
+```
 
 ![Alt_Text](Images/33.jpg)
+
+We will replace the OR3 gate of drive strength 2 with a **drive strength 4** version (`sky130_fd_sc_hd__or3_4`) to improve timing.
+
+> 💡 Higher drive strength cells offer faster transitions and better timing but consume more area and power — use judiciously on critical paths.
 
 Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
 
 ```shell
+# Report all the connections (fanouts) of the net _11873_ to identify the load
 report_net -connections _11873_
+
+# Display help info for the 'replace_cell' command to understand its usage
 help replace_cell
+
+# Replace instance _14770_ with a higher drive strength OR3 gate (drive strength 4)
 replace_cell _14770_ sky130_fd_sc_hd__or3_4
+
+# Re-run timing checks to observe updated capacitance, slew, and arrival times after replacement
 report_checks -fields {net cap slew input_pins} -digits 4
 ```
 
