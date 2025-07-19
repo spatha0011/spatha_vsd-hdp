@@ -597,7 +597,7 @@ lrwxrwxrwx 1 spatha spatha   29 Jul 18 18:53 merged_unpadded.lef -> ../../tmp/me
 
 ### Setup timing analysis using real clocks
 
-### ⏰ Setup Timing Analysis using Real Clocks
+### Setup Timing Analysis using Real Clocks
 
 Setup timing analysis ensures that data launched from a source flop reaches the destination flop **before the active clock edge**, with enough time to meet the **setup time** requirement.
 
@@ -610,9 +610,9 @@ In practical designs, the clock signal experiences delay and uncertainty due to 
 #### ✅ Setup Timing Condition:
 The following condition must be met to avoid setup violations:
 
-\[
-\theta + \Delta_1 < (T + \Delta_2) - S - SU
-\]
+```
+θ + Δ₁ < (T + Δ₂) - S - SU
+```
 
 Where:
 - `θ` is the **data path delay**
