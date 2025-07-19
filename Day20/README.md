@@ -8,6 +8,38 @@
 - [15. Post-Route parasitic extraction using SPEF extractor](#15-post-route-parasitic-extraction-using-spef-extractor)
 - [16. Post-Route OpenSTA timing analysis with the extracted parasitics of the route](#16-post-route-opensta-timing-analysis-with-the-extracted-parasitics-of-the-route)
 
+### <ins>What is Routing in VLSI Physical Design?</ins>
+
+Routing is the process of creating **physical electrical connections** between standard cells, macros, and I/O pins using **metal layers and vias**. It transforms the logical connections (netlist) into actual wires on silicon after placement and Clock Tree Synthesis (CTS). This is a crucial step that directly impacts the chip’s **functionality**, **timing**, **signal integrity**, and **manufacturability**.
+
+### <ins>Goals of Routing</ins>
+
+- Establish all **signal connections** defined in the netlist.
+- Avoid **DRC (Design Rule Check)** violations.
+- Minimize **routing congestion** and **via count**.
+- Improve **timing performance** by optimizing critical paths.
+- Ensure **LVS (Layout vs Schematic)** and **Signal Integrity** compliance.
+- Maintain clear separation of **signal** and **power/ground** routing.
+
+### <ins>Steps in Routing Flow</ins>
+
+1. **Global Routing**  
+   - Divides the layout into coarse grid cells.
+   - Assigns rough paths for nets avoiding congestion and blockages.
+   - Steers clear of P/G routes and macro blockages.
+
+2. **Track Assignment (TA)**  
+   - Maps each net to specific routing tracks.
+   - Optimizes for fewer vias and longer straight segments.
+   - Physical DRCs are not enforced yet.
+
+3. **Detail Routing**  
+   - Finalizes exact wire geometry and vias.
+   - Fixes DRC violations (spacing, width, enclosure, etc.).
+   - Performs timing-aware optimizations.
+
+> ✅ **Result**: A DRC-clean, fully-connected layout ready for parasitic extraction and timing signoff.
+
 
 ### 14. Perform detailed routing using TritonRoute and explore the routed layout
 
