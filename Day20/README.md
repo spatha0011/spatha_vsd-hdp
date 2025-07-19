@@ -105,7 +105,7 @@ The **Routing Topology Algorithm** is crucial for defining the connection struct
 
 ![Alt_Text](Images/t4.jpg)
 
-### 14. Perform detailed routing using TritonRoute and explore the routed layout
+### `14. Perform detailed routing using TritonRoute and explore the routed layout`
 
 Commands to perform routing:
 
@@ -149,7 +149,7 @@ Screenshot of fast route guide present in `openlane/designs/picorv32a/runs/19-07
 
 ![Alt_Text](Images/5.jpg)
 
-### 15. Post-Route parasitic extraction using SPEF extractor
+### `15. Post-Route parasitic extraction using SPEF extractor`
 
 Commands for SPEF extraction Post-Route parasitic extraction using SPEF extractor:
 
@@ -166,7 +166,7 @@ Screenshot of spef extracted:
 
 ![Alt_Text](Images/13.jpg)
 
-### 16. Post-Route OpenSTA timing analysis with the extracted parasitics of the route
+### `16. Post-Route OpenSTA timing analysis with the extracted parasitics of the route`
 
 Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD:
 
