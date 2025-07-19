@@ -4,20 +4,19 @@
 
 ### 📚 Contents
 
- - [Pre-layout timing analysis and importance of good clock tree](#pre-layout-timing-analysis-and-importance-of-good-clock-tree)
-    - [1. Fix up small DRC errors and verify the design is ready](#1-fix-up-small-drc-errors-and-verify-the-design-is-ready)
-    - [2. Save the finalized layout with custom name](#2-save-the-finalized-layout-with-custom-name)
-    - [3. Generate LEF from the layout](#3-generate-lef-from-the-layout)
-    - [4. Copy LEF and LIB files to `picorv32a` src directory](#4-copy-lef-and-lib-files-to-picorv32a-src-directory)
-    - [5. Edit `config.tcl` to include custom LEF and LIB](#5-edit-configtcl-to-include-custom-lef-and-lib)
-    - [6. Run synthesis with custom inverter in OpenLANE](#6-run-synthesis-with-custom-inverter-in-openlane)
-    - [7. Modify parameters to fix timing violations](#7-modify-parameters-to-fix-timing-violations)
-    - [8. Floorplanning and placement with custom inverter](#8-floorplanning-and-placement-with-custom-inverter)
-    - [9. Post-Synthesis timing analysis using OpenSTA](#9-post-synthesis-timing-analysis-using-opensta)
-    - [10. Timing ECO fixes to reduce violations](#10-timing-eco-fixes-to-reduce-violations)
-    - [11. Replace netlist and re-run floorplan, placement, CTS](#11-replace-netlist-and-re-run-floorplan-placement-cts)
-    - [12. Post-CTS OpenROAD timing analysis](#12-post-cts-openroad-timing-analysis)
-    - [13. Explore post-CTS timing after modifying CTS_CLK_BUFFER_LIST](#13-explore-post-cts-timing-after-modifying-cts_clk_buffer_list)
+- [1. Fix up small DRC errors and verify the design is ready to be inserted into our flow](#1fix-up-small-drc-errors-and-verify-the-design-is-ready-to-be-inserted-into-our-flow)
+- [2. Save the finalized layout with custom name and open it](#2-save-the-finalized-layout-with-custom-name-and-open-it)
+- [3. Generate lef from the layout](#3-generate-lef-from-the-layout)
+- [4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory](#4-copy-the-newly-generated-lef-and-associated-required-lib-files-to-picorv32a-design-src-directory)
+- [5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow](#5-edit-configtcl-to-change-lib-file-and-add-the-new-extra-lef-into-the-openlane-flow)
+- [6. Run openlane flow synthesis with newly inserted custom inverter cell](#6-run-openlane-flow-synthesis-with-newly-inserted-custom-inverter-cell)
+- [7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters](#7-removereduce-the-newly-introduced-violations-with-the-introduction-of-custom-inverter-cell-by-modifying-design-parameters)
+- [8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow](#8-once-synthesis-has-accepted-our-custom-inverter-we-can-now-run-floorplan-and-placement-and-verify-the-cell-is-accepted-in-pnr-flow)
+- [9. Do Post-Synthesis timing analysis with OpenSTA tool](#9-do-post-synthesis-timing-analysis-with-opensta-tool)
+- [10. Make timing ECO fixes to remove all violations](#10-make-timing-eco-fixes-to-remove-all-violations)
+- [11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts](#11-replace-the-old-netlist-with-the-new-netlist-generated-after-timing-eco-fix-and-implement-the-floorplan-placement-and-cts)
+- [12. Post-CTS OpenROAD timing analysis](#12-post-cts-openroad-timing-analysis)
+- [13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'](#13-explore-post-cts-openroad-timing-analysis-by-removing-sky130_fd_sc_hd__clkbuf_1-cell-from-clock-buffer-list-variable-cts_clk_buffer_list)
       
 ### 1.Fix up small DRC errors and verify the design is ready to be inserted into our flow
 
@@ -75,7 +74,7 @@ Vertical track pitch = 0.34 µm
 
 Height of standard cell = 2.72 µm = 0.34 × 8
 
-### 2. Save the finalized layout with custom name and open it.
+### 2. Save the finalized layout with custom name and open it
 
 Command for tkcon window to save the layout with custom name:
 
@@ -95,7 +94,7 @@ Screenshot of newly saved layout:
 
 ![Alt_Text](Images/7.jpg)
 
-### 3. Generate lef from the layout.
+### 3. Generate lef from the layout
 
 Command for tkcon window to write lef
 
@@ -114,7 +113,7 @@ gvim sky130_vsdinv.lef
 ```
 ![Alt_Text](Images/9.jpg)
 
-### 4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory.
+### 4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory
 
 Commands to copy necessary files to 'picorv32a' design 'src' directory
 
@@ -130,7 +129,7 @@ ls ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir
 
 ```
 
-### 5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow.
+### 5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow
 
 Commands to be added to config.tcl to include our custom cell in the openlane flow
 
@@ -146,7 +145,8 @@ Edited config.tcl to include the added lef and change library to ones we added i
 
 ![Alt_Text](Images/10.jpg)
 
-#### 6. Run openlane flow synthesis with newly inserted custom inverter cell.
+### 6. Run openlane flow synthesis with newly inserted custom inverter cell
+
 Commands to invoke the OpenLANE flow include new lef and perform synthesis
 
 ```shell
@@ -180,7 +180,7 @@ run_synthesis
 
 ![Alt_Text](Images/11.jpg)
 
-### 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
+### 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters
 
 Noting down current design values generated before modifying parameters to improve timing.
 
@@ -227,7 +227,7 @@ Comparing to previously noted run values area has increased and worst negative s
 
 ![Alt_Text](Images/15.jpg)
 
-### 8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
+### 8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow
 
 Now that our custom inverter is properly accepted in synthesis we can now run floorplan using following command
 
@@ -303,7 +303,7 @@ expand
 
 ![Alt_Text](Images/24.jpg)
 
-### 9. Do Post-Synthesis timing analysis with OpenSTA tool.
+### 9. Do Post-Synthesis timing analysis with OpenSTA tool
 
 Since we are having 0 wns after improved timing run we are going to do timing analysis on initial run of synthesis which has lots of violations and no parameters were added to improve timing
 
@@ -405,7 +405,7 @@ sta pre_sta.conf
 
 ![Alt_Text](Images/31.jpg)
 
-### 10. Make timing ECO fixes to remove all violations.
+### 10. Make timing ECO fixes to remove all violations
 
 OR gate of drive strength 2 is driving 4 fanouts
 
@@ -513,7 +513,7 @@ Load pins
 
 _We started ECO fixes at WNS = -23.8900 ns, and have now improved it to WNS = -22.7650 ns, achieving a reduction of approximately 1.1250 ns in worst negative slack._
 
-### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts
 
 Now to insert this updated netlist to PnR flow and we can use `write_verilog` and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist
 
@@ -656,7 +656,7 @@ In hold analysis, the objective is to make sure that the data launched by the cl
 
 ![Alt_Text](Images/52.jpg)
 
-### 12. Post-CTS OpenROAD timing analysis.
+### 12. Post-CTS OpenROAD timing analysis
 
 Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD
 
@@ -855,7 +855,7 @@ Fanout       Cap      Slew     Delay      Time   Description
 % exit
 ```
 
-### 13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'.
+### 13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'
 
 Commands to be run in OpenLANE flow to do OpenROAD timing analysis after changing `CTS_CLK_BUFFER_LIST`
 
