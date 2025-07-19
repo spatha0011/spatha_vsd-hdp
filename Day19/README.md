@@ -464,9 +464,17 @@ Result - slack reduced
 
 ![Alt_Text](Images/35.jpg)
 
-OR gate of drive strength 2 driving OA gate has more delay
+In the timing report, we observe that an **OR gate with drive strength 2** (`sky130_fd_sc_hd__or4_2`) is driving an **OA (OR-AND) gate** (`sky130_fd_sc_hd__o2111a_2`). This introduces significant delay on the net due to high capacitive load and insufficient driving strength.
+
+```txt
+Driver: sky130_fd_sc_hd__or4_2
+Load:   sky130_fd_sc_hd__o2111a_2
+Delay:  1.5344 + 2.9746 = 4.509 ns (approx)
+```
 
 ![Alt_Text](Images/36.jpg)
+
+To reduce delay and improve slack, we will replace the weak OR gate with a higher drive-strength version (`sky130_fd_sc_hd__or4_4`).
 
 Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
 
