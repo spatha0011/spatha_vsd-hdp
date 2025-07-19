@@ -465,3 +465,34 @@ Screenshot of replaced instance
 
 ![Alt_Text](Images/42.jpg)
 
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+```shell
+% report_net -connections _12396_
+Warning: pre_sta.conf line 1, report_net -connections is deprecated.
+Net _12396_
+ Pin capacitance: 0.01-0.01
+ Wire capacitance: 0.00
+ Total capacitance: 0.01-0.01
+ Number of drivers: 1
+ Number of loads: 3
+ Number of pins: 4
+
+Driver pins
+ _15474_/X output (sky130_fd_sc_hd__or2_2)
+
+Load pins
+ _15475_/B input (sky130_fd_sc_hd__or2_2) 0.00-0.00
+ _15505_/A2 input (sky130_fd_sc_hd__a211oi_2) 0.00-0.00
+ _15507_/C1 input (sky130_fd_sc_hd__o211a_2) 0.00-0.00
+
+% replace_cell _15474_ sky130_fd_sc_hd__or2_4
+1
+```
+
+![Alt_Text](Images/43.jpg)
+
+_We started ECO fixes at WNS = -23.8900 ns, and have now improved it to WNS = -22.7650 ns, achieving a reduction of approximately 1.1250 ns in worst negative slack._
+
+### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+
