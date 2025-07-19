@@ -42,3 +42,74 @@ Screenshot of fast route guide present in `openlane/designs/picorv32a/runs/19-07
 
 ![Alt_Text](Images/5.jpg)
 
+### Post-Route parasitic extraction using SPEF extractor.
+
+Commands for SPEF extraction Post-Route parasitic extraction using SPEF extractor
+
+```shell
+cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/scripts/spef_extractor
+python3 main.py -l /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/tmp/merged.lef -d /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/routing/picorv32a.def
+```
+
+Screenshot of spef extrtaction run
+
+![Alt_Text](Images/6.jpg)
+
+### Post-Route OpenSTA timing analysis with the extracted parasitics of the route.
+
+Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD
+
+```shell
+# Launch OpenROAD shell
+openroad
+
+# Load technology and cell LEF (used for physical layout)
+read_lef /openLANE_flow/designs/picorv32a/runs/19-07_00-15/tmp/merged.lef
+
+# Load routed DEF (final physical layout including routing)
+read_def /openLANE_flow/designs/picorv32a/runs/19-07_00-15/results/routing/picorv32a.def
+
+# Save OpenROAD database state (optional, for reuse/debug)
+write_db pico_route.db
+
+# Reload the previously saved OpenROAD database (optional)
+read_db pico_route.db
+
+# Load pre-route synthesized netlist
+read_verilog /openLANE_flow/designs/picorv32a/runs/19-07_00-15/results/synthesis/picorv32a.synthesis_preroute.v
+
+# Load full liberty timing models
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+# Link design with top module name
+link_design picorv32a
+
+# Load custom timing constraints
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+# Set all clocks as propagated (real clock tree delays will be used)
+set_propagated_clock [all_clocks]
+
+# Read in extracted parasitics for post-route timing accuracy
+read_spef /openLANE_flow/designs/picorv32a/runs/19-07_00-15/results/routing/picorv32a.spef
+
+# Generate detailed setup/hold timing report (with slew, capacitance, fanout etc.)
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+# Exit OpenROAD
+exit
+```
+
+Screenshot of commands run
+
+![Alt_Text](Images/7.jpg)
+
+![Alt_Text](Images/8.jpg)
+
+![Alt_Text](Images/9.jpg)
+
+![Alt_Text](Images/10.jpg)
+
+![Alt_Text](Images/11.jpg)
+
+![Alt_Text](Images/13.jpg)
