@@ -1,6 +1,17 @@
-### Perform detailed routing using TritonRoute and explore the routed layout.
+# VSD Hardware Design Program
 
-Command to perform routing
+## Final steps for RTL2GDS using tritonRoute and openSTA
+
+### 📚 Contents
+
+- [14. Perform detailed routing using TritonRoute and explore the routed layout](#14-perform-detailed-routing-using-tritonroute-and-explore-the-routed-layout)
+- [15. Post-Route parasitic extraction using SPEF extractor](#15-post-route-parasitic-extraction-using-spef-extractor)
+- [16. Post-Route OpenSTA timing analysis with the extracted parasitics of the route](#16-post-route-opensta-timing-analysis-with-the-extracted-parasitics-of-the-route)
+
+
+### 14. Perform detailed routing using TritonRoute and explore the routed layout
+
+Commands to perform routing:
 
 ```shell
 # Check value of 'CURRENT_DEF'
@@ -17,7 +28,7 @@ Screenshots of routing run:
 
 ![Alt_Text](Images/rout_done.jpg)
 
-Commands to load routed def in magic in another terminal
+Commands to load routed def in magic in another terminal:
 
 ```shell
 # Change directory to path containing routed def
@@ -27,7 +38,7 @@ cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir
 magic -T /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
 
-Screenshots of routed def
+Screenshots of routed def:
 
 ![Alt_Text](Images/1.jpg)
 
@@ -38,26 +49,26 @@ Screenshots of routed def
 ![Alt_Text](Images/4.jpg)
 
 
-Screenshot of fast route guide present in `openlane/designs/picorv32a/runs/19-07_00-15/tmp/routing` directory
+Screenshot of fast route guide present in `openlane/designs/picorv32a/runs/19-07_00-15/tmp/routing` directory:
 
 ![Alt_Text](Images/5.jpg)
 
-### Post-Route parasitic extraction using SPEF extractor.
+### 15. Post-Route parasitic extraction using SPEF extractor
 
-Commands for SPEF extraction Post-Route parasitic extraction using SPEF extractor
+Commands for SPEF extraction Post-Route parasitic extraction using SPEF extractor:
 
 ```shell
 cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/scripts/spef_extractor
 python3 main.py -l /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/tmp/merged.lef -d /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/routing/picorv32a.def
 ```
 
-Screenshot of spef extrtaction run
+Screenshot of spef extrtaction run:
 
 ![Alt_Text](Images/6.jpg)
 
-### Post-Route OpenSTA timing analysis with the extracted parasitics of the route.
+### 16. Post-Route OpenSTA timing analysis with the extracted parasitics of the route
 
-Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD
+Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD:
 
 ```shell
 # Launch OpenROAD shell
@@ -100,7 +111,7 @@ report_checks -path_delay min_max -fields {slew trans net cap input_pins} -forma
 exit
 ```
 
-Screenshot of commands run
+Screenshot of commands run:
 
 ![Alt_Text](Images/7.jpg)
 
