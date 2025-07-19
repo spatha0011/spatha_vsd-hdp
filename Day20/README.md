@@ -62,9 +62,13 @@ cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir
 python3 main.py -l /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/tmp/merged.lef -d /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/routing/picorv32a.def
 ```
 
-Screenshot of spef extrtaction run:
+Screenshot of commands run:
 
 ![Alt_Text](Images/6.jpg)
+
+Screenshot of spef extracted:
+
+![Alt_Text](Images/13.jpg)
 
 ### 16. Post-Route OpenSTA timing analysis with the extracted parasitics of the route
 
