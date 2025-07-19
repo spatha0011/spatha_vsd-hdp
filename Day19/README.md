@@ -371,3 +371,20 @@ echo $::env(SYNTH_DRIVING_CELL)
 # Now that the design is prepped and ready, we can run synthesis using following command
 run_synthesis
 ```
+
+Screenshot of commands run:
+
+![Alt_Text](Images/30.jpg)
+
+Commands to run STA in another terminal
+
+```shell
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
+
+![Alt_Text](Images/31.jpg)
+
