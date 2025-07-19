@@ -580,3 +580,19 @@ Screenshots of commands run
 ![Alt_Text](Images/47.jpg)
 
 ![Alt_Text](Images/48.jpg)
+
+After completing CTS in OpenLane, the following files are generated in the `results/synthesis/` directory:
+
+```shell
+spatha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis$ ls -ltrh
+total 12M
+lrwxrwxrwx 1 spatha spatha   29 Jul 18 18:53 merged_unpadded.lef -> ../../tmp/merged_unpadded.lef
+-rw-r--r-- 1 spatha spatha 2.1M Jul 18 18:54 picorv32a.synthesis.v
+-rw-r--r-- 1 spatha spatha 2.0M Jul 18 18:55 picorv32a.synthesis_optimized.v
+-rw-r--r-- 1 spatha spatha 2.1M Jul 18 18:56 picorv32a.synthesis_cts.v
+```
+
+- picorv32a.synthesis.v	: Gate-level netlist generated after initial synthesis of the RTL
+- picorv32a.synthesis_cts.v	Generated after running Clock Tree Synthesis (CTS). This netlist includes inserted clock buffers and CTS-aware hierarchy.
+
+
