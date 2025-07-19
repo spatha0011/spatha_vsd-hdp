@@ -747,7 +747,7 @@ Notice 0: Finished DEF file: /openLANE_flow/designs/picorv32a/runs/19-07_00-15/r
 % read_verilog /openLANE_flow/designs/picorv32a/runs/19-07_00-15/results/synthesis/picorv32a.synthesis_cts.v
 
 # Read library for design
-read_liberty $::env(LIB_SYNTH_COMPLETE)
+% read_liberty $::env(LIB_SYNTH_COMPLETE)
 
 # Link design and library
 % link_design picorv32a
