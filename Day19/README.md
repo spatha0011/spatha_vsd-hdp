@@ -115,7 +115,7 @@ gvim sky130_vsdinv.lef
 
 ### 4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory
 
-Commands to copy necessary files to 'picorv32a' design 'src' directory
+Commands to copy necessary files to 'picorv32a' design 'src' directory:
 
 ```shell
 # Copy lef file
@@ -131,7 +131,7 @@ ls ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir
 
 ### 5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow
 
-Commands to be added to config.tcl to include our custom cell in the openlane flow
+Commands to be added to config.tcl to include our custom cell in the openlane flow:
 
 ```shell
 set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
@@ -147,7 +147,7 @@ Edited config.tcl to include the added lef and change library to ones we added i
 
 ### 6. Run openlane flow synthesis with newly inserted custom inverter cell
 
-Commands to invoke the OpenLANE flow include new lef and perform synthesis
+Commands to invoke the OpenLANE flow include new lef and perform synthesis:
 
 ```shell
 # Change directory to openlane flow directory
@@ -188,7 +188,7 @@ Noting down current design values generated before modifying parameters to impro
 
 ![Alt_Text](Images/13.jpg)
 
-Commands to view and change parameters to improve timing and run synthesis
+Commands to view and change parameters to improve timing and run synthesis:
 
 ```shell
 # Now once again we have to prep design so as to update variables
@@ -273,7 +273,7 @@ Screenshots of commands run:
 
 ![Alt_Text](Images/20.jpg)
 
-Commands to load placement def in magic in another terminal
+Commands to load placement def in magic in another terminal:
 
 ```shell
 # Change directory to path containing generated placement def
@@ -292,7 +292,7 @@ Screenshot of custom inverter inserted in placement def with proper abutment:
 
 ![Alt_Text](Images/22.jpg)
 
-Command for tkcon window to view internal layers of cells
+Command for tkcon window to view internal layers of cells:
 
 ```shell
 # Command to view internal connectivity layers
@@ -307,7 +307,7 @@ expand
 
 Since we are having 0 wns after improved timing run we are going to do timing analysis on initial run of synthesis which has lots of violations and no parameters were added to improve timing
 
-Commands to invoke the OpenLANE flow include new lef and perform synthesis
+Commands to invoke the OpenLANE flow include new lef and perform synthesis:
 
 ```shell
 # Change directory to openlane flow directory
@@ -344,15 +344,15 @@ Screenshot of commands run:
 
 ![Alt_Text](Images/25.jpg)
 
-Newly created `pre_sta.conf` for STA analysis in `openlane` directory
+Newly created `pre_sta.conf` for STA analysis in `openlane` directory:
 
 ![Alt_Text](Images/32.jpg)
 
-Newly created `my_base.sdc` for STA analysis in `openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc`
+Newly created `my_base.sdc` for STA analysis in `openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc`:
 
 ![Alt_Text](Images/27.jpg)
 
-Commands to run STA in another terminal
+Commands to run STA in another terminal:
 
 ```
 # Change directory to openlane
@@ -373,7 +373,7 @@ Since more fanout is causing more delay we can add parameter to reduce fanout an
 
 We can adjust the `SYNTH_MAX_FANOUT` parameter in the `.sdc` file and rerun synthesis to reduce loading effects.
 
-Commands to include new lef and perform synthesis
+Commands to include new lef and perform synthesis:
 
 ```shell
 # Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
@@ -400,7 +400,7 @@ Screenshot of commands run:
 
 ![Alt_Text](Images/30.jpg)
 
-Commands to run STA in another terminal
+Commands to run STA in another terminal:
 
 ```shell
 # Change directory to openlane
@@ -442,7 +442,7 @@ We will replace the OR3 gate of drive strength 2 with a **drive strength 4** ver
 
 > 💡 Higher drive strength cells offer faster transitions and better timing but consume more area and power — use judiciously on critical paths.
 
-Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4:
 
 ```shell
 # Report all the connections (fanouts) of the net _11873_ to identify the load
@@ -476,7 +476,7 @@ Delay:  1.5344 + 2.9746 = 4.509 ns (approx)
 
 To reduce delay and improve slack, we will replace the weak OR gate with a higher drive-strength version (`sky130_fd_sc_hd__or4_4`).
 
-Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4:
 
 ```shell
 # Reports all the connections to a net
@@ -499,7 +499,7 @@ OR gate of drive strength 2 driving OA gate has more delay
 
 ![Alt_Text](Images/39.jpg)
 
-Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4:
 
 ```shell
 # Reports all the connections to a net
@@ -518,7 +518,7 @@ Result - slack reduced
 
 ![Alt_Text](Images/41.jpg)
 
-Commands to verify instance _14766_ is replaced with sky130_fd_sc_hd__or4_4
+Commands to verify instance _14766_ is replaced with sky130_fd_sc_hd__or4_4:
 
 ```shell
 report_checks -from _29555_ -to _30952_ -through _14766_
@@ -528,11 +528,11 @@ report_checks -from _29555_ -to _30952_ -through _14766_
 - **`-to _30952_`**: Endpoint of the path (data capture pin or flop input)
 - **`-through _14766_`**: Ensures the path being reported includes the specific instance you replaced
   
-Screenshot of replaced instance
+Screenshot of replaced instance:
 
 ![Alt_Text](Images/42.jpg)
 
-Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4:
 
 ```shell
 % report_net -connections _12396_
@@ -560,7 +560,7 @@ Load pins
  report_checks -fields {net cap slew input_pins} -digits 4
 ```
 ![Alt_Text](Images/43.jpg)
-`
+
 **_We started ECO fixes at WNS = -23.8900 ns, and have now improved it to WNS = -22.7650 ns, achieving a reduction of approximately 1.1250 ns in worst negative slack._**
 
 ------
@@ -569,7 +569,7 @@ Load pins
 
 Now to insert this updated netlist to PnR flow and we can use `write_verilog` and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist
 
-Commands to make copy of netlist
+Commands to make copy of netlist:
 
 ```shell
 # Change from home directory to synthesis results directory
@@ -583,7 +583,7 @@ ls
 ```
 ![Alt_Text](Images/45.jpg)
 
-Commands to write verilog
+Commands to write verilog:
 
 ```shell
 # Check syntax
@@ -644,7 +644,7 @@ unset ::env(LIB_CTS)
 run_cts
 ```
 
-Screenshots of commands run
+Screenshots of commands run:
 
 ![Alt_Text](Images/47.jpg)
 
@@ -710,7 +710,7 @@ In hold analysis, the objective is to make sure that the data launched by the cl
 
 ### 12. Post-CTS OpenROAD timing analysis
 
-Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD
+Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD:
 
 ```shell
 # Command to run OpenROAD tool
@@ -909,7 +909,7 @@ Fanout       Cap      Slew     Delay      Time   Description
 
 ### 13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'
 
-Commands to be run in OpenLANE flow to do OpenROAD timing analysis after changing `CTS_CLK_BUFFER_LIST`
+Commands to be run in OpenLANE flow to do OpenROAD timing analysis after changing `CTS_CLK_BUFFER_LIST`:
 
 ```shell
 # Checking current value of 'CTS_CLK_BUFFER_LIST'
