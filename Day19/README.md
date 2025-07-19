@@ -567,7 +567,7 @@ Load pins
 
 ### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts
 
-Now to insert this updated netlist to PnR flow and we can use `write_verilog` and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist
+Now to insert this updated netlist to PnR flow and we can use `write_verilog` and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist.
 
 Commands to make copy of netlist:
 
@@ -597,7 +597,7 @@ exit
 ```
 ![Alt_Text](Images/44.jpg)
 
-Verified that the netlist is overwritten by checking that instance _14766_ is replaced with sky130_fd_sc_hd__or4_4
+<ins>Verified that the netlist is overwritten by checking that instance _14766_ is replaced with sky130_fd_sc_hd__or4_4</ins>
 
 ![Alt_Text](Images/46.jpg)
 
