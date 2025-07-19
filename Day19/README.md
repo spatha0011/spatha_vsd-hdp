@@ -503,13 +503,16 @@ Now to insert this updated netlist to PnR flow and we can use `write_verilog` an
 Commands to make copy of netlist
 
 ```shell
-patha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane$ cd  /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis
-spatha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis$ ls
-merged_unpadded.lef  picorv32a.synthesis.v
-spatha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis$ cp picorv32a.synthesis.v picorv32a.synthesis_old.v
-spatha@spatha-VirtualBox:~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis$ ls
-merged_unpadded.lef  picorv32a.synthesis_old.v  picorv32a.synthesis.v
+# Change from home directory to synthesis results directory
+cd  /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/19-07_00-15/results/synthesis
+# List contents of the directory
+ls
+# Copy and rename the netlist
+cp picorv32a.synthesis.v picorv32a.synthesis_old.v
+# List contents of the directory
+ls
 ```
+![Alt_Text](Images/45.jpg)
 
 Commands to write verilog
 
@@ -524,3 +527,58 @@ write_verilog /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tool
 exit
 ```
 ![Alt_Text](Images/44.jpg)
+
+Verified that the netlist is overwritten by checking that instance _14766_ is replaced with sky130_fd_sc_hd__or4_4
+
+![Alt_Text](Images/46.jpg)
+
+Since we confirmed that netlist is replaced and will be loaded in PnR but since we want to follow up on the earlier 0 violation design we are continuing with the clean design to further stages
+
+Commands load the design and run necessary stages
+
+The or_cts.tcl script requires the variable CTS_SQR_RES (square resistance in kΩ/µm²), but it's not set in your config.tcl or environment.
+
+Add the following two lines to your config.tcl before initiating the runs:
+
+```shell
+set ::env(CTS_SQR_CAP) 0.024   ;# Square capacitance in pF/µm²
+set ::env(CTS_SQR_RES) 0.075   ;# Square resistance in kΩ/µm²
+```
+
+```shell
+# Now once again we have to prep design so as to update variables
+prep -design picorv32a -tag 19-07_00-15 -overwrite
+
+# Addiitional commands to include newly added lef to openlane flow merged.lef
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+
+# Follwing commands are alltogather sourced in "run_floorplan" command
+init_floorplan
+place_io
+tap_decap_or
+
+# Now we are ready to run placement
+run_placement
+
+# Incase getting error
+unset ::env(LIB_CTS)
+
+# With placement done we are now ready to run CTS
+run_cts
+```
+
+Screenshots of commands run
+
+![Alt_Text](Images/47.jpg)
+
+![Alt_Text](Images/48.jpg)
