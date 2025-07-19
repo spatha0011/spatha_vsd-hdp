@@ -26,4 +26,4 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 | **Day 17** | [**Expand Ubuntu VM Disk Space in VirtualBox**](Day17/README.md) | **✅ Done** |
 | **Day 18** | [**Magic Layout and ngspice characterization**](Day18/README.md) | **✅ Done** |
 | **Day 19** | [**Pre-layout timing analysis and importance of good clock tree**](Day19/README.md) | **✅ Done**|
-| **Day 20** | [**Final steps for RTL2GDS using tritonRoute and openSTA**](Day20/README.md) | **In Progress**|
+| **Day 20** | [**Final steps for RTL2GDS using tritonRoute and openSTA**](Day20/README.md) | **✅ Done**|
