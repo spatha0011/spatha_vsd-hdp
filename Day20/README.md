@@ -8,7 +8,7 @@
 - [15. Post-Route parasitic extraction using SPEF extractor](#15-post-route-parasitic-extraction-using-spef-extractor)
 - [16. Post-Route OpenSTA timing analysis with the extracted parasitics of the route](#16-post-route-opensta-timing-analysis-with-the-extracted-parasitics-of-the-route)
 
-### <ins>What is Routing in VLSI Physical Design?</ins>
+### <ins>What is Routing?</ins>
 
 Routing is the process of creating **physical electrical connections** between standard cells, macros, and I/O pins using **metal layers and vias**. It transforms the logical connections (netlist) into actual wires on silicon after placement and Clock Tree Synthesis (CTS). This is a crucial step that directly impacts the chip’s **functionality**, **timing**, **signal integrity**, and **manufacturability**.
 
