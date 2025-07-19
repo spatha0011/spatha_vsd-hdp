@@ -36,3 +36,9 @@ Screenshots of routed def
 ![Alt_Text](Images/3.jpg)
 
 ![Alt_Text](Images/4.jpg)
+
+
+Screenshot of fast route guide present in `openlane/designs/picorv32a/runs/19-07_00-15/tmp/routing` directory
+
+![Alt_Text](Images/5.jpg)
+
