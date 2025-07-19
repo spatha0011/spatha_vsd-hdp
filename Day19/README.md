@@ -412,6 +412,14 @@ sta pre_sta.conf
 
 ![Alt_Text](Images/31.jpg)
 
+Despite reducing the fanout and inserting buffers, the design still fails to meet timing after synthesis, as shown in the updated PrimeTime report:
+
+- **Slack**: `-23.89 ps` → **Violation persists**
+- **TNS**: `-710.70 ps`  
+- **WNS**: `-23.89 ps`  
+
+Since basic optimizations during synthesis were insufficient, we proceed with **Engineering Change Order (ECO)** fixes — a common post-synthesis method to fix critical timing issues without a complete re-synthesis.
+
 ### 10. Make timing ECO fixes to remove all violations
 
 OR gate of drive strength 2 is driving 4 fanouts
