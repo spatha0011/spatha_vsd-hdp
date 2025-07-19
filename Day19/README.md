@@ -2,6 +2,23 @@
 
 ## Pre-layout timing analysis and importance of good clock tree
 
+### 📚 Contents
+
+ - [Pre-layout timing analysis and importance of good clock tree](#pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+    - [1. Fix up small DRC errors and verify the design is ready](#1-fix-up-small-drc-errors-and-verify-the-design-is-ready)
+    - [2. Save the finalized layout with custom name](#2-save-the-finalized-layout-with-custom-name)
+    - [3. Generate LEF from the layout](#3-generate-lef-from-the-layout)
+    - [4. Copy LEF and LIB files to `picorv32a` src directory](#4-copy-lef-and-lib-files-to-picorv32a-src-directory)
+    - [5. Edit `config.tcl` to include custom LEF and LIB](#5-edit-configtcl-to-include-custom-lef-and-lib)
+    - [6. Run synthesis with custom inverter in OpenLANE](#6-run-synthesis-with-custom-inverter-in-openlane)
+    - [7. Modify parameters to fix timing violations](#7-modify-parameters-to-fix-timing-violations)
+    - [8. Floorplanning and placement with custom inverter](#8-floorplanning-and-placement-with-custom-inverter)
+    - [9. Post-Synthesis timing analysis using OpenSTA](#9-post-synthesis-timing-analysis-using-opensta)
+    - [10. Timing ECO fixes to reduce violations](#10-timing-eco-fixes-to-reduce-violations)
+    - [11. Replace netlist and re-run floorplan, placement, CTS](#11-replace-netlist-and-re-run-floorplan-placement-cts)
+    - [12. Post-CTS OpenROAD timing analysis](#12-post-cts-openroad-timing-analysis)
+    - [13. Explore post-CTS timing after modifying CTS_CLK_BUFFER_LIST](#13-explore-post-cts-timing-after-modifying-cts_clk_buffer_list)
+      
 ### 1.Fix up small DRC errors and verify the design is ready to be inserted into our flow
 
 Conditions to be verified before moving forward with custom designed cell layout:
