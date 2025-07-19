@@ -91,7 +91,7 @@ This connectivity mechanism helps:
 
 The **Routing Topology Algorithm** is crucial for defining the connection structure between pins in an integrated circuit. It determines the most efficient and cost-effective way to route nets by analyzing the relative positions of pins (also known as Access Points for Connections — APCs).
 
-#### Key Steps:
+**Key Steps:**
 1. **Distance Calculation**:
    - Compute pairwise distances between all pin access points.
    - `cost(i, j) = dist(APC_i, APC_j)` for each pair `(i, j)`.
