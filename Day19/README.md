@@ -432,4 +432,36 @@ Result - slack reduced
 
 ![Alt_Text](Images/38.jpg)
 
+OR gate of drive strength 2 driving OA gate has more delay
+
+![Alt_Text](Images/39.jpg)
+
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+```shell
+# Reports all the connections to a net
+report_net -connections _11869_
+
+# Replacing cell
+replace_cell _14766_ sky130_fd_sc_hd__or4_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+![Alt_Text](Images/40.jpg)
+
+Result - slack reduced
+
+![Alt_Text](Images/41.jpg)
+
+Commands to verify instance _14766_ is replaced with sky130_fd_sc_hd__or4_4
+
+```shell
+report_checks -from _29555_ -to _30952_ -through _14766_
+```
+
+Screenshot of replaced instance
+
+![Alt_Text](Images/42.jpg)
 
