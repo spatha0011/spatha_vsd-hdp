@@ -329,7 +329,7 @@ Screenshot of commands run:
 
 Newly created `pre_sta.conf` for STA analysis in `openlane` directory
 
-![Alt_Text](Images/26.jpg)
+![Alt_Text](Images/29.jpg)
 
 Newly created `my_base.sdc` for STA analysis in `openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc`
 
@@ -343,4 +343,31 @@ cd /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_
 
 # Command to invoke OpenSTA tool with script
 sta pre_sta.conf
+```
+
+![Alt_Text](Images/28.jpg)
+
+Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
+
+Commands to include new lef and perform synthesis
+
+```shell
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a -tag 19-07_00-15 -overwrite
+
+# Adiitional commands to include newly added lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Command to set new value for SYNTH_MAX_FANOUT
+set ::env(SYNTH_MAX_FANOUT) 4
+
+# Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+echo $::env(SYNTH_DRIVING_CELL)
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
 ```
