@@ -592,7 +592,7 @@ lrwxrwxrwx 1 spatha spatha   29 Jul 18 18:53 merged_unpadded.lef -> ../../tmp/me
 -rw-r--r-- 1 spatha spatha 2.1M Jul 18 18:56 picorv32a.synthesis_cts.v
 ```
 
-- picorv32a.synthesis.v	: Gate-level netlist generated after initial synthesis of the RTL
-- picorv32a.synthesis_cts.v	Generated after running Clock Tree Synthesis (CTS). This netlist includes inserted clock buffers and CTS-aware hierarchy.
+- **picorv32a.synthesis.v	:** Gate-level netlist generated after initial synthesis of the RTL
+- **picorv32a.synthesis_cts.v	:** Generated after running Clock Tree Synthesis (CTS). This netlist includes inserted clock buffers and CTS-aware hierarchy.
 
 
