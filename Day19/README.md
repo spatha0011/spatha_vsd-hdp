@@ -532,9 +532,7 @@ Verified that the netlist is overwritten by checking that instance _14766_ is re
 
 ![Alt_Text](Images/46.jpg)
 
-Since we confirmed that netlist is replaced and will be loaded in PnR but since we want to follow up on the earlier 0 violation design we are continuing with the clean design to further stages
-
-Commands load the design and run necessary stages
+Since we confirmed that netlist is replaced and will be loaded in PnR but since we want to follow up on the earlier 0 violation design we are continuing with the clean design to further stages.
 
 The or_cts.tcl script requires the variable CTS_SQR_RES (square resistance in kΩ/µm²), but it's not set in your config.tcl or environment.
 
