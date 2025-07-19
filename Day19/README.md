@@ -393,3 +393,21 @@ sta pre_sta.conf
 OR gate of drive strength 2 is driving 4 fanouts
 
 ![Alt_Text](Images/33.jpg)
+
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+```shell
+report_net -connections _11873_
+help replace_cell
+replace_cell _14770_ sky130_fd_sc_hd__or3_4
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+![Alt_Text](Images/34.jpg)
+
+Result - slack reduced
+
+![Alt_Text](Images/35.jpg)
+
+
+
