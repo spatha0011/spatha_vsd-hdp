@@ -4,6 +4,11 @@
 
 ### 📚 Contents
 
+- **Concepts**
+  - [What is Routing?](#what-is-routing)
+  - [Goals of Routing](#goals-of-routing)
+  - [Steps in Routing Flow](#steps-in-routing-flow)
+  - [TritonRoute](#tritonroute)
 - [14. Perform detailed routing using TritonRoute and explore the routed layout](#14-perform-detailed-routing-using-tritonroute-and-explore-the-routed-layout)
 - [15. Post-Route parasitic extraction using SPEF extractor](#15-post-route-parasitic-extraction-using-spef-extractor)
 - [16. Post-Route OpenSTA timing analysis with the extracted parasitics of the route](#16-post-route-opensta-timing-analysis-with-the-extracted-parasitics-of-the-route)
