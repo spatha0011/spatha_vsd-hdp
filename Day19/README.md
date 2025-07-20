@@ -359,8 +359,10 @@ Commands to run STA in another terminal:
 cd /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane
 
 # Command to invoke OpenSTA tool with script
-sta pre_sta.conf
+~/OpenSTA/build/sta pre_sta.conf
 ```
+
+![Alt_Text](Images/miss1.jpg)
 
 ![Alt_Text](Images/28.jpg)
 
