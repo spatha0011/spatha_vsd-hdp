@@ -13,7 +13,7 @@
 - [7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters](#7-removereduce-the-newly-introduced-violations-with-the-introduction-of-custom-inverter-cell-by-modifying-design-parameters)
 - [8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow](#8-once-synthesis-has-accepted-our-custom-inverter-we-can-now-run-floorplan-and-placement-and-verify-the-cell-is-accepted-in-pnr-flow)
 - [9. Do Post-Synthesis timing analysis with OpenSTA tool](#9-do-post-synthesis-timing-analysis-with-opensta-tool)
-- [10. Make timing ECO fixes to remove all violations](#10-make-timing-eco-fixes-to-remove-all-violations)
+- [10. Make timing ECO fixes to remove violations](#10-make-timing-eco-fixes-to-remove-violations)
 - [11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts](#11-replace-the-old-netlist-with-the-new-netlist-generated-after-timing-eco-fix-and-implement-the-floorplan-placement-and-cts)
 - [12. Post-CTS OpenROAD timing analysis](#12-post-cts-openroad-timing-analysis)
 - [13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'](#13-explore-post-cts-openroad-timing-analysis-by-removing-sky130_fd_sc_hd__clkbuf_1-cell-from-clock-buffer-list-variable-cts_clk_buffer_list)
@@ -424,7 +424,7 @@ Despite reducing the fanout and inserting buffers, the design still fails to mee
 
 Since basic optimizations during synthesis were insufficient, we proceed with **Engineering Change Order (ECO)** fixes — a common post-synthesis method to fix critical timing issues without a complete re-synthesis.
 
-### 10. Make timing ECO fixes to remove all violations
+### 10. Make timing ECO fixes to remove violations
 
 ❗**Note:** Naming Convention: `sky130_fd_sc_hd__or3_4`
 
