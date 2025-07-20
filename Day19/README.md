@@ -544,6 +544,8 @@ Screenshot of replaced instance:
 
 Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4:
 
+![Alt_Text](Images/miss11.jpg)
+
 ```shell
 % report_net -connections _12396_
 Warning: pre_sta.conf line 1, report_net -connections is deprecated.
@@ -567,9 +569,11 @@ Load pins
 1
 ```
 ```shell
- report_checks -fields {net cap slew input_pins} -digits 4
+ report_checks -fields {net cap slew input_pins fanout} -digits 4
 ```
-![Alt_Text](Images/43.jpg)
+
+![Alt_Text](Images/miss12.jpg)
+
 
 **_We started ECO fixes at WNS = -23.8900 ns, and have now improved it to WNS = -22.7650 ns, achieving a reduction of approximately 1.1250 ns in worst negative slack._**
 
