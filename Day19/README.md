@@ -611,7 +611,7 @@ exit
 ```
 ![Alt_Text](Images/44.jpg)
 
-<ins>Verified that the netlist is overwritten by checking that instance _14766_ is replaced with sky130_fd_sc_hd__or4_4</ins>
+**_Verified that the netlist is overwritten by checking that instance _14766_ is replaced with sky130_fd_sc_hd__or4_4_**
 
 ![Alt_Text](Images/46.jpg)
 
