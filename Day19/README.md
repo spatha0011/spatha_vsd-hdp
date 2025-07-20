@@ -412,7 +412,9 @@ cd Desktop/work/tools/openlane_working_dir/openlane
 ~/OpenSTA/build/sta pre_sta.conf
 ```
 
-![Alt_Text](Images/31.jpg)
+![Alt_Text](Images/miss4.jpg)
+
+![Alt_Text](Images/miss5.jpg)
 
 Despite reducing the fanout and inserting buffers, the design still fails to meet timing after synthesis, as shown in the updated PrimeTime report:
 
