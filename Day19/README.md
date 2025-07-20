@@ -459,14 +459,14 @@ help replace_cell
 replace_cell _14770_ sky130_fd_sc_hd__or3_4
 
 # Re-run timing checks to observe updated capacitance, slew, and arrival times after replacement
-report_checks -fields {net cap slew input_pins} -digits 4
+report_checks -fields {net cap slew input_pins fanout} -digits 4
 ```
 
 ![Alt_Text](Images/34.jpg)
 
 Result - slack reduced
 
-![Alt_Text](Images/35.jpg)
+![Alt_Text](Images/miss7.jpg)
 
 In the timing report, we observe that an **OR gate with drive strength 2** (`sky130_fd_sc_hd__or4_2`) is driving an **OA (OR-AND) gate** (`sky130_fd_sc_hd__o2111a_2`). This introduces significant delay on the net due to high capacitive load and insufficient driving strength.
 
