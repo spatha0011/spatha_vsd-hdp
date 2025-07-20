@@ -364,7 +364,7 @@ cd /home/spatha/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_
 
 ![Alt_Text](Images/miss1.jpg)
 
-![Alt_Text](Images/miss2.jpg)
+![Alt_Text](Images/miss3.jpg)
 
 Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again.
 
