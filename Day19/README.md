@@ -520,6 +520,8 @@ report_checks -fields {net cap slew input_pins fanout} -digits 4
 
 Result - slack reduced
 
+![Alt_Text](Images/miss9.jpg)
+
 ![Alt_Text](Images/41.jpg)
 
 Commands to verify instance _14766_ is replaced with sky130_fd_sc_hd__or4_4:
@@ -527,6 +529,8 @@ Commands to verify instance _14766_ is replaced with sky130_fd_sc_hd__or4_4:
 ```shell
 report_checks -from _29555_ -to _30952_ -through _14766_
 ```
+
+❗**Note:** Make sure that the <startpoint> and <endpoint> are the same as those reported in the previous full timing report. This ensures you're analyzing timing improvements or regressions on the exact same critical path, especially after making ECO changes like gate replacements.
 
 - **`-from _29555_`**: Starting point of the path (launch pin or clock origin)
 - **`-to _30952_`**: Endpoint of the path (data capture pin or flop input)
