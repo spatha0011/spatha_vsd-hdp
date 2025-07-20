@@ -440,7 +440,7 @@ Fanouts: 4
 Net: _11873_
 ```
 
-![Alt_Text](Images/33.jpg)
+![Alt_Text](Images/miss6.jpg)
 
 We will replace the OR3 gate of drive strength 2 with a **drive strength 4** version (`sky130_fd_sc_hd__or3_4`) to improve timing.
 
