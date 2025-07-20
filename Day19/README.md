@@ -497,6 +497,8 @@ report_checks -fields {net cap slew input_pins fanout} -digits 4
 
 Result - slack reduced
 
+![Alt_Text](Images/miss10.jpg)
+
 ![Alt_Text](Images/38.jpg)
 
 OR gate of drive strength 2 driving OA gate has more delay
@@ -530,7 +532,7 @@ Commands to verify instance _14766_ is replaced with sky130_fd_sc_hd__or4_4:
 report_checks -from _29555_ -to _30952_ -through _14766_
 ```
 
-❗**Note:** Make sure that the <startpoint> and <endpoint> are the same as those reported in the previous full timing report. This ensures you're analyzing timing improvements or regressions on the exact same critical path, especially after making ECO changes like gate replacements.
+❗**Note:** Make sure that the <startpoint> and <endpoint> are the same as those reported in the previous full timing report. This ensures you're analyzing timing improvements or regressions on the exact same critical path, especially after making ECO changes like gate replacements. You can refer to the previous timing report [here](Images/miss10.jpg).
 
 - **`-from _29555_`**: Starting point of the path (launch pin or clock origin)
 - **`-to _30952_`**: Endpoint of the path (data capture pin or flop input)
