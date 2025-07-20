@@ -513,7 +513,7 @@ report_net -connections _11869_
 replace_cell _14766_ sky130_fd_sc_hd__or4_4
 
 # Generating custom timing report
-report_checks -fields {net cap slew input_pins} -digits 4
+report_checks -fields {net cap slew input_pins fanout} -digits 4
 ```
 
 ![Alt_Text](Images/40.jpg)
