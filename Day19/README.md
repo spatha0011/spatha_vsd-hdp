@@ -501,7 +501,7 @@ Result - slack reduced
 
 OR gate of drive strength 2 driving OA gate has more delay
 
-![Alt_Text](Images/39.jpg)
+![Alt_Text](Images/miss8.jpg)
 
 Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4:
 
