@@ -32,6 +32,8 @@ $ sudo apt-get install build-essential clang bison flex \
     graphviz xdot pkg-config python3 libboost-system-dev \
     libboost-python-dev libboost-filesystem-dev zlib1g-dev
 $ make config-gcc
+# Yosys build depends on a Git submodule called abc, which hasn't been initialized yet. You need to run the following command before running make
+$ git submodule update --init --recursive
 $ make 
 $ sudo make install
 ```
