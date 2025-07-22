@@ -15,7 +15,7 @@ cd flow/
 openroad
 ```
 
-![Alt Text](Images/1.png)
+![Alt Text](Images/1.jpg)
 
 ### Step 2: Load Design and Technology Files
 
@@ -38,7 +38,7 @@ The DEF file represents the post-route physical layout of the design:
 read_def /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_route.def
 ```
 
-![Alt Text](Images/2.png)
+![Alt Text](Images/2.jpg)
 
 ### **Step 3: RC Extraction and Output Generation**
 
@@ -73,9 +73,9 @@ Save the netlist after placement and routing:
 write_verilog /home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/vsdbabysoc_post_place.v
 ```
 
-![Alt Text](Images/5.png)
+![Alt Text](Images/5.jpg)
 
-![Alt Text](Images/6.png)
+![Alt Text](Images/6.jpg)
 
-![Alt Text](Images/7.png)
+![Alt Text](Images/7.jpg)
 
