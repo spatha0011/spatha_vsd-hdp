@@ -6,10 +6,10 @@
  - [Step 1: Launch OpenROAD](#step-1-launch-openroad)
  - [Step 2: Load Design and Technology Files](#step-2-load-design-and-technology-files)
  - [Step 3: RC Extraction and Output Generation](#step-3-rc-extraction-and-output-generation)
-    - [1. Define Process Corner](#1-define-process-corner)
-    - [2. Extract Parasitics](#2-extract-parasitics)
-    - [3. Write SPEF File](#3-write-spef-file)
-    - [4. Write Post-Placement Verilog Netlist](#4-write-post-placement-verilog-netlist)
+    - [🔹 1. Define Process Corner](#-1-define-process-corner)
+    - [🔹 2. Extract Parasitics](#-2-extract-parasitics)
+    - [🔹 3. Write SPEF File](#-3-write-spef-file)
+    - [🔹 4. Write Post-Placement Verilog Netlist](#-4-write-post-placement-verilog-netlist)
 
 This section covers the step-by-step procedure to generate the **post-route Standard Parasitic Exchange Format (SPEF)** and **post-placement Verilog netlist** for the `VSDBabySoC` design using OpenROAD. These outputs are essential for accurate timing analysis and signoff after the routing stage. The SPEF file captures parasitic RC effects from the physical layout, while the updated Verilog reflects the final net connections post-placement and routing.
 
