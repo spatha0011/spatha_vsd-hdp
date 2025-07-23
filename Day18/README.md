@@ -157,7 +157,7 @@ The time when the falling input or output crosses the lower threshold, typically
 First, clone the required mag files and spicemodels of inverter,pmos and nmos sky130.
 
 ```shell
-cd ~cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/
+cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/
 
 git clone https://github.com/nickson-jose/vsdstdcelldesign.git
 ```
