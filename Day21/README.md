@@ -676,6 +676,20 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 
 ![Alt Text](Images/routegui.jpg)
 
+**Timing Report after Routing**
+
+After completing routing, run the following in the OpenROAD GUI → Scripting window:
+
+```shell
+report_checks
+```
+
+This command provides a detailed timing analysis of critical paths.
+
+In the example below, the design meets timing with Slack = 6.41 ns (MET)
+
+![Alt Text](Images/slack.jpg)
+
 ### `VSDBabySoC post_route SPEF generation`
 
 This section covers the step-by-step procedure to generate the **post-route Standard Parasitic Exchange Format (SPEF)** and **post-placement Verilog netlist** for the `VSDBabySoC` design using OpenROAD. These outputs are essential for accurate timing analysis and signoff after the routing stage. The SPEF file captures parasitic RC effects from the physical layout, while the updated Verilog reflects the final net connections post-placement and routing.
