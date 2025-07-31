@@ -17,9 +17,11 @@ Earlier, we successfully executed the RTL2GDS flow for VSDBabySoC.
 
 However, re-running the same flow with previous files now results in the following error during floorplanning:
 
+![Alt Text](Images/t2.jpeg)
+
 ![Alt Text](Images/t1.jpeg)
 
-![Alt Text](Images/t2.jpeg)
+
 
 ### ✅ Fix: Use Fresh Design Files
 
@@ -30,8 +32,6 @@ Copy the clean design directories
 - [flow_designs_sky130hd_vsdbabysoc](Day21/flow_designs_sky130hd_vsdbabysoc) → `OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc`
   
 - [flow_designs_src_vsdbabysoc](Day21/flow_designs_src_vsdbabysoc) → `OpenROAD-flow-scripts/flow/designs/src/vsdbabysoc`
-
-### `run cts`
 
 ### <ins>contents of config.mk</ins>
 
@@ -93,6 +93,8 @@ export MAGIC_EXT_USE_GDS    = 1
 # export CORE_UTILIZATION=0.1  # Reduce this value to allow more whitespace for routing.
 ```
 </details>
+
+### `run cts`
 
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk cts
