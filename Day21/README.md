@@ -91,6 +91,31 @@ export MAGIC_EXT_USE_GDS    = 1
 ```
 </details>
 
+### `run synthesis`
+
+Before running the updated flow, make sure to remove any previously generated results, logs, and intermediate files. Use the following command:
+
+```shell
+
+cd OpenROAD-flow-scripts/flow
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk clean_all
+```
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
+```
+
+![Alt Text](Images/synth1.jpg)
+
+**Synthesis Stats**
+
+```shell
+spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsdbabysoc/base/synth_stat.txt
+```
+
+![Alt Text](Images/synth2.jpg)
+
+
 ### `run cts`
 
 ```shell
