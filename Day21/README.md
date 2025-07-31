@@ -14,7 +14,7 @@
 
 ### `run cts`
 
-#### contents of config.mk
+#### <inst>contents of config.mk</inst>
 
 <details> <summary><strong>config.mk</strong></summary>
 
