@@ -692,7 +692,7 @@ In the example below, the design meets timing with Slack = 6.41 ns (MET)
 ![Alt Text](Images/slack.jpg)
 
 
-### 🔄 Convert `.odb` to `.def` in OpenROAD
+### 🔄 `Convert `.odb` to `.def` in OpenROAD`
 
 Follow the steps below to export a DEF file from an existing OpenDB (`.odb`) database.
 
@@ -703,7 +703,6 @@ cd flow
 openroad
 # Load the .odb database file
 read_db /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_2_route.odb
-
 # Write out the DEF file
 write_def /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_2_route.def
 ```
