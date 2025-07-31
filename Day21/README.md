@@ -757,10 +757,10 @@ read_liberty /home/spatha/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky1
 
 The DEF file represents the post-route physical layout of the design:
 ```shell
-read_def /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_route.def
+read_def /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_2_route.def
 ```
 
-![Alt Text](Images/2.jpg)
+![Alt Text](Images/final.jpg)
 
 ### `Step 3: RC Extraction and Output Generation`
 
