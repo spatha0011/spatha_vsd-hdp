@@ -134,6 +134,9 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
 ```
+
+![Alt Text](Images/placet1.jpg)
+
 ![Alt Text](Images/place_terminal.jpg)
 
 **Placement Result (GUI)**
