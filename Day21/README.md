@@ -13,9 +13,9 @@
 
 ### ⚠️ Issue: Floorplan Step Fails with Macro Placement Error
 
-Earlier, we successfully executed the RTL2GDS flow for VSDBabySoC.
+Earlier, we successfully ran the Floorplan and Placement stages for the VSDBabySoC design.
 
-However, re-running the same flow with previous files now results in the following error during floorplanning:
+However, with the updated OpenROAD version `v2.0-23132-g814048c9f3`, these steps fail during the macro placement stage with the following error:
 
 ![Alt Text](Images/t2.jpeg)
 
