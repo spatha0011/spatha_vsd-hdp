@@ -115,6 +115,36 @@ spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsd
 
 ![Alt Text](Images/synth2.jpg)
 
+### `run floorplan`
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
+```
+![Alt Text](Images/fp_terminal.jpg)
+
+**Floorplan Result (GUI)**
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
+```
+
+![Alt Text](Images/fp_gui.jpg)
+
+
+### `run placement`
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk placement
+```
+![Alt Text](Images/place_terminal.jpg)
+
+**Placement Result (GUI)**
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_placement
+```
+
+![Alt Text](Images/place_gui.jpg)
 
 ### `run cts`
 
