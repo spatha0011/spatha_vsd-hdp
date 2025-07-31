@@ -684,6 +684,10 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 
 ![Alt Text](Images/routegui.jpg)
 
+**Final routed design in OpenROAD showing VDD net and multiple metal layers after detailed routing.**
+
+![Alt Text](Images/r1.jpg)
+
 **Timing Report after Routing**
 
 After completing routing, run the following in the OpenROAD GUI → Scripting window:
