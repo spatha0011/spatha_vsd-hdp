@@ -692,7 +692,7 @@ In the example below, the design meets timing with Slack = 6.41 ns (MET)
 ![Alt Text](Images/slack.jpg)
 
 
-### 🔄 `Convert `.odb` to `.def` in OpenROAD`
+### 🔄 Convert `.odb` to `.def` in OpenROAD
 
 Follow the steps below to export a DEF file from an existing OpenDB (`.odb`) database.
 
