@@ -3,6 +3,7 @@
 ### 📚 Contents
 - [Issue: Floorplan Step Fails with Macro Placement Error](#️-issue-floorplan-step-fails-with-macro-placement-error)
 - [Fix: Use Fresh Design Files](#-fix-use-fresh-design-files)
+- [Synthesis to Route of VSDBabySoC Design](#synthesis-to-route-of-vsdbabysoc-design)
 - [VSDBabySoC post_route SPEF generation](#vsdbabysoc-post_route-spef-generation)
  - [Step 1: Launch OpenROAD](#step-1-launch-openroad)
  - [Step 2: Load Design and Technology Files](#step-2-load-design-and-technology-files)
@@ -91,6 +92,8 @@ export MAGIC_EXT_USE_GDS    = 1
 # export CORE_UTILIZATION=0.1  # Reduce this value to allow more whitespace for routing.
 ```
 </details>
+
+### Synthesis to Route of VSDBabySoC Design
 
 ### `run synthesis`
 
