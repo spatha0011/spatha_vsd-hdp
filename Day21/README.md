@@ -4,6 +4,7 @@
 - [Issue: Floorplan Step Fails with Macro Placement Error](#️-issue-floorplan-step-fails-with-macro-placement-error)
 - [Fix: Use Fresh Design Files](#-fix-use-fresh-design-files)
 - [Synthesis to Route of VSDBabySoC Design](#synthesis-to-route-of-vsdbabysoc-design)
+- [Convert `.odb` to `.def` in OpenROAD](#-convert-odb-to-def-in-openroad)
 - [VSDBabySoC post_route SPEF generation](#vsdbabysoc-post_route-spef-generation)
  - [Step 1: Launch OpenROAD](#step-1-launch-openroad)
  - [Step 2: Load Design and Technology Files](#step-2-load-design-and-technology-files)
@@ -689,6 +690,37 @@ This command provides a detailed timing analysis of critical paths.
 In the example below, the design meets timing with Slack = 6.41 ns (MET)
 
 ![Alt Text](Images/slack.jpg)
+
+
+### 🔄 Convert `.odb` to `.def` in OpenROAD
+
+Follow the steps below to export a DEF file from an existing OpenDB (`.odb`) database.
+
+```shell
+cd ~/OpenROAD-flow-scripts
+source env.sh
+cd flow
+openroad
+# Load the .odb database file
+read_db /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_2_route.odb
+
+# Write out the DEF file
+write_def /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_2_route.def
+```
+![Alt Text](Images/con1.jpg)
+
+```shell
+gvim /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_2_route.def
+```
+
+![Alt Text](Images/con2.jpg)
+
+### ✅ Prerequisites
+- OpenROAD should be installed and available in your environment.
+- Load the OpenROAD environment:
+
+```bash
+source env.sh
 
 ### `VSDBabySoC post_route SPEF generation`
 
