@@ -1,7 +1,5 @@
 # VSD Hardware Design Program
 
-## VSDBabySoC post_route SPEF generation
-
 ### 📚 Contents
  - [Step 1: Launch OpenROAD](#step-1-launch-openroad)
  - [Step 2: Load Design and Technology Files](#step-2-load-design-and-technology-files)
@@ -635,6 +633,15 @@ Total                  1.13e-02   5.72e-03   2.44e-08   1.70e-02 100.0%
                           66.3%      33.7%       0.0%
 ```
 </details>
+
+
+### `run routing`
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
+```
+
+### VSDBabySoC post_route SPEF generation
 
 This section covers the step-by-step procedure to generate the **post-route Standard Parasitic Exchange Format (SPEF)** and **post-placement Verilog netlist** for the `VSDBabySoC` design using OpenROAD. These outputs are essential for accurate timing analysis and signoff after the routing stage. The SPEF file captures parasitic RC effects from the physical layout, while the updated Verilog reflects the final net connections post-placement and routing.
 
