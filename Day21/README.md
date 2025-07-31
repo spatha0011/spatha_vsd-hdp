@@ -674,7 +674,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 ```
 
-![Alt Text](Images/routgui.jpg)
+![Alt Text](Images/routegui.jpg)
 
 ### `VSDBabySoC post_route SPEF generation`
 
