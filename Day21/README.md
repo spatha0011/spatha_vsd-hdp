@@ -679,10 +679,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 ```
-
-![Alt Text](Images/routefinal.jpg)
-
-![Alt Text](Images/routegui.jpg)
+![Alt Text](Images/r2.jpg)
 
 **Final routed design in OpenROAD showing VDD net and multiple metal layers after detailed routing.**
 
