@@ -17,8 +17,6 @@ Earlier, we successfully ran the Floorplan and Placement stages for the VSDBabyS
 
 However, with the updated OpenROAD version `v2.0-23132-g814048c9f3`, these steps fail during the macro placement stage with the following error:
 
-![Alt Text](Images/t2.jpeg)
-
 ![Alt Text](Images/t1.jpeg)
 
 ### ✅ Fix: Use Fresh Design Files
