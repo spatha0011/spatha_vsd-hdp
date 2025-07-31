@@ -814,5 +814,5 @@ The post-placement Verilog netlist represents the logical connectivity of the de
 gvim /home/spatha/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/vsdbabysoc_post_place.v
 ```
 
-![Alt Text](Images/7.jpg)
+![Alt Text](Images/v1.jpg)
 
