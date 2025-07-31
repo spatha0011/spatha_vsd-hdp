@@ -12,7 +12,7 @@
     - [4. Write Post-Placement Verilog Netlist](#-4-write-post-placement-verilog-netlist)
 
 
-### run cts
+### `run cts`
 
 #### contents of config.mk
 
