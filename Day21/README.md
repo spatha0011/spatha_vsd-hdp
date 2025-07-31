@@ -1,6 +1,9 @@
 # VSD Hardware Design Program
 
 ### 📚 Contents
+- [⚠️ Issue: Floorplan Step Fails with Macro Placement Error](#️-issue-floorplan-step-fails-with-macro-placement-error)
+- [✅ Fix: Use Fresh Design Files](#-fix-use-fresh-design-files)
+- [VSDBabySoC post_route SPEF generation](#vsdbabysoc-post_route-spef-generation)
  - [Step 1: Launch OpenROAD](#step-1-launch-openroad)
  - [Step 2: Load Design and Technology Files](#step-2-load-design-and-technology-files)
  - [Step 3: RC Extraction and Output Generation](#step-3-rc-extraction-and-output-generation)
