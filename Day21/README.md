@@ -1,6 +1,6 @@
 # VSD Hardware Design Program
 
-## VSDBabySoC Synthesis to Route and Post-Route SPEF Generation
+## OpenROAD-Flow-Scripts: Physical Design, Post-Route SPEF and Verilog Netlist Generation for VSDBabySoC
 
 ### 📚 Contents
 - [Issue: Floorplan Step Fails with Macro Placement Error](#️-issue-floorplan-step-fails-with-macro-placement-error)
