@@ -714,12 +714,6 @@ gvim /home/spatha/OpenROAD-flow-scripts/flow/results/sky130hd/vsdbabysoc/base/5_
 
 ![Alt Text](Images/con2.jpg)
 
-### ✅ Prerequisites
-- OpenROAD should be installed and available in your environment.
-- Load the OpenROAD environment:
-
-```bash
-source env.sh
 
 ### `VSDBabySoC post_route SPEF generation`
 
