@@ -21,17 +21,14 @@ However, re-running the same flow with previous files now results in the followi
 
 ![Alt Text](Images/t1.jpeg)
 
-
-
 ### ✅ Fix: Use Fresh Design Files
 
 To resolve this issue:
 
 Copy the clean design directories
 
-- [flow_designs_sky130hd_vsdbabysoc](Day21/flow_designs_sky130hd_vsdbabysoc) → `OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc`
-  
-- [flow_designs_src_vsdbabysoc](Day21/flow_designs_src_vsdbabysoc) → `OpenROAD-flow-scripts/flow/designs/src/vsdbabysoc`
+- [flow_designs_sky130hd_vsdbabysoc](./flow_designs_sky130hd_vsdbabysoc) → `OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc`
+- [flow_designs_src_vsdbabysoc](./flow_designs_src_vsdbabysoc) → `OpenROAD-flow-scripts/flow/designs/src/vsdbabysoc`
 
 ### <ins>contents of config.mk</ins>
 
