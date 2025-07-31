@@ -669,8 +669,6 @@ Total                  1.13e-02   5.72e-03   2.44e-08   1.70e-02 100.0%
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 ```
 
-![Alt Text](Images/routefinal.jpg)
-
 ![Alt Text](Images/route1.jpg)
 
 ![Alt Text](Images/routedone.jpg)
@@ -681,6 +679,8 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 ```
+
+![Alt Text](Images/routefinal.jpg)
 
 ![Alt Text](Images/routegui.jpg)
 
