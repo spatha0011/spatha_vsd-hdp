@@ -13,7 +13,7 @@
     - [3. Write SPEF File](#-3-write-spef-file)
     - [4. Write Post-Placement Verilog Netlist](#-4-write-post-placement-verilog-netlist)
 
-### ⚠️ Issue: Floorplan Step Fails with Macro Placement Error
+### ⚠️ `Issue: Floorplan Step Fails with Macro Placement Error`
 
 Earlier, we successfully ran the Floorplan and Placement stages for the VSDBabySoC design.
 
@@ -23,7 +23,7 @@ However, with the updated OpenROAD version `v2.0-23132-g814048c9f3`, these steps
 
 ![Alt Text](Images/t1.jpeg)
 
-### ✅ Fix: Use Fresh Design Files
+### ✅ `Fix: Use Fresh Design Files`
 
 To resolve this issue:
 
@@ -93,7 +93,7 @@ export MAGIC_EXT_USE_GDS    = 1
 ```
 </details>
 
-### Synthesis to Route of VSDBabySoC Design
+### `Synthesis to Route of VSDBabySoC Design`
 
 ### `run synthesis`
 
@@ -663,7 +663,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 
 ![Alt Text](Images/route1.jpg)
 
-### VSDBabySoC post_route SPEF generation
+### `VSDBabySoC post_route SPEF generation`
 
 This section covers the step-by-step procedure to generate the **post-route Standard Parasitic Exchange Format (SPEF)** and **post-placement Verilog netlist** for the `VSDBabySoC` design using OpenROAD. These outputs are essential for accurate timing analysis and signoff after the routing stage. The SPEF file captures parasitic RC effects from the physical layout, while the updated Verilog reflects the final net connections post-placement and routing.
 
