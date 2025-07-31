@@ -168,6 +168,8 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk cts
 
 ![Alt Text](Images/cts2.jpg)
 
+**CTS Result (GUI)**
+
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_cts
 ```
@@ -664,6 +666,15 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 ![Alt Text](Images/route1.jpg)
 
 ![Alt Text](Images/routedone.jpg)
+
+
+**Routing Result (GUI)**
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
+```
+
+![Alt Text](Images/routg1.jpg)
 
 ### `VSDBabySoC post_route SPEF generation`
 
