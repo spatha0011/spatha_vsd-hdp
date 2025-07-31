@@ -147,6 +147,8 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 
 ![Alt Text](Images/place_gui.jpg)
 
+![Alt Text](Images/placeg1.jpg)
+
 ### `run cts`
 
 ```shell
