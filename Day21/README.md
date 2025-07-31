@@ -11,6 +11,24 @@
     - [3. Write SPEF File](#-3-write-spef-file)
     - [4. Write Post-Placement Verilog Netlist](#-4-write-post-placement-verilog-netlist)
 
+
+### run cts
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk cts
+```
+![Alt Text](Images/cts1.jpg)
+
+![Alt Text](Images/cts2.jpg)
+
+```shell
+make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_cts
+```
+
+![Alt Text](Images/cts4.jpg)
+
+![Alt Text](Images/cts3.jpg)
+
 This section covers the step-by-step procedure to generate the **post-route Standard Parasitic Exchange Format (SPEF)** and **post-placement Verilog netlist** for the `VSDBabySoC` design using OpenROAD. These outputs are essential for accurate timing analysis and signoff after the routing stage. The SPEF file captures parasitic RC effects from the physical layout, while the updated Verilog reflects the final net connections post-placement and routing.
 
 ### `Step 1: Launch OpenROAD`
