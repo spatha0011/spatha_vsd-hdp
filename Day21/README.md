@@ -11,6 +11,25 @@
     - [3. Write SPEF File](#-3-write-spef-file)
     - [4. Write Post-Placement Verilog Netlist](#-4-write-post-placement-verilog-netlist)
 
+### ⚠️ Issue: Floorplan Step Fails with Macro Placement Error
+
+Earlier, we successfully executed the RTL2GDS flow for VSDBabySoC.
+
+However, re-running the same flow with previous files now results in the following error during floorplanning:
+
+![Alt Text](Images/t1.jpeg)
+
+![Alt Text](Images/t2.jpeg)
+
+### ✅ Fix: Use Fresh Design Files
+
+To resolve this issue:
+
+Copy the clean design directories
+
+- [flow_designs_sky130hd_vsdbabysoc](Day21/flow_designs_sky130hd_vsdbabysoc) → `OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc`
+  
+- [flow_designs_src_vsdbabysoc](Day21/flow_designs_src_vsdbabysoc) → `OpenROAD-flow-scripts/flow/designs/src/vsdbabysoc`
 
 ### `run cts`
 
