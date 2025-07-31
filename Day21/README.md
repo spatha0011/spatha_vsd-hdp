@@ -170,6 +170,8 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_cts
 
 ![Alt Text](Images/cts3.jpg)
 
+**CTS final report:**
+
 ```shell
 gvim /home/spatha/OpenROAD-flow-scripts/flow/reports/sky130hd/vsdbabysoc/base/4_cts_final.rpt
 ```
