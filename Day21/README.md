@@ -652,6 +652,8 @@ Total                  1.13e-02   5.72e-03   2.44e-08   1.70e-02 100.0%
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 ```
 
+![Alt Text](Images/route1.jpg)
+
 ### VSDBabySoC post_route SPEF generation
 
 This section covers the step-by-step procedure to generate the **post-route Standard Parasitic Exchange Format (SPEF)** and **post-placement Verilog netlist** for the `VSDBabySoC` design using OpenROAD. These outputs are essential for accurate timing analysis and signoff after the routing stage. The SPEF file captures parasitic RC effects from the physical layout, while the updated Verilog reflects the final net connections post-placement and routing.
