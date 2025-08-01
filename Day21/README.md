@@ -191,9 +191,9 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk cts
 ```
 
-![Alt Text](Images/c1.jpg)
+![Alt Text](Images/cts1.jpg)
 
-![Alt Text](Images/c2.jpg)
+![Alt Text](Images/cts2.jpg)
 
 **CTS Result (GUI)**
 
@@ -202,11 +202,11 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_cts
 ```
 **Timing Reports**
 
-![Alt Text](Images/cts4.jpg)
+![Alt Text](Images/c1.jpg)
 
 **Charts**
 
-![Alt Text](Images/cts3.jpg)
+![Alt Text](Images/c2.jpg)
 
 **CTS final report:**
 
