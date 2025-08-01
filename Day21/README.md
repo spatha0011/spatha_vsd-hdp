@@ -179,6 +179,8 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 ```
 
+❗**Note:** In the floorplan stage, you do not see any placement density heat maps because standard cells have not yet been placed. The heat map will only appear after the placement step.
+
 ![Alt Text](Images/place_gui.jpg)
 
 ![Alt Text](Images/placeg1.jpg)
