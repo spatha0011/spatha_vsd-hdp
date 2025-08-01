@@ -712,6 +712,8 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 
 ![Alt Text](Images/rc1.jpg)
 
+![Alt Text](Images/rc4.jpg)
+
 ![Alt Text](Images/rc3.jpg)
 
 
