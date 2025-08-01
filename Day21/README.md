@@ -712,6 +712,9 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 
 ![Alt Text](Images/rc1.jpg)
 
+![Alt Text](Images/rc3.jpg)
+
+
 **Timing Report after Routing**
 
 After completing routing, run the following in the OpenROAD GUI → Scripting window:
