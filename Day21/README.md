@@ -708,6 +708,10 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 
 ![Alt Text](Images/r1.jpg)
 
+**routing congestion heat map**
+
+![Alt Text](Images/rc1.jpg)
+
 **Timing Report after Routing**
 
 After completing routing, run the following in the OpenROAD GUI → Scripting window:
