@@ -122,10 +122,27 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
 **Synthesis Stats**
 
 ```shell
-spatha@spatha-VirtualBox:~/OpenROAD-flow-scripts/flow$ gvim reports/sky130hd/vsdbabysoc/base/synth_stat.txt
+gvim reports/sky130hd/vsdbabysoc/base/synth_stat.txt
 ```
 
 ![Alt Text](Images/synth2.jpg)
+
+
+**Synthesis netlist**
+
+```shell
+gvim results/sky130hd/vsdbabysoc/base/1_2_yosys.v
+```
+![Alt Text](Images/y1.jpg)
+
+**Synthesis Check**
+
+```shell
+gvim reports/sky130hd/vsdbabysoc/base/synth_check.txt
+```
+
+![Alt Text](Images/y2.jpg)
+
 
 ### `run floorplan`
 
