@@ -202,6 +202,8 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_cts
 ```
 **Timing Reports**
 
+This image shows the clock tree after CTS with highlighted clock paths and buffer placements in the OpenROAD GUI
+
 ![Alt Text](Images/c1.jpg)
 
 **Charts**
