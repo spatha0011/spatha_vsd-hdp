@@ -191,9 +191,9 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk cts
 ```
 
-![Alt Text](Images/cts1.jpg)
+![Alt Text](Images/c1.jpg)
 
-![Alt Text](Images/cts2.jpg)
+![Alt Text](Images/c2.jpg)
 
 **CTS Result (GUI)**
 
