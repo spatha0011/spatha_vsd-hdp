@@ -762,9 +762,12 @@ This image shows the **routing congestion heatmap** in OpenROAD after the routin
 - A **filler cell** (`FILLER_349_1316`) is highlighted, with details like coordinates, bounding box, and obstructions shown in the Inspector.
 
 #### Formula for Congestion:
-\[
-\text{Congestion (\%)} = \left( \frac{\text{Used Routing Tracks}}{\text{Available Routing Tracks}} \right) \times 100
-\]
+
+The routing congestion percentage is calculated as:
+
+$$
+\text{Congestion (\%)} = \frac{\text{Used Routing Tracks}}{\text{Available Routing Tracks}} \times 100
+$$
 
 Where:
 - **Used Routing Tracks** = Number of tracks occupied by wires in a specific region.
