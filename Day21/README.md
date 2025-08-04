@@ -780,7 +780,7 @@ This image shows the **routing congestion heatmap** in OpenROAD after the routin
 - **Red cells** represent high congestion (close to 100% utilization).
 - A **filler cell** (`FILLER_349_1316`) is highlighted, with details like coordinates, bounding box, and obstructions shown in the Inspector.
 
-#### Formula for Congestion:
+#### <ins>Formula for Congestion:</ins>
 
 The routing congestion percentage is calculated as:
 
@@ -792,7 +792,7 @@ Where:
 
 ![Alt Text](Images/rc3.jpg)
 
-**Techniques to Reduce Routing Congestion:**
+#### <ins>Techniques to Reduce Routing Congestion:</ins>
 
 1. **Increase Core Area / Die Size**
    - Enlarging the die provides more routing tracks and reduces congestion.
