@@ -4,7 +4,7 @@
 
 ### 📚 Contents
 - [Issue: Floorplan Step Fails with Macro Placement Error](#️-issue-floorplan-step-fails-with-macro-placement-error)
-- [Fix: Use Updated Design Files](#-fix-use-fresh-design-files)
+- [Fix: Use Updated Design Files](#-fix-use-updated-design-files)
 - [Synthesis to Route of VSDBabySoC Design](#synthesis-to-route-of-vsdbabysoc-design)
   - [Run Synthesis](#run-synthesis)
   - [Run Floorplan](#run-floorplan)
