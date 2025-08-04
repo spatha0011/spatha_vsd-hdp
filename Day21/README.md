@@ -242,6 +242,11 @@ This image shows the **Hold Slack Histogram** after CTS in OpenROAD. The histogr
 
 ![Alt Text](Images/ctsn6.jpg)
 
+Zoomed-in view of the design after CTS, showing inserted clock buffers and routing connections.
+
+![Alt Text](Images/ctsn7.jpg)
+
+
 **CTS final report:**
 
 ```shell
