@@ -746,14 +746,31 @@ This image shows the **post-routing stage** in OpenROAD. The highlighted net `VC
 
 ![Alt Text](Images/rn2.jpg)
 
-**routing congestion heat map**
+This image shows the **Routing Congestion Heatmap** after the routing stage in OpenROAD. Areas with higher congestion are highlighted in **red**, while green regions indicate lower congestion. The highlighted net `_01595_` is fully routed, and its properties such as bounding box and connectivity details are shown in the Inspector.
 
 ![Alt Text](Images/rc1.jpg)
 
+This image shows the **clock net (`clknet_0_CLK`) routing** overlaid on the **routing congestion heatmap** in OpenROAD. 
+- **Red regions** indicate areas of high routing congestion.
+- The highlighted yellow path represents the clock distribution network across the design.
+- Inspector details show net properties like type (`CLOCK`), routing status (`ROUTED`), and bounding box coordinates.
+  
 ![Alt Text](Images/rc4.jpg)
 
-![Alt Text](Images/rc3.jpg)
+This image shows the **routing congestion heatmap** in OpenROAD after the routing stage, with utilization values (%) displayed in each grid.  
+- **Red cells** represent high congestion (close to 100% utilization).
+- A **filler cell** (`FILLER_349_1316`) is highlighted, with details like coordinates, bounding box, and obstructions shown in the Inspector.
 
+#### Formula for Congestion:
+\[
+\text{Congestion (\%)} = \left( \frac{\text{Used Routing Tracks}}{\text{Available Routing Tracks}} \right) \times 100
+\]
+
+Where:
+- **Used Routing Tracks** = Number of tracks occupied by wires in a specific region.
+- **Available Routing Tracks** = Total routing capacity of that region.
+
+![Alt Text](Images/rc3.jpg)
 
 **Timing Report after Routing**
 
