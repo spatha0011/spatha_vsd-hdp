@@ -200,15 +200,47 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk cts
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_cts
 ```
-**Timing Reports**
 
-This image shows the clock tree after CTS with highlighted clock paths and buffer placements in the OpenROAD GUI
+This image shows the **Clock Tree Synthesis (CTS) stage** in OpenROAD, highlighting a placed clock buffer (`clkbuf_leaf_209_CLK`) with its properties displayed in the Inspector, including **position, orientation, and connectivity details**.
 
-![Alt Text](Images/c1.jpg)
+![Alt Text](Images/ctsn1.jpg)
 
-**Charts**
+This image shows the **Clock Tree Viewer** after CTS in OpenROAD, illustrating the **clock buffer distribution on the layout** and a **histogram of clock insertion delays**, indicating **balanced clock skew across the sinks**.
 
-![Alt Text](Images/c2.jpg)
+![Alt Text](Images/ctsn2.jpg)
+
+This image shows the **Setup Timing Report** in OpenROAD, presenting a list of timing paths with key metrics such as:
+- **Required Time**
+- **Arrival Time**
+- **Slack**
+- **Skew**
+- **Logic Delay**
+- **Logic Depth**
+- **Fanout**
+
+All paths have **positive slack**, confirming that the design meets **setup timing requirements**.
+
+![Alt Text](Images/ctsn3.jpg)
+
+This image displays the **Hold Timing Report** in OpenROAD, showing timing paths with details such as:
+- **Required Time**
+- **Arrival Time**
+- **Slack**
+- **Skew**
+- **Logic Delay**
+- **Fanout**
+
+All paths listed have **positive slack**, indicating that the design meets **hold timing requirements** and is free from hold violations.
+
+![Alt Text](Images/ctsn4.jpg)
+
+This image shows the **Setup Slack Histogram** after CTS in OpenROAD. The histogram represents the distribution of endpoint slack values, all of which are **positive**, indicating that there are **no setup timing violations**.
+
+![Alt Text](Images/ctsn5.jpg)
+
+This image shows the **Hold Slack Histogram** after CTS in OpenROAD. The histogram represents the distribution of hold slack values for all endpoints. All values are **positive**, confirming that the design meets **hold timing requirements** without any violations.
+
+![Alt Text](Images/ctsn6.jpg)
 
 **CTS final report:**
 
