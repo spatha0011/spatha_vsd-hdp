@@ -740,11 +740,11 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 ```
-![Alt Text](Images/r2.jpg)
+This image shows the **post-routing stage** in OpenROAD. The highlighted net `VCO_IN` is fully routed, with its details such as signal type, wire type, and bounding box displayed in the Inspector.
 
-**Final routed design in OpenROAD showing VDD net and multiple metal layers after detailed routing.**
+![Alt Text](Images/rn1.jpg)
 
-![Alt Text](Images/r1.jpg)
+![Alt Text](Images/rn2.jpg)
 
 **routing congestion heat map**
 
