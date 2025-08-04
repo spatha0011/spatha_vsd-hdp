@@ -4,7 +4,7 @@
 
 ### 📚 Contents
 - [Issue: Floorplan Step Fails with Macro Placement Error](#️-issue-floorplan-step-fails-with-macro-placement-error)
-- [Fix: Use Fresh Design Files](#-fix-use-fresh-design-files)
+- [Fix: Use Updated Design Files](#-fix-use-fresh-design-files)
 - [Synthesis to Route of VSDBabySoC Design](#synthesis-to-route-of-vsdbabysoc-design)
   - [Run Synthesis](#run-synthesis)
   - [Run Floorplan](#run-floorplan)
@@ -31,7 +31,7 @@ However, with the updated OpenROAD version `v2.0-23132-g814048c9f3`, these steps
 
 ![Alt Text](Images/t1.jpeg)
 
-### ✅ `Fix: Use Fresh Design Files`
+### ✅ `Fix: Use Updated Design Files`
 
 To resolve this issue:
 
