@@ -179,7 +179,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 ```
 
-❗**Note:** In the floorplan stage, you do not see any placement density heat maps because standard cells have not yet been placed. The heat map will only appear after the placement step.
+This image shows the design during the **placement stage** in OpenROAD. Standard cells have been placed, and connectivity visualization is active.
 
 ![Alt Text](Images/place_gui.jpg)
 
@@ -187,6 +187,8 @@ This image shows the **Placement Density Heatmap** after the placement stage in 
 - **Red regions** indicate areas with higher cell density, approaching 100%.
 - **Green and blue regions** indicate moderate to low cell density.
 - The highlighted row (`ROW_343`) displays details such as origin coordinates, site count, site spacing, and bounding box dimensions.
+
+❗**Note:** In the floorplan stage, you do not see any placement density heat maps because standard cells have not yet been placed. The heat map will only appear after the placement step.
 
 ![Alt Text](Images/pn1.jpg)
 
