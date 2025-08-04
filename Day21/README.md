@@ -818,7 +818,7 @@ Where:
 8. **Congestion-Driven Placement**
    - Enable congestion-aware algorithms during placement in the EDA tool.
      
-**Timing Report after Routing**
+#### <ins>Timing Report after Routing:<ins>
 
 After completing routing, run the following in the OpenROAD GUI → Scripting window:
 
