@@ -792,6 +792,32 @@ Where:
 
 ![Alt Text](Images/rc3.jpg)
 
+**Techniques to Reduce Routing Congestion:**
+
+1. **Increase Core Area / Die Size**
+   - Enlarging the die provides more routing tracks and reduces congestion.
+   
+2. **Adjust Placement Density**
+   - Lower the target density during placement to leave whitespace for routing.
+   
+3. **Add Placement Blockages**
+   - Create routing blockages or halos around macros to avoid routing choke points.
+   
+4. **Cell Padding**
+   - Add extra spacing between standard cells to reduce local congestion.
+   
+5. **Macro Repositioning**
+   - Move large macros toward the periphery and keep enough channel spacing.
+   
+6. **Use Higher Metal Layers**
+   - Assign global nets or critical signals to higher metal layers for better routing resources.
+   
+7. **Routing Layer Adjustment**
+   - Allow more routing layers in congested designs.
+   
+8. **Congestion-Driven Placement**
+   - Enable congestion-aware algorithms during placement in the EDA tool.
+     
 **Timing Report after Routing**
 
 After completing routing, run the following in the OpenROAD GUI → Scripting window:
