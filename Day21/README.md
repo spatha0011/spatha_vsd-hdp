@@ -190,7 +190,7 @@ This image shows the **Placement Density Heatmap** after the placement stage in 
 
 ❗**Note:** In the floorplan stage, you do not see any placement density heat maps because standard cells have not yet been placed. The heat map will only appear after the placement step.
 
-The placement density percentage is calculated as:
+<ins>The placement density percentage is calculated as:</ins>
 
 **Placement Density (%) = (Area Occupied by Cells ÷ Total Placement Area) × 100**
 
@@ -198,7 +198,7 @@ The placement density percentage is calculated as:
 
 This image shows the **Pin Density Heatmap** in OpenROAD after the placement stage.
 
-The pin density percentage is calculated as:
+<ins>The pin density percentage is calculated as:</ins>
 
 **Pin Density (%) = (Number of Pins in a Region ÷ Total Area of that Region) × 100**
 
