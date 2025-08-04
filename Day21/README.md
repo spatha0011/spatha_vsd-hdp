@@ -765,9 +765,7 @@ This image shows the **routing congestion heatmap** in OpenROAD after the routin
 
 The routing congestion percentage is calculated as:
 
-$$
-\text{Congestion (\%)} = \left( \dfrac{\text{Used Routing Tracks}}{\text{Available Routing Tracks}} \right) \times 100
-$$
+**Congestion (%) = (Used Routing Tracks ÷ Available Routing Tracks) × 100**
 
 Where:
 - **Used Routing Tracks** = Number of tracks occupied by wires in a specific region.
