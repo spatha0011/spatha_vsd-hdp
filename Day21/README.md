@@ -160,7 +160,9 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
 ```
 
-![Alt Text](Images/fp_gui.jpg)
+This image shows the floorplan view in OpenROAD where you can see two macros placed: **DAC** and **PLL** after the floorplanning step.
+
+![Alt Text](Images/fn1.png)
 
 
 ### `run placement`
