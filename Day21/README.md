@@ -246,6 +246,7 @@ Zoomed-in view of the design after CTS, showing inserted clock buffers and routi
 
 ![Alt Text](Images/ctsn7.jpg)
 
+![Alt Text](Images/ctsn8.jpg)
 
 **CTS final report:**
 
