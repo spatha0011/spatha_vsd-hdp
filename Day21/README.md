@@ -181,7 +181,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 
 This image shows the design during the **placement stage** in OpenROAD. Standard cells have been placed, and connectivity visualization is active.
 
-![Alt Text](Images/place_gui.jpg)
+![Alt Text](Images/pn2.jpg)
 
 This image shows the **Placement Density Heatmap** after the placement stage in OpenROAD.  
 - **Red regions** indicate areas with higher cell density, approaching 100%.
