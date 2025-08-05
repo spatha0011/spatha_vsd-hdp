@@ -185,7 +185,8 @@ This image shows the placement stage in OpenROAD with the **placement density** 
 
 ![Alt Text](Images/pn2.jpg)
 
-This image shows the **Placement Density Heatmap** after the placement stage in OpenROAD.  
+This image shows a zoomed-in view of the Placement Density Heatmap after the placement stage:
+
 - **Red regions** indicate areas with higher cell density, approaching 100%.
 - **Green and blue regions** indicate moderate to low cell density.
 - The highlighted row (`ROW_343`) displays details such as origin coordinates, site count, site spacing, and bounding box dimensions.
