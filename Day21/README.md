@@ -199,7 +199,7 @@ This image shows a zoomed-in view of the Placement Density Heatmap after the pla
 
 ![Alt Text](Images/pn1.jpg)
 
-This image shows the **Pin Density Heatmap** in OpenROAD after the placement stage.
+This image shows the **Pin Density Heatmap** after the placement stage.
 
 <ins>The pin density percentage is calculated as:</ins>
 
@@ -223,15 +223,16 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk cts
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_cts
 ```
 
-This image shows the **Clock Tree Synthesis (CTS) stage** in OpenROAD, highlighting a placed clock buffer (`clkbuf_leaf_209_CLK`) with its properties displayed in the Inspector, including **position, orientation, and connectivity details**.
+This image shows the Clock Tree Synthesis (CTS) stage, highlighting a placed clock buffer (clkbuf_leaf_209_CLK) with its properties displayed in the Inspector, including position, orientation, and connectivity details.
 
 ![Alt Text](Images/ctsn1.jpg)
 
-This image shows the **Clock Tree Viewer** after CTS in OpenROAD, illustrating the **clock buffer distribution on the layout** and a **histogram of clock insertion delays**, indicating **balanced clock skew across the sinks**.
+This image shows the **Clock Tree Viewer** after CTS, illustrating the clock buffer distribution on the layout and a histogram of clock insertion delays, indicating balanced clock skew across the sinks.
 
 ![Alt Text](Images/ctsn2.jpg)
 
-This image shows the **Setup Timing Report** in OpenROAD, presenting a list of timing paths with key metrics such as:
+This image shows the **Setup Timing Report**, presenting a list of timing paths with key metrics such as:
+
 - **Required Time**
 - **Arrival Time**
 - **Slack**
@@ -244,7 +245,8 @@ All paths have **positive slack**, confirming that the design meets **setup timi
 
 ![Alt Text](Images/ctsn3.jpg)
 
-This image displays the **Hold Timing Report** in OpenROAD, showing timing paths with details such as:
+This image displays the **Hold Timing Report**, showing timing paths with details such as:
+
 - **Required Time**
 - **Arrival Time**
 - **Slack**
@@ -256,11 +258,11 @@ All paths listed have **positive slack**, indicating that the design meets **hol
 
 ![Alt Text](Images/ctsn4.jpg)
 
-This image shows the **Setup Slack Histogram** after CTS in OpenROAD. The histogram represents the distribution of endpoint slack values, all of which are **positive**, indicating that there are **no setup timing violations**.
+This image shows the **Setup Slack Histogram** after CTS. The histogram represents the distribution of endpoint slack values, all of which are positive, indicating that there are no setup timing violations.
 
 ![Alt Text](Images/ctsn5.jpg)
 
-This image shows the **Hold Slack Histogram** after CTS in OpenROAD. The histogram represents the distribution of hold slack values for all endpoints. All values are **positive**, confirming that the design meets **hold timing requirements** without any violations.
+This image shows the **Hold Slack Histogram** after CTS. The histogram represents the distribution of hold slack values for all endpoints. All values are positive, confirming that the design meets hold timing requirements without any violations.
 
 ![Alt Text](Images/ctsn6.jpg)
 
