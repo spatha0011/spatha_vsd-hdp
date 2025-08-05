@@ -764,24 +764,24 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk route
 ```shell
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_route
 ```
-This image shows the **post-routing stage** in OpenROAD. The highlighted net `VCO_IN` is fully routed, with its details such as signal type, wire type, and bounding box displayed in the Inspector.
+This image shows the **post-routing stage**. The highlighted net `VCO_IN` is fully routed, with its details such as signal type, wire type, and bounding box displayed in the Inspector.
 
 ![Alt Text](Images/rn1.jpg)
 
 ![Alt Text](Images/rn2.jpg)
 
-This image shows the **Routing Congestion Heatmap** after the routing stage in OpenROAD. Areas with higher congestion are highlighted in **red**, while green regions indicate lower congestion. The highlighted net `_01595_` is fully routed, and its properties such as bounding box and connectivity details are shown in the Inspector.
+This image shows the **Routing Congestion Heatmap** after the routing stage. Areas with higher congestion are highlighted in **red**, while green regions indicate lower congestion. The highlighted net `_01595_` is fully routed, and its properties such as bounding box and connectivity details are shown in the Inspector.
 
 ![Alt Text](Images/rc1.jpg)
 
-This image shows the **clock net (`clknet_0_CLK`) routing** overlaid on the **routing congestion heatmap** in OpenROAD. 
+This image shows the **clock net (`clknet_0_CLK`) routing** overlaid on the **routing congestion heatmap**. 
 - **Red regions** indicate areas of high routing congestion.
 - The highlighted yellow path represents the clock distribution network across the design.
 - Inspector details show net properties like type (`CLOCK`), routing status (`ROUTED`), and bounding box coordinates.
   
 ![Alt Text](Images/rc4.jpg)
 
-This image shows the **routing congestion heatmap** in OpenROAD after the routing stage, with utilization values (%) displayed in each grid.  
+This image shows the **routing congestion heatmap** after the routing stage, with utilization values (%) displayed in each grid.  
 - **Red cells** represent high congestion (close to 100% utilization).
 - A **filler cell** (`FILLER_349_1316`) is highlighted, with details like coordinates, bounding box, and obstructions shown in the Inspector.
 
