@@ -181,7 +181,7 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
 make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 ```
 
-This image shows the design during the **placement stage** in OpenROAD. Standard cells have been placed, and connectivity visualization is active.
+This image shows the placement stage in OpenROAD with the **placement density** heat map enabled.
 
 ![Alt Text](Images/pn2.jpg)
 
