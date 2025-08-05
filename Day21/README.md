@@ -231,6 +231,10 @@ This image shows the **Clock Tree Viewer** after CTS, illustrating the clock buf
 
 ![Alt Text](Images/ctsn2.jpg)
 
+This image shows the **Clock Tree Viewer after Clock Tree Synthesis (CTS)**, illustrating the hierarchical structure of the clock network. The root node at the top represents the clock source (`pll/CLK`), and the branches show the inserted clock buffers used to distribute the clock signal across the design. The vertical axis represents the **clock arrival times (in nanoseconds)** at each stage. The endpoints at the bottom represent the registers (clock sinks), where the clock reaches after passing through multiple buffer levels. The balanced branching and closely aligned arrival times indicate **low clock skew and a well-optimized clock tree**.
+
+![Alt Text](Images/clkv.jpg)
+
 This image shows the **Setup Timing Report**, presenting a list of timing paths with key metrics such as:
 
 - **Required Time**
