@@ -8,7 +8,8 @@
 - [Post-Routing Results Summary](#post-routing-results-summary)
 - [📈 Comparison Graphs](#-comparison-graphs)
   
-### <u>Key Files</u>
+### Key Files
+---
 
 To perform reliable timing verification of the BabySoC design after routing, we use OpenSTA with a dedicated TCL script and a post-CTS constraints file.
 
