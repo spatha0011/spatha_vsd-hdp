@@ -3,8 +3,8 @@
 ## Post-Routing STA analysis of VSDBabySoC Design
 
 ### 📚 Contents
-- [Key Files](#-key-files)
-- [Running STA](#️-running-sta)
+- [Key Files](#key-files)
+- [Running STA](#️running-sta)
 - [Post-Routing Results Summary](#post-routing-results-summary)
 - [📈 Comparison Graphs](#-comparison-graphs)
   
