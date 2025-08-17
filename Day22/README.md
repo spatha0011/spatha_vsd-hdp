@@ -80,4 +80,7 @@ docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/Bab
 
 ![Alt Text](Images/1.jpg)
 
+After running the STA script, you can navigate to the `STA_OUTPUT/route/` directory to see all the generated timing reports. This includes detailed path delay reports for each library corner (`min_max_*.txt`), worst setup and hold slack summaries (`sta_worst_max_slack.txt and sta_worst_min_slack.txt`), as well as total negative slack (sta_tns.txt) and worst negative slack (`sta_wns.txt`). These files provide a complete overview of the BabySoC design’s timing performance after routing.
+
+![Alt Text](Images/2.jpg)
 
