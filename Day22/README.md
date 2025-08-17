@@ -4,7 +4,7 @@
 
 ### 📚 Contents
 - [Key Files](#key-files)
-- [Running STA](#️running-sta)
+- [Running STA](#running-sta)
 - [Post-Routing Results Summary](#post-routing-results-summary)
 - [📈 Comparison Graphs](#-comparison-graphs)
   
