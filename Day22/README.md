@@ -4,6 +4,8 @@
 
 ### 📚 Contents
 
+The script `sta_across_pvt_route.tcl` runs post-route Static Timing Analysis (STA) of the BabySoC design across multiple PVT corners using OpenSTA.
+
 <details> <summary><strong>sta_across_pvt_route.tcl</strong></summary>
 
 ```
@@ -47,4 +49,25 @@
  }
 ```
 </details>
+
+This `vsdbabysoc_post_cts.sdc` file is an auto-generated SDC created after clock tree synthesis. It sets the current design to `vsdbabysoc` and defines the basic timing environment. The file specifies a clock named `clk` with an 11 ns period, driven from the pin `pll/CLK`, and marks it as a propagated clock for STA. Sections for environment and design rules are also included for adding further constraints if needed.
+
+```shell
+###############################################################################
+# Created by write_sdc
+###############################################################################
+current_design vsdbabysoc
+###############################################################################
+# Timing Constraints
+###############################################################################
+create_clock -name clk -period 11.0000 [get_pins {pll/CLK}]
+set_propagated_clock [get_clocks {clk}]
+###############################################################################
+# Environment
+###############################################################################
+###############################################################################
+# Design Rules
+###############################################################################
+```
+
 
