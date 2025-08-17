@@ -3,7 +3,11 @@
 ## Post-Routing STA analysis of VSDBabySoC Design
 
 ### 📚 Contents
-
+- [Key Files](#-key-files)
+- [Running STA](#️-running-sta)
+- [Post-Routing Results Summary](#post-routing-results-summary)
+- [📈 Comparison Graphs](#-comparison-graphs)
+  
 ### 📂 Key Files  
 
 To perform reliable timing verification of the BabySoC design after routing, we use OpenSTA with a dedicated TCL script and a post-CTS constraints file.
