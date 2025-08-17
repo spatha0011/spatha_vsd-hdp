@@ -4,7 +4,9 @@
 
 ### 📚 Contents
 
-The script `sta_across_pvt_route.tcl` runs post-route Static Timing Analysis (STA) of the BabySoC design across multiple PVT corners using OpenSTA.
+To perform reliable timing verification of the BabySoC design after routing, we use OpenSTA with a dedicated TCL script and a post-CTS constraints file.
+
+The `sta_across_pvt_route.tcl` script automates static timing analysis across multiple process, voltage, and temperature (PVT) corners, while the `vsdbabysoc_post_cts.sdc` file provides the design-specific timing constraints generated after clock tree synthesis. Together, these files ensure that STA is run under the correct operating conditions and that reports such as setup/hold slack, WNS, and TNS are captured for each library corner.
 
 <details> <summary><strong>sta_across_pvt_route.tcl</strong></summary>
 
