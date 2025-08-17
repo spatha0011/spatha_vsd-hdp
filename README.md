@@ -28,3 +28,4 @@ Welcome to my journey through the VSD-HDP program! Below are links to my day-wis
 | **Day 19** | [**Pre-layout timing analysis and importance of good clock tree**](Day19/README.md) | **✅ Done**|
 | **Day 20** | [**Final steps for RTL2GDS using tritonRoute and openSTA**](Day20/README.md) | **✅ Done**|
 | **Day 21** | [**OpenROAD-Flow-Scripts: Physical Design, Post-Route SPEF and Verilog Netlist Generation for VSDBabySoC**](Day21/README.md) | **✅ Done**|
+| **Day 22** | [**Post-Routing STA analysis of VSDBabySoC Design**](Day22/README.md) | **✅ Done**|
