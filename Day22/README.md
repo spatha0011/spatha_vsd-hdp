@@ -7,6 +7,8 @@
 - [Running STA](#running-sta)
 - [Post-Routing Results Summary](#post-routing-results-summary)
 - [📈 Comparison Graphs](#-comparison-graphs)
+- [Key Differences: Post-Synthesis vs Post-Route Timing Analysis](#-key-differences-post-synthesis-vs-post-route-timing-analysis)
+- [Summary](#-summary)
   
 ### `Key Files`
 
@@ -116,7 +118,7 @@ Here is a graph showing the comparison of `TNS` post-synthesis vs post-routing f
 
 ![Alt Text](Images/7.jpg)
 
-### Key Differences: Post-Synthesis vs Post-Route Timing Analysis
+### `Key Differences: Post-Synthesis vs Post-Route Timing Analysis`
 
 | Aspect              | Post-Synthesis Analysis                                                                 | Post-Route Analysis                                                                 |
 |---------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -128,7 +130,7 @@ Here is a graph showing the comparison of `TNS` post-synthesis vs post-routing f
 
 ---
 
-### Summary
+### `Summary`
 - Post-synthesis analysis serves as an **early timing checkpoint**.  
 - Post-route analysis represents the **golden reference for timing sign-off**.  
 - Transition from estimated to actual physical parameters often reveals:
