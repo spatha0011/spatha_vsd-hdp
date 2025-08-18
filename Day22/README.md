@@ -7,8 +7,8 @@
 - [Running STA](#running-sta)
 - [Post-Routing Results Summary](#post-routing-results-summary)
 - [📈 Comparison Graphs](#-comparison-graphs)
-- [Key Differences: Post-Synthesis vs Post-Route Timing Analysis](#-key-differences-post-synthesis-vs-post-route-timing-analysis)
-- [Summary](#-summary)
+- [Key Differences: Post-Synthesis vs Post-Route Timing Analysis](#key-differences-post-synthesis-vs-post-route-timing-analysis)
+- [Summary](#summary)
   
 ### `Key Files`
 
