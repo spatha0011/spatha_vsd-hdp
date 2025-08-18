@@ -118,8 +118,6 @@ Here is a graph showing the comparison of `TNS` post-synthesis vs post-routing f
 
 ### Key Differences: Post-Synthesis vs Post-Route Timing Analysis
 
-The fundamental differences between post-synthesis and post-route timing analysis stem from the level of physical design information available at each stage:
-
 | Aspect              | Post-Synthesis Analysis                                                                 | Post-Route Analysis                                                                 |
 |---------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | **Timing Model**    | Uses statistical wire-load models based on fanout and cell characteristics                                    | Uses actual extracted parasitics (RC values) from the physical layout                                          |
