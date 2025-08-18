@@ -115,3 +115,27 @@ Here is a graph showing the comparison of `WNS` post-synthesis vs post-routing f
 Here is a graph showing the comparison of `TNS` post-synthesis vs post-routing for the BabySoC design.
 
 ![Alt Text](Images/7.jpg)
+
+### Key Differences: Post-Synthesis vs Post-Route Timing Analysis
+
+The fundamental differences between post-synthesis and post-route timing analysis stem from the level of physical design information available at each stage:
+
+| Aspect              | Post-Synthesis Analysis                                                                 | Post-Route Analysis                                                                 |
+|---------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| **Timing Model**    | Uses statistical wire-load models based on fanout and cell characteristics                                    | Uses actual extracted parasitics (RC values) from the physical layout                                          |
+| **Clock Network**   | Assumes ideal clock distribution with zero skew and instantaneous arrival                                    | Models propagated clock with real buffer delays and network latency                                           |
+| **Interconnect**    | Estimates delays using fanout-based lookup tables                                                            | Calculates delays from actual routed metal paths and vias                                                      |
+| **Accuracy**        | Provides ~70–80% timing correlation due to estimation                                                        | Achieves ~95–98% correlation with final timing sign-off                                                        |
+| **Critical Paths**  | May identify different critical paths than final implementation due to estimation errors                      | Precisely matches the final layout's timing critical paths                                                     |
+
+---
+
+### Summary
+- Post-synthesis analysis serves as an **early timing checkpoint**.  
+- Post-route analysis represents the **golden reference for timing sign-off**.  
+- Transition from estimated to actual physical parameters often reveals:
+  - New critical paths not visible during synthesis  
+  - Clock network effects that were previously idealized  
+  - Interconnect-dominated timing issues  
+  - Real impact of physical proximity and coupling effects  
+
