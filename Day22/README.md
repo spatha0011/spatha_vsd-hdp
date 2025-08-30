@@ -42,6 +42,7 @@ The `sta_across_pvt_route.tcl` script automates static timing analysis across mu
  link_design vsdbabysoc
  current_design
  read_sdc /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/vsdbabysoc_post_cts.sdc
+ read_spef /data/OpenROAD-flow-scripts/flow/designs/sky130hd/vsdbabysoc/vsdbabysoc.spef
  check_setup -verbose
  report_checks -path_delay min_max -fields {nets cap slew input_pins fanout} -digits {4} > /data/VLSI/VSDBabySoC/OpenSTA/examples/BabySoC/STA_OUTPUT/route/min_max_$list_of_lib_files($i).txt
 
